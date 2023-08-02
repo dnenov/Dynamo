@@ -20,6 +20,15 @@
             <controls:PrettyDateConverter x:Key="PrettyDateConverter" />
             <controls:DependencyListToStringConverter x:Key="DependencyListToStringConverter" />
             <controls:ListHasMoreThanNItemsToVisibilityConverter x:Key="ListHasMoreThanNItemsToVisibilityConverter" />
+
+            <ContextMenu x:Key="installContextMenu">
+                <MenuItem Header="{x:Static p:Resources.PackageSearchViewInstallLatestVersion}"
+                          Command="{Binding DownloadLatestCommand}" />
+                <MenuItem Header="{x:Static p:Resources.PackageSearchViewInstallLatestVersionTo}"
+                          Command="{Binding DownloadLatestToCustomPathCommand}"
+                          CommandParameter="{Binding Path=Model.LatestVersion}"  />
+            </ContextMenu>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoConvertersDictionaryUri}" />
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoModernDictionaryUri}" />
@@ -151,6 +160,8 @@
                             </Button>
 
                             <!--  Install Button  -->
+                          
+
                             <Button Name="installButton"
                                     Command="{Binding DownloadLatestCommand}"
                                     Content="{Binding CanInstall, Converter={StaticResource InstalledButtonTextConverter}}"
@@ -170,6 +181,19 @@
                                                         <Grid x:Name="installPackageGrid">
 
                                                             <DockPanel LastChildFill="False">
+                                                                <!-- The drop-down context menu arrow button -->
+                                                                <Button Name="dropDownInstallButton"
+                                                                        DockPanel.Dock="Right"
+                                                                        IsEnabled="{Binding IsEnabledForInstall}"
+                                                                        Click="DropDownInstallButton_OnClick"
+                                                                        BorderThickness="0"
+                                                                        Cursor="Hand"
+                                                                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                                                                    <Image Source=" /DynamoCoreWpf;component/UI/Images/caret_drop_down.png"
+                                                                           Width="7"
+                                                                           Height="5" />
+                                                                </Button>
+                                                                
                                                                 <TextBlock Name="textBlock"
                                                                            Padding="4,4,4,3"
                                                                            VerticalAlignment="Center"
@@ -294,6 +318,8 @@
                                     </Style>
                                 </Button.Style>
                             </Button>
+
+                      
 
                             <!--  Contains Package Name and New Label  -->
                             <Grid Margin="0,0,0,0"

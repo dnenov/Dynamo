@@ -55,6 +55,7 @@
     <None Remove="Packages\SplashScreen\build\index.bundle.js" />
     <None Remove="Packages\SplashScreen\build\index.html" />
     <None Remove="UI\Images\Canvas\canvas-button-geometry-scaling.png" />
+    <None Remove="UI\Images\caret_drop_down.png" />
     <None Remove="UI\Images\PackageManager\empty-state-first-use-light-gray.png" />
     <None Remove="UI\Images\PackageManager\loading-timed-out.png" />
     <None Remove="UI\Prompts\PortPropertiesEditPrompt.xaml" />
@@ -793,6 +794,7 @@
     <Resource Include="UI\Images\Alignment\align_y_average.png" />
     <Resource Include="UI\Images\Alignment\align_y_distribute.png" />
     <Resource Include="UI\Images\Canvas\canvas-button-geometry-scaling.png" />
+    <Resource Include="UI\Images\caret_drop_down.png" />
     <Resource Include="UI\Images\caret_up.png" />
     <EmbeddedResource Include="Views\GuidedTour\HtmlPages\Resources\ArtifaktElement-Regular.woff" />
     <Resource Include="UI\Images\cursors.psd" />
