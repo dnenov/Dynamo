@@ -40,7 +40,7 @@
 
             <!--  Contains the search bar, sort and filter buttons  -->
             <Border Name="searchBar"
-                    Padding="25,18"
+                    Padding="16 16 25 8"
                     BorderBrush="#7E7E7E"
                     BorderThickness="0,1,0,0">
                 <DockPanel>
@@ -234,7 +234,7 @@
                     <!--  Search Bar  -->
                     <local:SearchBoxControl x:Name="SearchBox"
                                             DockPanel.Dock="Left"
-                                            Margin="10 5 20 5" />
+                                            Margin="0 5 0 0" />
 
                 </DockPanel>
             </Border>
