@@ -20,6 +20,8 @@
             <controls:PrettyDateConverter x:Key="PrettyDateConverter" />
             <controls:DependencyListToStringConverter x:Key="DependencyListToStringConverter" />
             <controls:ListHasMoreThanNItemsToVisibilityConverter x:Key="ListHasMoreThanNItemsToVisibilityConverter" />
+            <controls:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
+            
 
             <ContextMenu x:Key="installContextMenu">
                 <MenuItem Header="{x:Static p:Resources.PackageSearchViewInstallLatestVersion}"
@@ -159,8 +161,7 @@
                                 </Button.Template>
                             </Button>
 
-                            <!--  Install Button  -->
-                          
+                            <!--  Install Button  -->                          
 
                             <Button Name="installButton"
                                     Command="{Binding DownloadLatestCommand}"
@@ -184,7 +185,8 @@
                                                                 <!-- The drop-down context menu arrow button -->
                                                                 <Button Name="dropDownInstallButton"
                                                                         DockPanel.Dock="Right"
-                                                                        IsEnabled="{Binding IsEnabledForInstall}"
+                                                                        Visibility="{Binding CanInstall,
+                                                                                             Converter={StaticResource BoolToVisibilityCollapsedConverter}}"
                                                                         Click="DropDownInstallButton_OnClick"
                                                                         BorderThickness="0"
                                                                         Cursor="Hand"
@@ -429,6 +431,7 @@
                                    Margin="15,0,5,15"
                                    VerticalAlignment="Bottom"
                                    LastChildFill="True">
+                            <!-- Right-hand side -->
                             <TextBlock Name="dateLabel"
                                        Margin="5,0"
                                        DockPanel.Dock="Right"
@@ -471,11 +474,15 @@
                                     <ImageBrush ImageSource="/DynamoCoreWpf;component/UI/Images/Favorite.png" />
                                 </Rectangle.Fill>
                             </Rectangle>
-                            <TextBlock Name="versionLabel"
-                                       Margin="5,0"
-                                       DockPanel.Dock="Right"
-                                       Style="{StaticResource resultLabelStyle}"
-                                       Text="{Binding Path=Model.LatestVersion}" />
+
+                            <!-- The version combobox -->
+                            <ComboBox HorizontalAlignment="Left"
+                                      Margin="5,0,15,0"
+                                      DockPanel.Dock="Right"
+                                      ItemsSource="{Binding Path=Model.PackageVersions}"
+                                      SelectedItem="{Binding Path=Model.SelectedVersion}"
+                                      Style="{StaticResource PackageManagerSmallComboBox}">
+                            </ComboBox>
                             <Rectangle Width="10"
                                        Height="10"
                                        Margin="5,0,0,2"
@@ -485,9 +492,11 @@
                                     <ImageBrush ImageSource="/DynamoCoreWpf;component/UI/Images/Flag.png" />
                                 </Rectangle.Fill>
                             </Rectangle>
+                            
+                            <!-- Left-hand side --> 
                             <Rectangle Width="10"
                                        Height="10"
-                                       Margin="0,0,0,2"
+                                       Margin="0,0,0,2" 
                                        VerticalAlignment="Center"
                                        DockPanel.Dock="Left">
                                 <Rectangle.Fill>
