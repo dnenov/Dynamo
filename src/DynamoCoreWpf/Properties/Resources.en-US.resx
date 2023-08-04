@@ -2909,7 +2909,7 @@ This package will be unloaded after the next Dynamo restart.</value>
     <value>My Packages</value>
   </data>
   <data name="PackageManagerPackageSettingsTab" xml:space="preserve">
-    <value>My Packages</value>
+    <value>Package Settings</value>
   </data>
   <data name="PackageManagerTitle" xml:space="preserve">
     <value>Package Manager</value>

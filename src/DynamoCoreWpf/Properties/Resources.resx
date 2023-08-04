@@ -1296,7 +1296,7 @@ Don't worry, you'll have the option to save your work.</value>
   <data name="PackageManagerPackageSettingsTab" xml:space="preserve">
     <value>Package Settings</value>
   </data>
- <data name="PackageManagerTitle" xml:space="preserve">
+  <data name="PackageManagerTitle" xml:space="preserve">
     <value>Package Manager</value>
   </data>
   <data name="PackageManagerLoadingTimedOutWarningMessage" xml:space="preserve">
@@ -1305,7 +1305,7 @@ Don't worry, you'll have the option to save your work.</value>
   <data name="PackagerManageNoInstalledPackagesMessage" xml:space="preserve">
     <value>You don’t have any installed packages yet.</value>
   </data>
- <data name="PackageManagerNoInstalledPackagesSubMessage" xml:space="preserve">
+  <data name="PackageManagerNoInstalledPackagesSubMessage" xml:space="preserve">
     <value>Once you install a package, you can find it here.</value>
   </data>
   <data name="PackageManagerSearchPackagesButton" xml:space="preserve">
