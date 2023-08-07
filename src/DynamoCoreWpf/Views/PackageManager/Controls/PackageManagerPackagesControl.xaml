@@ -21,16 +21,17 @@
             <controls:DependencyListToStringConverter x:Key="DependencyListToStringConverter" />
             <controls:ListHasMoreThanNItemsToVisibilityConverter x:Key="ListHasMoreThanNItemsToVisibilityConverter" />
             <controls:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-            
 
-            <ContextMenu x:Key="installContextMenu">
-                <MenuItem Header="{x:Static p:Resources.PackageSearchViewInstallLatestVersion}"
-                          Command="{Binding DownloadLatestCommand}" />
+
+            <ContextMenu x:Key="installContextMenu"
+                         Style="{StaticResource ContextMenuStyle}">
                 <MenuItem Header="{x:Static p:Resources.PackageSearchViewInstallLatestVersionTo}"
                           Command="{Binding DownloadLatestToCustomPathCommand}"
-                          CommandParameter="{Binding Path=Model.LatestVersion}"  />
+                          CommandParameter="{Binding Path=Model.LatestVersion}" 
+                          MinHeight="30"
+                          MinWidth="60" />
             </ContextMenu>
-            
+                
             <Style x:Key="RectangleStyle" TargetType="Rectangle">
                 <Setter Property="Opacity" Value="0" />
                 <Style.Triggers>
@@ -514,8 +515,8 @@
                                        DockPanel.Dock="Right"
                                        Style="{StaticResource resultLabelStyle}"
                                        Text="{Binding Path=Model.Votes, Converter={StaticResource NegativeIntToZeroConverter}}" />
-                            <Rectangle Width="10"
-                                       Height="10"
+                            <Rectangle Width="12"
+                                       Height="11"
                                        Margin="5,0,0,2"
                                        VerticalAlignment="Center"
                                        DockPanel.Dock="Right">
@@ -525,7 +526,7 @@
                             </Rectangle>
 
                             <!-- The version combobox -->
-                            <StackPanel Margin="5,0,15,0"
+                            <StackPanel Margin="5,0,5,0"
                                         DockPanel.Dock="Right"
                                         Orientation="Vertical"
                                         MinHeight="120">

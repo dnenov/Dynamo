@@ -5547,7 +5547,7 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Filter packages that depend on applications outside Dynamo. This feature currently can only filter packages which have been marked manually by package authors during publish..
+        ///   Looks up a localized string similar to Filter packages.
         /// </summary>
         public static string PackageHostDependencyFilter {
             get {
@@ -6150,7 +6150,7 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install latest version to folder....
+        ///   Looks up a localized string similar to Install to folder....
         /// </summary>
         public static string PackageSearchViewInstallLatestVersionTo {
             get {
@@ -6521,7 +6521,7 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sort Packages..
+        ///   Looks up a localized string similar to Sort Packages.
         /// </summary>
         public static string PackageSortToolTip {
             get {

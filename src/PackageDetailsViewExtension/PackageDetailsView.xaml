@@ -231,7 +231,7 @@
                     <!--  Votes  -->
                     <Border Style="{StaticResource BorderStyle}">
                         <StackPanel Orientation="Horizontal">
-                            <Rectangle Width="10" Height="10">
+                            <Rectangle Width="12" Height="11">
                                 <Rectangle.Fill>
                                     <ImageBrush ImageSource="/DynamoCoreWpf;component/UI/Images/Favorite.png" />
                                 </Rectangle.Fill>

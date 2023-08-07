@@ -758,8 +758,8 @@
                                     Style="{StaticResource resultLabelStyle}"
                                     Text="{Binding Path=Model.Votes, Converter={StaticResource NegativeIntToZeroConverter}}" />
                                 <Rectangle
-                                    Width="10"
-                                    Height="10"
+                                    Width="12"
+                                    Height="11"
                                     Margin="5,0,0,2"
                                     VerticalAlignment="Center"
                                     DockPanel.Dock="Right">
