@@ -31,6 +31,58 @@
                           CommandParameter="{Binding Path=Model.LatestVersion}"  />
             </ContextMenu>
             
+            <Style x:Key="RectangleStyle" TargetType="Rectangle">
+                <Setter Property="Opacity" Value="0" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ElementName=VersionComboBox, Path=IsMouseOver}"
+                                 Value="True">
+                        <Setter Property="Fill"
+                                Value="DimGray" />
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard SpeedRatio="2">
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                     To="0.75"
+                                                     Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard SpeedRatio="2">
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                     To="0"
+                                                     Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding ElementName=VersionComboBox, Path=IsDropDownOpen}"
+                                 Value="True">
+                        <Setter Property="Fill"
+                                Value="{StaticResource MidDarkBlueBrush}" />
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard SpeedRatio="2">
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                     To="0.75"
+                                                     Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard SpeedRatio="2">
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                     To="0"
+                                                     Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
             <ResourceDictionary.MergedDictionaries>
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoConvertersDictionaryUri}" />
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoModernDictionaryUri}" />
@@ -93,7 +145,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40px" />
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="35px" />
+                            <RowDefinition Height="40px" />
                         </Grid.RowDefinitions>
 
                         <!--  Top Row  -->
@@ -161,8 +213,7 @@
                                 </Button.Template>
                             </Button>
 
-                            <!--  Install Button  -->                          
-
+                            <!--  Install Button  -->
                             <Button Name="installButton"
                                     Command="{Binding DownloadLatestCommand}"
                                     Content="{Binding CanInstall, Converter={StaticResource InstalledButtonTextConverter}}"
@@ -319,9 +370,7 @@
                                         </Setter>
                                     </Style>
                                 </Button.Style>
-                            </Button>
-
-                      
+                            </Button>                      
 
                             <!--  Contains Package Name and New Label  -->
                             <Grid Margin="0,0,0,0"
@@ -461,7 +510,7 @@
                                 </Rectangle.Fill>
                             </Rectangle>
                             <TextBlock Name="noFavoritesLabel"
-                                       Margin="5,0"
+                                       Margin="5,0" 
                                        DockPanel.Dock="Right"
                                        Style="{StaticResource resultLabelStyle}"
                                        Text="{Binding Path=Model.Votes, Converter={StaticResource NegativeIntToZeroConverter}}" />
@@ -476,13 +525,20 @@
                             </Rectangle>
 
                             <!-- The version combobox -->
-                            <ComboBox HorizontalAlignment="Left"
-                                      Margin="5,0,15,0"
-                                      DockPanel.Dock="Right"
-                                      ItemsSource="{Binding Path=Model.PackageVersions}"
-                                      SelectedItem="{Binding Path=Model.SelectedVersion}"
-                                      Style="{StaticResource PackageManagerSmallComboBox}">
-                            </ComboBox>
+                            <StackPanel Margin="5,0,15,0"
+                                        DockPanel.Dock="Right"
+                                        Orientation="Vertical"
+                                        MinHeight="120">
+                                <ComboBox x:Name="VersionComboBox"
+                                          HorizontalAlignment="Left"
+                                          ItemsSource="{Binding Path=Model.PackageVersions}"
+                                          SelectedItem="{Binding Path=Model.SelectedVersion}"
+                                          Style="{StaticResource PackageManagerSmallComboBox}">
+                                </ComboBox>
+                                <Rectangle Style="{StaticResource RectangleStyle}" Height="5" />
+
+                            </StackPanel>
+                            
                             <Rectangle Width="10"
                                        Height="10"
                                        Margin="5,0,0,2"
@@ -493,7 +549,7 @@
                                 </Rectangle.Fill>
                             </Rectangle>
                             
-                            <!-- Left-hand side --> 
+                            <!-- Left-hand sid  e --> 
                             <Rectangle Width="10"
                                        Height="10"
                                        Margin="0,0,0,2" 

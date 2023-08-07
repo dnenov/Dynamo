@@ -319,18 +319,70 @@
         <Style.Triggers />
     </Style>
 
+    <!-- Package Manager Styles --> 
+    <ControlTemplate x:Key="PackageManagerComboBoxToggleButton"
+                     TargetType="ToggleButton">
+        <Grid>
+            <Border x:Name="Border"
+                    Background="Transparent"
+                    BorderBrush="#a9a9a9"
+                    BorderThickness="0 0 0 1" />
+            <Path x:Name="Arrow"
+                  Margin="0"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Center"
+                  Data="M 0 0 L 4 4 L 8 0 Z"
+                  Fill="#999" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver"
+                     Value="true">
+                <Setter TargetName="Arrow"  
+                        Property="Fill"
+                        Value="#fff" />
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked"
+                     Value="true">
+                <Setter TargetName="Border"
+                        Property="BorderBrush"
+                        Value="{DynamicResource BlueBrush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="PackageManagerComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border Name="Border" Padding="10,5" SnapsToDevicePixels="true">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#474747" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#888888" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="PackageManagerSmallComboBox" TargetType="{x:Type ComboBox}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
-        <Setter Property="MinWidth" Value="60" />
-        <Setter Property="Padding" Value="3" />
+        <Setter Property="MinWidth" Value="40" />
+        <Setter Property="Padding" Value="0" />
         <Setter Property="MinHeight" Value="20" />  
         <Setter Property="MaxHeight" Value="40" />
         <Setter Property="FontSize" Value="10" />
         <Setter Property="Foreground" Value="#C7C7C7" />
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource PackageManagerComboBoxItemStyle}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBox">
@@ -340,9 +392,9 @@
                                       ClickMode="Press"
                                       Focusable="false"
                                       IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                                      Template="{StaticResource ComboBoxToggleButtonUpdated}" />
+                                      Template="{DynamicResource PackageManagerComboBoxToggleButton}" />
                         <ContentPresenter Name="ContentSite"
-                                          Margin="9,3,23,3"
+                                          Margin="1,3,12,3"
                                           HorizontalAlignment="Left"
                                           VerticalAlignment="Center"
                                           Content="{TemplateBinding SelectionBoxItem}"
@@ -373,9 +425,9 @@
                                   MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                   SnapsToDevicePixels="True">
                                 <Border x:Name="DropDownBorder"
-                                        Background="#2c2c2c"
-                                        BorderBrush="#444444"
-                                        BorderThickness="1,0,1,1" />
+                                        Background="#535353"
+                                        BorderBrush="{DynamicResource MidLightBlueBrush}"
+                                        BorderThickness="0,6,0,0" />
                                 <ScrollViewer Margin="0,6,0,6"
                                               SnapsToDevicePixels="True">
                                     <StackPanel IsItemsHost="True"
@@ -401,10 +453,10 @@
                                  Value="true">
                             <Setter TargetName="DropDownBorder"
                                     Property="CornerRadius"
-                                    Value="4" />
+                                    Value="0" />
                             <Setter TargetName="DropDownBorder"
                                     Property="Margin"
-                                    Value="0,2,0,0" />
+                                    Value="0,0,0,0" />
                         </Trigger>
                         <Trigger Property="IsEditable"
                                  Value="true">
@@ -423,7 +475,8 @@
         </Setter>
         <Style.Triggers />
     </Style>
-    
+    <!-- End Package Manager Styles -->
+
     <Style x:Key="SComboBox_Update" TargetType="{x:Type ComboBox}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -2062,6 +2115,77 @@
         </Setter>
     </Style>
 
+
+    <Style x:Key="TestScrollViewer"
+           TargetType="{x:Type ScrollViewer}">
+        <Setter Property="HorizontalScrollBarVisibility"
+                Value="Hidden" />
+        <Setter Property="VerticalScrollBarVisibility"
+                Value="Hidden" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                    <Grid>
+                        <Grid Background="{TemplateBinding Background}">
+                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                                    Margin="{TemplateBinding Padding}"
+                                                    CanContentScroll="{TemplateBinding CanContentScroll}"
+                                                    Content="{TemplateBinding Content}"
+                                                    ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <ScrollBar x:Name="PART_VerticalScrollBar"
+                                       Grid.Column="1"
+                                       AutomationProperties.AutomationId="VerticalScrollBar"
+                                       Cursor="Arrow"
+                                       Margin="0"
+                                       Padding="0"
+                                       Background="Red"
+                                       Foreground="Blue"
+                                       Maximum="{TemplateBinding ScrollableHeight}"
+                                       Minimum="0.0"
+                                       ViewportSize="{TemplateBinding ViewportHeight}"
+                                       Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                       Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=VerticalOffset, Mode=OneWay}" />
+                            <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                       Grid.Row="1"
+                                       AutomationProperties.AutomationId="HorizontalScrollBar"
+                                       Cursor="Arrow"
+                                       Maximum="{TemplateBinding ScrollableWidth}"
+                                       Minimum="0.0"
+                                       Orientation="Horizontal"
+                                       ViewportSize="{TemplateBinding ViewportWidth}"
+                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                       Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalOffset, Mode=OneWay}" />
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled"
+                     Value="false">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+            </Trigger>
+            <Trigger Property="IsMouseOver"
+                     Value="true">
+                <Setter Property="HorizontalScrollBarVisibility"
+                        Value="Visible" />
+                <Setter Property="VerticalScrollBarVisibility"
+                        Value="Visible" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
     <Style x:Key="SDarkScrollViewer" TargetType="{x:Type ScrollViewer}">
         <Setter Property="HorizontalScrollBarVisibility" Value="Hidden" />
         <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
