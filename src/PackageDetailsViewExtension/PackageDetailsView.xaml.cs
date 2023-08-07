@@ -1,7 +1,9 @@
 using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
@@ -14,6 +16,56 @@ namespace Dynamo.PackageDetails
         public PackageDetailsView()
         {
             InitializeComponent();
+        }
+
+        private void AddHyperlinksToTextBlock(TextBlock textBlock, string text)
+        {
+            // Clear previous results   
+            if (textBlock == null) return;
+            textBlock.Inlines.Clear();
+
+            // Regular expression pattern to detect URLs
+            //string pattern = @"(?<url>https?://[^\s]+)";
+            //string pattern = @"(?<url>https?://[^\s]+)|(?<url>www\.[^\s]+)";
+            string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?)";
+
+            MatchCollection matches = Regex.Matches(text, pattern);
+
+            foreach (Match match in matches)
+            {
+                string url = match.Groups["url"].Value;
+                int startIndex = match.Index;
+                int length = match.Length;
+
+                // Add the non-hyperlink text before the URL
+                if (startIndex > 0)
+                {
+                    textBlock.Inlines.Add(new Run(text.Substring(0, startIndex)));
+                }
+
+                if (!string.IsNullOrEmpty(url))
+                {
+                    // Add the hyperlink
+                    Hyperlink hyperlink = new Hyperlink(new Run(url));
+                    Uri result;
+                    if (Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out result))
+                    {
+                        // the url is valid
+                        hyperlink.NavigateUri = result;
+                    }
+                    hyperlink.RequestNavigate += Hyperlink_RequestNavigate;
+                    textBlock.Inlines.Add(hyperlink);
+                }
+
+                // Remove the processed part of the text
+                text = text.Substring(startIndex + length);
+            }
+
+            // Add any remaining text (after the last hyperlink)
+            if (!string.IsNullOrEmpty(text))
+            {
+                textBlock.Inlines.Add(new Run(text));
+            }
         }
 
         /// <summary>
@@ -49,6 +101,24 @@ namespace Dynamo.PackageDetails
         private void CloseButton_OnClick(object sender, RoutedEventArgs e)
         {
             Closed?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void PackageDetailsView_OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var packageDetailsViewModel = this.DataContext as PackageDetailsViewModel;
+            var descriptionText = packageDetailsViewModel.PackageDescription;
+            if (!string.IsNullOrEmpty(descriptionText))
+            {
+                try
+                {
+                    AddHyperlinksToTextBlock(this.DescriptionBody, descriptionText);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Package Detail Extension Log");
+                    Console.WriteLine(ex.Message);
+                }
+            }
         }
     }
 }
