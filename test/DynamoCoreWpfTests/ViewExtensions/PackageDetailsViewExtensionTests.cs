@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Dynamo.PackageDetails;
 using Dynamo.PackageManager;
@@ -418,6 +418,88 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(packageToOpen, packageDetailsViewModel.PackageName);
             Assert.AreEqual(packageAuthor.First().username, packageDetailsViewModel.PackageAuthorName);
             Assert.AreEqual(packageDescription, packageDetailsViewModel.PackageDescription);
+        }
+
+        /// <summary>
+        /// Unit test of the URL detecting regex expression
+        /// </summary>
+        [Test]
+        public void TestGetURLMatchesFromString()
+        {
+            var text = @"1. https://www.example.com
+                         2. http://subdomain.example.org
+                         3. www.google.com
+                         4. ftp://ftp.example.net
+                         5. Visit our website at https://www.mywebsite.com
+                         6. Click here: http://www.link12345.info
+                         7. Check out our GitHub repository: https://github.com/yourusername/repo-name
+                         8. Learn more about regex: http://www.regex101.com
+                         9. URL with a query parameter: https://www.example.com/page?query=test
+                         10. No prefix link yahoo.com";
+
+            var matches = PackageDetailsView.GetURLMatchesFromString(text);
+            Assert.AreEqual(10, matches.Count);
+        }
+
+        /// <summary>
+        /// Tests if a descirption containing hyperlinks will be displayed correctly
+        /// </summary>
+        [Test]
+        public void TestDescriptionWithHyperlink()
+        {
+            // Arrange
+            string packageToOpen = "Sample View Extension";
+            List<User> packageAuthor = new List<User> { new User { _id = "1", username = "DynamoTeam" } };
+            string packageDescription = @"Description with www.hyperlink.com and https://hyperlink.com and hyperlink.com hyperlinks.";
+
+            PackageDetailsViewExtension.PackageManagerClientViewModel = ViewModel.PackageManagerClientViewModel;
+
+            PackageHeader packageHeader = new PackageHeader
+            {
+                _id = null,
+                name = packageToOpen,
+                versions = PackageVersions,
+                latest_version_update = System.DateTime.Now,
+                num_versions = PackageVersions.Count,
+                comments = null,
+                num_comments = 0,
+                latest_comment = null,
+                votes = 0,
+                downloads = 0,
+                repository_url = null,
+                site_url = null,
+                banned = false,
+                deprecated = false,
+                @group = null,
+                engine = null,
+                license = null,
+                used_by = null,
+                host_dependencies = Hosts,
+                num_dependents = 0,
+                description = packageDescription,
+                maintainers = packageAuthor,
+                keywords = null
+            };
+            PackageManagerSearchElement packageManagerSearchElement = new PackageManagerSearchElement(packageHeader);
+            PackageDetailsViewExtension.OpenPackageDetails(packageManagerSearchElement);
+            PackageDetailsView packageDetailsView = PackageDetailsViewExtension.PackageDetailsView;
+            Assert.IsInstanceOf<PackageDetailsViewModel>(packageDetailsView.DataContext);
+            PackageDetailsViewModel packageDetailsViewModel = packageDetailsView.DataContext as PackageDetailsViewModel;
+
+            // Act
+            PackageDetailsViewExtension.PackageManagerClientViewModel
+                .DynamoViewModel
+                .OnViewExtensionOpenWithParameterRequest("Package Details", packageManagerSearchElement);
+
+            var descriptionTextBlock = packageDetailsView.DescriptionBody;
+            var inlineCount = descriptionTextBlock.Inlines.Count;
+            var textCount = descriptionTextBlock.Inlines.OfType<System.Windows.Documents.Run>().Count();
+            var linkCount = descriptionTextBlock.Inlines.OfType<System.Windows.Documents.Hyperlink>().Count();
+
+            // Assert
+            Assert.AreEqual(7, inlineCount);
+            Assert.AreEqual(4, textCount);
+            Assert.AreEqual(3, linkCount);
         }
     }
 }

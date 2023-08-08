@@ -18,56 +18,6 @@ namespace Dynamo.PackageDetails
             InitializeComponent();
         }
 
-        private void AddHyperlinksToTextBlock(TextBlock textBlock, string text)
-        {
-            // Clear previous results   
-            if (textBlock == null) return;
-            textBlock.Inlines.Clear();
-
-            // Regular expression pattern to detect URLs
-            //string pattern = @"(?<url>https?://[^\s]+)";
-            //string pattern = @"(?<url>https?://[^\s]+)|(?<url>www\.[^\s]+)";
-            string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?)";
-
-            MatchCollection matches = Regex.Matches(text, pattern);
-
-            foreach (Match match in matches)
-            {
-                string url = match.Groups["url"].Value;
-                int startIndex = match.Index;
-                int length = match.Length;
-
-                // Add the non-hyperlink text before the URL
-                if (startIndex > 0)
-                {
-                    textBlock.Inlines.Add(new Run(text.Substring(0, startIndex)));
-                }
-
-                if (!string.IsNullOrEmpty(url))
-                {
-                    // Add the hyperlink
-                    Hyperlink hyperlink = new Hyperlink(new Run(url));
-                    Uri result;
-                    if (Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out result))
-                    {
-                        // the url is valid
-                        hyperlink.NavigateUri = result;
-                    }
-                    hyperlink.RequestNavigate += Hyperlink_RequestNavigate;
-                    textBlock.Inlines.Add(hyperlink);
-                }
-
-                // Remove the processed part of the text
-                text = text.Substring(startIndex + length);
-            }
-
-            // Add any remaining text (after the last hyperlink)
-            if (!string.IsNullOrEmpty(text))
-            {
-                textBlock.Inlines.Add(new Run(text));
-            }
-        }
-
         /// <summary>
         /// Allows for mousewheel scrolling in the DataGrid.
         /// </summary>
@@ -119,6 +69,75 @@ namespace Dynamo.PackageDetails
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Turns a plain text to series of runs and hyperlinks
+        /// and assigns it onto a TextBlock element
+        /// </summary>
+        /// <param name="textBlock">the TextBlock element to assign to</param>
+        /// <param name="text">the plain text to convert</param>
+        private void AddHyperlinksToTextBlock(TextBlock textBlock, string text)
+        {
+            // Clear previous results   
+            if (textBlock == null) return;
+            textBlock.Inlines.Clear();
+
+            MatchCollection matches = GetURLMatchesFromString(text);
+
+            int carryOver = 0;
+
+            foreach (Match match in matches)
+            {
+                string url = match.Groups["url"].Value;
+                int startIndex = match.Index - carryOver;
+                int length = match.Length;
+
+                // Add the non-hyperlink text before the URL
+                if (startIndex > 0)
+                {
+                    textBlock.Inlines.Add(new Run(text.Substring(0, startIndex)));
+                }
+
+                if (!string.IsNullOrEmpty(url))
+                {
+                    // Add the hyperlink
+                    Hyperlink hyperlink = new Hyperlink(new Run(url));
+                    Uri result;
+                    if (Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out result))
+                    {
+                        // the url is valid
+                        hyperlink.NavigateUri = result;
+                    }
+                    hyperlink.RequestNavigate += Hyperlink_RequestNavigate;
+                    textBlock.Inlines.Add(hyperlink);
+                }
+
+                // Remove the processed part of the text
+                text = text.Substring(startIndex + length);
+                carryOver += startIndex + length;
+            }
+
+            // Add any remaining text (after the last hyperlink)
+            if (!string.IsNullOrEmpty(text))
+            {
+                textBlock.Inlines.Add(new Run(text));
+            }
+        }
+
+        /// <summary>
+        /// Detect URL regex
+        /// </summary>
+        /// <param name="text">The string to find URL matches from</param>
+        /// <returns></returns>
+        internal static MatchCollection GetURLMatchesFromString(string text)
+        {
+            // Regular expression pattern to detect URLs
+            string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?)";
+
+            MatchCollection matches = Regex.Matches(text, pattern);
+
+            return matches;
         }
     }
 }
