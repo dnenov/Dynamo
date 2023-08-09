@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using Dynamo.Core;
 using Dynamo.Graph.Workspaces;
 using Dynamo.Interfaces;
 using Dynamo.PackageManager;
 using Dynamo.UI.Commands;
 using Dynamo.ViewModels;
+using Greg.Requests;
+using Microsoft.Extensions.Primitives;
 
 namespace Dynamo.PackageDetails
 {
@@ -28,7 +31,8 @@ namespace Dynamo.PackageDetails
                 return packageManagerClientViewModel.DynamoViewModel.PreferenceSettings;
             }
         }
-
+        private int numberVotes;
+        private bool hasVoted;
         #endregion
 
         #region Public Properties
@@ -77,7 +81,15 @@ namespace Dynamo.PackageDetails
         /// <summary>
         /// How many votes this package has received.
         /// </summary>
-        public int NumberVotes { get; }
+        public int NumberVotes
+        {
+            get => numberVotes;
+            set
+            {
+                if (value != numberVotes) { numberVotes = value; }
+                RaisePropertyChanged(nameof(NumberVotes));
+            }
+        }
 
         /// <summary>
         /// How many times this package has been downloaded.
@@ -110,12 +122,23 @@ namespace Dynamo.PackageDetails
         /// </summary>
         public bool IsEnabledForInstall { get; private set; }
 
+        public bool HasVoted
+        {
+            get => hasVoted;
+            set
+            {
+                if(value != hasVoted) { hasVoted = value; }
+                RaisePropertyChanged(nameof(HasVoted));
+            }
+        }
+
         #endregion
 
         #region Commands
 
         public DelegateCommand OpenDependencyDetailsCommand { get; set; }
         public DelegateCommand TryInstallPackageVersionCommand { get; set; }
+        public ICommand UpvoteCommand { get; set; }
 
         /// <summary>
         /// Retrieves a package by name and display its details in the PackageDetailsView.
@@ -144,6 +167,23 @@ namespace Dynamo.PackageDetails
             PackageInfo packageInfo = new PackageInfo(PackageName, Version.Parse(versionName));
             
             this.PackageDetailsViewExtension.PackageManagerClientViewModel.DownloadAndInstallPackage(packageInfo);
+        }
+
+        /// <summary>
+        /// Upvote a packge - only keep track if a packge is due an upvote, 
+        /// but do not commit to it until dispose - if it still needs upvoting, then propagate further
+        /// </summary>
+        /// <param name="obj"></param>
+        private void UpvotePackage(object obj)
+        {
+            HasVoted = !HasVoted;
+            NumberVotes = HasVoted ? ++NumberVotes : --NumberVotes;
+        }
+
+        private bool CanUpvotePackage(object obj)
+        {
+            // If any version of the package has been installed locally, then we allow voting
+            return PackageDetailItems.Any(x => !x.CanInstall);
         }
 
         /// <summary>
@@ -234,6 +274,7 @@ namespace Dynamo.PackageDetails
 
             OpenDependencyDetailsCommand = new DelegateCommand(OpenDependencyDetails);
             TryInstallPackageVersionCommand = new DelegateCommand(TryInstallPackageVersion);
+            UpvoteCommand = new DelegateCommand(UpvotePackage, CanUpvotePackage);
         }
 
         private void PackageLoaderOnPackageAdded(Package obj)
@@ -277,6 +318,11 @@ namespace Dynamo.PackageDetails
         internal void Dispose()
         {
             PackageDetailsViewExtension.PackageManagerExtension.PackageLoader.PackageAdded -= PackageLoaderOnPackageAdded;
+            if (HasVoted)
+            {
+                PackageManagerSearchElement packageManagerSearchElement = GetPackageByName(this.PackageName);
+                packageManagerSearchElement?.Upvote();
+            }
         }
     }
 }
