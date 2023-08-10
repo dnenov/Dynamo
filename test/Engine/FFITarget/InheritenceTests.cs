@@ -1,4 +1,4 @@
-namespace FFITarget
+﻿namespace FFITarget
 {
     public abstract class BaseTest
     {
@@ -55,13 +55,13 @@ namespace FFITarget
 
     public class HidesMethodFromClassA: ClassA
     {
-        public new int Bar()
+        public int Bar()
         {
             
             return 3; 
         }
 
-        public static new int Baz()
+        public static int Baz()
         {
             return 23;
         }

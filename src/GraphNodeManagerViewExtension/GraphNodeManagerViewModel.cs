@@ -483,11 +483,11 @@ namespace Dynamo.GraphNodeManager
                         NodesCollection.View.Refresh();
                 });
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException invalidOperationException)
             {
                 return;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
                 return;
             }

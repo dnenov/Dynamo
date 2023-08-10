@@ -1,8 +1,8 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Threading;
+using System.Windows.Shapes;
 using Dynamo.Controls;
 using Dynamo.UI;
 using Dynamo.UI.Controls;
@@ -101,7 +101,7 @@ namespace DynamoCoreWpfTests
     [TestFixture]
     public class ListAtLevelTest : RecordedUnitTestBase
     {
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Test01()
         {
             var listNode = "e4988561-5a7c-4936-8ba4-e07fda0dd733";

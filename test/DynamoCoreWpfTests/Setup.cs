@@ -10,7 +10,7 @@ using NUnit.Framework;
     {
         private AssemblyHelper assemblyHelper;
 
-        [OneTimeSetUp]
+        [SetUp]
         public void RunBeforeAllTests()
         {
             var assemblyPath = Assembly.GetExecutingAssembly().Location;
@@ -28,7 +28,7 @@ using NUnit.Framework;
             AppDomain.CurrentDomain.AssemblyResolve += assemblyHelper.ResolveAssembly;
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void RunAfterAllTests()
         {
             AppDomain.CurrentDomain.AssemblyResolve -= assemblyHelper.ResolveAssembly;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Windows.Threading;
 using Dynamo.Models;
@@ -59,11 +59,11 @@ namespace Dynamo.Tests
         {
             // Create a crash report to submit
             var crashReport = Wpf.Utilities.CrashUtilities.BuildMarkdownContent(null, null);
-            Assert.IsFalse(string.IsNullOrEmpty(crashReport));
+            Assert.IsNotNullOrEmpty(crashReport);
 
             // Mock url for request
             string url = Wpf.Utilities.CrashUtilities.GithubNewIssueUrlFromCrashContent(crashReport);
-            Assert.IsFalse(string.IsNullOrEmpty(url));
+            Assert.IsNotNullOrEmpty(url);
 
             // Report a bug with no details
             Assert.DoesNotThrow(() => DynamoViewModel.ReportABug());
@@ -78,7 +78,7 @@ namespace Dynamo.Tests
 
             // Create a crash report to submit
             var crashReport = Wpf.Utilities.CrashUtilities.BuildMarkdownContent(dynamoVersion, Packages);
-            Assert.IsFalse(string.IsNullOrEmpty(crashReport));
+            Assert.IsNotNullOrEmpty(crashReport);
 
             // Report a bug with a stack trace
             Assert.DoesNotThrow(() => DynamoViewModel.ReportABug(crashReport));
@@ -92,11 +92,11 @@ namespace Dynamo.Tests
 
             // Create a crash report to submit
             var crashReport = Wpf.Utilities.CrashUtilities.BuildMarkdownContent(dynamoVersion, Packages);
-            Assert.IsFalse(string.IsNullOrEmpty(crashReport));
+            Assert.IsNotNullOrEmpty(crashReport);
 
             // Mock url for request
             string url = Wpf.Utilities.CrashUtilities.GithubNewIssueUrlFromCrashContent(crashReport);
-            Assert.IsFalse(string.IsNullOrEmpty(url));
+            Assert.IsNotNullOrEmpty(url);
 
             // Get body content from request
             var query = "body=";
@@ -125,11 +125,11 @@ namespace Dynamo.Tests
 
             // Create a crash report to submit
             var crashReport = Wpf.Utilities.CrashUtilities.BuildMarkdownContent(dynamoVersion, packagesData);
-            Assert.IsFalse(string.IsNullOrEmpty(crashReport));
+            Assert.IsNotNullOrEmpty(crashReport);
 
             // Mock url for request
             string url = Wpf.Utilities.CrashUtilities.GithubNewIssueUrlFromCrashContent(crashReport);
-            Assert.IsFalse(string.IsNullOrEmpty(url));
+            Assert.IsNotNullOrEmpty(url);
 
             // Get body content from request
             var query = "body=";
@@ -159,11 +159,11 @@ namespace Dynamo.Tests
 
             // Create a crash report to submit
             var crashReport = Wpf.Utilities.CrashUtilities.BuildMarkdownContent(dynamoVersion, packagesData);
-            Assert.IsFalse(string.IsNullOrEmpty(crashReport));
+            Assert.IsNotNullOrEmpty(crashReport);
 
             // Mock url for request
             string url = Wpf.Utilities.CrashUtilities.GithubNewIssueUrlFromCrashContent(crashReport);
-            Assert.IsFalse(string.IsNullOrEmpty(url));
+            Assert.IsNotNullOrEmpty(url);
 
             // Get body content from request
             var query = "body=";

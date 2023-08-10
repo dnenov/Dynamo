@@ -130,7 +130,6 @@ namespace Dynamo.UI.Views
             // Bind event handlers
             webView.NavigationCompleted += WebView_NavigationCompleted;
             DynamoModel.RequestUpdateLoadBarStatus += DynamoModel_RequestUpdateLoadBarStatus;
-            DynamoModel.LanguageDetected += DynamoModel_LanguageDetected;
             StaticSplashScreenReady += OnStaticScreenReady;
             RequestLaunchDynamo = LaunchDynamo;
             RequestImportSettings = ImportSettings;
@@ -138,13 +137,9 @@ namespace Dynamo.UI.Views
             RequestSignOut = SignOut;
         }
 
-        private void DynamoModel_LanguageDetected()
+        private void WebView_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
         {
             SetLabels();
-        }
-
-        private void WebView_NavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
-        {            
             if (webView != null)
             {
                 webView.NavigationCompleted -= WebView_NavigationCompleted;
@@ -281,7 +276,7 @@ namespace Dynamo.UI.Views
             webView.CoreWebView2.Settings.IsZoomControlEnabled = false;
 
             var assembly = Assembly.GetExecutingAssembly();
-
+           
             using (Stream stream = assembly.GetManifestResourceStream(htmlEmbeddedFile))
             using (StreamReader reader = new StreamReader(stream))
             {
@@ -301,7 +296,6 @@ namespace Dynamo.UI.Views
                 jsonString = jsonString.Replace("#base64BackgroundImage", $"data:image/{imageFileExtension};base64,{resourceBase64}");
             }
 
-            jsonString = jsonString.Replace("Welcome to Dynamo!", "");
             htmlString = htmlString.Replace("mainJs", jsonString);
 
             webView.NavigateToString(htmlString);
@@ -480,7 +474,6 @@ namespace Dynamo.UI.Views
             base.OnClosed(e);
 
             DynamoModel.RequestUpdateLoadBarStatus -= DynamoModel_RequestUpdateLoadBarStatus;
-            DynamoModel.LanguageDetected -= DynamoModel_LanguageDetected;
             webView.Dispose();
             webView = null;
 

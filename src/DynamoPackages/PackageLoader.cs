@@ -89,6 +89,7 @@ namespace Dynamo.PackageManager
         /// If not, the root path is returned unchanged.
         /// </summary>
         /// <param name="root">root path to transform</param>
+        /// <param name="userDataFolder"></param>
         /// <param name="extension">subdirectory or subpath</param>
         /// <returns>combined root and extension path</returns>
         private static string TransformPath(string root, string extension)
@@ -110,21 +111,21 @@ namespace Dynamo.PackageManager
 
         private readonly IPathManager pathManager;
 
+        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         /// <summary>
         /// This constructor is currently being used for testing and these tests should be updated to use 
         /// another constructor when this is obsoleted.
         /// </summary>
-        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         public PackageLoader(string overridePackageDirectory)
             : this(new[] { overridePackageDirectory })
         {
         }
 
+        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         /// <summary>
         /// This constructor is currently being used by other constructors that have also been deprecated and by tests,
         /// which should be updated to use another constructor when this is obsoleted.
         /// </summary>
-        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         public PackageLoader(IEnumerable<string> packagesDirectories)
         {
             InitPackageLoader(packagesDirectories, null);
@@ -141,6 +142,7 @@ namespace Dynamo.PackageManager
             }
         }
 
+        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         /// <summary>
         /// Initialize a new instance of PackageLoader class.
         /// This constructor is currently being used for testing and these tests should be updated to use 
@@ -148,7 +150,6 @@ namespace Dynamo.PackageManager
         /// </summary>
         /// <param name="packagesDirectories">Default package directories</param>
         /// <param name="packageDirectoriesToVerify">Default package directories where node library files require certificate verification before loading</param>
-        [Obsolete("This constructor will be removed in Dynamo 3.0 and should not be used any longer. If used, it should be passed parameters from PathManager properties.")]
         public PackageLoader(IEnumerable<string> packagesDirectories, IEnumerable<string> packageDirectoriesToVerify)
             : this(packagesDirectories)
         {
@@ -573,9 +574,9 @@ namespace Dynamo.PackageManager
                     
                 }
             }
-            catch (UnauthorizedAccessException) { }
-            catch (IOException) { }
-            catch (ArgumentException) { }
+            catch (UnauthorizedAccessException ex) { }
+            catch (IOException ex) { }
+            catch (ArgumentException ex) { }
         }
 
         public Package ScanPackageDirectory(string directory)

@@ -196,7 +196,7 @@ namespace DynamoCoreWpfTests
 
         #region Pan Left, Right, Top, Down Canvas
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanPanLeft()
         {
@@ -217,7 +217,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(workspaceVM.Y, posY);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanPanRight()
         {
@@ -238,7 +238,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(workspaceVM.Y, posY);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanPanUp()
         {
@@ -259,7 +259,7 @@ namespace DynamoCoreWpfTests
             Assert.Greater(workspaceVM.Y, posY);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanPanDown()
         {
@@ -284,7 +284,7 @@ namespace DynamoCoreWpfTests
 
         #region Fit to View
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void FitViewWithNoNodes()
         {
@@ -303,7 +303,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(workspaceVM.Y, initY);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanFitView()
         {
@@ -326,7 +326,7 @@ namespace DynamoCoreWpfTests
             ViewModel.CurrentSpaceViewModel.Model.HasUnsavedChanges = false;
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanFitViewTwiceForActualZoom()
         {
@@ -349,7 +349,7 @@ namespace DynamoCoreWpfTests
             ViewModel.CurrentSpace.HasUnsavedChanges = false;
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void FitViewStressTest()
         {
@@ -373,7 +373,7 @@ namespace DynamoCoreWpfTests
             ViewModel.CurrentSpace.HasUnsavedChanges = false;
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanFitViewResetByZoom()
         {
@@ -400,7 +400,7 @@ namespace DynamoCoreWpfTests
             ViewModel.CurrentSpace.HasUnsavedChanges = false;
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void CanFitViewResetByPan()
         {
@@ -437,7 +437,7 @@ namespace DynamoCoreWpfTests
 
         #endregion
 
-        [Test,Apartment(ApartmentState.STA)]
+        [Test,RequiresSTA]
         [Category("DynamoUI")]
         public void PreferenceSetting_BackgroundPreview_1_0API()
         {
@@ -478,7 +478,7 @@ namespace DynamoCoreWpfTests
             #endregion
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void PreferenceSetting_RenderPrecision()
         {
@@ -509,7 +509,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(WithoutRenderPrecision.RenderPrecision, 128);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void PreferenceSetting_GroupStyles()
         {
@@ -567,13 +567,13 @@ namespace DynamoCoreWpfTests
             // Test loading old settings file with agreement
             var filePath = Path.Combine(GetTestDirectory(ExecutingDirectory), @"settings\DynamoSettings-AnalyticsTurnedOn.xml");
             var resultSetting = PreferenceSettings.Load(filePath);
-            Assert.AreEqual(false, resultSetting.IsAnalyticsReportingApproved);
+            Assert.AreEqual(true, resultSetting.IsAnalyticsReportingApproved);
             Assert.AreEqual(false, resultSetting.IsUsageReportingApproved);
             Assert.DoesNotThrow(() => Dynamo.Logging.AnalyticsService.ShutDown());
         }
 
         #region PreferenceSettings
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("DynamoUI")]
         public void PreferenceSetting()
         {
@@ -799,10 +799,9 @@ namespace DynamoCoreWpfTests
                 new DynamoModel.DefaultStartConfiguration()
                 {
                     StartInTestMode = startInTestMode,
-                    ProcessMode = startInTestMode 
-                        ? TaskProcessMode.Synchronous 
-                        : TaskProcessMode.Asynchronous,
-                    Preferences= PreferenceSettings.Instance
+                    ProcessMode = startInTestMode
+                        ? TaskProcessMode.Synchronous
+                        : TaskProcessMode.Asynchronous
                 });
 
             ViewModel = DynamoViewModel.Start(
@@ -877,7 +876,7 @@ namespace DynamoCoreWpfTests
             }
         }
 
-        [Test, Ignore("Test is no longer feasible.")]
+        [Test, Ignore]
         // Opacity is no longer affecting the visibility of infobubble. This requires opacity of UIElement
         // This test is no longer feasible. Keeping it for future reference
         [Category("DynamoUI")]

@@ -1,17 +1,15 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using Dynamo.Graph.Nodes;
 using Dynamo.Wpf.ViewModels.Watch3D;
-using HelixToolkit.SharpDX.Core;
 using HelixToolkit.Wpf.SharpDX;
 using NUnit.Framework;
 using SystemTestServices;
 
 namespace AnalysisTests
 {
-    [TestFixture, Apartment(ApartmentState.STA)]
+    [TestFixture, RequiresSTA]
     class LabelTests : SystemTestBase
     {
         protected void OpenVisualizationTest(string fileName)

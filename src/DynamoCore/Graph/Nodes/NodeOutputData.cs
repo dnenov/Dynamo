@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.Serialization;
@@ -94,7 +94,7 @@ namespace Dynamo.Graph.Nodes
             {
                 valNumberComparison = Math.Abs(Convert.ToDouble(this.InitialValue, CultureInfo.InvariantCulture) - Convert.ToDouble(converted.InitialValue, CultureInfo.InvariantCulture)) < .000001;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 //this just stays false.
                 valNumberComparison = false;
@@ -110,4 +110,5 @@ namespace Dynamo.Graph.Nodes
                 ((this.InitialValue == converted.InitialValue) || valNumberComparison || this.InitialValue.ToString() == converted.InitialValue.ToString());
         }
     }
+
 }

@@ -846,7 +846,7 @@ namespace DynamoCoreWpfTests
                 }
 
                 // Assert
-                Assert.IsTrue(string.IsNullOrEmpty(output));
+                Assert.IsNullOrEmpty(output);
             }
         }
 
@@ -863,7 +863,7 @@ namespace DynamoCoreWpfTests
                 var output = converter.SanitizeHtml(html);
 
                 // Assert
-                Assert.IsTrue(string.IsNullOrEmpty(output));
+                Assert.IsNullOrEmpty(output);
             }
         }
 

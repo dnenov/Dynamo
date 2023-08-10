@@ -44,17 +44,17 @@ namespace Dynamo.PythonServices.EventHandlers
 
 namespace Dynamo.PythonServices
 {
+    [SupressImportIntoVM]
     /// <summary>
     /// Enum of possible python evaluation states.
     /// </summary>
-    [SupressImportIntoVM]
     public enum EvaluationState { Success, Failed }
 
+    [SupressImportIntoVM]
+    [IsVisibleInDynamoLibrary(false)]
     /// <summary>
     /// This abstract class is intended to act as a base class for different python engines
     /// </summary>
-    [SupressImportIntoVM]
-    [IsVisibleInDynamoLibrary(false)]
     public abstract class PythonEngine
     {
         /// <summary>
@@ -84,11 +84,13 @@ namespace Dynamo.PythonServices
         /// <summary>
         /// Add an event handler before the Python evaluation begins
         /// </summary>
+        /// <param name="callback"></param>
         public abstract event EvaluationStartedEventHandler EvaluationStarted;
 
         /// <summary>
         /// Add an event handler after the Python evaluation has finished
         /// </summary>
+        /// <param name="callback"></param>
         public abstract event EvaluationFinishedEventHandler EvaluationFinished;
 
         /// <summary>
@@ -705,7 +707,7 @@ namespace Dynamo.PythonServices
                     var type = Type.GetType(typeName);
                     ImportedTypes.Add(name, type);
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     LogError(String.Format("Failed to load module: {0}, with statement: {1}", memberName, statement));
                     // Log(e.ToString());
@@ -1019,6 +1021,7 @@ namespace Dynamo.PythonServices
         /// the given regex
         /// </summary>
         /// <param name="code">The code to search</param>
+        /// <param name="valueRegex">Your regex to match the type</param>
         /// <returns>A dictionary of name to assignment line pairs</returns>
         internal Dictionary<string, Tuple<string, int, Type>> FindAllVariables(string code)
         {

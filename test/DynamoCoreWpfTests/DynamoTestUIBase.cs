@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -36,7 +36,7 @@ namespace DynamoCoreWpfTests
 
         protected string TempFolder { get; private set; }
 
-        [OneTimeSetUp]
+        [SetUp]
         public virtual void Start()
         {
             var assemblyPath = Assembly.GetExecutingAssembly().Location;
@@ -105,7 +105,7 @@ namespace DynamoCoreWpfTests
             };
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void Exit()
         {
             //Ensure that we leave the workspace marked as
@@ -139,7 +139,7 @@ namespace DynamoCoreWpfTests
             }
         }
 
-        [OneTimeTearDown]
+        [TestFixtureTearDown]
         public void FinalTearDown()
         {
             // Fix for COM exception on close

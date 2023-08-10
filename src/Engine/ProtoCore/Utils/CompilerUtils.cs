@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -193,7 +193,6 @@ namespace ProtoCore.Utils
         /// </summary>
         /// <param name="code"></param>
         /// <param name="core"></param>
-        /// <param name="codeBlock"></param>
         /// <param name="blockId"></param>
         /// <returns></returns>
         public static ProtoCore.BuildStatus PreCompile(string code, Core core, CodeBlockNode codeBlock, out int blockId)
@@ -223,9 +222,7 @@ namespace ProtoCore.Utils
 
                 if (!(ex is ProtoCore.BuildHaltException))
                 {
-#pragma warning disable CA2200 // Rethrow to preserve stack details
                     throw ex;
-#pragma warning restore CA2200 // Rethrow to preserve stack details
                 }
             }
 
@@ -265,6 +262,7 @@ namespace ProtoCore.Utils
             return status.ErrorCount == 0;
         }
 
+        [Obsolete("This method is deprecated and will be removed in Dynamo 3.0")]
         /// <summary>
         /// Pre-compiles DS code in code block node, 
         /// checks for syntax, converts non-assignments to assignments,
@@ -275,7 +273,6 @@ namespace ProtoCore.Utils
         /// <param name="parseParams"> container for compilation related parameters </param>
         /// <param name="priorNames"></param>
         /// <returns> true if code compilation succeeds, false otherwise </returns>
-        [Obsolete("This method is deprecated and will be removed in Dynamo 3.0")]
         public static bool PreCompileCodeBlock(Core core, ref ParseParam parseParams, IDictionary<string, string> priorNames = null)
         {
             return PreCompileCodeBlock(core, parseParams, priorNames);

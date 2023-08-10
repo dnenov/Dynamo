@@ -963,7 +963,8 @@ namespace ProtoCore.DSASM
         /// <summary>
         /// Returns an array's next key
         /// </summary>
-        /// <param name="runtimeCore"></param>
+        /// <param name="key"></param>
+        /// <param name="core"></param>
         /// <returns></returns>
         public StackValue GetNextKey(RuntimeCore runtimeCore)
         {
@@ -1000,7 +1001,7 @@ namespace ProtoCore.DSASM
         /// Convert StackValue to boolean typed StackValue. Returns 
         /// StackValue.Null if not able to do conversion.
         /// </summary>
-        /// <param name="runtimeCore"></param>
+        /// <param name="core"></param>
         /// <returns></returns>
         public StackValue ToBoolean(RuntimeCore runtimeCore)
         {

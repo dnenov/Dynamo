@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices;
 
 namespace FFITarget
 {
@@ -179,14 +178,5 @@ namespace FFITarget
         {
             throw new NotImplementedException();
         }
-    }
-
-    public class MissingClass
-    {
-        public static long MissingMethod([In, Optional] object value)
-        {
-            return (long)value;
-        }
-
     }
 }

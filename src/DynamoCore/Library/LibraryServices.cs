@@ -742,7 +742,7 @@ namespace Dynamo.Engine
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception exception)
             {
                 return; // if the XML file is badly formatted, return like it doesn't exist
             }

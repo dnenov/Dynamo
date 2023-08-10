@@ -49,7 +49,6 @@ namespace ProtoCore
             /// Experimental constructor that takes in a core object
             /// Takes a core object to read static data
             /// </summary>
-            /// <param name="core"></param>
             /// <param name="sv"></param>
             public MirrorData(ProtoCore.Core core, StackValue sv)
             {
@@ -60,8 +59,6 @@ namespace ProtoCore
             /// <summary>
             /// Takes a runtime core object to read runtime data
             /// </summary>
-            /// <param name="core"></param>
-            /// <param name="runtimeCore"></param>
             /// <param name="sv"></param>
             public MirrorData(ProtoCore.Core core, ProtoCore.RuntimeCore runtimeCore, StackValue sv)
             {
@@ -187,7 +184,7 @@ namespace ProtoCore
             /// it returns null.
             /// </summary>
             /// <param name="sv">StackValue</param>
-            /// <param name="runtimeCore">ProtoCore.Core</param>
+            /// <param name="core">ProtoCore.Core</param>
             /// <returns>System.Object</returns>
             internal static object GetData(StackValue sv, RuntimeCore runtimeCore)
             {

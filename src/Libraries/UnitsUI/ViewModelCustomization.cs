@@ -144,7 +144,8 @@ namespace UnitsUI
         /// Called when Toggle button is clicked.
         /// Switches the combo box values
         /// </summary>
-        /// <param name="obj">The sender.</param>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void OnSwitchUnitsButtonClick(object obj)
         {
             dynamoConvertModel.SwitchUnitsDropdownValues();

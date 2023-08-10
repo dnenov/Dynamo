@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using FFITarget;
 using NUnit.Framework;
@@ -227,26 +226,6 @@ import (EmbeddedInteropTestClass from ""..\\..\\..\\test\\test_dependencies\\Emb
             thisTest.Verify("o", true);
         }
 #endif
-
-        [Test]
-        public void Test_OfficeImportedTypes()
-        {
-            string code = @"import (""DSOffice.dll"");";
-            thisTest.RunScriptSource(code);
-
-            var officeTypes = new List<string>();
-            var dsOfficeTypes = CLRModuleType.GetTypes((CLRModuleType x) => x.CLRType.Assembly.GetName().Name.StartsWith("DSOffice")).ToList();
-            foreach (var x in dsOfficeTypes)
-            {
-                if (x.FullName.Contains("Microsoft.Office"))
-                {
-                    officeTypes.Add(x.FullName);
-                }
-            }
-
-            Assert.AreEqual(0, officeTypes.Count);
-        }
-
         [Test]
         public void Test_FFIImportExceptionContainsNameOfType()
         {
@@ -272,18 +251,6 @@ import (EnumReferencingClass from ""FFITarget.dll"");
 
             thisTest.RunScriptSource(code);
             thisTest.Verify("val", "Friday is the best");
-        }
-
-        [Test]
-        public void Test_FFI_ImportMissingTypeParameter()
-        {
-            var val = 30;
-            string code = $@"
-        import (MissingClass from ""FFITarget.dll"");
-        x = MissingClass.MissingMethod({val});";
-
-            thisTest.RunScriptSource(code);
-            thisTest.Verify("x", val);
         }
     }
 }

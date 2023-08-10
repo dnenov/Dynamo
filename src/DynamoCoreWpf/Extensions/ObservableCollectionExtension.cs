@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using Dynamo.Wpf.ViewModels;
 
 namespace Dynamo.Wpf.Extensions
@@ -12,7 +12,6 @@ namespace Dynamo.Wpf.Extensions
         /// A method to insert an element to collection by index. If index exceeds 
         /// count of elements element will be pushed to the tail of collection.
         /// </summary>
-        /// <param name="items"></param>
         /// <param name="index">Index to insert element to.</param>
         /// <param name="entry">Element to insert.</param>
         public static void TryInsert(this ObservableCollection<ISearchEntryViewModel> items, int index, ISearchEntryViewModel entry)

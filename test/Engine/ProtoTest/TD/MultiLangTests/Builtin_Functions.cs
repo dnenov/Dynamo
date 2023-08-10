@@ -1967,6 +1967,7 @@ z = Insert(x, y, -1);
 ";
             string error = "";
             thisTest.VerifyRunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("z", new Object[] { 1, new Object[] { 3, 3 }, 2 });
         }
 
@@ -1985,6 +1986,7 @@ z = [Imperative]
 ";
             string error = "";
             thisTest.VerifyRunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("z", new Object[] { 1, new Object[] { 3, 3 }, 2 });
         }
 
@@ -2005,6 +2007,7 @@ z = foo();
 ";
             string error = "";
             thisTest.VerifyRunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("z", new Object[] { 1, new Object[] { 3, 3 }, 2 });
         }
 
@@ -2025,6 +2028,7 @@ z = foo();
 ";
             string error = "";
             thisTest.VerifyRunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("z", new Object[] { 1, new Object[] { 1, 2 }, 2 });
         }
 
@@ -2047,6 +2051,7 @@ z = foo();
 ";
             string error = "";
             thisTest.VerifyRunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("z", new Object[] { 1, new Object[] { 1, 2 }, 2 });
         }
 

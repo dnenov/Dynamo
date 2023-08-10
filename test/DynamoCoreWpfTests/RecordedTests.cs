@@ -1,10 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
-using System.Threading;
 using CoreNodeModels.Input;
 using Dynamo;
 using Dynamo.Configuration;
@@ -294,7 +293,7 @@ namespace DynamoCoreWpfTests
 
         #region Recorded Test Cases for Command Framework
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void _SnowPeashooter()
         {
             RunCommandsFromFile("SnowPeashooter.xml");
@@ -308,7 +307,7 @@ namespace DynamoCoreWpfTests
             //Assert.Inconclusive("Porting : DoubleInput");
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestPausePlaybackCommand()
         {
             int pauseDurationInMs = randomizer.Next(2000);
@@ -318,7 +317,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.PauseDurationInMs, cmdTwo.PauseDurationInMs);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestRunCancelCommand()
         {
             bool showErrors = randomizer.Next(2) == 0;
@@ -330,7 +329,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.CancelRun, cmdTwo.CancelRun);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateNodeCommand()
         {
             // Create the command in completely unpredictable states. These 
@@ -359,7 +358,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(true, cmdTwo.IsInPlaybackMode);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateAndConnectNodeCommand()
         {
             // Create the command in completely unpredictable states. These 
@@ -393,7 +392,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(true, cmdTwo.IsInPlaybackMode);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateNoteCommand()
         {
             // Create the command in completely unpredictable states. These 
@@ -416,7 +415,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.DefaultPosition, cmdTwo.DefaultPosition);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestSelectModelCommand()
         {
             Guid modelGuid = Guid.NewGuid();
@@ -430,7 +429,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.Modifiers, cmdTwo.Modifiers);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestSelectInRegionCommand()
         {
             var region = new Rect2D(
@@ -451,7 +450,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.IsCrossSelection, cmdTwo.IsCrossSelection);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestDragSelectionCommand()
         {
             var point = new Point2D(
@@ -470,7 +469,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.DragOperation, cmdTwo.DragOperation);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestMakeConnectionCommand()
         {
             Guid nodeId = Guid.NewGuid();
@@ -489,7 +488,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.ConnectionMode, cmdTwo.ConnectionMode);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestDeleteModelCommand()
         {
             Guid modelGuid = Guid.NewGuid();
@@ -498,7 +497,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.ModelGuid, cmdTwo.ModelGuid);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUndoRedoCommand()
         {
             var operation = ((DynamoModel.UndoRedoCommand.Operation)randomizer.Next(2));
@@ -507,7 +506,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.CmdOperation, cmdTwo.CmdOperation);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUpdateModelValueCommand0()
         {
             Guid modelGuid = Guid.NewGuid();
@@ -522,7 +521,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.Value, cmdTwo.Value);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUpdateModelValueCommand1()
         {
             var modelGuids = new[]
@@ -546,7 +545,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.Value, cmdTwo.Value);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateCustomNodeCommand()
         {
             Guid modelGuid = Guid.NewGuid();
@@ -566,7 +565,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.MakeCurrent, cmdTwo.MakeCurrent);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Defect_MAGN_6821_withoutInput()
         {
                
@@ -591,7 +590,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Defect_MAGN_6821_withInput()
         {
             
@@ -616,7 +615,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Defect_MAGN_6821_multipleInput()
         {        
             // Create Multiple Input nodes
@@ -638,7 +637,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Defect_MAGN_6821_multipleInstance()
         {         
             //Create Multiple Instances nodes
@@ -660,7 +659,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
 
         public void Defect_MAGN_6821_nestedCustomNode()
         {          
@@ -774,7 +773,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestRunEnabledButtonCanBeDisabled()
         {
             RunCommandsFromFile("TestRunEnabledButtonCanBeDisabled.xml", (commandTag) =>
@@ -794,7 +793,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Defect_MAGN_1143_CN()
         {
             // modify the name of the input node
@@ -887,7 +886,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestSwitchTabCommand()
         {
             var cmdOne = new DynamoModel.SwitchTabCommand(randomizer.Next());
@@ -895,7 +894,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(cmdOne.WorkspaceModelIndex, cmdTwo.WorkspaceModelIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateNodeCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestCreateNodeCommandWithMultyGuids.xml");
@@ -912,7 +911,7 @@ namespace DynamoCoreWpfTests
             Assert.NotNull(node);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCreateNoteCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestCreateNoteCommandWithMultiGuids.xml");
@@ -925,7 +924,7 @@ namespace DynamoCoreWpfTests
             Assert.NotNull(node);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestSelectModelCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestSelectModelCommandWithMultiGuids.xml");
@@ -942,7 +941,7 @@ namespace DynamoCoreWpfTests
             Assert.NotNull(node);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestMakeConnectionCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestMakeConnectionCommandWithMultiGuids.xml");
@@ -954,7 +953,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(1, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestDeleteModelCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestDeleteModelCommandWithMultiGuids.xml");
@@ -966,7 +965,7 @@ namespace DynamoCoreWpfTests
             Assert.NotNull(node);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestModelEventCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestModelEventCommandWithMultiGuids.xml");
@@ -983,7 +982,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(2, node.InPorts.Count);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUpdateModelValueCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestUpdateModelValueCommandWithMultiGuids.xml");
@@ -995,7 +994,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(3, workspace.Nodes.OfType<DoubleInput>().Count(node => node.Value == "5"));
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUngroupModelCommandWithMultiGuids()
         {
             RunCommandsFromFile("TestUngroupModelCommandWithMultiGuids.xml");
@@ -1013,7 +1012,7 @@ namespace DynamoCoreWpfTests
             Assert.IsTrue(group.Nodes.Any(m => m.GUID == Guid.Parse("7dc3b638-284f-4296-a793-8185ef42cd71")));
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestNodeDeletionWhileMakingConnectionToOtherNode()
         {
             RunCommandsFromFile("DeleteNodeWhileConnecting.xml");
@@ -1031,7 +1030,7 @@ namespace DynamoCoreWpfTests
         /// 3. Reconnect the 2 wires to the second number node using shift + click
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestShiftReconnections()
         {
             RunCommandsFromFile("TestShiftReconnections.xml");
@@ -1041,7 +1040,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("b4df09e1-0041-4e4c-b417-325f27224e6c", 5.0);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestShiftReconnectionsUndo()
         {
             RunCommandsFromFile("TestShiftReconnectionsUndo.xml");
@@ -1052,7 +1051,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("7552b4cd-13b2-4921-aff8-682ec0dfd6fb", 2.0);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestShiftReconnectionsUndoRedo()
         {
             RunCommandsFromFile("TestShiftReconnectionsUndoRedo.xml");
@@ -1071,7 +1070,7 @@ namespace DynamoCoreWpfTests
         /// 3. Shift + click on the output port of number node, then click anywhere on the canvas to remove the two connectors
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestShiftReconnectionsCancel()
         {
             RunCommandsFromFile("TestShiftReconnectionsCancel.xml");
@@ -1088,7 +1087,7 @@ namespace DynamoCoreWpfTests
         /// 3. Use ctrl + click to connect the number node to the 4 inputs of add and subtract nodes
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCtrlConnections()
         {
             RunCommandsFromFile("TestCtrlConnections.xml");
@@ -1108,7 +1107,7 @@ namespace DynamoCoreWpfTests
         /// 4. Use ctrl + click to connect "5.000" to the add and subtract nodes
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCtrlConnectionsUndo()
         {
             RunCommandsFromFile("TestCtrlConnectionsUndo.xml");
@@ -1120,7 +1119,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("511760d9-1a05-41a8-bcc8-8856a95b1df0", 0.0); // value of the subtract node (2-2)
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCtrlConnectionsUndoRedo()
         {
             RunCommandsFromFile("TestCtrlConnectionsUndoRedo.xml");
@@ -1140,7 +1139,7 @@ namespace DynamoCoreWpfTests
         /// 3. Grab the connector from y input port and hit undo
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestReconnectionUndo()
         {
             RunCommandsFromFile("TestReconnectionUndo.xml");
@@ -1321,7 +1320,7 @@ namespace DynamoCoreWpfTests
 
         #region General Node Operations Test Cases
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void MultiPassValidationSample()
         {
             RunCommandsFromFile("MultiPassValidationSample.xml", (commandTag) =>
@@ -1341,7 +1340,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestModifyPythonNodes()
         {
             RunCommandsFromFile("ModifyPythonNodes.xml");
@@ -1355,7 +1354,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual("# Modification 4", pvarin.Script);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestModifyPythonNodesUndo()
         {
             RunCommandsFromFile("ModifyPythonNodesUndo.xml");
@@ -1369,7 +1368,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual("# Modification 2", pvarin.Script);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestModifyPythonNodesUndoRedo()
         {
             RunCommandsFromFile("ModifyPythonNodesUndoRedo.xml");
@@ -1405,7 +1404,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("345cd2d4-5f3b-4eb0-9d5f-5dd90c5a7493", 36.0);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestPreviewToggleConnectionMultiOutputNode()
         {
             RunCommandsFromFile("multioutput_node_preview.xml", (commandTag) =>
@@ -1427,7 +1426,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestAddingAndRemovingConnectors()
         {
             RunCommandsFromFile("TestAddingAndRemovingConnectors.xml", (commandTag) =>
@@ -1461,7 +1460,7 @@ namespace DynamoCoreWpfTests
 
         #region Basic CodeBlockNode Test Cases
 
-        [Test, Apartment(ApartmentState.STA), Category("Failure")]
+        [Test, RequiresSTA, Category("Failure")]
         public void TestBasicCodeBlockNodePortCreation()
         {
             RunCommandsFromFile("TestBasicPortCreation.xml");
@@ -1512,7 +1511,7 @@ namespace DynamoCoreWpfTests
         /// 5. Redo once (connector restored)
         /// 
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void RedoDeletedNodeShowsConnector()
         {
             RunCommandsFromFile("RedoDeletedNodeShowsConnector.xml", (commandTag) =>
@@ -1563,7 +1562,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUnresolvedCodeBlockNodeUndo()
         {
             bool undo_1 = false;
@@ -1597,7 +1596,7 @@ namespace DynamoCoreWpfTests
         /// Creates a Code Block Node with a single line comment and multi line comment 
         /// checks if the ports are created properly and at the correct height
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCommentsInCodeBlockNode()
         {
             RunCommandsFromFile("TestCommentsInCodeBlockNode.xml");
@@ -1623,7 +1622,7 @@ namespace DynamoCoreWpfTests
         /// Create a code block node with some ports connected and others unconnected. Change all variable names
         /// and ensure that connectors remain to the port index.
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCodeBlockNodeConnectionOnCodeChange()
         {
             RunCommandsFromFile("TestCodeBlockNodeConnectionSwitching.xml");
@@ -1652,7 +1651,7 @@ namespace DynamoCoreWpfTests
         /// Creates 3 number nodes and an add (+) nodes. Connects 2 of the number
         /// nodes to the + node. Then converts all the nodes to Code.
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestConvertAllNodesToCode()
         {
             Assert.Inconclusive("Node To Code feature has been removed");
@@ -1681,7 +1680,7 @@ namespace DynamoCoreWpfTests
         /// Converts a set of nodes to code. Then does Undo and checks that the original set of
         /// nodes are formed again.
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestConvertAllNodesToCodeUndo()
         {
             //RunCommandsFromFile("TestConvertAllNodesToCodeUndo.xml");
@@ -1713,7 +1712,7 @@ namespace DynamoCoreWpfTests
         /// Ensures that redo works for NodeToCode by converting a set of nodes to
         /// code and then undoing and redoing it again.
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestConvertAllNodesToCodeUndoRedo()
         {
             Assert.Inconclusive("Node to Code has been removed");
@@ -1738,7 +1737,7 @@ namespace DynamoCoreWpfTests
             Assert.True(cbn.Code.Contains("69"));
         }
 
-        [Ignore("Unknown reason"), Apartment(ApartmentState.STA)]
+        [Ignore, RequiresSTA]
         public void TestDeleteCommands_DS()
         {
             RunCommandsFromFile("TestDeleteCommands_DS.xml");
@@ -1760,7 +1759,7 @@ namespace DynamoCoreWpfTests
             VerifyModelExistence(nodeExistenceMap);
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("Failure")]
+        [Test, RequiresSTA, Category("Failure")]
         public void TestUndoRedoNodesAndConnections_DS()
         {
             RunCommandsFromFile("TestUndoRedoNodesAndConnection_DS.xml");
@@ -1778,7 +1777,7 @@ namespace DynamoCoreWpfTests
             VerifyModelExistence(nodeExistenceMap);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestUpdateNodeCaptions_DS()
         {
             RunCommandsFromFile("TestUpdateNodeCaptions_DS.xml");
@@ -1792,7 +1791,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual("CBN", cbn.Name);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void ReExecuteASTTest()
         {
             RunCommandsFromFile("ReExecuteASTTest.xml", (commandTag) =>
@@ -1813,7 +1812,7 @@ namespace DynamoCoreWpfTests
             });
         }
         
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void ErrorInCBN_3872()
         {
             // add a new line of code in a CBN in warning stage and see if the warning persists
@@ -1832,7 +1831,7 @@ namespace DynamoCoreWpfTests
                 }
             });
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void Array_CBN_3921()
         {
             // No error and no output port for the code written with curly braces in CBN
@@ -1850,7 +1849,7 @@ namespace DynamoCoreWpfTests
 
         #region Defect Verifications Test Cases
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void UpdatingCbnShouldCauseDownstreamExecution()
         {
             // This test is meant to verify the fix for MAGN-7575 where updating
@@ -1881,7 +1880,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("RegressionTests")]
+        [Test, RequiresSTA, Category("RegressionTests")]
         public void Defect_MAGN_1956()
         {
             // Details are available in defect http://adsk-oss.myjetbrains.com/youtrack/issue/MAGN-1956
@@ -1889,7 +1888,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("bbec3d26-e220-4b55-9da6-ca1f37a55d7f", -10);
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("RegressionTests")]
+        [Test, RequiresSTA, Category("RegressionTests")]
         public void Defect_MAGN_159()
         {
             // Details are available in defect http://adsk-oss.myjetbrains.com/youtrack/issue/MAGN-159
@@ -1904,7 +1903,7 @@ namespace DynamoCoreWpfTests
             //Assert.Inconclusive("Porting : DoubleInput");
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         [Category("Failure")] // Node2Code is disabled for the time being
         public void Defect_MAGN_164_DS()
@@ -1927,7 +1926,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_190_DS()
         {
@@ -1949,7 +1948,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_225_DS()
         {
@@ -1962,7 +1961,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_397_DS()
         {
@@ -1973,7 +1972,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_411()
         {
@@ -1989,7 +1988,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual("b", cbn.InPorts[0].ToolTip);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_429_DS()
         {
@@ -2001,7 +2000,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_478_DS()
         {
@@ -2013,7 +2012,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(1, workspace.Notes.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_491_DS()
         {
@@ -2040,7 +2039,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(secondPoint.Y, secondConnector.CurvePoint3.Y);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_520_DS()
         {
@@ -2053,7 +2052,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_520_WithCrossSelection_DS()
         {
@@ -2066,7 +2065,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_581_DS()
         {
@@ -2077,7 +2076,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_590()
         {
@@ -2095,7 +2094,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(2, connector.End.Index);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_775()
         {
@@ -2105,7 +2104,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, workspace.Connectors.Count());
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_585()
         {
@@ -2127,7 +2126,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(1, cbn.InPorts.Count);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_605()
         {
@@ -2160,7 +2159,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_624_1()
         {
@@ -2192,7 +2191,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(3, cbn.OutPorts[2].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_590_1()
         {
@@ -2225,7 +2224,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(2, connector.End.Index);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_589_1()
         {
@@ -2255,7 +2254,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(4, cbn.OutPorts[2].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_589_2()
         {
@@ -2284,7 +2283,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(3, cbn.OutPorts[1].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_589_3()
         {
@@ -2320,7 +2319,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(8, cbn.OutPorts[4].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_828()
         {
@@ -2345,7 +2344,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, cbn.OutPorts[0].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_613()
         {
@@ -2366,7 +2365,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, cbn.OutPorts[0].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_904()
         {
@@ -2392,7 +2391,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(0, cbn.OutPorts[1].MarginThickness.Top);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_830()
         {
@@ -2415,7 +2414,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_803()
         {
@@ -2442,7 +2441,7 @@ namespace DynamoCoreWpfTests
         /// Eventually the evaluation will be done at record playback side thus remove the need
         /// of having multiple files.
         /// </summary>
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void TestCBNWithNodeToCode()
         {
@@ -2468,7 +2467,7 @@ namespace DynamoCoreWpfTests
             AssertValue("c_089fbe21a34547759592b683550558dd", 8);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_902()
         {
@@ -2492,7 +2491,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_422()
         {
@@ -2516,7 +2515,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(3, cbn.OutPorts[1].LineIndex);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_422_1()
         {
@@ -2634,7 +2633,7 @@ namespace DynamoCoreWpfTests
             AssertValue("b_9b638b99d63145838b82662a60cdf6bc", 0);
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("Failure")]
+        [Test, RequiresSTA, Category("Failure")]
         [Category("RegressionTests")]
         public void MethodResolutionFailRedef_MAGN_2262()
         {
@@ -2654,7 +2653,7 @@ namespace DynamoCoreWpfTests
         }
 
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCallsiteMapModifyFunctionParamValue()
         {
             Guid callsiteGuidFirstCall = Guid.Empty;
@@ -2703,7 +2702,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_1412_CreateList()
         {
@@ -2713,7 +2712,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(4, workspace.Nodes.Count());
             Assert.AreEqual(2, workspace.Connectors.Count());
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_1344_PythonEditor()
         {
@@ -2724,7 +2723,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(3, workspace.Nodes.Count());
             Assert.AreEqual(2, workspace.Connectors.Count());
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2208_DeleteCBN()
         {
@@ -2733,7 +2732,7 @@ namespace DynamoCoreWpfTests
             RunCommandsFromFile("Defect_MAGN_2208_DeleteCBN.xml");
             Assert.AreEqual(0, workspace.Nodes.Count());
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2201_WatchCBN()
         {
@@ -2741,7 +2740,7 @@ namespace DynamoCoreWpfTests
             RunCommandsFromFile("Defect_MAGN_2201_WatchCBN.xml");
             Assert.AreEqual(3, workspace.Nodes.Count());
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_747_MultiReference()
         {
@@ -2752,7 +2751,7 @@ namespace DynamoCoreWpfTests
         }
 
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestCallsiteMapModifyInputConnection()
         {
             Guid callsiteGuidFirstCall = Guid.Empty;
@@ -2801,7 +2800,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         public void TestNodeToCallsitesObjMapModifyInputConnection()
         {
             Guid callsiteIdFirstCall = new Guid();
@@ -2858,7 +2857,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
 
         //Details for steps can be found in defect http://adsk-oss.myjetbrains.com/youtrack/issue/MAGN-2521
@@ -2894,7 +2893,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests"), Category("Failure")]
         public void Defect_MAGN_2378()
         {
@@ -2924,7 +2923,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("Failure")]
+        [Test, RequiresSTA, Category("Failure")]
         [Category("RegressionTests")]
         public void Defect_MAGN_2378_AnotherScenario()
         {
@@ -2960,7 +2959,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2100()
         {
@@ -2988,7 +2987,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue(nodeGuid, 11);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2102()
         {
@@ -3032,7 +3031,7 @@ namespace DynamoCoreWpfTests
             });
         }
 
-        [Test, Apartment(ApartmentState.STA), Category("Failure")]
+        [Test, RequiresSTA, Category("Failure")]
         [Category("RegressionTests")]
         public void Defect_MAGN_2272()
         {
@@ -3069,7 +3068,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2528()
         {
@@ -3087,7 +3086,7 @@ namespace DynamoCoreWpfTests
         }
 
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2453()
         {
@@ -3123,7 +3122,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_1463()
         {
@@ -3155,7 +3154,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2593()
         {
@@ -3216,7 +3215,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3113()
         {
@@ -3236,7 +3235,7 @@ namespace DynamoCoreWpfTests
         }
 
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2373()
         {
@@ -3270,7 +3269,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2563()
         {
@@ -3288,7 +3287,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(ElementState.Dead, node.State);
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2247()
         {
@@ -3328,7 +3327,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2311()
         {
@@ -3361,7 +3360,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_2279()
         {
@@ -3410,7 +3409,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3116()
         {
@@ -3445,7 +3444,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         [Category("Failure")]
         public void Defect_MAGN_2290()
@@ -3495,7 +3494,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3166()
         {
@@ -3543,7 +3542,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3599()
         {
@@ -3588,7 +3587,7 @@ namespace DynamoCoreWpfTests
         }
 
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3580()
         {
@@ -3673,7 +3672,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_3212()
         {
@@ -3717,7 +3716,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests"), Category("Failure")]
         public void TestCancelExecution()
         {
@@ -3747,7 +3746,7 @@ namespace DynamoCoreWpfTests
             
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("Failure")]
         public void TestCancelExecutionWhileLoop()
         {
@@ -3786,7 +3785,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("91fb442c-8e17-4a2f-8b0b-cf520b543c18", new object [] { 43} );
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_4710()
         {
@@ -3828,7 +3827,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_4659()
         {
@@ -3870,7 +3869,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void RunAutomatically_On_5068()
         {
@@ -3910,7 +3909,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]        
         public void EqualEqualTest_Defect6694()
         {
@@ -3968,7 +3967,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void PointDoesntUpdateProperlyWithRageChange_MAGN7635()
         {
@@ -4025,7 +4024,7 @@ namespace DynamoCoreWpfTests
             AssertPreviewValue("045decd1-7454-4b85-b92e-d59d35f31ab2", 8);
         }
 
-        [Ignore("Unknown reason")]
+        [Ignore]
         public void Defect_MAGN_160()
         {
             // Details are available in defect http://adsk-oss.myjetbrains.com/youtrack/issue/MAGN-160
@@ -4175,7 +4174,7 @@ namespace DynamoCoreWpfTests
 
         }
 
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Defect_MAGN_581()
         {
@@ -4403,7 +4402,7 @@ namespace DynamoCoreWpfTests
                 }
             });
         }
-        [Test, Apartment(ApartmentState.STA)]
+        [Test, RequiresSTA]
         [Category("RegressionTests")]
         public void Lacing_Deffect_5759()
         {
@@ -4818,6 +4817,7 @@ namespace DynamoCoreWpfTests
                 {
                     AssertPreviewValue("93d9bb4d-4da0-422e-add0-3b6d71cee598", 3);//minus node
                     AssertPreviewValue("9b00f9cf-9590-468f-9579-89e76a0d1ab5", 3);//cbn node
+                    AssertPreviewValue("013c4b13-2b50-4385-adb2-39861ca5fa1d", 3);//formula node
                 }
                 else if (commandTag == "SecondRun")
                 {
@@ -4825,6 +4825,7 @@ namespace DynamoCoreWpfTests
                 }
                 else if (commandTag == "ThirdRun")
                 {
+                    AssertPreviewValue("fc7308e1-546b-4f60-8342-d607692db435", 1);//formula node
                     AssertPreviewValue("3507e4b6-209f-46d1-9ebd-cf9b66088c65", 1);//remainder node
                     AssertPreviewValue("37592d1c-992e-4101-8bad-f1f4c031634c", 1);//cbn node
                 }
@@ -4836,10 +4837,12 @@ namespace DynamoCoreWpfTests
                 {
                     AssertPreviewValue("389b90e5-83ea-4f38-966a-fbce6d5cb550", false);// <= node
                     AssertPreviewValue("fd2c046b-5b3a-46e1-972c-b4deabb7d72f", false);//cbn node
+                    AssertPreviewValue("d9cc11a5-58a0-43c3-939b-30e5e238e37d", false);//formula node         
                 }
                 else if (commandTag == "SixthRun")
                 {
                     AssertPreviewValue("194b2c6c-226d-42a0-acab-db55c5cc74ea", false); //== node
+                    AssertPreviewValue("48c497fb-376e-473b-b31c-f7865b7c2229", false);//formula node
                     AssertPreviewValue("23ee05b2-1e02-4537-83f0-1ac8a65bc87a", false);//cbn 
                 }
                 else if (commandTag == "SeventhRun")

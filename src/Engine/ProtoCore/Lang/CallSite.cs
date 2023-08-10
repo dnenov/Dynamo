@@ -490,10 +490,8 @@ namespace ProtoCore
         /// </summary>
         /// <param name="context"></param>
         /// <param name="arguments"></param>
-        /// <param name="partialReplicationGuides"></param>
         /// <param name="stackFrame"></param>
-        /// <param name="runtimeCore"></param>
-        /// <param name="replicationTrials"></param>
+        /// <param name="core"></param>
         /// <returns></returns>
         public bool WillCallReplicate(Context context, List<StackValue> arguments,
                                       List<List<ReplicationGuide>> partialReplicationGuides, StackFrame stackFrame, RuntimeCore runtimeCore,
@@ -663,7 +661,7 @@ namespace ProtoCore
         /// <summary>
         /// Report that whole function group couldn't be found
         /// </summary>
-        /// <param name="runtimeCore"></param>
+        /// <param name="core"></param>
         /// <param name="arguments"></param>
         /// <returns></returns>
         private StackValue ReportFunctionGroupNotFound(RuntimeCore runtimeCore, List<StackValue> arguments)
@@ -708,8 +706,8 @@ namespace ProtoCore
         /// <summary>
         ///  This function handles generating a unique callsite ID and serializing the data associated with this callsite
         /// </summary>
-        /// <param name="callsiteData"></param>
-        /// <param name="runtimeCore"></param>
+        /// <param name="methodName"></param>
+        /// <param name="core"></param>
         private void UpdateCallsiteExecutionState(Object callsiteData, RuntimeCore runtimeCore)
         {
         
@@ -1947,8 +1945,8 @@ namespace ProtoCore
         /// If all the arguments that have rep guides are single values, then strip the rep guides
         /// </summary>
         /// <param name="arguments"></param>
-        /// <param name="providedReplicationGuides"></param>
-        /// <param name="runtimeCore"></param>
+        /// <param name="partialReplicationGuides"></param>
+        /// <param name="core"></param>
         /// <returns></returns>
         private static List<List<ReplicationGuide>> PerformRepGuideDemotion(List<StackValue> arguments, List<List<ReplicationGuide>> providedReplicationGuides, RuntimeCore runtimeCore)
         {

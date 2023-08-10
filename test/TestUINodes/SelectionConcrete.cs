@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml;
 using CoreNodeModels;
 using Dynamo.Graph;
@@ -15,16 +15,16 @@ namespace TestUINodes
         public NodeModel testNode { get; set; }
         public override IModelSelectionHelper<ModelBase> SelectionHelper { get; }
 
-        public new void SerializeCore(XmlElement nodeElement, SaveContext context) =>
+        public void SerializeCore(XmlElement nodeElement, SaveContext context) =>
             base.SerializeCore(nodeElement, context);
 
-        public new void DeserializeCore(XmlElement nodeElement, SaveContext context) =>
+        public void DeserializeCore(XmlElement nodeElement, SaveContext context) =>
             base.DeserializeCore(nodeElement, context);
 
-        public new bool UpdateValueCore(UpdateValueParams updateValueParams) =>
+        public bool UpdateValueCore(UpdateValueParams updateValueParams) =>
             base.UpdateValueCore(updateValueParams);
 
-        public new string GetOutputPortName() =>
+        public string GetOutputPortName() =>
              base.GetOutputPortName();
 
         //Implemented this way for testing so the selection suffers no modifications

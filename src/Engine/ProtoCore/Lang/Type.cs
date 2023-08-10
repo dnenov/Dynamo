@@ -26,8 +26,7 @@ namespace ProtoCore
         /// <summary>
         /// Constructor of Type using Short string
         /// </summary>
-        /// <param name="TypeName"> Serialized Short String</param>
-        /// <param name="TypeRank"></param>
+        /// <param name="displayTypeName"> Serialized Short String</param>
         public Type(string TypeName, int TypeRank)
         {
             UID = Constants.kInvalidIndex;

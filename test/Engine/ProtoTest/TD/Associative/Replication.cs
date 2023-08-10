@@ -2566,6 +2566,7 @@ test3 = a1.X[0][0];
             string error = "";// "1467266 - Sprint25: rev 3549 : Accessing array members is not giving the expected result";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             ExecutionMirror mirror = thisTest.RunScriptSource(code, error);
+            Object n1 = null;
             thisTest.Verify("test3", 1);
             thisTest.Verify("test2", new Object[] { 1, 2 });
         }
@@ -3078,6 +3079,7 @@ y = x;
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "MAGN-4092 Replication should not be supported in Imperative scope";
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
+            Object n1 = null;
             thisTest.Verify("y", new Object[] { 10, 11, 12, 13, 14, 15 });
         }
 
@@ -3098,6 +3100,7 @@ y = x + 1;
             String errmsg = "1662 rev 3746 - REGRESSION : replication on jagged array is giving unexpected output";
             
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
+            Object n1 = null;
             thisTest.Verify("y", new Object[] { 11, 12, new Object[] { 3, 3 }, null, new Object[] { 2, 2 } });
         }
 
@@ -3116,6 +3119,7 @@ y1 = x;
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
+            Object n1 = null;
             thisTest.Verify("y1", new Object[] { 10, 2, 2, 13, 14, 15});
         }
         [Test]
@@ -3356,6 +3360,7 @@ y = x [ [0,1] ][[0,1]];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467284 Sprint25: rev 3705: replication on array indices should follow zipped collection rule";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("y", new int[] { 0, 4 });
 
@@ -3408,6 +3413,7 @@ rab = a*b;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "DNL-1467125 Sprint 24 - Rev 2877 replication does not work with higher ranks , throws error Method resolution failure";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { new Object[] { 10, 20 } });
 
@@ -3425,6 +3431,7 @@ rab = a*b;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { new Object[] { 10, 20 } });
         }
@@ -3441,6 +3448,7 @@ rab = a*b;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { new Object[] { 10, 20 } });
         }
@@ -3457,6 +3465,7 @@ rab = a*b;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { new Object[] { 10 } });
         }
@@ -3473,6 +3482,7 @@ rab = a*b;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { 3, 8 });
         }
@@ -3492,6 +3502,7 @@ rab = a*b;
             //String errmsg = "DNL-1467125 Sprint 24 - Rev 2877 replication does not work with higher ranks , throws error Method resolution failure";
             String errmsg = "4109 TestFramework - asserting a collection against an array with different rank throws object reference not set to an instance of an object in some cases";
             //once the testframework issue is fixed change the error string back to the original bug above
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("rab", new Object[] { new Object[] { 3, 8 } });
         }
@@ -3508,6 +3519,7 @@ b = !a[i];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { false, false });
         }
@@ -3524,6 +3536,7 @@ b = -a[i];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { -1, -2 });
         }
@@ -3580,6 +3593,7 @@ b = -a1.X[i];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { -1, -2 });
         }
@@ -3598,6 +3612,7 @@ b = -a1.X[0];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", -1);
         }
@@ -3616,6 +3631,7 @@ b = -a1.X;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { -1, -2, -3 });
         }
@@ -3633,6 +3649,7 @@ b = -a1.X;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", -1);
         }
@@ -3649,6 +3666,7 @@ b = -DummyVector.ByCoordinates(1,2,3).X;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", -1);
         }
@@ -3679,6 +3697,7 @@ b = -A.A().a;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", 1);
         }
@@ -3709,6 +3728,7 @@ b = [A.A(), A.A()].a;
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { -1, -1 });
         }
@@ -3739,6 +3759,7 @@ b = [-A.A().a, A.A().a];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "";//DNL-1467297 rev 3769 : parser issue over negating a property of an instance";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { 1, -1 });
         }
@@ -4452,6 +4473,7 @@ a = [ 5, 6, 7, 8 ];
 ";
             ProtoScript.Runners.ProtoScriptRunner fsr = new ProtoScript.Runners.ProtoScriptRunner();
             String errmsg = "http://adsk-oss.myjetbrains.com/youtrack/issue/MAGN-4112";
+            Object n1 = null;
             ExecutionMirror mirror = thisTest.VerifyRunScriptSource(code, errmsg);
             thisTest.Verify("b", new Object[] { 7, 8, 7, 8 });
         }

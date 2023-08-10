@@ -15,7 +15,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// Controls connector visibility: on/off. When wire is off, additional styling xaml turns off tooltips.
         /// </summary>
-        public override bool IsCollapsed
+        public bool IsCollapsed
         {
             get => isCollapsed;
             set

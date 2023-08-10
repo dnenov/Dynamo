@@ -25,9 +25,9 @@ namespace TestUINodes
             RegisterAllPorts();
         }
 
-        public new void SerializeCore(XmlElement nodeElement, SaveContext context) =>
+        public void SerializeCore(XmlElement nodeElement, SaveContext context) =>
             base.SerializeCore(nodeElement, context);
-        public new bool UpdateValueCore(UpdateValueParams updateValueParams) =>
+        public bool UpdateValueCore(UpdateValueParams updateValueParams) =>
             base.UpdateValueCore(updateValueParams);
     }
 }

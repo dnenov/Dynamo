@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -101,8 +101,7 @@ namespace Dynamo.Utilities
 
         /// <summary>
         /// Calls Dispatcher event after some delay.
-        /// </summary>
-        /// <param name="ds"></param>
+        /// </summary>        
         /// <param name="delay">delay in milliseconds</param>
         /// <param name="callback">action to be called</param>
         public static async void DelayInvoke(this Dispatcher ds, int delay, Action callback)

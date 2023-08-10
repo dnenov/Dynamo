@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace ProtoCore.CodeModel
 {
@@ -21,5 +21,6 @@ namespace ProtoCore.CodeModel
         {
             return !(lhs == rhs);
         }
+
     }
 }

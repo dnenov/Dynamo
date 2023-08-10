@@ -98,7 +98,8 @@ namespace ProtoCore
         /// It will initialize the runtime execution data and configuration
         /// </summary>
         /// <param name="compileCore"></param>
-        /// <param name="globalStackFrameSize"></param>
+        /// <param name="isCodeCompiled"></param>
+        /// <param name="context"></param>
         public void SetupForExecution(ProtoCore.Core compileCore, int globalStackFrameSize)
         {
             if (globalStackFrameSize > 0)

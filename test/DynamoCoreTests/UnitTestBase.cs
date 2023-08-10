@@ -65,6 +65,10 @@ namespace Dynamo
         public virtual void Setup()
         {
             SetupDirectories();
+#if NETFRAMEWORK
+            
+            DSOffice.ExcelInterop.ShowOnStartup = false;
+#endif
 
             if (assemblyHelper == null)
             {

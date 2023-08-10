@@ -479,7 +479,7 @@ namespace ProtoCore.Utils
         /// Given: A.B[0].C
         ///     Return: "A.B[0].C"
         /// </summary>
-        /// <param name="node"></param>
+        /// <param name="identList"></param>
         /// <returns></returns>
         public static string GetIdentifierStringUntilFirstParenthesis(AST.Node node)
         {
@@ -787,7 +787,7 @@ namespace ProtoCore.Utils
         /// Parses designscript code and outputs ProtoAST
         /// </summary>
         /// <param name="core"></param>
-        /// <param name="codeList"></param>
+        /// <param name="code"></param>
         /// <returns></returns>
         public static List<AssociativeNode> BuildASTList(Core core, List<string> codeList)
         {
@@ -926,7 +926,6 @@ namespace ProtoCore.Utils
         /// </summary>
         /// <param name="sv1"></param>
         /// <param name="sv2"></param>
-        /// <param name="runtimeCore"></param>
         /// <returns></returns>
         public static StackValue AddStackValueString(StackValue sv1, StackValue sv2, RuntimeCore runtimeCore)
         {

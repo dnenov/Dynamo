@@ -341,6 +341,7 @@ namespace ProtoCore.DSASM
         /// Exceptions: ProtoCore.Exceptions.RunOutOfMemoryException
         /// </summary>
         /// <param name="values">Array elements whose indices are integer</param>
+        /// <param name="dict">Array elements whose indices are not integer</param>
         /// <returns></returns>
         public StackValue AllocateArray(StackValue[] values)
         {
@@ -417,7 +418,6 @@ namespace ProtoCore.DSASM
         /// Allocate a string, the string will be put in string table.
         /// </summary>
         /// <param name="str"></param>
-        /// <param name="isConstant"></param>
         /// <returns></returns>
         private StackValue AllocateStringInternal(string str, bool isConstant)
         {
@@ -495,7 +495,7 @@ namespace ProtoCore.DSASM
         /// <summary>
         /// Returns string that pointer represents.
         /// </summary>
-        /// <param name="dsString"></param>
+        /// <param name="pointer"></param>
         /// <returns></returns>
         public string GetString(DSString dsString)
         {
@@ -685,7 +685,7 @@ namespace ProtoCore.DSASM
         /// Recursively mark all objects referenced by the object and change the
         /// color of this object to black.
         /// </summary>
-        /// <param name="root">StackValue</param>
+        /// <param name="value">StackValue</param>
         /// <returns></returns>
         private int RecursiveMark(StackValue root)
         {

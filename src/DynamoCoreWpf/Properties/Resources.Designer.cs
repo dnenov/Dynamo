@@ -583,6 +583,15 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to I agree to contribute to the Google Analytics program..
+        /// </summary>
+        public static string ConsentFormGoogleAnalyticsCheckBoxContent {
+            get {
+                return ResourceManager.GetString("ConsentFormGoogleAnalyticsCheckBoxContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Node To Group.
         /// </summary>
         public static string ContextAddGroupFromSelection {
@@ -4978,15 +4987,6 @@ namespace Dynamo.Wpf.Properties {
         public static string NodeTooltipOriginalName {
             get {
                 return ResourceManager.GetString("NodeTooltipOriginalName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Package: .
-        /// </summary>
-        public static string NodeTooltipPackage {
-            get {
-                return ResourceManager.GetString("NodeTooltipPackage", resourceCulture);
             }
         }
         

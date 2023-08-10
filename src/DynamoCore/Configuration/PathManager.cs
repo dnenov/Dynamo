@@ -48,15 +48,8 @@ namespace Dynamo.Core
         internal IPathResolver PathResolver { get; set; }
     }
 
-    public class PathManager : IPathManager
+    class PathManager : IPathManager
     {
-        internal static Lazy<PathManager>
-         lazy =
-         new Lazy<PathManager>
-         (() => new PathManager(new PathManagerParams()));
-
-        public static PathManager Instance { get { return lazy.Value; } }
-
         #region Class Private Data Members
 
         public const string PackagesDirectoryName = "packages";
@@ -96,7 +89,7 @@ namespace Dynamo.Core
         private readonly HashSet<string> preloadedLibraries;
         private readonly HashSet<string> extensionsDirectories;
         private readonly HashSet<string> viewExtensionsDirectories;
-        private IPathResolver pathResolver;
+        private readonly IPathResolver pathResolver;
 
         #endregion
 
@@ -281,14 +274,6 @@ namespace Dynamo.Core
             get { return minorFileVersion; }
         }
 
-        /// <summary>
-        /// This function indicates if there is an already assigned Path Resolver , otherwise it will take from the ctor config
-        /// </summary>
-        public bool HasPathResolver
-        {
-            get { return pathResolver != null; }
-        }
-
         public void AddResolutionPath(string path)
         {
             if (string.IsNullOrEmpty(path))
@@ -360,16 +345,6 @@ namespace Dynamo.Core
         #endregion
 
         #region Public Class Operational Methods
-
-        /// <summary>
-        /// Assigns an IPathResolver on demand with the same behavior as the Ctor.
-        /// </summary>
-        /// <param name="resolver"></param>
-        internal void AssignIPathResolver(IPathResolver resolver)
-        {
-            pathResolver = resolver;            
-            LoadPathsFromResolver();
-        }
 
         /// <summary>
         /// Constructs an instance of PathManager object.

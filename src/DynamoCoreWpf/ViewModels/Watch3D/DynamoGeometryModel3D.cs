@@ -1,10 +1,8 @@
-using System;
-using System.Windows; 
+﻿using System;
+using System.Windows;
 using HelixToolkit.Wpf.SharpDX;
-using HelixToolkit.SharpDX.Core;
-using HelixToolkit.SharpDX.Core.Core;
-using HelixToolkit.SharpDX.Core.Model.Scene;
-
+using HelixToolkit.Wpf.SharpDX.Core;
+using HelixToolkit.Wpf.SharpDX.Model.Scene;
 
 namespace Dynamo.Wpf.ViewModels.Watch3D
 {
@@ -92,9 +90,9 @@ namespace Dynamo.Wpf.ViewModels.Watch3D
             return new DynamoGeometryMeshCore();
         }
 
-        protected override IRenderTechnique OnCreateRenderTechnique(IEffectsManager effectsManager)
+        protected override IRenderTechnique OnCreateRenderTechnique(IRenderHost host)
         {
-            return effectsManager[DynamoEffectsManager.DynamoMeshShaderName];
+            return host.EffectsManager[DynamoEffectsManager.DynamoMeshShaderName];
         }
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -31,7 +31,10 @@ namespace Dynamo.UI.Prompts
                 TitleTextBlock.Text = resourceProvider.GetString(Wpf.Interfaces.ResourceNames.ConsentForm.Title);
             }
             viewModel = dynamoViewModel;
+            var googleAnalyticsFile = "GoogleAnalyticsConsent.rtf";
 
+            if (viewModel.Model.PathManager.ResolveDocumentPath(ref googleAnalyticsFile))
+                GoogleAnalyticsConsent.File = googleAnalyticsFile;
             var adpAnalyticsFile = "ADPAnalyticsConsent.rtf";
 
             if (viewModel.Model.PathManager.ResolveDocumentPath(ref adpAnalyticsFile))
@@ -41,8 +44,14 @@ namespace Dynamo.UI.Prompts
             //also disabled below id all analytics disabled.
             configure_adp_button.IsEnabled = AnalyticsService.IsADPAvailable();
 
+            AcceptGoogleAnalyticsCheck.IsChecked = UsageReportingManager.Instance.IsAnalyticsReportingApproved;
+
             if (Analytics.DisableAnalytics)
             {
+                AcceptGoogleAnalyticsCheck.IsChecked = false;
+                AcceptGoogleAnalyticsTextBlock.IsEnabled = false;
+                AcceptGoogleAnalyticsCheck.IsEnabled = false;
+
                 configure_adp_button.IsEnabled = false;
             }
            
@@ -56,9 +65,27 @@ namespace Dynamo.UI.Prompts
             AcceptUsageReportingCheck.IsChecked = UsageReportingManager.Instance.IsUsageReportingApproved;
         }
 
+        private void ToggleIsGoogleAnalyticsChecked(object sender, RoutedEventArgs e)
+        {
+            UsageReportingManager.Instance.SetAnalyticsReportingAgreement(
+                AcceptGoogleAnalyticsCheck.IsChecked.HasValue &&
+                AcceptGoogleAnalyticsCheck.IsChecked.Value);
+        }
+
         private void OnContinueClick(object sender, RoutedEventArgs e)
         {
+            // Update user agreement for GA.
+            //ADP is set via the ADPSDK consent window.
+            UsageReportingManager.Instance.SetAnalyticsReportingAgreement(AcceptGoogleAnalyticsCheck.IsChecked.Value);
             Close();
+        }
+
+        private void OnLearnMoreClick(object sender, RoutedEventArgs e)
+        {
+            var aboutBox = viewModel.BrandingResourceProvider.CreateAboutBox(viewModel);
+            aboutBox.Owner = this;
+            aboutBox.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            aboutBox.ShowDialog();
         }
 
         protected override void OnClosed(System.EventArgs e)

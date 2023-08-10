@@ -55,6 +55,7 @@ namespace ProtoFFI
                 {
                     mtype = new CLRModuleType(type);
                     //Now check that a type with same name is not imported.
+                    Type otherType;
                     if (mTypeNames.TryGetValue(mtype.FullName, out CLRModuleType otherMType))
                     {
                         if (otherMType.CLRType.IsEquivalentTo(type))
@@ -862,7 +863,8 @@ namespace ProtoFFI
                         }
                         else
                         {
-                            rhs = AstFactory.BuildPrimitiveNodeFromObjectAndType(defaultValue, parameter.ParameterType);
+                            rhs = AstFactory.BuildPrimitiveNodeFromObject(defaultValue);
+
                         }
                         paramNode.NameNode = AstFactory.BuildBinaryExpression(lhs, rhs, ProtoCore.DSASM.Operator.assign);
                     }
@@ -940,7 +942,7 @@ namespace ProtoFFI
 
     /// <summary>
     /// Implements DLLModule for CLR types and FFI. This class supports .NET
-    /// module import to DesignScript and provides FFIFunctionPointer &amp;
+    /// module import to DesignScript and provides FFIFunctionPointer &
     /// FFIObjectMarshler.
     /// </summary>
     public class CLRDLLModule : DLLModule

@@ -654,9 +654,7 @@ namespace Dynamo.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message + " : " + ex.StackTrace);
-#pragma warning disable CA2200 // Rethrow to preserve stack details
-                throw ex;
-#pragma warning restore CA2200 // Rethrow to preserve stack details
+                throw (ex);
             }
         }
         /// <summary>

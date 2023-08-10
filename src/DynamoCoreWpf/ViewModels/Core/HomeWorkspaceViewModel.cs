@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -449,7 +449,6 @@ namespace Dynamo.Wpf.ViewModels.Core
         /// A sequence of methods to zoom around a selection of nodes 
         /// </summary>
         /// <param name="selectedNodes"></param>
-        /// <param name="currentNotificationType"></param>
         private void FitSelection(IEnumerable<NodeModel> selectedNodes, FooterNotificationItem.FooterNotificationType currentNotificationType)
         {
             Guid nodeToSelect = Guid.Empty;

@@ -283,6 +283,7 @@ namespace ProtoTestFx
             string line;
 
             int lineNo = 0;
+            int colNo = 0;
 
             string[] lines = fileContent.Split('\n');
 
@@ -424,6 +425,7 @@ namespace ProtoTestFx
 
             //bool isPrevBreakAtPop = false;
             int lineAtPrevBreak = -1;
+            string symbolName = null;
             DebugRunner.VMState vms = null;
 
             while (!fsr.isEnded)

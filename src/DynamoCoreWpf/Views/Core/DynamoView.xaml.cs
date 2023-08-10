@@ -1618,7 +1618,8 @@ namespace Dynamo.Controls
         /// Presents the function name dialogue. Returns true if the user enters
         /// a function name and category.
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="name"></param>
+        /// <param name="category"></param>
         /// <returns></returns>
         internal void ShowNewFunctionDialog(FunctionNamePromptEventArgs e)
         {

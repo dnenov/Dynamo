@@ -105,7 +105,7 @@ namespace Dynamo.GraphNodeManager
         /// <summary>
         /// Tear down function
         /// </summary>
-        public override void Shutdown()
+        public void Shutdown()
         {
             this.Dispose();
         }

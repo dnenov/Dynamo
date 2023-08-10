@@ -40,12 +40,12 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// Returns whether this port has a default value that can be used.
         /// </summary>
-        public new bool DefaultValueEnabled => port.DefaultValue != null;
+        public bool DefaultValueEnabled => port.DefaultValue != null;
 
         /// <summary>
         /// Returns whether the port is using its default value, or whether this been disabled
         /// </summary>
-        public new bool UsingDefaultValue
+        public bool UsingDefaultValue
         {
             get => port.UsingDefaultValue;
             set
@@ -57,7 +57,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// If should display Use Levels popup menu. 
         /// </summary>
-        public new bool ShowUseLevelMenu
+        public bool ShowUseLevelMenu
         {
             get => showUseLevelMenu;
             set
@@ -82,7 +82,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// If UseLevel is enabled on this port.
         /// </summary>
-        public new bool UseLevels => port.UseLevels;
+        public bool UseLevels => port.UseLevels;
 
         /// <summary>
         /// Determines whether or not the UseLevelsSpinner is visible on the port.
@@ -108,12 +108,12 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// If should keep list structure on this port.
         /// </summary>
-        public new bool ShouldKeepListStructure => port.KeepListStructure;
+        public bool ShouldKeepListStructure => port.KeepListStructure;
 
         /// <summary>
         /// Levle of list.
         /// </summary>
-        public new int Level
+        public int Level
         {
             get => port.Level;
             set
@@ -125,7 +125,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// The visibility of Use Levels menu.
         /// </summary>
-        public new Visibility UseLevelVisibility
+        public Visibility UseLevelVisibility
         {
             get
             {
@@ -249,7 +249,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// UseLevels command
         /// </summary>
-        public new DelegateCommand UseLevelsCommand
+        public DelegateCommand UseLevelsCommand
         {
             get { return useLevelsCommand ?? (useLevelsCommand = new DelegateCommand(UseLevel, p => true)); }
         }
@@ -267,7 +267,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// ShouldKeepListStructure command
         /// </summary>
-        public new DelegateCommand KeepListStructureCommand
+        public DelegateCommand KeepListStructureCommand
         {
             get
             {
@@ -296,7 +296,7 @@ namespace Dynamo.ViewModels
         /// <summary>
         /// Handles the Mouse left button click on the node levels context menu button.
         /// </summary>
-        public new DelegateCommand MouseLeftButtonDownOnLevelCommand
+        public DelegateCommand MouseLeftButtonDownOnLevelCommand
         {
             get
             {

@@ -12,7 +12,7 @@ using Dynamo.Models;
 using Dynamo.Search.SearchElements;
 using Dynamo.Selection;
 using Dynamo.ViewModels;
-using FontAwesome5;
+using FontAwesome.WPF;
 #if NETFRAMEWORK
 using Microsoft.Practices.Prism.Commands;
 #else
@@ -23,7 +23,7 @@ namespace Dynamo.Wpf.ViewModels
 {
     public class NodeSearchElementViewModel : ViewModelBase, ISearchEntryViewModel
     {
-        private Dictionary<SearchElementGroup, EFontAwesomeIcon> FontAwesomeDict;
+        private Dictionary<SearchElementGroup, FontAwesomeIcon> FontAwesomeDict;
 
         private bool isSelected;
         private SearchViewModel searchViewModel;
@@ -172,21 +172,21 @@ namespace Dynamo.Wpf.ViewModels
         /// </summary>
         private void LoadFonts()
         {
-            FontAwesomeDict = new Dictionary<SearchElementGroup, EFontAwesomeIcon>();
+            FontAwesomeDict = new Dictionary<SearchElementGroup, FontAwesomeIcon>();
 
-            FontAwesomeDict.Add(SearchElementGroup.Create, EFontAwesomeIcon.Solid_Plus);
-            FontAwesomeDict.Add(SearchElementGroup.Action, EFontAwesomeIcon.Solid_Bolt);
-            FontAwesomeDict.Add(SearchElementGroup.Query, EFontAwesomeIcon.Solid_Question);
+            FontAwesomeDict.Add(SearchElementGroup.Create, FontAwesomeIcon.Plus);
+            FontAwesomeDict.Add(SearchElementGroup.Action, FontAwesomeIcon.Bolt);
+            FontAwesomeDict.Add(SearchElementGroup.Query, FontAwesomeIcon.Question);
         }
 
         /// <summary>
         /// Indicates group icon, e.g. create - plus icon.
         /// </summary>
-        public EFontAwesomeIcon GroupIconName
+        public FontAwesomeIcon GroupIconName
         {
             get
             {
-                return FontAwesomeDict.ContainsKey(Group) ? FontAwesomeDict[Group] : EFontAwesomeIcon.None;
+                return FontAwesomeDict.ContainsKey(Group) ? FontAwesomeDict[Group] : FontAwesomeIcon.None;
             }
         }
 

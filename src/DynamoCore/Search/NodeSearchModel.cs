@@ -48,7 +48,6 @@ namespace Dynamo.Search
         ///     Dumps the contents of search into an Xml file.
         /// </summary>
         /// <param name="fileName"></param>
-        /// <param name="dynamoPath"></param>
         internal void DumpLibraryToXml(string fileName, string dynamoPath)
         {
             if (string.IsNullOrEmpty(fileName))

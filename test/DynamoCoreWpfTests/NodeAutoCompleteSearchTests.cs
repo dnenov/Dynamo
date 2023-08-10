@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Dynamo;
 using Dynamo.Controls;
 using Dynamo.Graph.Nodes;
 using Dynamo.Models;
@@ -142,50 +141,9 @@ namespace DynamoCoreWpfTests
             // Set the suggestion to ObjectType
             searchViewModel.dynamoViewModel.PreferenceSettings.DefaultNodeAutocompleteSuggestion = NodeAutocompleteSuggestion.ObjectType;
 
-            // Results will be nodes that take color or color[] etc as params.
+            // The initial list will fill the FilteredResults with a few options - all basic input types
             searchViewModel.PopulateAutoCompleteCandidates();
-            Assert.AreEqual(10, searchViewModel.FilteredResults.Count());
-        }
-
-        [Test]
-        public void NodeSuggestions_CanAutoCompleteOnCustomNodesOutPort_WithSpaceInPortName()
-        {
-            var outputNode = new Dynamo.Graph.Nodes.CustomNodes.Output();
-            outputNode.Symbol = "Line Nonsense";
-            var cnm = new Dynamo.Graph.Nodes.CustomNodes.Function(
-                new CustomNodeDefinition(Guid.NewGuid(), "mock", new List<NodeModel>() { outputNode })
-                , "mock", "mock", "mock");
-            var cnvm = new NodeViewModel(ViewModel.CurrentSpaceViewModel, cnm);
-
-            var searchViewModel = ViewModel.CurrentSpaceViewModel.NodeAutoCompleteSearchViewModel;
-            searchViewModel.PortViewModel = cnvm.OutPorts.First();
-
-            // Set the suggestion to ObjectType
-            searchViewModel.dynamoViewModel.PreferenceSettings.DefaultNodeAutocompleteSuggestion = NodeAutocompleteSuggestion.ObjectType;
-
-            // Results will be nodes that accept Line as parameter.
-            searchViewModel.PopulateAutoCompleteCandidates();
-            Assert.AreEqual(44, searchViewModel.FilteredResults.Count());
-        }
-        [Test]
-        public void NodeSuggestions_CanAutoCompleteOnCustomNodesOutPort_WithWhiteSpaceStartingPortName()
-        {
-            var outputNode = new Dynamo.Graph.Nodes.CustomNodes.Output();
-            outputNode.Symbol = "   Line Nonsense";
-            var cnm = new Dynamo.Graph.Nodes.CustomNodes.Function(
-                new CustomNodeDefinition(Guid.NewGuid(), "mock", new List<NodeModel>() { outputNode })
-                , "mock", "mock", "mock");
-            var cnvm = new NodeViewModel(ViewModel.CurrentSpaceViewModel, cnm);
-
-            var searchViewModel = ViewModel.CurrentSpaceViewModel.NodeAutoCompleteSearchViewModel;
-            searchViewModel.PortViewModel = cnvm.OutPorts.First();
-
-            // Set the suggestion to ObjectType
-            searchViewModel.dynamoViewModel.PreferenceSettings.DefaultNodeAutocompleteSuggestion = NodeAutocompleteSuggestion.ObjectType;
-
-            // Results will be nodes that accept Line as parameter.
-            searchViewModel.PopulateAutoCompleteCandidates();
-            Assert.AreEqual(44, searchViewModel.FilteredResults.Count());
+            Assert.AreEqual(7, searchViewModel.FilteredResults.Count());
         }
 
         [Test]
@@ -324,7 +282,7 @@ namespace DynamoCoreWpfTests
             var searchViewModel = ViewModel.CurrentSpaceViewModel.NodeAutoCompleteSearchViewModel;
             searchViewModel.PortViewModel = outPorts[0];
             var suggestions = searchViewModel.GetMatchingSearchElements();
-            Assert.AreEqual(44, suggestions.Count());
+            Assert.AreEqual(29, suggestions.Count());
         }
 
         [Test]

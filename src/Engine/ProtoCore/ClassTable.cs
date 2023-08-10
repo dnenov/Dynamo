@@ -605,7 +605,7 @@ namespace ProtoCore.DSASM
         /// </summary>
         /// <param name="status">BuildStatus to log the warnings if
         /// multiple symbol found.</param>
-        /// <param name="graphNode"></param>
+        /// /// <param name="guid">Guid of node to which warning corresponds</param>
         public void AuditMultipleDefinition(BuildStatus status, AssociativeGraph.GraphNode graphNode)
         {
             var names = symbolTable.GetAllSymbolNames();

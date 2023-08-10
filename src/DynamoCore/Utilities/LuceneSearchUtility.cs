@@ -218,18 +218,32 @@ namespace Dynamo.Utilities
                     booleanQuery.Add(fuzzyQuery, Occur.SHOULD);
                 }
 
-                var fieldQuery = CalculateFieldWeight(f, searchTerm);
-                var wildcardQuery = CalculateFieldWeight(f, searchTerm, true);
+                var wildcardQuery = new WildcardQuery(new Term(f, searchTerm));
+                if (f.Equals(nameof(LuceneConfig.NodeFieldsEnum.Name)))
+                {
+                    wildcardQuery.Boost = LuceneConfig.SearchNameWeight;
+                }
+                else
+                {
+                    wildcardQuery.Boost = LuceneConfig.SearchMetaFieldsWeight;
+                }
+                booleanQuery.Add(wildcardQuery, Occur.SHOULD);
 
-                booleanQuery.Add(fieldQuery, Occur.SHOULD);
+                wildcardQuery = new WildcardQuery(new Term(f, "*" + searchTerm + "*"));
+                if (f.Equals(nameof(LuceneConfig.NodeFieldsEnum.Name)))
+                {
+                    wildcardQuery.Boost = LuceneConfig.WildcardsSearchNameWeight;
+                }
+                else
+                {
+                    wildcardQuery.Boost = LuceneConfig.WildcardsSearchMetaFieldsWeight;
+                }
                 booleanQuery.Add(wildcardQuery, Occur.SHOULD);
 
                 if (searchTerm.Contains(' ') || searchTerm.Contains('.'))
                 {
                     foreach (string s in searchTerm.Split(' ', '.'))
                     {
-                        if (string.IsNullOrEmpty(s)) continue;
-
                         if (s.Length > LuceneConfig.FuzzySearchMinimalTermLength)
                         {
                             fuzzyQuery = new FuzzyQuery(new Term(f, s), LuceneConfig.FuzzySearchMinEdits);
@@ -239,7 +253,7 @@ namespace Dynamo.Utilities
 
                         if (f.Equals(nameof(LuceneConfig.NodeFieldsEnum.Name)))
                         {
-                            wildcardQuery.Boost = LuceneConfig.WildcardsSearchNameParsedWeight;
+                            wildcardQuery.Boost = 5;
                         }
                         else
                         {
@@ -250,39 +264,6 @@ namespace Dynamo.Utilities
                 }
             }
             return booleanQuery.ToString();
-        }
-
-        private WildcardQuery CalculateFieldWeight(string fieldName, string searchTerm, bool isWildcard = false)
-        {
-            WildcardQuery query;
-
-            query = isWildcard == false ?
-                new WildcardQuery(new Term(fieldName, searchTerm)) : new WildcardQuery(new Term(fieldName, "*" + searchTerm + "*"));
-
-            switch (fieldName)
-            {
-                case nameof(LuceneConfig.NodeFieldsEnum.Name):
-                    query.Boost = isWildcard == false?
-                        LuceneConfig.SearchNameWeight :  LuceneConfig.WildcardsSearchNameWeight;
-                    break;
-                case nameof(LuceneConfig.NodeFieldsEnum.FullCategoryName):
-                    query.Boost = isWildcard == false?
-                        LuceneConfig.SearchCategoryWeight : LuceneConfig.WildcardsSearchCategoryWeight;
-                    break;
-                case nameof(LuceneConfig.NodeFieldsEnum.Description):
-                    query.Boost = isWildcard == false ?
-                        LuceneConfig.SearchDescriptionWeight : LuceneConfig.WildcardsSearchDescriptionWeight;
-                    break;
-                case nameof(LuceneConfig.NodeFieldsEnum.SearchKeywords):
-                    query.Boost = isWildcard == false ?
-                       LuceneConfig.SearchTagsWeight : LuceneConfig.WildcardsSearchTagsWeight;
-                    break;
-                default:
-                    query.Boost = isWildcard == false ?
-                       LuceneConfig.SearchMetaFieldsWeight : LuceneConfig.WildcardsSearchMetaFieldsWeight;
-                    break;
-            }
-            return query;
         }
 
         internal void DisposeWriter()

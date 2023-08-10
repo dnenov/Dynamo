@@ -133,6 +133,7 @@ namespace ProtoCore.DSASM
         /// </summary>
         /// <param name="exeblock"></param>
         /// <param name="entry"></param>
+        /// <param name="context"></param>
         /// <param name="stackFrame"></param>
         /// <param name="locals"></param>
         /// <param name="exec"></param>
@@ -153,9 +154,9 @@ namespace ProtoCore.DSASM
         /// <summary>
         /// Bounce to an existing executive
         /// </summary>
-        /// <param name="executive"></param>
         /// <param name="exeblock"></param>
         /// <param name="entry"></param>
+        /// <param name="context"></param>
         /// <param name="stackFrame"></param>
         /// <param name="locals"></param>
         /// <param name="fepRun"></param>
@@ -1704,6 +1705,8 @@ namespace ProtoCore.DSASM
         /// <summary>
         /// Pops Debug stackframe, performs coercion and GC and pops stackframe if there's a break inside the function
         /// </summary>
+        /// <param name="exeblock"></param>
+        /// <param name="instructions"></param>
         /// <returns></returns>
         bool RestoreDebugPropsOnReturnFromBuiltIns()
         {
@@ -1895,7 +1898,6 @@ namespace ProtoCore.DSASM
         /// <param name="ci"></param>
         /// <param name="fi"></param>
         /// <param name="isReplicating"></param>
-        /// <param name="debugFrame"></param>
         /// <returns></returns>
         private bool DebugReturnFromFunctionCall(int currentPC, ref int exeblock, out int ci, out int fi, out bool isReplicating, out DebugFrame debugFrame)
         {
@@ -4691,7 +4693,7 @@ namespace ProtoCore.DSASM
         /// <summary>
         /// Returns the next graphnode to execute given the current next pc and scope
         /// </summary>
-        /// <param name="nextPC"></param>
+        /// <param name="pc"></param>
         /// <param name="ci"></param>
         /// <param name="fi"></param>
         private AssociativeGraph.GraphNode GetNextGraphNodeToExecute(int nextPC, int ci, int fi)

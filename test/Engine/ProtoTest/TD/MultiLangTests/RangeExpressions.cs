@@ -2021,13 +2021,10 @@ i = [Imperative]
         }
 
         [Test]
-        [Category("RegressionTests")]
+        [Category("RegressionTests"), Category("FailureNET6")]
         public void TestRangeExpressionOverLimit01()
         {
-            // Arrays can be much bigger in net6 before an out of memory exception is thrown.
-            // The magic number 2147483646 is the theoretical max size we can ask for for an array
-            // and should guarantee an out of memory exception.
-            string src = @"x = 1..2147483646;";
+            string src = @"x = 1..200000000;";
             thisTest.RunScriptSource(src);
             thisTest.VerifyRuntimeWarningCount(1);
         }
@@ -2042,13 +2039,10 @@ i = [Imperative]
         }
 
         [Test]
-        [Category("RegressionTests")]
+        [Category("RegressionTests"), Category("FailureNET6")]
         public void TestRangeExpressionOverLimit03()
         {
-            // Arrays can be much bigger in net6 before an out of memory exception is thrown.
-            // The magic number 2147483646 is the theoretical max size we can ask for for an array
-            // and should guarantee an out of memory exception.
-            string src = @"x = 1..10..#2147483646;";
+            string src = @"x = 1..10..#200000000;";
             thisTest.RunScriptSource(src);
             thisTest.VerifyRuntimeWarningCount(1);
         }

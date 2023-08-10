@@ -1112,14 +1112,7 @@ namespace Dynamo.Core
                     currentWorkspace.RemoveGroup(group);
 
                     group.GUID = Guid.NewGuid();
-                    group.Nodes = group.Nodes.Concat(group.DeletedModelBases);
-                    //for nested groups
-                    //if any of the previously added annotations has a DeletedModelBases with the same group as the current one, then add it to the Nodes
-                    var nestedGroup = newAnnotations.FirstOrDefault(x => x.DeletedModelBases.OfType<AnnotationModel>().Any(y => y.GUID == group.GUID));
-                    if (nestedGroup != null)
-                    {
-                        nestedGroup.Nodes = nestedGroup.Nodes.Append(group);
-                    }
+                    group.Nodes = group.DeletedModelBases;
                     newAnnotations.Add(group);
                 }
 

@@ -1,4 +1,4 @@
-namespace ProtoCore.CodeModel
+﻿namespace ProtoCore.CodeModel
 {
     public struct CodePoint
     {

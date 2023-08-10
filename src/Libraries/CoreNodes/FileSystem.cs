@@ -120,11 +120,9 @@ namespace DSCore.IO
                     throw new FileNotFoundException(Properties.Resources.InvalidDestinationPathErrorMessage, destinationPath);
                 }
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-#pragma warning disable CA2200 // Rethrow to preserve stack details
                 throw ex;
-#pragma warning restore CA2200 // Rethrow to preserve stack details
             }
             return true;
             

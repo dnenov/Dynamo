@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace Dynamo.Tests
         public void AnalyticsReportingApprovedSetting()
         {
             var settings = new PreferenceSettings();
-            Assert.IsFalse(settings.IsAnalyticsReportingApproved);
+            Assert.IsTrue(settings.IsAnalyticsReportingApproved);
 
             // Check when deserializing preference setting with first run flag
             var settingFilePath = Path.Combine(SettingDirectory, "DynamoSettings-firstrun.xml");
@@ -91,8 +91,7 @@ namespace Dynamo.Tests
 
             var config = new DynamoModel.DefaultStartConfiguration()
             {
-                PythonTemplatePath = templatePath,
-                StartInTestMode = true
+                PythonTemplatePath = templatePath
             };
 
             var model = DynamoModel.Start(config);
@@ -107,8 +106,7 @@ namespace Dynamo.Tests
 
             var config = new DynamoModel.DefaultStartConfiguration()
             {
-                PythonTemplatePath = templatePath,
-                StartInTestMode = true
+                PythonTemplatePath = templatePath
             };
 
             var model = DynamoModel.Start(config);
