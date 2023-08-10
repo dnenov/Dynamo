@@ -44,7 +44,19 @@ namespace Dynamo.PackageDetails
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            System.Diagnostics.Process.Start(new ProcessStartInfo(e.Uri.ToString()) { UseShellExecute = true });
+            try
+            {
+                if (!e.Uri.IsAbsoluteUri)
+                {
+                    var attemptRequest = string.Concat("www.", e.Uri.ToString());
+                    System.Diagnostics.Process.Start(new ProcessStartInfo(attemptRequest) { UseShellExecute = true });
+                }
+                else
+                {
+                    System.Diagnostics.Process.Start(new ProcessStartInfo(e.Uri.ToString()) { UseShellExecute = true });
+                }
+            }
+            catch (Exception) { }
             e.Handled = true;
         }
 
@@ -133,8 +145,11 @@ namespace Dynamo.PackageDetails
         internal static MatchCollection GetURLMatchesFromString(string text)
         {
             // Regular expression pattern to detect URLs
-            string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?)";
-
+            // only with prefix
+            //string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA\/])([^\""\'\n\;\s]*)|((?<!\<)[\/]+[\w]+[^\'\""\s\<\>]*))";
+            // without prefix
+            string pattern = @"(?<url>((http|ftp|https):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?)";
+            
             MatchCollection matches = Regex.Matches(text, pattern);
 
             return matches;

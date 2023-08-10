@@ -435,10 +435,12 @@ namespace DynamoCoreWpfTests
                          7. Check out our GitHub repository: https://github.com/yourusername/repo-name
                          8. Learn more about regex: http://www.regex101.com
                          9. URL with a query parameter: https://www.example.com/page?query=test
-                         10. No prefix link yahoo.com";
+                         10. No prefix link yahoo.com
+                         11. http://provingground.io/tools/lunchbox
+                         12. www.archi-lab.net";
 
             var matches = PackageDetailsView.GetURLMatchesFromString(text);
-            Assert.AreEqual(10, matches.Count);
+            Assert.AreEqual(12, matches.Count);
         }
 
         /// <summary>
@@ -450,7 +452,7 @@ namespace DynamoCoreWpfTests
             // Arrange
             string packageToOpen = "Sample View Extension";
             List<User> packageAuthor = new List<User> { new User { _id = "1", username = "DynamoTeam" } };
-            string packageDescription = @"Description with www.hyperlink.com and https://hyperlink.com and hyperlink.com hyperlinks.";
+            string packageDescription = @"Description with www.hyperlink.com and http://provingground.io/tools/lunchbox and hyperlink.com hyperlinks.";
 
             PackageDetailsViewExtension.PackageManagerClientViewModel = ViewModel.PackageManagerClientViewModel;
 
