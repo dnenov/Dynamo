@@ -146,10 +146,10 @@ namespace Dynamo.PackageDetails
         {
             // Regular expression pattern to detect URLs
             // only with prefix
-            //string pattern = @"(?<url>(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA\/])([^\""\'\n\;\s]*)|((?<!\<)[\/]+[\w]+[^\'\""\s\<\>]*))";
+            string pattern = @"(?<url>(ftp:\/\/|www\.|https?:\/\/){1}[a-zA-Z0-9u00a1ffff0-]{2,}\.[a-zA-Z0-9u00a1ffff0-]{2,}(\S*))";
             // without prefix
-            string pattern = @"(?<url>((http|ftp|https):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?)";
-            
+            //string pattern = @"(?<url>((http|ftp|https):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?)";
+
             MatchCollection matches = Regex.Matches(text, pattern);
 
             return matches;
