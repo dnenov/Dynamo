@@ -94,6 +94,41 @@ namespace Dynamo.PackageManager
             public bool OnChecked { get; set; }
 
             /// <summary>
+            /// Filters packages which are active
+            /// </summary>
+            public bool ShowActive {
+                get { return pmSearchViewModel.ShowActive; }
+                set { pmSearchViewModel.ShowActive = value; }
+            }
+
+            /// <summary>
+            /// Filters packages which are deprecated
+            /// </summary>
+            public bool ShowDeprecated
+            {
+                get { return pmSearchViewModel.ShowDeprecated; }
+                set { pmSearchViewModel.ShowDeprecated = value; }
+            }
+
+            /// <summary>
+            /// Filters packages with dependencies
+            /// </summary>
+            public bool ShowDependencies
+            {
+                get { return pmSearchViewModel.ShowDependencies; }
+                set { pmSearchViewModel.ShowDependencies = value; }
+            }
+
+            /// <summary>
+            /// Filters packages which have no dependencies
+            /// </summary>
+            public bool ShowNoDependencies
+            {
+                get { return pmSearchViewModel.ShowNoDependencies; }
+                set { pmSearchViewModel.ShowNoDependencies = value; }
+            }            
+
+            /// <summary>
             /// Private reference of PackageManagerSearchViewModel,
             /// used in the FilterCommand to filter search results
             /// </summary>
@@ -501,7 +536,7 @@ namespace Dynamo.PackageManager
             ClearSearchTextBoxCommand = new DelegateCommand<object>(ClearSearchTextBox);
             ClearToastNotificationCommand = new DelegateCommand<object>(ClearToastNotification);
             SearchText = string.Empty;
-            SortingKey = PackageSortingKey.LastUpdate;
+            SortingKey = PackageSortingKey.Votes;
             SortingDirection = PackageSortingDirection.Descending;
             HostFilter = new List<FilterEntry>();
             SelectedHosts = new List<string>();
@@ -905,6 +940,11 @@ namespace Dynamo.PackageManager
         // if exceeded will trigger `timed out` event and failure screen
         internal int MAX_LOAD_TIME = 30 * 1000;
         private bool _timedOut;
+        private bool showActive = true;
+        private bool showDeprecated;
+        private bool showDependencies;
+        private bool showNoDependencies;
+
         /// <summary>
         /// Will trigger timed out event
         /// </summary>
@@ -914,6 +954,62 @@ namespace Dynamo.PackageManager
             set {
                 _timedOut = value;
                 RaisePropertyChanged(nameof(TimedOut));
+            }
+        }
+
+        /// <summary>
+        /// Toggles active packages on and off
+        /// </summary>
+        public bool ShowActive
+        {
+            get { return showActive; }
+            set
+            {
+                showActive = value;
+                RaisePropertyChanged(nameof(ShowActive));
+                SearchAndUpdateResults();
+            }
+        }
+
+        /// <summary>
+        /// Toggles deprecated packages on and off
+        /// </summary>
+        public bool ShowDeprecated
+        {
+            get { return showDeprecated; }
+            set
+            {
+                showDeprecated = value;
+                RaisePropertyChanged(nameof(ShowDeprecated));
+                SearchAndUpdateResults();
+            }
+        }
+
+        /// <summary>
+        /// Show only packages with dependencies 
+        /// </summary>
+        public bool ShowDependencies
+        {
+            get { return showDependencies; }
+            set
+            {
+                showDependencies = value;
+                RaisePropertyChanged(nameof(ShowDependencies));
+                SearchAndUpdateResults();
+            }
+        }
+
+        /// <summary>
+        /// Show only packages without dependencies 
+        /// </summary>
+        public bool ShowNoDependencies
+        {
+            get { return showNoDependencies; }
+            set 
+            {
+                showNoDependencies = value;
+                RaisePropertyChanged(nameof(ShowNoDependencies));
+                SearchAndUpdateResults();
             }
         }
 
@@ -1177,7 +1273,7 @@ namespace Dynamo.PackageManager
         /// <summary>   
         ///     Get all the package results in the package manager.
         /// </summary>
-        /// <returns> Returns a list with a maximum MaxNumSearchResults elements.</returns>
+        /// <returns> Returns a list with a maximum MaxNumSearchResults elements.</returns> 
         internal IEnumerable<PackageManagerSearchElementViewModel> GetAllPackages()
         {
             if (LastSync == null) return new List<PackageManagerSearchElementViewModel>();
@@ -1187,7 +1283,10 @@ namespace Dynamo.PackageManager
             var isEnabledForInstall = !(Preferences as IDisablePackageLoadingPreferences).DisableCustomPackageLocations;
 
             // Don't show deprecated packages
-            list = Filter(LastSync.Where(x => !x.IsDeprecated)
+            list = Filter(LastSync.Where(x => ShowDeprecated ? true : !x.IsDeprecated)
+                                  .Where(x => ShowActive ? true : x.IsDeprecated)
+                                  .Where(x => !ShowDependencies ? true : x.Header.versions.First(v => v.name.Equals(x.SelectedVersion))?.direct_dependency_ids.Count() >= 1)
+                                  .Where(x => !ShowNoDependencies ? true : x.Header.versions.First(v => v.name.Equals(x.SelectedVersion))?.direct_dependency_ids.Count() == 0)
                                   .Select(x => new PackageManagerSearchElementViewModel(x,
                                                    PackageManagerClientViewModel.AuthenticationManager.HasAuthProvider,
                                                    CanInstallPackage(x.Name), isEnabledForInstall)))

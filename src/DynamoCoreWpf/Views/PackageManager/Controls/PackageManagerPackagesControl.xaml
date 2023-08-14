@@ -550,7 +550,7 @@
                                 </Rectangle.Fill>
                             </Rectangle>
                             
-                            <!-- Left-hand sid  e --> 
+                            <!-- Left-hand side --> 
                             <Rectangle Width="10"
                                        Height="10"
                                        Margin="0,0,0,2" 

@@ -83,7 +83,7 @@
                         <Button.ContextMenu>
                             <ContextMenu MinWidth="180"
                                          Width="Auto"
-                                         Background="{StaticResource NodeContextMenuBackground}"
+                                         Background="{StaticResource GenericBorderBackgroundColorBrush}"
                                          Style="{StaticResource ContextMenuStyle}">
 
                                 <!--  Sub-Title 'SORT BY'  -->
@@ -207,26 +207,90 @@
                         <Button.ContextMenu>
                             <ContextMenu Name="HostFilter"
                                          Width="180"
-                                         Background="{StaticResource NodeContextMenuBackground}"
+                                         Background="{StaticResource GenericBorderBackgroundColorBrush}"
                                          DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Mode=Self}}"
                                          DisplayMemberPath="FilterName"
-                                         ItemsSource="{Binding HostFilter}"
                                          Style="{StaticResource ContextMenuStyle}">
-                                <ContextMenu.ItemContainerStyle>
+                                <ContextMenu.Resources>
                                     <Style BasedOn="{StaticResource ContextMenuItemStyle}"
                                            TargetType="{x:Type MenuItem}">
-                                        <Setter Property="IsCheckable"
-                                                Value="True" />
-                                        <Setter Property="Command"
-                                                Value="{Binding FilterCommand}" />
-                                        <Setter Property="CommandParameter"
-                                                Value="{Binding FilterName}" />
-                                        <Setter Property="IsChecked"
-                                                Value="{Binding OnChecked}" />
-                                        <Setter Property="ToolTip"
-                                                Value="{x:Static p:Resources.PackageHostDependencyFilterContextItem}" />
+                                        <Setter Property="IsCheckable" Value="True" />
+                                        <Setter Property="Command" Value="{Binding FilterCommand}" />
+                                        <Setter Property="CommandParameter" Value="{Binding FilterName}" />
+                                        <Setter Property="IsChecked" Value="{Binding OnChecked}" />
+                                        <Setter Property="ToolTip" Value="{x:Static p:Resources.PackageHostDependencyFilterContextItem}" />
                                     </Style>
-                                </ContextMenu.ItemContainerStyle>
+                                     <CollectionViewSource x:Key="MenuItems" Source="{Binding HostFilter}"/>
+                                </ContextMenu.Resources>
+                                <ContextMenu.ItemsSource>
+                                    <CompositeCollection>
+                                        <!--  Sub-Title 'FILTER BY HOST'  -->
+                                        <Separator>
+                                            <Separator.Template>
+                                                <ControlTemplate TargetType="Separator">
+                                                    <StackPanel>
+                                                        <TextBlock Margin="10,5"
+                                                                   FontSize="11"
+                                                                   Foreground="#8C8C8C "
+                                                                   Text="{x:Static p:Resources.PackageFilterByHost}" />
+                                                    </StackPanel>
+                                                </ControlTemplate>
+                                            </Separator.Template>
+                                        </Separator>
+                                        <CollectionContainer Collection="{Binding Source={StaticResource MenuItems}}" />
+                                        
+                                        <!--  Sub-Title 'FILTER BY STATUS'  -->
+                                        <Separator>
+                                            <Separator.Template>
+                                                <ControlTemplate TargetType="Separator">
+                                                    <StackPanel>
+                                                        <TextBlock Margin="10,5"
+                                                                   FontSize="11"
+                                                                   Foreground="#8C8C8C "
+                                                                   Text="{x:Static p:Resources.PackageFilterByStatus}" />
+                                                    </StackPanel>
+                                                </ControlTemplate>
+                                            </Separator.Template>
+                                        </Separator>
+
+                                        <!--  Filter Active  -->
+                                        <MenuItem Header="{x:Static p:Resources.PackageSearchViewContextMenuFilterActive}"
+                                                  ToolTipService.IsEnabled="False"
+                                                  IsCheckable="True"
+                                                  IsChecked="{Binding Path=ShowActive, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                        <!--  Filter Deprecated  -->
+                                        <MenuItem Header="{x:Static p:Resources.PackageSearchViewContextMenuFilterDeprecated}"
+                                                  ToolTipService.IsEnabled="False"
+                                                  IsCheckable="True"
+                                                  IsChecked="{Binding Path=ShowDeprecated, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                                        <!--  Sub-Title 'FILTER BY DEPENDENCY'  -->
+                                        <Separator>
+                                            <Separator.Template>
+                                                <ControlTemplate TargetType="Separator">
+                                                    <StackPanel>
+                                                        <TextBlock Margin="10,5"
+                                                                   FontSize="11"
+                                                                   Foreground="#8C8C8C "
+                                                                   Text="{x:Static p:Resources.PackageFilterByDependency}" />
+                                                    </StackPanel>
+                                                </ControlTemplate>
+                                            </Separator.Template>
+                                        </Separator>
+                                        
+                                        <!--  Filter Has dependencies  -->
+                                        <MenuItem Header="{x:Static p:Resources.PackageSearchViewContextMenuFilterDependencies}"
+                                                  ToolTipService.IsEnabled="False"
+                                                  IsCheckable="True"    
+                                                  IsChecked="{Binding Path=ShowDependencies, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                        <!--  Filter Has no dependencies  -->
+                                        <MenuItem Header="{x:Static p:Resources.PackageSearchViewContextMenuFilterNoDependencies}"
+                                                  ToolTipService.IsEnabled="False"
+                                                  IsCheckable="True"
+                                                  IsChecked="{Binding Path=ShowNoDependencies, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                                    </CompositeCollection>
+                                </ContextMenu.ItemsSource>
                             </ContextMenu>
                         </Button.ContextMenu>
                     </Button>

@@ -73,6 +73,7 @@ namespace Dynamo.PackageDetails
             {
                 try
                 {
+                    return; // currently not implemented (waiting for approval)
                     AddHyperlinksToTextBlock(this.DescriptionBody, descriptionText);
                 }
                 catch(Exception ex)

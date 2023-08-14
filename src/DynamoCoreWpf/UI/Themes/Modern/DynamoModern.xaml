@@ -51,7 +51,7 @@
     <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
 
     <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
-
+    <SolidColorBrush x:Key="GenericBorderBackgroundColorBrush" Color="#3c3c3c"/>
 
     <!--  Control-specific resources.  -->
     <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
@@ -671,7 +671,7 @@
                                                              Value="False">
                                                         <Setter TargetName="Border"
                                                                 Property="Background"
-                                                                Value="#3C3C3C" />
+                                                                Value="{StaticResource GenericBorderBackgroundColorBrush}" />
                                                         <Setter TargetName="Border"
                                                                 Property="BorderBrush"
                                                                 Value="#AAAAAA" />
@@ -1401,7 +1401,7 @@
 
                     <Border x:Name="container"
                             Background="Transparent"
-                            BorderBrush="#3c3c3c"
+                            BorderBrush="{StaticResource GenericBorderBackgroundColorBrush}"
                             BorderThickness="1">
                         <Grid x:Name="inner" Background="#373737">
 
@@ -1450,7 +1450,7 @@
                 <ControlTemplate>
                     <Border x:Name="container"
                             Background="Transparent"
-                            BorderBrush="#3c3c3c"
+                            BorderBrush="{StaticResource GenericBorderBackgroundColorBrush}"
                             BorderThickness="1">
                         <Grid x:Name="inner" Background="#373737">
                             <TextBlock x:Name="text"
@@ -1492,7 +1492,7 @@
 
                     <Border x:Name="container"
                             Background="Transparent"
-                            BorderBrush="#3c3c3c"
+                            BorderBrush="{StaticResource GenericBorderBackgroundColorBrush}"
                             BorderThickness="1">
                         <Grid x:Name="inner" Background="#373737">
 
@@ -3922,7 +3922,7 @@
                                Content="✓"
                                DockPanel.Dock="Left"
                                FontSize="9px"
-                               Foreground="White"
+                               Foreground="{StaticResource PreferencesWindowButtonColor}"
                                Visibility="Collapsed" />
                         <ContentPresenter x:Name="ContentPresenter"
                                           Margin="{TemplateBinding Padding}"
@@ -3989,7 +3989,7 @@
                             <Setter TargetName="dockPanel" Property="Background" Value="{StaticResource NodeContextMenuBackgroundHighlight}" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter TargetName="dockPanel" Property="Background" Value="{StaticResource NodeContextMenuBackground}" />
+                            <Setter TargetName="dockPanel" Property="Background" Value="{StaticResource GenericBorderBackgroundColorBrush}" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="checkBox" Property="Visibility" Value="Visible" />
