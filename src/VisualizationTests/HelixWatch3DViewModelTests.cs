@@ -29,7 +29,6 @@ using Dynamo.Wpf.Rendering;
 using Dynamo.Wpf.ViewModels.Watch3D;
 using DynamoCoreWpfTests.Utility;
 using DynamoShapeManager;
-using HelixToolkit.SharpDX.Core;
 using HelixToolkit.Wpf.SharpDX;
 using NUnit.Framework;
 using SharpDX;
@@ -109,10 +108,6 @@ namespace WpfVisualizationTests
 
             ViewModel = DynamoViewModel.Start(vmConfig);
 
-            // Disable edge rendering to ensure that curve counts are correct.
-            // because preferences settings is now a sinleton prefs changes can affect other tests.
-            ViewModel.RenderPackageFactoryViewModel.ShowEdges = false;
-
             //create the view
             View = new DynamoView(ViewModel);
             View.Show();
@@ -143,7 +138,7 @@ namespace WpfVisualizationTests
             };
         }
 
-        private void Model_EvaluationCompleted(object sender, EvaluationCompletedEventArgs e)
+        private async void Model_EvaluationCompleted(object sender, EvaluationCompletedEventArgs e)
         {
             DispatcherUtil.DoEvents();
         }
@@ -164,14 +159,9 @@ namespace WpfVisualizationTests
 
         // With version 2.5 NUnit will call base class TearDown methods after those in the derived classes
         [TearDown]
-        public void CleanUp()
+        private void CleanUp()
         {
             Model.EvaluationCompleted -= Model_EvaluationCompleted;
-            //under some circumstances, closing the DynamoView does not trigger the unloaded
-            //event on the view or on child user controls, so here we clear the workspace
-            //before the base class teardown closes the view - this will trigger unloaded
-            //on all children of the workspace.
-            ViewModel.CurrentSpace.Clear();
         }
     }
 
@@ -1269,7 +1259,7 @@ namespace WpfVisualizationTests
             }
         }
 
-        private void tagGeometryWhenClickingItem(int[] indexes, int expectedNumberOfLabels,
+        private async void tagGeometryWhenClickingItem(int[] indexes, int expectedNumberOfLabels,
             string nodeName, Func<NodeView,NodeModel> getGeometryOwnerNode, bool expandPreviewBubble = false)
         {
             OpenVisualizationTest("MAGN_3815.dyn");
@@ -1297,17 +1287,17 @@ namespace WpfVisualizationTests
             {
                 treeViewItem = treeViewItem.ChildrenOfType<TreeViewItem>().ElementAt(index);
             }
+
             // click on the found TreeViewItem
             View.Dispatcher.Invoke(() =>
             {
                 treeViewItem.RaiseEvent(new MouseButtonEventArgs(Mouse.PrimaryDevice, 0, MouseButton.Left)
                 {
-                    RoutedEvent = Mouse.MouseUpEvent
+                    RoutedEvent = Mouse.MouseDownEvent
                 });
             });
 
             DispatcherUtil.DoEvents();
-
 
             // check if label has been added to corresponding geometry
             var helix = ViewModel.BackgroundPreviewViewModel as HelixWatch3DViewModel;

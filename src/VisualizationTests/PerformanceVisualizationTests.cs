@@ -1,7 +1,6 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using DynamoCoreWpfTests.Utility;
 using NUnit.Framework;
 
@@ -22,7 +21,7 @@ namespace WpfVisualizationTests
         const int SamplingAmount = 3;
 
         [Test]
-        [TestCaseSource(nameof(PerformanceTestSource))]
+        [TestCaseSource("PerformanceTestSource")]
         public void TestVisualizationPerformance(string filePath)
         {
             ViewModel.OpenCommand.Execute(filePath);
@@ -31,11 +30,11 @@ namespace WpfVisualizationTests
             DispatcherUtil.DoEvents();
         }
 
-        public static IEnumerable<string> PerformanceTestSource
+        public IEnumerable<string> PerformanceTestSource
         {
             get
             {
-                var path = Path.Combine(GetTestDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)), @"..\tools\Performance\DynamoPerformanceTests\graphs");
+                var path = Path.Combine(GetTestDirectory(ExecutingDirectory), @"..\tools\Performance\DynamoPerformanceTests\graphs");
                 return new DirectoryInfo(path).GetFiles("*.dyn").SelectMany(fileInfo => Enumerable.Repeat(fileInfo.FullName, SamplingAmount));
             }
         }

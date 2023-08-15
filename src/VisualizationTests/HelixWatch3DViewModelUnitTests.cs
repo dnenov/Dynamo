@@ -1,7 +1,6 @@
-using System.Linq;
+﻿using System.Linq;
 using Dynamo.Wpf.Rendering;
 using Dynamo.Wpf.ViewModels.Watch3D;
-using HelixToolkit.SharpDX.Core;
 using HelixToolkit.Wpf.SharpDX;
 using NUnit.Framework;
 using SharpDX;

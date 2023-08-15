@@ -1,6 +1,5 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Threading;
 using NUnit.Framework;
 
 // General Information about an assembly is controlled through the following 
@@ -9,6 +8,6 @@ using NUnit.Framework;
 [assembly: AssemblyTitle("VisualizationTests")]
 [assembly: AssemblyCulture("")]
 [assembly: Guid("c4964946-b367-44ee-9ed2-451ff2a83d32")]
-[assembly: NUnit.Framework.Apartment(ApartmentState.STA)]
+[assembly: RequiresSTA]
 
 
