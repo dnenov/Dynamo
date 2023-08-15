@@ -2178,11 +2178,38 @@ namespace Dynamo.Controls
             preferencesWindow.Show();
         }
 
-        private void OnPackageManagerWindowClick(object sender, RoutedEventArgs e)
+        private void DynamoViewModelRequestShowPackageManager(object s, EventArgs e)
         {
-            packageManagerWindow = new PackageManagerView();
-            packageManagerWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            packageManagerWindow.Show();
+            if (!DisplayTermsOfUseForAcceptance())
+                return; // Terms of use not accepted.
+
+            var cmd = Analytics.TrackCommandEvent("PackageManager");
+            if (_pkgSearchVM == null)
+            {
+                _pkgSearchVM = new PackageManagerSearchViewModel(dynamoViewModel.PackageManagerClientViewModel);
+            }
+
+            if (_pkgVM == null)
+            {
+                _pkgVM = new PackageManagerViewModel(dynamoViewModel, _pkgSearchVM);
+            }
+
+            if (packageManagerWindow == null)
+            {
+                packageManagerWindow = new PackageManagerView(this, _pkgVM)
+                {
+                    Owner = this,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner
+                };
+
+                packageManagerWindow.Closed += (sender, args) => { packageManagerWindow = null; cmd.Dispose(); };
+                packageManagerWindow.Show();
+
+                if (packageManagerWindow.IsLoaded && IsLoaded) packageManagerWindow.Owner = this;
+            }
+
+            packageManagerWindow.Focus();
+            _pkgSearchVM.RefreshAndSearchAsync();
         }
 
         internal void EnableEnvironment(bool isEnabled)
