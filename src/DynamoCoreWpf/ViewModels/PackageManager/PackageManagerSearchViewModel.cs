@@ -1282,11 +1282,12 @@ namespace Dynamo.PackageManager
 
             var isEnabledForInstall = !(Preferences as IDisablePackageLoadingPreferences).DisableCustomPackageLocations;
 
-            // Don't show deprecated packages
+            // Filter based on user preference
+            // A package has depndencies if the number of direct_dependency_ids is more than 1
             list = Filter(LastSync.Where(x => ShowDeprecated ? true : !x.IsDeprecated)
                                   .Where(x => ShowActive ? true : x.IsDeprecated)
-                                  .Where(x => !ShowDependencies ? true : x.Header.versions.First(v => v.name.Equals(x.SelectedVersion))?.direct_dependency_ids.Count() >= 1)
-                                  .Where(x => !ShowNoDependencies ? true : x.Header.versions.First(v => v.name.Equals(x.SelectedVersion))?.direct_dependency_ids.Count() == 0)
+                                  .Where(x => !ShowDependencies ? true : PackageHasDependencies(x))
+                                  .Where(x => !ShowNoDependencies ? true : !PackageHasDependencies(x))
                                   .Select(x => new PackageManagerSearchElementViewModel(x,
                                                    PackageManagerClientViewModel.AuthenticationManager.HasAuthProvider,
                                                    CanInstallPackage(x.Name), isEnabledForInstall)))
@@ -1304,6 +1305,12 @@ namespace Dynamo.PackageManager
 
             return list;
         }
+
+        private bool PackageHasDependencies(PackageManagerSearchElement package)
+        {
+            return package.Header.versions.First(v => v.version.Equals(package.SelectedVersion)).direct_dependency_ids.Count() > 1;
+        }
+
 
         /// <summary>
         ///     Performs a search using the given string as query, but does not update
