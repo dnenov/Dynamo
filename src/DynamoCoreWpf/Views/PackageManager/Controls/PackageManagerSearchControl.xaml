@@ -42,7 +42,7 @@
             <Border Name="searchBar"
                     Padding="16 16 25 8"
                     BorderBrush="#7E7E7E"
-                    BorderThickness="0,1,0,0">
+                    BorderThickness="0">
                 <DockPanel>
                     <!--  Sort Button  -->
                     <Button Name="sortResultsButton"
