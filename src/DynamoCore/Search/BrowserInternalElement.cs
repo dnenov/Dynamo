@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 
 namespace Dynamo.Search
 {
@@ -28,6 +28,11 @@ namespace Dynamo.Search
         ///     Returns previous parent item 
         /// </summary>
         public BrowserItem OldParent { get; set; }
+
+        /// <summary>
+        ///     Returns the wpf UI parent to host the view
+        /// </summary>
+        public object UIParent { get; set; }
 
         internal void ReturnToOldParent()
         {

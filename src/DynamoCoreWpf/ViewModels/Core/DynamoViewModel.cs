@@ -24,6 +24,7 @@ using Dynamo.Graph.Workspaces;
 using Dynamo.Interfaces;
 using Dynamo.Models;
 using Dynamo.PackageManager;
+using Dynamo.PackageManager.UI;
 using Dynamo.Scheduler;
 using Dynamo.Selection;
 using Dynamo.Services;
@@ -2217,7 +2218,15 @@ namespace Dynamo.ViewModels
 
         internal void ShowPackageManagerSearch(object parameters)
         {
-            OnRequestPackageManagerSearchDialog(this, EventArgs.Empty);
+            if (parameters == null)
+            {
+                OnRequestPackageManagerDialog(this, EventArgs.Empty);
+            }
+            else
+            {
+                var param = (string)parameters;
+                OnRequestPackageManagerDialog(this, new OpenPackageManagerEventArgs(param));
+            }
         }
 
         internal void ShowPackageManager(object parameters)

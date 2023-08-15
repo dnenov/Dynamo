@@ -26,6 +26,7 @@ using Dynamo.Wpf.Properties;
 using Dynamo.Wpf.ViewModels;
 using DynamoUnits;
 using FontAwesome5;
+using static Dynamo.PackageManager.PackageManagerSearchViewModel;
 using Color = System.Windows.Media.Color;
 using FlowDirection = System.Windows.FlowDirection;
 using HorizontalAlignment = System.Windows.HorizontalAlignment;
@@ -144,6 +145,24 @@ namespace Dynamo.Controls
             var n = (int)(parameter ?? 0);
 
             return collection.Count <= n ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Returns Visibility.Visible if the collection is empty, otherwise returns Visibility.Collapsed.
+    /// </summary>
+    public class EmptyListToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (!(value is ICollection collection)) return Visibility.Collapsed;
+
+            return collection.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -3762,6 +3781,39 @@ namespace Dynamo.Controls
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
             return null;
+        }
+    }
+
+    public class PackageSearchStateToVisibilityConverter : IValueConverter
+    {
+        /// <summary>
+        /// Returns Visibility.Visible or Visibility.Collapsed based on the value of the Enum and the provided parameter
+        /// </summary>
+        /// <returns>Visibility.Visible or Visibility.Collapsed</returns>
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var searchState = (PackageSearchState)value;
+
+            // If no parameter is specified, we use True value
+            bool param = parameter == null || bool.Parse(parameter.ToString());
+
+            // If we have finished searching, and no parameter, or true parameter is provided, return Visible 
+            if (PackageSearchState.Results == searchState && param)
+            {
+                return Visibility.Visible;
+            }
+            // If we are still searching, and false parameter is provided, then also return Visible (loading screen)
+            else if (PackageSearchState.Results != searchState && !param)
+            {
+                return Visibility.Visible;
+            }
+
+            return Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }
