@@ -1,4 +1,4 @@
-﻿using SystemTestServices;
+using SystemTestServices;
 using Dynamo.PackageManager.ViewModels;
 using Moq;
 using NUnit.Framework;
@@ -9,6 +9,7 @@ using Dynamo.ViewModels;
 using System.Collections.Generic;
 using static Dynamo.PackageManager.PackageManagerSearchViewModel;
 using Dynamo.Controls;
+using System.Collections.ObjectModel;
 
 namespace Dynamo.PackageManager.Wpf.Tests
 {
@@ -183,7 +184,7 @@ namespace Dynamo.PackageManager.Wpf.Tests
             packageManagerSearchViewModel.RegisterTransientHandlers();
 
             //Adds the filters for FormIt and Advance Steel
-            packageManagerSearchViewModel.HostFilter = new List<FilterEntry>
+            packageManagerSearchViewModel.HostFilter = new ObservableCollection<FilterEntry>
             {
                 new FilterEntry(advSteelFilterName, packageManagerSearchViewModel) { OnChecked = true },
                 new FilterEntry(formItFilterName, packageManagerSearchViewModel) { OnChecked = true },

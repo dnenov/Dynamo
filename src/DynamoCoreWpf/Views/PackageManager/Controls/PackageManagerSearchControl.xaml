@@ -304,24 +304,45 @@
                 </DockPanel>
             </Border>
 
-            <StackPanel x:Name="filterBar" Grid.Row="1">
-                <ItemsControl x:Name="FilterItemControl"
-                              Margin="5"
-                              ItemsSource="{Binding FilterItems, UpdateSourceTrigger=PropertyChanged}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <local:FilterTagControl />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal" />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </StackPanel>
+            <ItemsControl x:Name="FilterItemControl"
+                            Grid.Row="1"
+                            Margin="12 5">
+                <ItemsControl.Resources>
+                    <CollectionViewSource x:Key="FilterItems" Source="{Binding HostFilter}" />
+                </ItemsControl.Resources>
+                <ItemsControl.ItemsSource>
+                    <CompositeCollection>
+                        <CollectionContainer Collection="{Binding Source={StaticResource FilterItems}}" />
+                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterActive}"
+                                                IsFilterOn="{Binding ShowActive}"
+                                                Visibility="{Binding ShowActive,
+                                                        Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDeprecated}"
+                                Visibility="{Binding ShowDeprecated,
+                                                        Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDependencies}"
+                                Visibility="{Binding ShowDependencies,
+                                                        Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterNoDependencies}"
+                                Visibility="{Binding ShowNoDependencies,
+                                                        Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+                    </CompositeCollection>
+                </ItemsControl.ItemsSource>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type local:FilterTagControl}">
+                        <local:FilterTagControl TagName="{Binding FilterName}"  
+                                Visibility="{Binding OnChecked,
+                                                        Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
 
-            <local:PackageManagerPackageAnimationControl x:Name="loadingScreen"
+            <local:PackageManagerPackageAnimationControl x:Name="loadingScreen" 
                                                          Grid.Row="2"
                                                          Visibility="{Binding Path=InitialResultsLoaded, UpdateSourceTrigger=PropertyChanged,
                                                                 Converter={StaticResource InverseBooleanToVisibilityCollapsedConverter}}" />

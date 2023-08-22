@@ -13,6 +13,25 @@ namespace Dynamo.PackageManager.UI
     /// </summary>
     public partial class FilterTagControl : UserControl
     {
+        public string TagName
+        {
+            get { return (string)GetValue(TagNameProperty); }
+            set { SetValue(TagNameProperty, value); }
+        }
+
+        public bool IsFilterOn
+        {
+            get { return (bool)GetValue(IsFilterOnProperty); }
+            set { SetValue(IsFilterOnProperty, value); }
+        }
+
+        public static readonly DependencyProperty TagNameProperty =
+            DependencyProperty.Register("TagName", typeof(string), typeof(FilterTagControl), new PropertyMetadata(string.Empty));
+
+        public static readonly DependencyProperty IsFilterOnProperty =
+            DependencyProperty.Register("IsFilterOn", typeof(bool), typeof(FilterTagControl), new PropertyMetadata(false));
+
+
         public FilterTagControl()
         {
             InitializeComponent();

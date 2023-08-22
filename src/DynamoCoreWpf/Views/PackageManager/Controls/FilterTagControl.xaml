@@ -31,19 +31,14 @@
                         SnapsToDevicePixels="True"
                         UseLayoutRounding="True"
                         BorderThickness="2"
-                        BorderBrush="{Binding IsFilterOn,
-                                                  Converter={StaticResource BooleanToBorderColorConverter}, 
-                                                  UpdateSourceTrigger=PropertyChanged}"
-                        Background="{Binding IsFilterOn, 
-                                             Converter={StaticResource BooleanToColorConverter},
-                                             ConverterParameter=Default,
-                                             UpdateSourceTrigger=PropertyChanged}">
+                        BorderBrush="#2a2a2a"
+                        Background="#494949">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="{Binding FilterImage}"
-                               Width="10"
-                               Height="10"
+                        <Image Source="/DynamoCoreWpf;component/UI/Images/closetab_normal.png"
+                               Width="16"
+                               Height="16"
                                SnapsToDevicePixels="True"
-                               UseLayoutRounding="True"
+                               UseLayoutRounding="True" 
                                VerticalAlignment="Stretch"
                                Margin="2 0 0 0" />
                         <ContentPresenter />
@@ -55,19 +50,13 @@
                              Value="True">
                         <Setter TargetName="border"
                                 Property="Background"
-                                Value="{Binding IsFilterOn, 
-                                                Converter={StaticResource BooleanToColorConverter},
-                                                ConverterParameter=Hover,
-                                                UpdateSourceTrigger=PropertyChanged}" />
+                                Value="#5D5D5D" />
                     </Trigger>
                     <Trigger Property="IsPressed"
                              Value="True">
                         <Setter TargetName="border"
-                                Property="Background"
-                                Value="{Binding IsFilterOn, 
-                                                Converter={StaticResource BooleanToColorConverter},
-                                                ConverterParameter=Pressed,
-                                                UpdateSourceTrigger=PropertyChanged}" />
+                                Property="BorderBrush"
+                                Value="#25576E" />
 
                     </Trigger>
                 </ControlTemplate.Triggers>
@@ -76,13 +65,13 @@
     </UserControl.Resources>
     <Grid>
         <Button Template="{StaticResource ToggleTemplate}"
-                Height="32"
+                Height="36" 
                 Click="ButtonBase_OnClick">
-            <TextBlock Text="{Binding Name}"
-                       Padding="4 2 4 0"
+            <TextBlock Text="{Binding TagName, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                       Padding="6 2 6 0"
                        TextAlignment="Center"
-                       FontSize="10"
-                       FontWeight="Medium"
+                       FontSize="12"
+                       FontFamily="{StaticResource ArtifaktElementRegular}"
                        Foreground="{StaticResource DarkThemeBodyMediumBrush}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center">

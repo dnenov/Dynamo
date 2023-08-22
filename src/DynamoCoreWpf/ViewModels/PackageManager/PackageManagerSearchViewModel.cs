@@ -93,40 +93,6 @@ namespace Dynamo.PackageManager
             /// </summary>
             public bool OnChecked { get; set; }
 
-            /// <summary>
-            /// Filters packages which are active
-            /// </summary>
-            public bool ShowActive {
-                get { return pmSearchViewModel.ShowActive; }
-                set { pmSearchViewModel.ShowActive = value; }
-            }
-
-            /// <summary>
-            /// Filters packages which are deprecated
-            /// </summary>
-            public bool ShowDeprecated
-            {
-                get { return pmSearchViewModel.ShowDeprecated; }
-                set { pmSearchViewModel.ShowDeprecated = value; }
-            }
-
-            /// <summary>
-            /// Filters packages with dependencies
-            /// </summary>
-            public bool ShowDependencies
-            {
-                get { return pmSearchViewModel.ShowDependencies; }
-                set { pmSearchViewModel.ShowDependencies = value; }
-            }
-
-            /// <summary>
-            /// Filters packages which have no dependencies
-            /// </summary>
-            public bool ShowNoDependencies
-            {
-                get { return pmSearchViewModel.ShowNoDependencies; }
-                set { pmSearchViewModel.ShowNoDependencies = value; }
-            }            
 
             /// <summary>
             /// Private reference of PackageManagerSearchViewModel,
@@ -213,13 +179,13 @@ namespace Dynamo.PackageManager
             }
         }
 
-        private List<FilterEntry> hostFilter;
+        private ObservableCollection<FilterEntry> hostFilter;
         
         /// <summary>
         /// Dynamic Filter for package hosts, should include all Dynamo known hosts from PM backend
         ///  e.g. "Advance Steel", "Alias", "Civil 3D", "FormIt", "Revit"
         /// </summary>
-        public List<FilterEntry> HostFilter
+        public ObservableCollection<FilterEntry> HostFilter
         {
             get { return hostFilter; }
             set
@@ -538,7 +504,7 @@ namespace Dynamo.PackageManager
             SearchText = string.Empty;
             SortingKey = PackageSortingKey.Votes;
             SortingDirection = PackageSortingDirection.Descending;
-            HostFilter = new List<FilterEntry>();
+            HostFilter = new ObservableCollection<FilterEntry>();
             SelectedHosts = new List<string>();
         }
 
@@ -678,7 +644,7 @@ namespace Dynamo.PackageManager
         /// Based on the known hosts received from Package Manager server,
         /// initialize the host filter in Dynamo
         /// </summary>
-        public List<FilterEntry> InitializeHostFilter()
+        public ObservableCollection<FilterEntry> InitializeHostFilter()
         {
             var hostFilter = new List<FilterEntry>();
             foreach (var host in PackageManagerClientViewModel.Model.GetKnownHosts())
@@ -686,7 +652,7 @@ namespace Dynamo.PackageManager
                 hostFilter.Add(new FilterEntry(host, this));
             }
             
-            return hostFilter;
+            return new ObservableCollection<FilterEntry> ( hostFilter );
         }
 
         /// <summary>
