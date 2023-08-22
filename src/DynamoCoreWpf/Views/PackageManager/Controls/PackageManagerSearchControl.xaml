@@ -35,6 +35,7 @@
         <Grid Background="Transparent">
             <Grid.RowDefinitions>
                 <RowDefinition Height="77" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
@@ -303,13 +304,30 @@
                 </DockPanel>
             </Border>
 
+            <StackPanel x:Name="filterBar" Grid.Row="1">
+                <ItemsControl x:Name="FilterItemControl"
+                              Margin="5"
+                              ItemsSource="{Binding FilterItems, UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:FilterTagControl />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+
             <local:PackageManagerPackageAnimationControl x:Name="loadingScreen"
-                                                         Grid.Row="1"
+                                                         Grid.Row="2"
                                                          Visibility="{Binding Path=InitialResultsLoaded, UpdateSourceTrigger=PropertyChanged,
                                                                 Converter={StaticResource InverseBooleanToVisibilityCollapsedConverter}}" />
         
             <local:PackageManagerPackagesControl x:Name="packageManagerSearchPackages"
-                                                 Grid.Row="1"
+                                                 Grid.Row="2"
                                                  SearchItems="{Binding Path=SearchResults}"
                                                  Visibility="{Binding Path=InitialResultsLoaded, UpdateSourceTrigger=PropertyChanged,
                                                                       Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
