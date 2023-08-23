@@ -3,8 +3,8 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Media;
-using ViewModels.PackageManager;
 
 namespace Dynamo.PackageManager.UI
 {
@@ -25,11 +25,20 @@ namespace Dynamo.PackageManager.UI
             set { SetValue(IsFilterOnProperty, value); }
         }
 
+        public ICommand FilterCommand
+        {
+            get { return (ICommand)GetValue(FilterCommandProperty); }
+            set { SetValue(FilterCommandProperty, value); }
+        }
+
         public static readonly DependencyProperty TagNameProperty =
             DependencyProperty.Register("TagName", typeof(string), typeof(FilterTagControl), new PropertyMetadata(string.Empty));
 
         public static readonly DependencyProperty IsFilterOnProperty =
             DependencyProperty.Register("IsFilterOn", typeof(bool), typeof(FilterTagControl), new PropertyMetadata(false));
+
+        public static readonly DependencyProperty FilterCommandProperty =
+            DependencyProperty.Register("FilterCommand", typeof(ICommand), typeof(FilterTagControl));
 
 
         public FilterTagControl()
@@ -39,10 +48,7 @@ namespace Dynamo.PackageManager.UI
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            var vm = this.DataContext as FilterTagViewModel;
-            if (vm == null) return;
-
-            vm.Toggle(sender);
+            IsFilterOn = !IsFilterOn;
         }
     }
 

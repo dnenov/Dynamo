@@ -17,6 +17,43 @@
         <ResourceDictionary>
             <controls:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
             <controls:InverseBooleanToVisibilityCollapsedConverter x:Key="InverseBooleanToVisibilityCollapsedConverter" />
+            <!-- Button Style -->
+            <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="#f5f5f5"></Setter>
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource ArtifaktElementRegular}"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{StaticResource Blue400Brush}" />
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter Property="Foreground" Value="{StaticResource MidLightBlueBrush}" />
+                    </Trigger>
+                    <Trigger Property="Visibility" Value="Visible">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                     From="0.0"
+                                                     To="1.0"
+                                                     Duration="0:0:0.3" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoConvertersDictionaryUri}" />
                 <ui:SharedResourceDictionary Source="{x:Static ui:SharedDictionaryManager.DynamoModernDictionaryUri}" />
@@ -218,7 +255,7 @@
                                         <Setter Property="IsCheckable" Value="True" />
                                         <Setter Property="Command" Value="{Binding FilterCommand}" />
                                         <Setter Property="CommandParameter" Value="{Binding FilterName}" />
-                                        <Setter Property="IsChecked" Value="{Binding OnChecked}" />
+                                        <Setter Property="IsChecked" Value="{Binding OnChecked, UpdateSourceTrigger=PropertyChanged}" />
                                         <Setter Property="ToolTip" Value="{x:Static p:Resources.PackageHostDependencyFilterContextItem}" />
                                     </Style>
                                      <CollectionViewSource x:Key="MenuItems" Source="{Binding HostFilter}"/>
@@ -275,7 +312,7 @@
                                                                    Foreground="#8C8C8C "
                                                                    Text="{x:Static p:Resources.PackageFilterByDependency}" />
                                                     </StackPanel>
-                                                </ControlTemplate>
+                                                </ControlTemplate>  
                                             </Separator.Template>
                                         </Separator>
                                         
@@ -304,43 +341,65 @@
                 </DockPanel>
             </Border>
 
-            <ItemsControl x:Name="FilterItemControl"
-                            Grid.Row="1"
-                            Margin="12 5">
-                <ItemsControl.Resources>
-                    <CollectionViewSource x:Key="FilterItems" Source="{Binding HostFilter}" />
-                </ItemsControl.Resources>
-                <ItemsControl.ItemsSource>
-                    <CompositeCollection>
-                        <CollectionContainer Collection="{Binding Source={StaticResource FilterItems}}" />
-                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterActive}"
-                                                IsFilterOn="{Binding ShowActive}"
-                                                Visibility="{Binding ShowActive,
+            <DockPanel Grid.Row="1"
+                       Margin="12 0 12 5"
+                       Visibility="{Binding Path=InitialResultsLoaded, UpdateSourceTrigger=PropertyChanged,
+                                                                      Converter={StaticResource BoolToVisibilityCollapsedConverter}}">
+                
+                <!-- Bar containing all active fitlers -->
+                <ItemsControl x:Name="FilterItemControl">
+                    <ItemsControl.Resources>
+                        <CollectionViewSource x:Key="FilterItems"
+                                              Source="{Binding HostFilter}" />
+                    </ItemsControl.Resources>
+                    <ItemsControl.ItemsSource>
+                        <CompositeCollection>
+                            <CollectionContainer Collection="{Binding Source={StaticResource FilterItems}}" />
+                            <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterActive}"
+                                                    IsFilterOn="{Binding ShowActive, Mode=TwoWay}"
+                                                    Visibility="{Binding ShowActive,
                                                         Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
-                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDeprecated}"
-                                Visibility="{Binding ShowDeprecated,
+                            <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDeprecated}"
+                                                    IsFilterOn="{Binding ShowDeprecated, Mode=TwoWay}"
+                                                    Visibility="{Binding ShowDeprecated,
                                                         Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
-                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDependencies}"
-                                Visibility="{Binding ShowDependencies,
+                            <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterDependencies}"
+                                                    IsFilterOn="{Binding ShowDependencies, Mode=TwoWay}"
+                                                    Visibility="{Binding ShowDependencies,
                                                         Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
-                        <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterNoDependencies}"
-                                Visibility="{Binding ShowNoDependencies,
+                            <local:FilterTagControl TagName="{x:Static p:Resources.PackageSearchViewContextMenuFilterNoDependencies}"
+                                                    IsFilterOn="{Binding ShowNoDependencies, Mode=TwoWay}"
+                                                    Visibility="{Binding ShowNoDependencies,
                                                         Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
-                    </CompositeCollection>
-                </ItemsControl.ItemsSource>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate DataType="{x:Type local:FilterTagControl}">
-                        <local:FilterTagControl TagName="{Binding FilterName}"  
-                                Visibility="{Binding OnChecked,
+                        </CompositeCollection>
+                    </ItemsControl.ItemsSource>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:FilterTagControl}">
+                            <local:FilterTagControl TagName="{Binding FilterName}"
+                                                    IsFilterOn="{Binding OnChecked, Mode=TwoWay}"
+                                                    FilterCommand="{Binding FilterCommand}"
+                                                    Visibility="{Binding OnChecked,
                                                         Converter={StaticResource BoolToVisibilityCollapsedConverter}}" />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+                
+                <!-- Clear Filter Button -->
+                <Button x:Name="ClearFiltersButton"
+                        DockPanel.Dock="Right"
+                        Content="Clear all"
+                        Margin="0 3 5 15"
+                        Width="60"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource ButtonStyle1}"
+                        Command="{Binding ClearFiltersCommand}"
+                        Visibility="{Binding IsAnyFilterOn, Converter={StaticResource BoolToVisibilityCollapsedConverter}, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
 
             <local:PackageManagerPackageAnimationControl x:Name="loadingScreen" 
                                                          Grid.Row="2"

@@ -21,13 +21,15 @@
             <Style x:Key="TextBoxStyle" TargetType="TextBox">
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="Padding" Value="15 10 5 5"/>
-                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="{StaticResource ArtifaktElementRegular}"/>
                 <Setter Property="Foreground" Value="{StaticResource DarkThemeBodyMediumBrush}"></Setter>
             </Style>
             <Style x:Key="TextBlockStyle" TargetType="TextBlock">
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="Padding" Value="15 10 5 5"/>
-                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="{StaticResource ArtifaktElementRegular}"/>
                 <Setter Property="Foreground" Value="{StaticResource DarkThemeBodyMediumBrush}"></Setter>
             </Style>
             <Style x:Key="BorderStyle" TargetType="Border">
@@ -77,13 +79,13 @@
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Center">
                     <Image x:Name="SearchImage"
-                               Width="16px"
-                               Height="16px"
+                               Width="20px"
+                               Height="20px"
                                Margin="0 5 -10 0"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                SnapsToDevicePixels="True"
-                               Source="/GraphNodeManagerViewExtension;component/Images/Search.png"
+                           Source="/DynamoCoreWpf;component/UI/Images/search_icon_20px.png"
                                Stretch="UniformToFill"/>
                     <Grid HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
