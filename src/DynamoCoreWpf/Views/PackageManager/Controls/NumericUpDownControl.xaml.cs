@@ -184,6 +184,11 @@ namespace Dynamo.PackageManager.UI
             {
                 e.Handled = true; // Prevent space from being entered
             }
+
+            if ((Keyboard.Modifiers & ModifierKeys.Control) != 0 && (e.Key == Key.C || e.Key == Key.X || e.Key == Key.V))
+            {
+                e.Handled = true; // Prevent the combination key for copy/cut/paste
+            }
         }
 
         #endregion
