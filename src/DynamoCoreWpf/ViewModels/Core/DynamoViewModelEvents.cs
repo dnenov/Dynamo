@@ -51,6 +51,16 @@ namespace Dynamo.ViewModels
             }
         }
 
+        public event ImageSaveEventHandler RequestSaveCompImage;
+        public virtual void OnRequestSaveCompImage(Object sender, ImageSaveEventArgs e)
+        {
+            if (RequestSaveCompImage != null)
+            {
+                RequestSaveCompImage(this, e);
+            }
+        }
+
+
         public event EventHandler RequestClose;
         public virtual void OnRequestClose(Object sender, EventArgs e)
         {

@@ -1333,6 +1333,7 @@ namespace Dynamo.Controls
             dynamoViewModel.RequestClose += DynamoViewModelRequestClose;
             dynamoViewModel.RequestSaveImage += DynamoViewModelRequestSaveImage;
             dynamoViewModel.RequestSave3DImage += DynamoViewModelRequestSave3DImage;
+            dynamoViewModel.RequestSaveCompImage += DynamoViewModelRequestSaveCompositeImage;
             dynamoViewModel.SidebarClosed += DynamoViewModelSidebarClosed;
 
             dynamoViewModel.Model.RequestsCrashPrompt += Controller_RequestsCrashPrompt;
@@ -1667,6 +1668,53 @@ namespace Dynamo.Controls
             {
                 encoder.Save(stream);
             }
+        }
+
+
+        private void DynamoViewModelRequestSaveCompositeImage(object sender, ImageSaveEventArgs e)
+        {
+            var img = e.Path;
+            if (img == null) return;
+
+            var filePathWithoutExtension = GetFilePathWithoutExtension(img);
+
+            var pathForeground = String.Concat(filePathWithoutExtension, "_f.png");
+            var pathBackground = String.Concat(filePathWithoutExtension, "_b.png");
+
+            DynamoViewModelRequestSave3DImage(sender, new ImageSaveEventArgs(pathBackground));
+            DynamoViewModelRequestSaveImage(sender, new ImageSaveEventArgs(pathForeground));
+
+            //this.Save3DImageCommand.Execute(pathBackground);
+            //this.SaveImageCommand.Execute(pathForeground);
+
+            var finalImage = ImageUtilities.OverlayImages(pathBackground, pathForeground, 1.1);
+            if (finalImage == null)
+            {
+                CleanUp(pathForeground);
+                CleanUp(pathBackground);
+
+                return;
+            }
+
+            ImageUtilities.SaveBitmap(finalImage, img);
+
+            CleanUp(pathForeground);
+            CleanUp(pathBackground);
+        }
+
+        private string GetFilePathWithoutExtension(string filePath)
+        {
+            string directory = Path.GetDirectoryName(filePath);
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(filePath);
+            string filePathWithoutExtension = Path.Combine(directory, fileNameWithoutExtension);
+
+            return filePathWithoutExtension;
+        }
+
+        private void CleanUp(string image)
+        {
+            if (File.Exists(image))
+                File.Delete(image);
         }
 
         private void DynamoViewModelRequestClose(object sender, EventArgs e)

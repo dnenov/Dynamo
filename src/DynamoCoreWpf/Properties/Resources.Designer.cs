@@ -2396,6 +2396,15 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export Composite Image.
+        /// </summary>
+        public static string DynamoViewToolbarExportCompButtonTooltip {
+            get {
+                return ResourceManager.GetString("DynamoViewToolbarExportCompButtonTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New [Ctrl + N].
         /// </summary>
         public static string DynamoViewToolbarNewButtonTooltip {
@@ -9004,6 +9013,15 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to screenshot_comp.
+        /// </summary>
+        public static string ScreenShotFromCompParameter {
+            get {
+                return ResourceManager.GetString("ScreenShotFromCompParameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Script tags detected in the help document have been removed..
         /// </summary>
         public static string ScriptTagsRemovalWarning {
@@ -9090,6 +9108,15 @@ namespace Dynamo.Wpf.Properties {
         public static string ShortcutExportBackground3DPreview {
             get {
                 return ResourceManager.GetString("ShortcutExportBackground3DPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export composite image.
+        /// </summary>
+        public static string ShortcutExportCompositePreview {
+            get {
+                return ResourceManager.GetString("ShortcutExportCompositePreview", resourceCulture);
             }
         }
         

@@ -874,6 +874,10 @@ Don't worry, you'll have the option to save your work.</value>
     <value>Export Background Preview As Image</value>
     <comment>Toolbar export button tooltip</comment>
   </data>
+  <data name="DynamoViewToolbarExportCompButtonTooltip" xml:space="preserve">
+    <value>Export Composite Image</value>
+    <comment>Toolbar export combposite image button tooltip</comment>
+  </data>
   <data name="DynamoViewToolbarExportButtonTooltip" xml:space="preserve">
     <value>Export Workspace As Image</value>
     <comment>Toolbar export button tooltip</comment>
@@ -1999,6 +2003,9 @@ Want to publish a different package?</value>
   </data>
   <data name="ScreenShotFrom3DShortcutParameter" xml:space="preserve">
     <value>screenshot_3D_shortcut</value>
+  </data>
+  <data name="ScreenShotFromCompParameter" xml:space="preserve">
+    <value>screenshot_comp</value>
   </data>
   <data name="SearchViewTopResult" xml:space="preserve">
     <value>Top Result</value>
@@ -3155,6 +3162,9 @@ This package will be unloaded after the next Dynamo restart.</value>
   </data>
   <data name="ShortcutExportBackground3DPreview" xml:space="preserve">
     <value>Background 3D Preview</value>
+  </data>
+  <data name="ShortcutExportCompositePreview" xml:space="preserve">
+    <value>Export composite image</value>
   </data>
   <data name="ShortcutExportWorkspace" xml:space="preserve">
     <value>Workspace</value>

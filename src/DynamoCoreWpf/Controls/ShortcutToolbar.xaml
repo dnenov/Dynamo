@@ -263,6 +263,16 @@
                                 <ToolTip Content="{x:Static p:Resources.DynamoViewToolbarExport3DButtonTooltip}" Style="{StaticResource GenericToolTipLight}"/>
                             </MenuItem.ToolTip>
                         </MenuItem>
+
+                        <MenuItem Focusable="False"
+                                  Header="{x:Static p:Resources.ShortcutExportCompositePreview}"
+                                  Command="{Binding ValidateWorkSpaceBeforeToExportAsImageCommand}"
+                                  CommandParameter="{x:Static p:Resources.ScreenShotFromCompParameter}"
+                                  Name="saveCompositeImage">
+                            <MenuItem.ToolTip>
+                                <ToolTip Content="{x:Static p:Resources.DynamoViewToolbarExportCompButtonTooltip}" Style="{StaticResource GenericToolTipLight}"/>
+                            </MenuItem.ToolTip>
+                        </MenuItem>
                     </MenuItem>
                     <MenuItem Name="NotificationCenter"
                               Margin="-16 0 -30 0">

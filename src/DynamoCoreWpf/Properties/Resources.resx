@@ -2495,11 +2495,18 @@ Next assemblies were loaded several times:
     <value>Export Background Preview As Image</value>
     <comment>Toolbar export button tooltip</comment>
   </data>
+  <data name="DynamoViewToolbarExportCompButtonTooltip" xml:space="preserve">
+    <value>Export Composite Image</value>
+    <comment>Toolbar export combposite image button tooltip</comment>
+  </data>
   <data name="ScreenShotFrom3DParameter" xml:space="preserve">
     <value>screenshot_3D</value>
   </data>
   <data name="ScreenShotFrom3DShortcutParameter" xml:space="preserve">
     <value>screenshot_3D_shortcut</value>
+  </data>
+  <data name="ScreenShotFromCompParameter" xml:space="preserve">
+    <value>screenshot_comp</value>
   </data>
   <data name="FileNotPublishCaption" xml:space="preserve">
     <value>Publish Fail!</value>
@@ -3163,6 +3170,9 @@ Delete the following packages: {2}?
   </data>
   <data name="ShortcutExportBackground3DPreview" xml:space="preserve">
     <value>Background 3D Preview</value>
+  </data>
+  <data name="ShortcutExportCompositePreview" xml:space="preserve">
+    <value>Export composite image</value>
   </data>
   <data name="ShortcutExportWorkspace" xml:space="preserve">
     <value>Workspace</value>

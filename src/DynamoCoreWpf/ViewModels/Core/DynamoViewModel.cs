@@ -30,7 +30,6 @@ using Dynamo.Selection;
 using Dynamo.Services;
 using Dynamo.UI;
 using Dynamo.UI.Prompts;
-using Dynamo.Updates;
 using Dynamo.Utilities;
 using Dynamo.Visualization;
 using Dynamo.Wpf.Interfaces;
@@ -2807,6 +2806,14 @@ namespace Dynamo.ViewModels
             OnRequestSave3DImage(this, new ImageSaveEventArgs(parameters.ToString()));
         }
 
+        public void SaveCompositeImage(object parameters)
+        {
+            OnRequestSaveCompImage(this, new ImageSaveEventArgs(parameters.ToString()));
+
+            Dynamo.Logging.Analytics.TrackTaskCommandEvent("ImageCapture",
+                "NodeCount", CurrentSpace.Nodes.Count());
+        }
+
         internal bool CanSaveImage(object parameters)
         {
             return true;
@@ -2821,8 +2828,8 @@ namespace Dynamo.ViewModels
                 _fileDialog = new SaveFileDialog()
                 {
                     AddExtension = true,
-                    DefaultExt = ".png",
-                    Filter = string.Format(Resources.FileDialogPNGFiles, "*.png"),
+                    DefaultExt = ".jpg",
+                    Filter = string.Format(Resources.FileDialogPNGFiles, "*.jpg"),
                     Title = Resources.SaveWorkbenToImageDialogTitle
                 };
             }
@@ -2859,6 +2866,10 @@ namespace Dynamo.ViewModels
                 {
                     SaveImage(_fileDialog.FileName);
                 }
+            }
+            else if (parameter.ToString() == Resources.ScreenShotFromCompParameter)
+            {
+                SaveCompositeImage(_fileDialog.FileName);
             }
             else
             {
