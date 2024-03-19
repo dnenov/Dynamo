@@ -622,8 +622,23 @@ namespace DSCore
 
         [IsVisibleInDynamoLibrary(false)]
         public static Dictionary<string, object> IsSupportedDataNodeType([ArbitraryDimensionArrayImport] object inputValue,
-            string typeString, bool isList, bool isAutoMode)
+            string typeString, bool isList, bool isAutoMode, string playerValue)
         {
+            // If the playerValue is not empty, then we assume it was set by the player.
+            // In that case, we need to parse it to get the actual value replace the inputValue.
+            if (!string.IsNullOrEmpty(playerValue))
+            {
+                try
+                {
+                    inputValue = ParseJSON(playerValue);
+                }
+                catch (Exception ex)
+                {
+                    dynamoLogger?.Log("A Player value failed to deserialize with this exception: " + ex.Message);
+                    throw new NotSupportedException(Properties.Resources.Exception_Deserialize_Unsupported_Cache);
+                }
+            }
+
             if(inputValue == null) { return null; }
 
             object result;  // Tuple<IsValid: bool, UpdateList: bool, InputType: DataNodeDynamoType>
