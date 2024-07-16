@@ -24,6 +24,9 @@
             <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Stroke" Color="Transparent"/>
             <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Fill" Color="#FF82DFFB"/>
             <SolidColorBrush x:Key="StrokeBrush" Color="#696969" />
+            
+            <!--Responsible for setting the color of the scrollbar rectangle-->
+            <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
 
             <PathGeometry x:Key="TreeArrow" Figures="M 0 0 L 0 7.2 L 4.8 3.6 Z"/>
         

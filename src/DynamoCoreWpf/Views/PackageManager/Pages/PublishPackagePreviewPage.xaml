@@ -325,6 +325,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="28px" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
 
@@ -454,16 +455,20 @@
             </Rectangle>
 
             <!-- Info text -->
-            <TextBlock
-            Grid.Row="1"
-            Margin="5 5 20 5"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Bottom"
-            FontFamily="{StaticResource ArtifaktElementRegular}"
-            FontSize="10"
-            Foreground="#F5F5F5"
-            DataContext="{Binding ElementName=PreviewPackagePage}"
-            Text="{Binding FilesAndFoldersCounterPreview, UpdateSourceTrigger=PropertyChanged}"/>
+            <StackPanel Grid.Row="2"
+                        Margin="26 0 0 0"
+                        Height="24px"
+                        VerticalAlignment="Center">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="0 5 0 0"
+                    FontFamily="{StaticResource ArtifaktElementRegular}"
+                    FontSize="10"
+                    Foreground="#F5F5F5"
+                    DataContext="{Binding ElementName=PreviewPackagePage}"
+                    Text="{Binding FilesAndFoldersCounterPreview, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Page>

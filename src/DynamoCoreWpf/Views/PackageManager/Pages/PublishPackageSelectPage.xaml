@@ -624,7 +624,7 @@
             <TextBlock
                 Grid.Row="2"
                 HorizontalAlignment="Left"
-            Margin="5 6 0 0"
+                Margin="26 6 0 0"
                 FontFamily="{StaticResource ArtifaktElementRegular}"
                 FontSize="10"
                 Foreground="#F5F5F5"
