@@ -25,6 +25,7 @@ using Dynamo.Models;
 using Dynamo.Nodes;
 using Dynamo.PackageManager;
 using Dynamo.PackageManager.UI;
+using Dynamo.PythonServices;
 using Dynamo.Search.SearchElements;
 using Dynamo.Selection;
 using Dynamo.Services;
@@ -251,6 +252,11 @@ namespace Dynamo.Controls
             this.dynamoViewModel.RequestEnableShortcutBarItems += DynamoViewModel_RequestEnableShortcutBarItems;
             this.dynamoViewModel.RequestExportWorkSpaceAsImage += OnRequestExportWorkSpaceAsImage;
 
+            //add option to update python engine for all python nodes in the workspace.
+            AddPythonEngineToMainMenu();
+            PythonEngineManager.Instance.AvailableEngines.CollectionChanged += OnPythonEngineListUpdated;
+            dynamoViewModel.Owner = this;
+
             FocusableGrid.InputBindings.Clear();
 
             if (fileTrustWarningPopup == null)
@@ -263,11 +269,31 @@ namespace Dynamo.Controls
             }
 
             DefaultMinWidth = MinWidth;
-    }
-
+        }
         private void OnRequestCloseHomeWorkSpace()
         {
             CalculateWindowMinWidth();
+        }
+
+        private void OnPythonEngineListUpdated(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            //Update the main menu Python Engine list whenever a python engine is added or removed.
+            AddPythonEngineToMainMenu();
+        }
+
+        /// <summary>
+        /// Populates the PythonEngineMenu in the main menu bar with currently available python engines.
+        /// </summary>
+        private void AddPythonEngineToMainMenu()
+        {
+            PythonEngineMenu.Items.Clear();
+            var availablePythonEngines = PythonEngineManager.Instance.AvailableEngines.Select(x => x.Name).ToList();
+            availablePythonEngines.Select(pythonEngine => new MenuItem
+            {
+                Header = pythonEngine,
+                Command = dynamoViewModel.UpdateAllPythonEngineCommand,
+                CommandParameter = pythonEngine
+            }).ToList().ForEach(x => PythonEngineMenu.Items.Add(x));
         }
 
         private void OnWorkspaceHidden(WorkspaceModel workspace)
@@ -2063,7 +2089,7 @@ namespace Dynamo.Controls
 
         // the key press event is being intercepted before it can get to
         // the active workspace. This code simply grabs the key presses and
-        // passes it to thecurrent workspace
+        // passes it to the current workspace
         private void DynamoView_KeyDown(object sender, KeyEventArgs e)
         {
             Analytics.TrackActivityStatus(HeartBeatType.User.ToString());
@@ -2183,6 +2209,7 @@ namespace Dynamo.Controls
         private void LoadSamplesMenu()
         {
             var samplesDirectory = dynamoViewModel.Model.PathManager.SamplesDirectory;
+
             if (Directory.Exists(samplesDirectory))
             {
                 var sampleFiles = new System.Collections.Generic.List<string>();
@@ -2205,7 +2232,7 @@ namespace Dynamo.Controls
                     }
                 }
 
-                // handle top-level dirs, TODO - factor out to a seperate function, make recusive
+                // handle top-level dirs, TODO - factor out to a separate function, make recursive
                 if (dirPaths.Any())
                 {
                     foreach (string dirPath in dirPaths)
