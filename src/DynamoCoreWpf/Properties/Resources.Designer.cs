@@ -5537,6 +5537,24 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Compatible.
+        /// </summary>
+        public static string PackageCompatible {
+            get {
+                return ResourceManager.GetString("PackageCompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Versions compatible with the current setup.
+        /// </summary>
+        public static string PackageCompatibleFilterTooltip {
+            get {
+                return ResourceManager.GetString("PackageCompatibleFilterTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This package contains custom nodes that are in use. These custom nodes need to be deleted or the graph needs to be closed before the package can be deleted..
         /// </summary>
         public static string PackageContextMenuDeletePackageCustomNodesInUseTooltip {
@@ -5888,6 +5906,15 @@ namespace Dynamo.Wpf.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VERSION COMPATIBILITY.
+        /// </summary>
+        public static string PackageFilterByCompatibility {
+            get {
+                return ResourceManager.GetString("PackageFilterByCompatibility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DEPENDENCY.
         /// </summary>
         public static string PackageFilterByDependency {
@@ -5993,6 +6020,24 @@ namespace Dynamo.Wpf.Properties {
         public static string PackageHostDependencyTooltip {
             get {
                 return ResourceManager.GetString("PackageHostDependencyTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incompatible.
+        /// </summary>
+        public static string PackageIncompatible {
+            get {
+                return ResourceManager.GetString("PackageIncompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Versions maybe incompatible with the current setup.
+        /// </summary>
+        public static string PackageIncompatibleFilterTooltip {
+            get {
+                return ResourceManager.GetString("PackageIncompatibleFilterTooltip", resourceCulture);
             }
         }
         
@@ -7234,6 +7279,24 @@ namespace Dynamo.Wpf.Properties {
         public static string PackageTypeShortString {
             get {
                 return ResourceManager.GetString("PackageTypeShortString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown compatibility.
+        /// </summary>
+        public static string PackageUnknownCompatibility {
+            get {
+                return ResourceManager.GetString("PackageUnknownCompatibility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compatibility of package version cannot be verified.
+        /// </summary>
+        public static string PackageUnknownCompatibilityFilterTooltip {
+            get {
+                return ResourceManager.GetString("PackageUnknownCompatibilityFilterTooltip", resourceCulture);
             }
         }
         
