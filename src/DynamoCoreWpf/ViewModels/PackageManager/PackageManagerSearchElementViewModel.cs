@@ -69,7 +69,7 @@ namespace Dynamo.PackageManager.ViewModels
         /// <summary>
         /// The currently selected version of a package
         /// </summary>
-        private VersionInfo selectedVersion;
+        private VersionInformation selectedVersion;
 
         public bool? IsSelectedVersionCompatible
         {
@@ -84,7 +84,10 @@ namespace Dynamo.PackageManager.ViewModels
             }
         }
 
-        public VersionInfo SelectedVersion   
+        /// <summary>
+        /// Keeps track of the currently selected package version in the UI
+        /// </summary>
+        public VersionInformation SelectedVersion   
         {
             get { return selectedVersion; }
             set
@@ -95,6 +98,7 @@ namespace Dynamo.PackageManager.ViewModels
 
                     // Update the compatibility info so the icon of the currently selected version is updated
                     IsSelectedVersionCompatible = selectedVersion.IsCompatible;
+                    SearchElementModel.SelectedVersion = selectedVersion;
                 }
             }
         }
@@ -115,9 +119,8 @@ namespace Dynamo.PackageManager.ViewModels
             IsEnabledForInstall = isEnabledForInstall;
 
             // Attempts to show the latest compatible version. If no compatible, will return the latest instead.
-            //this.SelectedVersion = this.SearchElementModel.LatestVersion;
             this.SelectedVersion = this.SearchElementModel.LatestCompatibleVersion;
-            this.VersionInfos = this.SearchElementModel.VersionInfos;
+            this.VersionInformationList = this.SearchElementModel.VersionDetails;
             WeakEventManager<INotifyPropertyChanged, PropertyChangedEventArgs>
                 .AddHandler(this.SearchElementModel, nameof(INotifyPropertyChanged.PropertyChanged), OnSearchElementModelPropertyChanged);
 
@@ -143,9 +146,9 @@ namespace Dynamo.PackageManager.ViewModels
             {
                 this.SelectedVersion = this.SearchElementModel.LatestCompatibleVersion;
             }
-            if (e.PropertyName == nameof(SearchElementModel.VersionInfos))
+            if (e.PropertyName == nameof(SearchElementModel.VersionDetails))
             {
-                this.VersionInfos = this.SearchElementModel.VersionInfos;
+                this.VersionInformationList = this.SearchElementModel.VersionDetails;
             }
         }
 
@@ -231,6 +234,9 @@ namespace Dynamo.PackageManager.ViewModels
             }
         }
 
+        /// <summary>
+        /// A collection of key-value pairs to allow the download of specific package version
+        /// </summary>
         public List<Tuple<PackageVersion, DelegateCommand<object>>> Versions
         {
             get
@@ -243,21 +249,35 @@ namespace Dynamo.PackageManager.ViewModels
             }
         }
 
-        private List<VersionInfo> versionInfos;
+        private List<VersionInformation> versionInformationList;
 
-        public List<VersionInfo> VersionInfos
+        /// <summary>
+        /// A collection containing all package versions
+        /// </summary>
+        public List<VersionInformation> VersionInformationList
         {
-            get { return versionInfos; }
+            get { return versionInformationList; }
             set
             {
-                if (value != versionInfos)
+                if (value != versionInformationList)
                 {
-                    versionInfos = value;
-                    RaisePropertyChanged(nameof(VersionInfos));
+                    versionInformationList = value;
+                    RaisePropertyChanged(nameof(VersionInformationList));
                 }
             }
         }
 
+        /// <summary>
+        /// Display the reversed version list - newest to oldest
+        /// </summary>
+        public ICollectionView ReversedVersionInformationList
+        {
+            get
+            {
+                var reversedList = VersionInformationList?.AsEnumerable().Reverse().ToList();
+                return CollectionViewSource.GetDefaultView(reversedList);
+            }
+        }
 
         private List<String> CustomPackageFolders;
         private bool? isSelectedVersionCompatible;
@@ -282,23 +302,9 @@ namespace Dynamo.PackageManager.ViewModels
                 RequestDownload(this.SearchElementModel, version, downloadPath);
         }
 
-        public void OnRequestDownload(bool downloadToCustomPath)
+        private void OnRequestDownload(bool downloadToCustomPath)
         {
             var version = this.SearchElementModel.Header.versions.First(x => x.version.Equals(SelectedVersion.Version));
-            var compatible = SelectedVersion.IsCompatible;
-
-            if (compatible == null || compatible == false)
-            {
-                var msg = Resources.PackageManagerIncompatibleVersionDownloadMsg;
-                var result = MessageBoxService.Show(msg,
-                    Resources.PackageManagerIncompatibleVersionDownloadTitle,
-                    MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-
-                if (result != MessageBoxResult.OK)
-                {
-                    return;
-                }
-            }
 
             string downloadPath = String.Empty;
 

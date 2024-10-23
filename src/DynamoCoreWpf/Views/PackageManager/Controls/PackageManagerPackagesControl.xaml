@@ -23,7 +23,6 @@
             <controls:DependencyListToStringConverter x:Key="DependencyListToStringConverter" />
             <controls:ListHasMoreThanNItemsToVisibilityConverter x:Key="ListHasMoreThanNItemsToVisibilityConverter" />
             <controls:BoolToVisibilityCollapsedConverter x:Key="BoolToVisibilityCollapsedConverter" />
-
             <Style x:Key="RectangleStyle" TargetType="Rectangle">
                 <Setter Property="Opacity" Value="0" />
                 <Style.Triggers>
@@ -174,7 +173,7 @@
         <ListBox Name="packagesListBox"
                  Background="{StaticResource PackageManagerTabBackgroundColor}"
                  BorderThickness="0"
-                 ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=SearchJsonResults}"
+                 ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=SearchResults}"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  ScrollViewer.VerticalScrollBarVisibility="Auto"
                  SelectedIndex="{Binding Path=SelectedIndex}"
@@ -443,9 +442,29 @@
                                     <ComboBox x:Name="VersionComboBox"
                                               HorizontalAlignment="Left"
                                               ItemTemplate="{StaticResource VersionInfoTemplate}"
-                                              ItemsSource="{Binding Path=VersionInfos, UpdateSourceTrigger=PropertyChanged}"
-                                              SelectedItem="{Binding Path=SelectedVersion, UpdateSourceTrigger=PropertyChanged}"
-                                              Style="{StaticResource PackageManagerSmallComboBox}" />
+                                              ItemsSource="{Binding Path=ReversedVersionInformationList, UpdateSourceTrigger=PropertyChanged}"
+                                              SelectedItem="{Binding Path=SelectedVersion, UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBox.Style>
+                                            <Style BasedOn="{StaticResource PackageManagerSmallComboBox}" TargetType="ComboBox">
+                                                <Style.Triggers>
+                                                    <!--  Trigger for IsCompatible == true (compatible)  -->
+                                                    <DataTrigger Binding="{Binding SelectedItem.IsCompatible, RelativeSource={RelativeSource Self}}" Value="True">
+                                                        <Setter Property="ToolTip" Value="{x:Static p:Resources.PackageDetailsCompatibleVersionTooltip}" />
+                                                    </DataTrigger>
+
+                                                    <!--  Trigger for IsCompatible == false (incompatible)  -->
+                                                    <DataTrigger Binding="{Binding SelectedItem.IsCompatible, RelativeSource={RelativeSource Self}}" Value="False">
+                                                        <Setter Property="ToolTip" Value="{x:Static p:Resources.PackageDetailsIncompatibileVersionTooltip}" />
+                                                    </DataTrigger>
+
+                                                    <!--  Trigger for IsCompatible == null (unknown compatibility)  -->
+                                                    <DataTrigger Binding="{Binding SelectedItem.IsCompatible, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                                                        <Setter Property="ToolTip" Value="{x:Static p:Resources.PackageDetailsUnknownCompatibilityVersionTooltip}" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </ComboBox.Style>
+                                    </ComboBox>
                                     <Rectangle Height="5" Style="{StaticResource RectangleStyle}" />
                                 </StackPanel>
                             </StackPanel>
@@ -540,8 +559,9 @@
                                        Margin="5,0"
                                        DockPanel.Dock="Left"
                                        Style="{StaticResource resultLabelStyle}"
-                                       Text="{Binding Hosts, Converter={StaticResource DependencyListToStringConverter}}"
-                                       Visibility="{Binding Path=Hosts, Converter={StaticResource ListHasMoreThanNItemsToVisibilityConverter}}" />
+                                       Text="{Binding Hosts, Converter={StaticResource DependencyListToStringConverter}}" />
+                            <!--  By keeping this textblock visible at all times we enforce line height consistency between items with and without host information  -->
+                            <!--  Visibility="{Binding Path=Hosts, Converter={StaticResource ListHasMoreThanNItemsToVisibilityConverter}}" />  -->
                         </DockPanel>
 
                         <!--  Bottom Row  -->

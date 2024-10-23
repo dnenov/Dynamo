@@ -46,7 +46,10 @@ namespace Dynamo.PackageDetails
         /// <param name="e"></param>
         private void FrameworkElement_OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            MainScrollViewer.ScrollToTop();
+            this.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                MainScrollViewer.ScrollToTop();
+            }), System.Windows.Threading.DispatcherPriority.Loaded);
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
@@ -55,7 +58,12 @@ namespace Dynamo.PackageDetails
             {
                 System.Diagnostics.Process.Start(new ProcessStartInfo(e.Uri.ToString()) { UseShellExecute = true });
             }
-            catch { }
+            catch (Exception ex)
+            {
+                // Have to make packageManagerClientViewModel internal in order to get to the DynamoViewModel/Model/Logger
+                var dataContext = this.DataContext as PackageDetailsViewModel;
+                dataContext?.packageManagerClientViewModel?.DynamoViewModel?.Model.Logger.Log("Error navigating to package url: " + ex.StackTrace);
+            }
             e.Handled = true;
         }
 

@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dynamo.Wpf.Properties {
+namespace Dynamo.Wpf.Properties
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,4536 +23,5562 @@ namespace Dynamo.Wpf.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
-        
+    public class Resources
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Resources()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        public static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Dynamo.Wpf.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
-            get {
+        public static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Could not get version..
         /// </summary>
-        public static string AboutWindowCannotGetVersion {
-            get {
+        public static string AboutWindowCannotGetVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("AboutWindowCannotGetVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} Website.
         /// </summary>
-        public static string AboutWindowDynamoWebsiteButton {
-            get {
+        public static string AboutWindowDynamoWebsiteButton
+        {
+            get
+            {
                 return ResourceManager.GetString("AboutWindowDynamoWebsiteButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to About {0}.
         /// </summary>
-        public static string AboutWindowTitle {
-            get {
+        public static string AboutWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("AboutWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to (Up to date).
         /// </summary>
-        public static string AboutWindowUpToDate {
-            get {
+        public static string AboutWindowUpToDate
+        {
+            get
+            {
                 return ResourceManager.GetString("AboutWindowUpToDate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Action.
         /// </summary>
-        public static string ActionMember {
-            get {
+        public static string ActionMember
+        {
+            get
+            {
                 return ResourceManager.GetString("ActionMember", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
-        public static string AddButton {
-            get {
+        public static string AddButton
+        {
+            get
+            {
                 return ResourceManager.GetString("AddButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Custom Node, Library, or XML file to Package....
         /// </summary>
-        public static string AddCustomFileToPackageDialogTitle {
-            get {
+        public static string AddCustomFileToPackageDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("AddCustomFileToPackageDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add File Path.
         /// </summary>
-        public static string AddFilePathButtonName {
-            get {
+        public static string AddFilePathButtonName
+        {
+            get
+            {
                 return ResourceManager.GetString("AddFilePathButtonName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add File to Package....
         /// </summary>
-        public static string AddFileToPackageDialogTitle {
-            get {
+        public static string AddFileToPackageDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("AddFileToPackageDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Style.
         /// </summary>
-        public static string AddStyleButton {
-            get {
+        public static string AddStyleButton
+        {
+            get
+            {
                 return ResourceManager.GetString("AddStyleButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
-        public static string AddToLibraryButton {
-            get {
+        public static string AddToLibraryButton
+        {
+            get
+            {
                 return ResourceManager.GetString("AddToLibraryButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to I would like to participate in data collection for Machine Learning Programs.
         /// </summary>
-        public static string AgreeToMLAutocompleteTOUText {
-            get {
+        public static string AgreeToMLAutocompleteTOUText
+        {
+            get
+            {
                 return ResourceManager.GetString("AgreeToMLAutocompleteTOUText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Autodesk A360.
         /// </summary>
-        public static string Autodesk360SignInButtonTitleToolTip {
-            get {
+        public static string Autodesk360SignInButtonTitleToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("Autodesk360SignInButtonTitleToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Autodesk Sign In.
         /// </summary>
-        public static string AutodeskSignIn {
-            get {
+        public static string AutodeskSignIn
+        {
+            get
+            {
                 return ResourceManager.GetString("AutodeskSignIn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Automatic.
         /// </summary>
-        public static string Automatic {
-            get {
+        public static string Automatic
+        {
+            get
+            {
                 return ResourceManager.GetString("Automatic", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There was an error creating a background preview in Dynamo. This could be due to a lack of graphics resources on your machine. See the log for more information..
         /// </summary>
-        public static string BackgroundPreviewCreationFailureMessage {
-            get {
+        public static string BackgroundPreviewCreationFailureMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("BackgroundPreviewCreationFailureMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Background Preview.
         /// </summary>
-        public static string BackgroundPreviewDefaultName {
-            get {
+        public static string BackgroundPreviewDefaultName
+        {
+            get
+            {
                 return ResourceManager.GetString("BackgroundPreviewDefaultName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Background Preview.
         /// </summary>
-        public static string BackgroundPreviewName {
-            get {
+        public static string BackgroundPreviewName
+        {
+            get
+            {
                 return ResourceManager.GetString("BackgroundPreviewName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Minute(s) between backups.
         /// </summary>
-        public static string BackupInternalUnit {
-            get {
+        public static string BackupInternalUnit
+        {
+            get
+            {
                 return ResourceManager.GetString("BackupInternalUnit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Break Connections.
         /// </summary>
-        public static string BreakConnectionsPopupMenuItem {
-            get {
+        public static string BreakConnectionsPopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("BreakConnectionsPopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Browse....
         /// </summary>
-        public static string BrowserNodeButtonLabel {
-            get {
+        public static string BrowserNodeButtonLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("BrowserNodeButtonLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No file selected..
         /// </summary>
-        public static string BrowserNodeNoFileSelected {
-            get {
+        public static string BrowserNodeNoFileSelected
+        {
+            get
+            {
                 return ResourceManager.GetString("BrowserNodeNoFileSelected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
-        public static string BrowserWindowLoading {
-            get {
+        public static string BrowserWindowLoading
+        {
+            get
+            {
                 return ResourceManager.GetString("BrowserWindowLoading", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Temporarily dismiss all warnings of this node.
         /// </summary>
-        public static string BubbleDismissAllButtonTooltip {
-            get {
+        public static string BubbleDismissAllButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("BubbleDismissAllButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You must provide a Build version as a non-negative integer..
         /// </summary>
-        public static string BuildVersionNonNegative {
-            get {
+        public static string BuildVersionNonNegative
+        {
+            get
+            {
                 return ResourceManager.GetString("BuildVersionNonNegative", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package has conflicts with one or more Built-In packages..
         /// </summary>
-        public static string BuiltInPackageConflictMessageBoxTitle {
-            get {
+        public static string BuiltInPackageConflictMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("BuiltInPackageConflictMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Camera position information could not be loaded from the file..
         /// </summary>
-        public static string CameraDataLoadError {
-            get {
+        public static string CameraDataLoadError
+        {
+            get
+            {
                 return ResourceManager.GetString("CameraDataLoadError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Camera position information could not be saved..
         /// </summary>
-        public static string CameraDataSaveError {
-            get {
+        public static string CameraDataSaveError
+        {
+            get
+            {
                 return ResourceManager.GetString("CameraDataSaveError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string CancelButton {
-            get {
+        public static string CancelButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CancelButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cannot Download Package.
         /// </summary>
-        public static string CannotDownloadPackageMessageBoxTitle {
-            get {
+        public static string CannotDownloadPackageMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CannotDownloadPackageMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cannot Load Package.
         /// </summary>
-        public static string CannotLoadPackageMessageBoxTitle {
-            get {
+        public static string CannotLoadPackageMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CannotLoadPackageMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You can&apos;t submit a package in this version of {0}.  You&apos;ll need a host application, like Revit, to submit a package..
         /// </summary>
-        public static string CannotSubmitPackage {
-            get {
+        public static string CannotSubmitPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("CannotSubmitPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The workspace cannot be exported as an image because it is empty..
         /// </summary>
-        public static string CantExportWorkspaceAsImageEmptyMessage {
-            get {
+        public static string CantExportWorkspaceAsImageEmptyMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("CantExportWorkspaceAsImageEmptyMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The workspace cannot be exported as an image because it contains nodes that are too far away from each other..
         /// </summary>
-        public static string CantExportWorkspaceAsImageNotValidMessage {
-            get {
+        public static string CantExportWorkspaceAsImageNotValidMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("CantExportWorkspaceAsImageNotValidMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To ensure accurate geometry rendering and calculation, select the range of geometry sizes that you will be working on:.
         /// </summary>
-        public static string ChangeScaleFactorPromptCaptionText {
-            get {
+        public static string ChangeScaleFactorPromptCaptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptCaptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Numerical range shown here denote numbers in the following unit:.
         /// </summary>
-        public static string ChangeScaleFactorPromptDescriptionBox {
-            get {
+        public static string ChangeScaleFactorPromptDescriptionBox
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptDescriptionBox", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use this working range to model in values that fall between {0} to {1} units.
         /// </summary>
-        public static string ChangeScaleFactorPromptDescriptionContent {
-            get {
+        public static string ChangeScaleFactorPromptDescriptionContent
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptDescriptionContent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Setting:.
         /// </summary>
-        public static string ChangeScaleFactorPromptDescriptionDefaultSetting {
-            get {
+        public static string ChangeScaleFactorPromptDescriptionDefaultSetting
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptDescriptionDefaultSetting", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Centimeters (cm).
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitCm {
-            get {
+        public static string ChangeScaleFactorPromptUnitCm
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitCm", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Meters (m).
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitM {
-            get {
+        public static string ChangeScaleFactorPromptUnitM
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitM", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Millimeters (mm).
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitMm {
-            get {
+        public static string ChangeScaleFactorPromptUnitMm
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitMm", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} cm.
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitsNumberFormatCm {
-            get {
+        public static string ChangeScaleFactorPromptUnitsNumberFormatCm
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitsNumberFormatCm", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} m.
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitsNumberFormatM {
-            get {
+        public static string ChangeScaleFactorPromptUnitsNumberFormatM
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitsNumberFormatM", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} mm.
         /// </summary>
-        public static string ChangeScaleFactorPromptUnitsNumberFormatMm {
-            get {
+        public static string ChangeScaleFactorPromptUnitsNumberFormatMm
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptUnitsNumberFormatMm", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Geometry Working Range.
         /// </summary>
-        public static string ChangeScaleFactorPromptWindowTitle {
-            get {
+        public static string ChangeScaleFactorPromptWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeScaleFactorPromptWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Compact.
         /// </summary>
-        public static string CompactLayoutTitle {
-            get {
+        public static string CompactLayoutTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CompactLayoutTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Represents estimated probability that the given node is the right choice. Recommended nodes are listed in order from highest to lowest confidence level. Confidence level percentages for all recommended nodes add up to about 100%..
         /// </summary>
-        public static string ConfidenceToolTipDescription {
-            get {
+        public static string ConfidenceToolTipDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfidenceToolTipDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more.
         /// </summary>
-        public static string ConfidenceToolTipoLearnMore {
-            get {
+        public static string ConfidenceToolTipoLearnMore
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfidenceToolTipoLearnMore", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confidence rating.
         /// </summary>
-        public static string ConfidenceToolTipTitle {
-            get {
+        public static string ConfidenceToolTipTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfidenceToolTipTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Configure Autodesk Analytics Program.
         /// </summary>
-        public static string ConfigureADPButtonText {
-            get {
+        public static string ConfigureADPButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfigureADPButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Break Connection.
         /// </summary>
-        public static string ConnectorContextMenuHeaderBreakConnection {
-            get {
+        public static string ConnectorContextMenuHeaderBreakConnection
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderBreakConnection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Navigate Downstream.
         /// </summary>
-        public static string ConnectorContextMenuHeaderEndNode {
-            get {
+        public static string ConnectorContextMenuHeaderEndNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderEndNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide Wire.
         /// </summary>
-        public static string ConnectorContextMenuHeaderHideConnector {
-            get {
+        public static string ConnectorContextMenuHeaderHideConnector
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderHideConnector", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pin Wire.
         /// </summary>
-        public static string ConnectorContextMenuHeaderPinConnector {
-            get {
+        public static string ConnectorContextMenuHeaderPinConnector
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderPinConnector", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Connected.
         /// </summary>
-        public static string ConnectorContextMenuHeaderSelectConnected {
-            get {
+        public static string ConnectorContextMenuHeaderSelectConnected
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderSelectConnected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Wire.
         /// </summary>
-        public static string ConnectorContextMenuHeaderShowConnector {
-            get {
+        public static string ConnectorContextMenuHeaderShowConnector
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderShowConnector", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Navigate Upstream.
         /// </summary>
-        public static string ConnectorContextMenuHeaderStartNode {
-            get {
+        public static string ConnectorContextMenuHeaderStartNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderStartNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unpin Wire.
         /// </summary>
-        public static string ConnectorContextMenuHeaderUnpinConnector {
-            get {
+        public static string ConnectorContextMenuHeaderUnpinConnector
+        {
+            get
+            {
                 return ResourceManager.GetString("ConnectorContextMenuHeaderUnpinConnector", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to I agree to data collection in desktop products for Autodesk analytics programs..
         /// </summary>
-        public static string ConsentFormADPAnalyticsCheckBoxContent {
-            get {
+        public static string ConsentFormADPAnalyticsCheckBoxContent
+        {
+            get
+            {
                 return ResourceManager.GetString("ConsentFormADPAnalyticsCheckBoxContent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Node To Group.
         /// </summary>
-        public static string ContextAddGroupFromSelection {
-            get {
+        public static string ContextAddGroupFromSelection
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextAddGroupFromSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create Group.
         /// </summary>
-        public static string ContextCreateGroupFromSelection {
-            get {
+        public static string ContextCreateGroupFromSelection
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextCreateGroupFromSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Options.
         /// </summary>
-        public static string ContextMenu {
-            get {
+        public static string ContextMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide All Wires.
         /// </summary>
-        public static string ContextMenuConnectionsHideAll {
-            get {
+        public static string ContextMenuConnectionsHideAll
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuConnectionsHideAll", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show All Wires.
         /// </summary>
-        public static string ContextMenuConnectionsShowAll {
-            get {
+        public static string ContextMenuConnectionsShowAll
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuConnectionsShowAll", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copy Contents.
         /// </summary>
-        public static string ContextMenuCopy {
-            get {
+        public static string ContextMenuCopy
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuCopy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string ContextMenuDelete {
-            get {
+        public static string ContextMenuDelete
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuDelete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Custom Node....
         /// </summary>
-        public static string ContextMenuEditCustomNode {
-            get {
+        public static string ContextMenuEditCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuEditCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Custom Node Properties....
         /// </summary>
-        public static string ContextMenuEditCustomNodeProperty {
-            get {
+        public static string ContextMenuEditCustomNodeProperty
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuEditCustomNodeProperty", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Fit to Screen.
         /// </summary>
-        public static string ContextMenuFitToScreen {
-            get {
+        public static string ContextMenuFitToScreen
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuFitToScreen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Switch to Geometry _View.
         /// </summary>
-        public static string ContextMenuGeometryView {
-            get {
+        public static string ContextMenuGeometryView
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuGeometryView", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Groups.
         /// </summary>
-        public static string ContextMenuGroups {
-            get {
+        public static string ContextMenuGroups
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuGroups", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide all text bubble.
         /// </summary>
-        public static string ContextMenuHideAllTextBubble {
-            get {
+        public static string ContextMenuHideAllTextBubble
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuHideAllTextBubble", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide geometry preview.
         /// </summary>
-        public static string ContextMenuHideGeometry {
-            get {
+        public static string ContextMenuHideGeometry
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuHideGeometry", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Insert code block.
         /// </summary>
-        public static string ContextMenuInsertCodeBlock {
-            get {
+        public static string ContextMenuInsertCodeBlock
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuInsertCodeBlock", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Lacing.
         /// </summary>
-        public static string ContextMenuLacing {
-            get {
+        public static string ContextMenuLacing
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto.
         /// </summary>
-        public static string ContextMenuLacingAuto {
-            get {
+        public static string ContextMenuLacingAuto
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacingAuto", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cross Product.
         /// </summary>
-        public static string ContextMenuLacingCrossProduct {
-            get {
+        public static string ContextMenuLacingCrossProduct
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacingCrossProduct", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to First.
         /// </summary>
-        public static string ContextMenuLacingFirst {
-            get {
+        public static string ContextMenuLacingFirst
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacingFirst", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Longest.
         /// </summary>
-        public static string ContextMenuLacingLongest {
-            get {
+        public static string ContextMenuLacingLongest
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacingLongest", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Shortest.
         /// </summary>
-        public static string ContextMenuLacingShortest {
-            get {
+        public static string ContextMenuLacingShortest
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuLacingShortest", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Connections.
         /// </summary>
-        public static string ContextMenuNodeConnections {
-            get {
+        public static string ContextMenuNodeConnections
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuNodeConnections", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Nodes From _Selected Geometry.
         /// </summary>
-        public static string ContextMenuNodesFromGeometry {
-            get {
+        public static string ContextMenuNodesFromGeometry
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuNodesFromGeometry", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create Custom Node.
         /// </summary>
-        public static string ContextMenuNodesFromSelection {
-            get {
+        public static string ContextMenuNodesFromSelection
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuNodesFromSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node to _Code.
         /// </summary>
-        public static string ContextMenuNodeToCode {
-            get {
+        public static string ContextMenuNodeToCode
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuNodeToCode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pa_n.
         /// </summary>
-        public static string ContextMenuPan {
-            get {
+        public static string ContextMenuPan
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuPan", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        public static string ContextMenuPaste {
-            get {
+        public static string ContextMenuPaste
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuPaste", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish This Custom Node....
         /// </summary>
-        public static string ContextMenuPublishCustomNode {
-            get {
+        public static string ContextMenuPublishCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuPublishCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show all text buble.
         /// </summary>
-        public static string ContextMenuShowAllTextBubble {
-            get {
+        public static string ContextMenuShowAllTextBubble
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuShowAllTextBubble", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show geometry preview.
         /// </summary>
-        public static string ContextMenuShowGeometry {
-            get {
+        public static string ContextMenuShowGeometry
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextMenuShowGeometry", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pin to node.
         /// </summary>
-        public static string ContextPinToNode {
-            get {
+        public static string ContextPinToNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextPinToNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select a node to pin to this note..
         /// </summary>
-        public static string ContextPinToNodeTooltip {
-            get {
+        public static string ContextPinToNodeTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextPinToNodeTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Downstream.
         /// </summary>
-        public static string ContextSelectConnectedDownstream {
-            get {
+        public static string ContextSelectConnectedDownstream
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextSelectConnectedDownstream", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Connected.
         /// </summary>
-        public static string ContextSelectConnectedHeader {
-            get {
+        public static string ContextSelectConnectedHeader
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextSelectConnectedHeader", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Upstream.
         /// </summary>
-        public static string ContextSelectConnectedUpstream {
-            get {
+        public static string ContextSelectConnectedUpstream
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextSelectConnectedUpstream", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Both.
         /// </summary>
-        public static string ContextSelectConnectedUpstreamDownstream {
-            get {
+        public static string ContextSelectConnectedUpstreamDownstream
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextSelectConnectedUpstreamDownstream", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove from Group.
         /// </summary>
-        public static string ContextUnGroupFromSelection {
-            get {
+        public static string ContextUnGroupFromSelection
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextUnGroupFromSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unpin from node.
         /// </summary>
-        public static string ContextUnpinFromNode {
-            get {
+        public static string ContextUnpinFromNode
+        {
+            get
+            {
                 return ResourceManager.GetString("ContextUnpinFromNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Continue.
         /// </summary>
-        public static string ContinueButton {
-            get {
+        public static string ContinueButton
+        {
+            get
+            {
                 return ResourceManager.GetString("ContinueButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Continue install.
         /// </summary>
-        public static string ContinueInstall {
-            get {
+        public static string ContinueInstall
+        {
+            get
+            {
                 return ResourceManager.GetString("ContinueInstall", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Current offset X: {0}, Y: {1}.
         /// </summary>
-        public static string ConverterMessageCurrentOffset {
-            get {
+        public static string ConverterMessageCurrentOffset
+        {
+            get
+            {
                 return ResourceManager.GetString("ConverterMessageCurrentOffset", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Transform origin X: {0}, Y: {1}.
         /// </summary>
-        public static string ConverterMessageTransformOrigin {
-            get {
+        public static string ConverterMessageTransformOrigin
+        {
+            get
+            {
                 return ResourceManager.GetString("ConverterMessageTransformOrigin", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom : {0}.
         /// </summary>
-        public static string ConverterMessageZoom {
-            get {
+        public static string ConverterMessageZoom
+        {
+            get
+            {
                 return ResourceManager.GetString("ConverterMessageZoom", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        public static string CrashPromptDialogCopyButton {
-            get {
+        public static string CrashPromptDialogCopyButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogCopyButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Something went wrong and Dynamo has closed unexpectedly.
         ///
         ///Don&apos;t worry, you&apos;ll have the option to save your work..
         /// </summary>
-        public static string CrashPromptDialogCrashMessage {
-            get {
+        public static string CrashPromptDialogCrashMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogCrashMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        public static string CrashPromptDialogDetailButton {
-            get {
+        public static string CrashPromptDialogDetailButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogDetailButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open Folder.
         /// </summary>
-        public static string CrashPromptDialogOpenFolderButton {
-            get {
+        public static string CrashPromptDialogOpenFolderButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogOpenFolderButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Submit bug to GitHub.
         /// </summary>
-        public static string CrashPromptDialogSubmitBugButton {
-            get {
+        public static string CrashPromptDialogSubmitBugButton
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogSubmitBugButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} has closed unexpectedly.
         /// </summary>
-        public static string CrashPromptDialogTitle {
-            get {
+        public static string CrashPromptDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CrashPromptDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
-        public static string CreateMember {
-            get {
+        public static string CreateMember
+        {
+            get
+            {
                 return ResourceManager.GetString("CreateMember", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Apply.
         /// </summary>
-        public static string CustomColorPickerApplyBtn {
-            get {
+        public static string CustomColorPickerApplyBtn
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerApplyBtn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Basic colors:.
         /// </summary>
-        public static string CustomColorPickerBasicColors {
-            get {
+        public static string CustomColorPickerBasicColors
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerBasicColors", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string CustomColorPickerCancelBtn {
-            get {
+        public static string CustomColorPickerCancelBtn
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerCancelBtn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Define Custom Colors.
         /// </summary>
-        public static string CustomColorPickerCustomColorBtn {
-            get {
+        public static string CustomColorPickerCustomColorBtn
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerCustomColorBtn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom colors:.
         /// </summary>
-        public static string CustomColorPickerCustomColors {
-            get {
+        public static string CustomColorPickerCustomColors
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerCustomColors", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Color.
         /// </summary>
-        public static string CustomColorPickerTitle {
-            get {
+        public static string CustomColorPickerTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorPickerTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom.
         /// </summary>
-        public static string CustomColorsPopupTitle {
-            get {
+        public static string CustomColorsPopupTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomColorsPopupTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A description that helps people understand what the node might be used for..
         /// </summary>
-        public static string CustomNodePromptDescriptionTooltip {
-            get {
+        public static string CustomNodePromptDescriptionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePromptDescriptionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A unique name for the node..
         /// </summary>
-        public static string CustomNodePromptNameTooltip {
-            get {
+        public static string CustomNodePromptNameTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePromptNameTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Node Property Error.
         /// </summary>
-        public static string CustomNodePropertyErrorMessageBoxTitle {
-            get {
+        public static string CustomNodePropertyErrorMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyErrorMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add-Ons Category.
         /// </summary>
-        public static string CustomNodePropertyWindowCategory {
-            get {
+        public static string CustomNodePropertyWindowCategory
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowCategory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string CustomNodePropertyWindowDescription {
-            get {
+        public static string CustomNodePropertyWindowDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description of Custom Node.
         /// </summary>
-        public static string CustomNodePropertyWindowDescriptionHint {
-            get {
+        public static string CustomNodePropertyWindowDescriptionHint
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowDescriptionHint", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Nodes will be placed in the Add-Ons section of the library..
         /// </summary>
-        public static string CustomNodePropertyWindowLocationNote {
-            get {
+        public static string CustomNodePropertyWindowLocationNote
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowLocationNote", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string CustomNodePropertyWindowName {
-            get {
+        public static string CustomNodePropertyWindowName
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name of Custom Node.
         /// </summary>
-        public static string CustomNodePropertyWindowNameHint {
-            get {
+        public static string CustomNodePropertyWindowNameHint
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowNameHint", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Node Properties.
         /// </summary>
-        public static string CustomNodePropertyWindowTitle {
-            get {
+        public static string CustomNodePropertyWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodePropertyWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DS.
         /// </summary>
-        public static string CustomNodeTypeShortString {
-            get {
+        public static string CustomNodeTypeShortString
+        {
+            get
+            {
                 return ResourceManager.GetString("CustomNodeTypeShortString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto-detect type.
         /// </summary>
-        public static string DataInputAutoDetectTypeLabel {
-            get {
+        public static string DataInputAutoDetectTypeLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputAutoDetectTypeLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Toggle on to allow Define Data to automatically detect the data type of the input node. Toggle off to set the desired data type yourself.
         /// </summary>
-        public static string DataInputAutoDetectTypeTooltip {
-            get {
+        public static string DataInputAutoDetectTypeTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputAutoDetectTypeTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to List.
         /// </summary>
-        public static string DataInputListLabel {
-            get {
+        public static string DataInputListLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputListLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Toggle on if the input data contains a list..
         /// </summary>
-        public static string DataInputNodeInformationTooltip {
-            get {
+        public static string DataInputNodeInformationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputNodeInformationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When locked, this node only accepts the selected data type as input. When unlocked, the input can be any supported data type..
         /// </summary>
-        public static string DataInputNodeModeLockTooltip {
-            get {
+        public static string DataInputNodeModeLockTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputNodeModeLockTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Type.
         /// </summary>
-        public static string DataInputTypeLabel {
-            get {
+        public static string DataInputTypeLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("DataInputTypeLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use System Default.
         /// </summary>
-        public static string DefaultPythonEngineNone {
-            get {
+        public static string DefaultPythonEngineNone
+        {
+            get
+            {
                 return ResourceManager.GetString("DefaultPythonEngineNone", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete Failure.
         /// </summary>
-        public static string DeleteFailureMessageBoxTitle {
-            get {
+        public static string DeleteFailureMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("DeleteFailureMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deprecating Package.
         /// </summary>
-        public static string DeprecatingPackageMessageBoxTitle {
-            get {
+        public static string DeprecatingPackageMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("DeprecatingPackageMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description must be longer than 10 characters..
         /// </summary>
-        public static string DescriptionNeedMoreCharacters {
-            get {
+        public static string DescriptionNeedMoreCharacters
+        {
+            get
+            {
                 return ResourceManager.GetString("DescriptionNeedMoreCharacters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Detailed.
         /// </summary>
-        public static string DetailedLayoutTitle {
-            get {
+        public static string DetailedLayoutTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("DetailedLayoutTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Directory Not Found.
         /// </summary>
-        public static string DirectoryNotFound {
-            get {
+        public static string DirectoryNotFound
+        {
+            get
+            {
                 return ResourceManager.GetString("DirectoryNotFound", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to If the toggle is on, built-in packages will not load on restart. Built-in packages that are currently loaded will be unloaded on restart. 
         ///If the toggle is off built-in packages that are not already loaded will load once the preferences dialog is closed..
         /// </summary>
-        public static string DisableBuiltInPackageToggleInfo {
-            get {
+        public static string DisableBuiltInPackageToggleInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("DisableBuiltInPackageToggleInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to If the toggle is on, custom packages will not load on restart. Custom packages that are currently loaded will be unloaded on restart. 
         ///If the toggle is off custom packages that are not already loaded will load once the preferences dialog is closed..
         /// </summary>
-        public static string DisableCustomPackageToggleInfo {
-            get {
+        public static string DisableCustomPackageToggleInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("DisableCustomPackageToggleInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to All custom package paths have been disabled in Preferences. Packages cannot be installed unless they are re-enabled..
         /// </summary>
-        public static string DisablePackageInstallIconTooltip {
-            get {
+        public static string DisablePackageInstallIconTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DisablePackageInstallIconTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Discard changes?.
         /// </summary>
-        public static string DiscardChangesWarningPopupCaption {
-            get {
+        public static string DiscardChangesWarningPopupCaption
+        {
+            get
+            {
                 return ResourceManager.GetString("DiscardChangesWarningPopupCaption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your changes will be lost if you navigate away from the package upload screen..
         /// </summary>
-        public static string DiscardChangesWarningPopupMessage {
-            get {
+        public static string DiscardChangesWarningPopupMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("DiscardChangesWarningPopupMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Download Warning.
         /// </summary>
-        public static string DownloadWarningMessageBoxTitle {
-            get {
+        public static string DownloadWarningMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("DownloadWarningMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Files with same name will be overwritten in the final package. To avoid this, rename or discard the duplicate files, or enable the Retain Folder Structure option.\n\n{0} duplicate file(s) found:\n{1}.
         /// </summary>
-        public static string DuplicateFilesInPublishWarningMessage {
-            get {
+        public static string DuplicateFilesInPublishWarningMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("DuplicateFilesInPublishWarningMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Duplicate Files.
         /// </summary>
-        public static string DuplicateFilesInPublishWarningTitle {
-            get {
+        public static string DuplicateFilesInPublishWarningTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("DuplicateFilesInPublishWarningTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show File Trust Warning.
         /// </summary>
-        public static string DynamoShowFileTrustWarning {
-            get {
+        public static string DynamoShowFileTrustWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoShowFileTrustWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A Dynamo update is available. Click to install..
         /// </summary>
-        public static string DynamoUpdateAvailableToolTip {
-            get {
+        public static string DynamoUpdateAvailableToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoUpdateAvailableToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel Run (Shift+F5).
         /// </summary>
-        public static string DynamoViewCancelButtonTooltip {
-            get {
+        public static string DynamoViewCancelButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewCancelButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
-        public static string DynamoViewContextMenuClearLog {
-            get {
+        public static string DynamoViewContextMenuClearLog
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewContextMenuClearLog", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to De_bug.
         /// </summary>
-        public static string DynamoViewDebugMenu {
-            get {
+        public static string DynamoViewDebugMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Check Daily Builds.
         /// </summary>
-        public static string DynamoViewDebugMenuCheckDailyBuild {
-            get {
+        public static string DynamoViewDebugMenuCheckDailyBuild
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuCheckDailyBuild", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Debug _Modes.
         /// </summary>
-        public static string DynamoViewDebugMenuDebugModes {
-            get {
+        public static string DynamoViewDebugMenuDebugModes
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuDebugModes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Dump Data.
         /// </summary>
-        public static string DynamoViewDebugMenuDumpData {
-            get {
+        public static string DynamoViewDebugMenuDumpData
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuDumpData", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Dump Library.
         /// </summary>
-        public static string DynamoViewDebugMenuDumpLibrary {
-            get {
+        public static string DynamoViewDebugMenuDumpLibrary
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuDumpLibrary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Dump Node Help Data.
         /// </summary>
-        public static string DynamoViewDebugMenuDumpNodeHelpData {
-            get {
+        public static string DynamoViewDebugMenuDumpNodeHelpData
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuDumpNodeHelpData", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Force Re-execute.
         /// </summary>
-        public static string DynamoViewDebugMenuForceReExecute {
-            get {
+        public static string DynamoViewDebugMenuForceReExecute
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuForceReExecute", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Force _Update.
         /// </summary>
-        public static string DynamoViewDebugMenuForceUpdate {
-            get {
+        public static string DynamoViewDebugMenuForceUpdate
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuForceUpdate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Run mutation test.
         /// </summary>
-        public static string DynamoViewDebugMenuRunMutationTest {
-            get {
+        public static string DynamoViewDebugMenuRunMutationTest
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuRunMutationTest", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Show Debug ASTs.
         /// </summary>
-        public static string DynamoViewDebugMenuShowDebugAST {
-            get {
+        public static string DynamoViewDebugMenuShowDebugAST
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuShowDebugAST", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Verbose Logging.
         /// </summary>
-        public static string DynamoViewDebugMenuVerboseLogging {
-            get {
+        public static string DynamoViewDebugMenuVerboseLogging
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDebugMenuVerboseLogging", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Dynamo.
         /// </summary>
-        public static string DynamoViewDynamoMenu {
-            get {
+        public static string DynamoViewDynamoMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDynamoMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _About.
         /// </summary>
-        public static string DynamoViewDynamoMenuAbout {
-            get {
+        public static string DynamoViewDynamoMenuAbout
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDynamoMenuAbout", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Exit Dynamo.
         /// </summary>
-        public static string DynamoViewDynamoMenuExit {
-            get {
+        public static string DynamoViewDynamoMenuExit
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDynamoMenuExit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Preferences....
         /// </summary>
-        public static string DynamoViewDynamoMenuPreferences {
-            get {
+        public static string DynamoViewDynamoMenuPreferences
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewDynamoMenuPreferences", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Edit.
         /// </summary>
-        public static string DynamoViewEditMenu {
-            get {
+        public static string DynamoViewEditMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Bottom.
         /// </summary>
-        public static string DynamoViewEditMenuAlighBottom {
-            get {
+        public static string DynamoViewEditMenuAlighBottom
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlighBottom", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Left.
         /// </summary>
-        public static string DynamoViewEditMenuAlignLeft {
-            get {
+        public static string DynamoViewEditMenuAlignLeft
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignLeft", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Right.
         /// </summary>
-        public static string DynamoViewEditMenuAlignRight {
-            get {
+        public static string DynamoViewEditMenuAlignRight
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignRight", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Align Selection.
         /// </summary>
-        public static string DynamoViewEditMenuAlignSelection {
-            get {
+        public static string DynamoViewEditMenuAlignSelection
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Top.
         /// </summary>
-        public static string DynamoViewEditMenuAlignTop {
-            get {
+        public static string DynamoViewEditMenuAlignTop
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignTop", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _X Average.
         /// </summary>
-        public static string DynamoViewEditMenuAlignXAverage {
-            get {
+        public static string DynamoViewEditMenuAlignXAverage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignXAverage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to X _Distribute.
         /// </summary>
-        public static string DynamoViewEditMenuAlignXDistribute {
-            get {
+        public static string DynamoViewEditMenuAlignXDistribute
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignXDistribute", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Y Average.
         /// </summary>
-        public static string DynamoViewEditMenuAlignYAverage {
-            get {
+        public static string DynamoViewEditMenuAlignYAverage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignYAverage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Y Di_stribute.
         /// </summary>
-        public static string DynamoViewEditMenuAlignYDistribute {
-            get {
+        public static string DynamoViewEditMenuAlignYDistribute
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuAlignYDistribute", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cleanup Node _Layout.
         /// </summary>
-        public static string DynamoViewEditMenuCleanupLayout {
-            get {
+        public static string DynamoViewEditMenuCleanupLayout
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCleanupLayout", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Copy.
         /// </summary>
-        public static string DynamoViewEditMenuCopy {
-            get {
+        public static string DynamoViewEditMenuCopy
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCopy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Crea_te Custom Node.
         /// </summary>
-        public static string DynamoViewEditMenuCreateCustomNode {
-            get {
+        public static string DynamoViewEditMenuCreateCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCreateCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create _Group.
         /// </summary>
-        public static string DynamoViewEditMenuCreateGroup {
-            get {
+        public static string DynamoViewEditMenuCreateGroup
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCreateGroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create _Note.
         /// </summary>
-        public static string DynamoViewEditMenuCreateNote {
-            get {
+        public static string DynamoViewEditMenuCreateNote
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCreateNote", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create Preset From Selection.
         /// </summary>
-        public static string DynamoViewEditMenuCreatePreset {
-            get {
+        public static string DynamoViewEditMenuCreatePreset
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuCreatePreset", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete Preset.
         /// </summary>
-        public static string DynamoViewEditMenuDeletePreset {
-            get {
+        public static string DynamoViewEditMenuDeletePreset
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuDeletePreset", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Delete Selected.
         /// </summary>
-        public static string DynamoViewEditMenuDeleteSelected {
-            get {
+        public static string DynamoViewEditMenuDeleteSelected
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuDeleteSelected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Paste.
         /// </summary>
-        public static string DynamoViewEditMenuPaste {
-            get {
+        public static string DynamoViewEditMenuPaste
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuPaste", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Presets.
         /// </summary>
-        public static string DynamoViewEditMenuPresetsMenu {
-            get {
+        public static string DynamoViewEditMenuPresetsMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuPresetsMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Redo.
         /// </summary>
-        public static string DynamoViewEditMenuRedo {
-            get {
+        public static string DynamoViewEditMenuRedo
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuRedo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Restore Preset.
         /// </summary>
-        public static string DynamoViewEditMenuRestorePreset {
-            get {
+        public static string DynamoViewEditMenuRestorePreset
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuRestorePreset", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Select All.
         /// </summary>
-        public static string DynamoViewEditMenuSelectAll {
-            get {
+        public static string DynamoViewEditMenuSelectAll
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuSelectAll", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Select Neighbors.
         /// </summary>
-        public static string DynamoViewEditMenuSelectNeighbours {
-            get {
+        public static string DynamoViewEditMenuSelectNeighbours
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuSelectNeighbours", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Undo.
         /// </summary>
-        public static string DynamoViewEditMenuUndo {
-            get {
+        public static string DynamoViewEditMenuUndo
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuUndo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Unpin All Preview Bubbles.
         /// </summary>
-        public static string DynamoViewEditMenuUnpinAllPreviewBubbles {
-            get {
+        public static string DynamoViewEditMenuUnpinAllPreviewBubbles
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewEditMenuUnpinAllPreviewBubbles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to E_xtensions.
         /// </summary>
-        public static string DynamoViewExtensionsMenu {
-            get {
+        public static string DynamoViewExtensionsMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewExtensionsMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _File.
         /// </summary>
-        public static string DynamoViewFileMenu {
-            get {
+        public static string DynamoViewFileMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Export.
         /// </summary>
-        public static string DynamoViewFileMenuExport {
-            get {
+        public static string DynamoViewFileMenuExport
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuExport", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export _Background 3D Preview as Image....
         /// </summary>
-        public static string DynamoViewFileMenuExport3DAsImage {
-            get {
+        public static string DynamoViewFileMenuExport3DAsImage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuExport3DAsImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export _Workspace As Image....
         /// </summary>
-        public static string DynamoViewFileMenuExportAsImage {
-            get {
+        public static string DynamoViewFileMenuExportAsImage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuExportAsImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export _Model to STL....
         /// </summary>
-        public static string DynamoViewFileMenuExportToSTL {
-            get {
+        public static string DynamoViewFileMenuExportToSTL
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuExportToSTL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Import Library....
         /// </summary>
-        public static string DynamoViewFileMenuImport {
-            get {
+        public static string DynamoViewFileMenuImport
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuImport", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Insert....
         /// </summary>
-        public static string DynamoViewFileMenuInsert {
-            get {
+        public static string DynamoViewFileMenuInsert
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuInsert", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _New.
         /// </summary>
-        public static string DynamoViewFileMenuNew {
-            get {
+        public static string DynamoViewFileMenuNew
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuNew", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Custom Node....
         /// </summary>
-        public static string DynamoViewFileMenuNewCustomNode {
-            get {
+        public static string DynamoViewFileMenuNewCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuNewCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Home Workspace.
         /// </summary>
-        public static string DynamoViewFileMenuNewHomeWorkSpace {
-            get {
+        public static string DynamoViewFileMenuNewHomeWorkSpace
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuNewHomeWorkSpace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Open....
         /// </summary>
-        public static string DynamoViewFileMenuOpen {
-            get {
+        public static string DynamoViewFileMenuOpen
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuOpen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _File.
         /// </summary>
-        public static string DynamoViewFileMenuOpenFile {
-            get {
+        public static string DynamoViewFileMenuOpenFile
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuOpenFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Template.
         /// </summary>
-        public static string DynamoViewFileMenuOpenTemplate {
-            get {
+        public static string DynamoViewFileMenuOpenTemplate
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuOpenTemplate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open _Recent Files.
         /// </summary>
-        public static string DynamoViewFileMenuRecentFiles {
-            get {
+        public static string DynamoViewFileMenuRecentFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuRecentFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Save.
         /// </summary>
-        public static string DynamoViewFileMenuSave {
-            get {
+        public static string DynamoViewFileMenuSave
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuSave", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save _As....
         /// </summary>
-        public static string DynamoViewFileMenuSaveAs {
-            get {
+        public static string DynamoViewFileMenuSaveAs
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewFileMenuSaveAs", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo Di_ctionary.
         /// </summary>
-        public static string DynamoViewHelpDictionary {
-            get {
+        public static string DynamoViewHelpDictionary
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpDictionary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Help.
         /// </summary>
-        public static string DynamoViewHelpMenu {
-            get {
+        public static string DynamoViewHelpMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Display Start Page.
         /// </summary>
-        public static string DynamoViewHelpMenuDisplayStartPage {
-            get {
+        public static string DynamoViewHelpMenuDisplayStartPage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuDisplayStartPage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo _Repository.
         /// </summary>
-        public static string DynamoViewHelpMenuGotoRepo {
-            get {
+        public static string DynamoViewHelpMenuGotoRepo
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuGotoRepo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo _Website.
         /// </summary>
-        public static string DynamoViewHelpMenuGotoWebsite {
-            get {
+        public static string DynamoViewHelpMenuGotoWebsite
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuGotoWebsite", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo _Project Wiki.
         /// </summary>
-        public static string DynamoViewHelpMenuGotoWiki {
-            get {
+        public static string DynamoViewHelpMenuGotoWiki
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuGotoWiki", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Report A Bug.
         /// </summary>
-        public static string DynamoViewHelpMenuReportBug {
-            get {
+        public static string DynamoViewHelpMenuReportBug
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuReportBug", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show In Folder.
         /// </summary>
-        public static string DynamoViewHelpMenuShowInFolder {
-            get {
+        public static string DynamoViewHelpMenuShowInFolder
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHelpMenuShowInFolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Samples.
         /// </summary>
-        public static string DynamoViewHepMenuSamples {
-            get {
+        public static string DynamoViewHepMenuSamples
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewHepMenuSamples", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Packages.
         /// </summary>
-        public static string DynamoViewPackageMenu {
-            get {
+        public static string DynamoViewPackageMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Manage Packages....
         /// </summary>
-        public static string DynamoViewPackageMenuManagePackage {
-            get {
+        public static string DynamoViewPackageMenuManagePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenuManagePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Package Manager....
         /// </summary>
-        public static string DynamoViewPackageMenuPackageManager {
-            get {
+        public static string DynamoViewPackageMenuPackageManager
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenuPackageManager", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish _Selected Nodes....
         /// </summary>
-        public static string DynamoViewPackageMenuPublishNodes {
-            get {
+        public static string DynamoViewPackageMenuPublishNodes
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenuPublishNodes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish _Current Workspace....
         /// </summary>
-        public static string DynamoViewPackageMenuPublishWorkspace {
-            get {
+        public static string DynamoViewPackageMenuPublishWorkspace
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenuPublishWorkspace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Search for a Package....
         /// </summary>
-        public static string DynamoViewPackageMenuSearchPackage {
-            get {
+        public static string DynamoViewPackageMenuSearchPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewPackageMenuSearchPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run Automatically.
         /// </summary>
-        public static string DynamoViewRunAutomaticallyOption {
-            get {
+        public static string DynamoViewRunAutomaticallyOption
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunAutomaticallyOption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run.
         /// </summary>
-        public static string DynamoViewRunButton {
-            get {
+        public static string DynamoViewRunButton
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run Workflow (F5).
         /// </summary>
-        public static string DynamoViewRunButtonTooltip {
-            get {
+        public static string DynamoViewRunButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run is not available when running Automatically or Periodically..
         /// </summary>
-        public static string DynamoViewRunButtonToolTipDisabled {
-            get {
+        public static string DynamoViewRunButtonToolTipDisabled
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunButtonToolTipDisabled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph execution is suspended until warning is resolved.
         /// </summary>
-        public static string DynamoViewRunButtonToolTipDisabledFileTrust {
-            get {
+        public static string DynamoViewRunButtonToolTipDisabledFileTrust
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunButtonToolTipDisabledFileTrust", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed in real time. Best suited for smaller graphs, known graphs, and Dynamo Sandbox..
         /// </summary>
-        public static string DynamoViewRunTypesAutomaticToolTip {
-            get {
+        public static string DynamoViewRunTypesAutomaticToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunTypesAutomaticToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run mode can not be changed until warning is resolved.
         /// </summary>
-        public static string DynamoViewRunTypesComboBoxToolTipDisabled {
-            get {
+        public static string DynamoViewRunTypesComboBoxToolTipDisabled
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunTypesComboBoxToolTipDisabled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run mode\n\nControls when graph changes are executed..
         /// </summary>
-        public static string DynamoViewRunTypesComboBoxToolTipEnabled {
-            get {
+        public static string DynamoViewRunTypesComboBoxToolTipEnabled
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunTypesComboBoxToolTipEnabled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed when you click Run. Use this mode when working in large graphs, unfamiliar graphs, or host applications..
         /// </summary>
-        public static string DynamoViewRunTypesManualToolTip {
-            get {
+        public static string DynamoViewRunTypesManualToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunTypesManualToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed at a specified interval. Only available when the graph contains specific nodes, such as DateTime.Now or WebRequest..
         /// </summary>
-        public static string DynamoViewRunTypesPeriodicToolTip {
-            get {
+        public static string DynamoViewRunTypesPeriodicToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewRunTypesPeriodicToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show In Folder.
         /// </summary>
-        public static string DynamoViewSamplesMenuShowInFolder {
-            get {
+        public static string DynamoViewSamplesMenuShowInFolder
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSamplesMenuShowInFolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Library.
         /// </summary>
-        public static string DynamoViewSettingLibraryZoomScale {
-            get {
+        public static string DynamoViewSettingLibraryZoomScale
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingLibraryZoomScale", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Settings.
         /// </summary>
-        public static string DynamoViewSettingMenu {
-            get {
+        public static string DynamoViewSettingMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Area Display Units.
         /// </summary>
-        public static string DynamoViewSettingMenuAreaUnits {
-            get {
+        public static string DynamoViewSettingMenuAreaUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuAreaUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Centimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuCentimeter {
-            get {
+        public static string DynamoViewSettingMenuCentimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCentimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cubic Centimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuCubicCentimeter {
-            get {
+        public static string DynamoViewSettingMenuCubicCentimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCubicCentimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cubic Foot.
         /// </summary>
-        public static string DynamoViewSettingMenuCubicFoot {
-            get {
+        public static string DynamoViewSettingMenuCubicFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCubicFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cubic Inch.
         /// </summary>
-        public static string DynamoViewSettingMenuCubicInch {
-            get {
+        public static string DynamoViewSettingMenuCubicInch
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCubicInch", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cubic Meter.
         /// </summary>
-        public static string DynamoViewSettingMenuCubicMeter {
-            get {
+        public static string DynamoViewSettingMenuCubicMeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCubicMeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cubic Millimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuCubicMillimeter {
-            get {
+        public static string DynamoViewSettingMenuCubicMillimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuCubicMillimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Decimal Foot.
         /// </summary>
-        public static string DynamoViewSettingMenuDecimalFoot {
-            get {
+        public static string DynamoViewSettingMenuDecimalFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuDecimalFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Decimal Inch.
         /// </summary>
-        public static string DynamoViewSettingMenuDecimalInch {
-            get {
+        public static string DynamoViewSettingMenuDecimalInch
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuDecimalInch", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Fractional Foot.
         /// </summary>
-        public static string DynamoViewSettingMenuFractionalFoot {
-            get {
+        public static string DynamoViewSettingMenuFractionalFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuFractionalFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Fractional Inch.
         /// </summary>
-        public static string DynamoViewSettingMenuFractionalInch {
-            get {
+        public static string DynamoViewSettingMenuFractionalInch
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuFractionalInch", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
-        public static string DynamoViewSettingMenuHighRenderPrecision {
-            get {
+        public static string DynamoViewSettingMenuHighRenderPrecision
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuHighRenderPrecision", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Length Display Units.
         /// </summary>
-        public static string DynamoViewSettingMenuLengthUnits {
-            get {
+        public static string DynamoViewSettingMenuLengthUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuLengthUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Low.
         /// </summary>
-        public static string DynamoViewSettingMenuLowRenderPrecision {
-            get {
+        public static string DynamoViewSettingMenuLowRenderPrecision
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuLowRenderPrecision", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Manage Node and Package Paths....
         /// </summary>
-        public static string DynamoViewSettingMenuManagePackagePath {
-            get {
+        public static string DynamoViewSettingMenuManagePackagePath
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuManagePackagePath", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Meter.
         /// </summary>
-        public static string DynamoViewSettingMenuMeter {
-            get {
+        public static string DynamoViewSettingMenuMeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuMeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Millimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuMillimeter {
-            get {
+        public static string DynamoViewSettingMenuMillimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuMillimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
-        public static string DynamoViewSettingMenuNumber0 {
-            get {
+        public static string DynamoViewSettingMenuNumber0
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumber0", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.0.
         /// </summary>
-        public static string DynamoViewSettingMenuNumber00 {
-            get {
+        public static string DynamoViewSettingMenuNumber00
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumber00", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.00.
         /// </summary>
-        public static string DynamoViewSettingMenuNumber000 {
-            get {
+        public static string DynamoViewSettingMenuNumber000
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumber000", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.000.
         /// </summary>
-        public static string DynamoViewSettingMenuNumber0000 {
-            get {
+        public static string DynamoViewSettingMenuNumber0000
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumber0000", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.0000.
         /// </summary>
-        public static string DynamoViewSettingMenuNumber00000 {
-            get {
+        public static string DynamoViewSettingMenuNumber00000
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumber00000", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Number Format.
         /// </summary>
-        public static string DynamoViewSettingMenuNumberFormat {
-            get {
+        public static string DynamoViewSettingMenuNumberFormat
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuNumberFormat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Agreements for _Data Collection.
         /// </summary>
-        public static string DynamoViewSettingMenuShowDataReportingDialog {
-            get {
+        public static string DynamoViewSettingMenuShowDataReportingDialog
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuShowDataReportingDialog", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square Centimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuSquareCentimeter {
-            get {
+        public static string DynamoViewSettingMenuSquareCentimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuSquareCentimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square Foot.
         /// </summary>
-        public static string DynamoViewSettingMenuSquareFoot {
-            get {
+        public static string DynamoViewSettingMenuSquareFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuSquareFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square Inch.
         /// </summary>
-        public static string DynamoViewSettingMenuSquareInch {
-            get {
+        public static string DynamoViewSettingMenuSquareInch
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuSquareInch", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square Meter.
         /// </summary>
-        public static string DynamoViewSettingMenuSquareMeter {
-            get {
+        public static string DynamoViewSettingMenuSquareMeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuSquareMeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square Millimeter.
         /// </summary>
-        public static string DynamoViewSettingMenuSquareMillimeter {
-            get {
+        public static string DynamoViewSettingMenuSquareMillimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuSquareMillimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Volume Display Units.
         /// </summary>
-        public static string DynamoViewSettingMenuVolumeUnits {
-            get {
+        public static string DynamoViewSettingMenuVolumeUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingMenuVolumeUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Run Preview.
         /// </summary>
-        public static string DynamoViewSettingShowRunPreview {
-            get {
+        public static string DynamoViewSettingShowRunPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingShowRunPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pause Splash Screen.
         /// </summary>
-        public static string DynamoViewSettingShowStaticSplashScreen {
-            get {
+        public static string DynamoViewSettingShowStaticSplashScreen
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingShowStaticSplashScreen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Geometry Scaling....
         /// </summary>
-        public static string DynamoViewSettingsMenuChangeScaleFactor {
-            get {
+        public static string DynamoViewSettingsMenuChangeScaleFactor
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingsMenuChangeScaleFactor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Visualization Settings.
         /// </summary>
-        public static string DynamoViewSettingsMenuVisualizationSettings {
-            get {
+        public static string DynamoViewSettingsMenuVisualizationSettings
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewSettingsMenuVisualizationSettings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export Background Preview As Image.
         /// </summary>
-        public static string DynamoViewToolbarExport3DButtonTooltip {
-            get {
+        public static string DynamoViewToolbarExport3DButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarExport3DButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export Workspace As Image.
         /// </summary>
-        public static string DynamoViewToolbarExportButtonTooltip {
-            get {
+        public static string DynamoViewToolbarExportButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarExportButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New [Ctrl + N].
         /// </summary>
-        public static string DynamoViewToolbarNewButtonTooltip {
-            get {
+        public static string DynamoViewToolbarNewButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarNewButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open [Ctrl + O].
         /// </summary>
-        public static string DynamoViewToolbarOpenButtonTooltip {
-            get {
+        public static string DynamoViewToolbarOpenButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarOpenButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Redo [Ctrl + Y].
         /// </summary>
-        public static string DynamoViewToolbarRedoButtonTooltip {
-            get {
+        public static string DynamoViewToolbarRedoButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarRedoButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save [Ctrl + S].
         /// </summary>
-        public static string DynamoViewToolbarSaveButtonTooltip {
-            get {
+        public static string DynamoViewToolbarSaveButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarSaveButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Undo [Ctrl + Z].
         /// </summary>
-        public static string DynamoViewToolbarUndoButtonTooltip {
-            get {
+        public static string DynamoViewToolbarUndoButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewToolbarUndoButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _View.
         /// </summary>
-        public static string DynamoViewViewMenu {
-            get {
+        public static string DynamoViewViewMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Background 3D Preview.
         /// </summary>
-        public static string DynamoViewViewMenu3DPreview {
-            get {
+        public static string DynamoViewViewMenu3DPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenu3DPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Geometry in {0}.
         /// </summary>
-        public static string DynamoViewViewMenuAlternateContextGeometry {
-            get {
+        public static string DynamoViewViewMenuAlternateContextGeometry
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuAlternateContextGeometry", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Available Previews.
         /// </summary>
-        public static string DynamoViewViewMenuAvailablePreviews {
-            get {
+        public static string DynamoViewViewMenuAvailablePreviews
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuAvailablePreviews", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Connectors.
         /// </summary>
-        public static string DynamoViewViewMenuConnector {
-            get {
+        public static string DynamoViewViewMenuConnector
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuConnector", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show _Tooltip.
         /// </summary>
-        public static string DynamoViewViewMenuConnectorShowTooltip {
-            get {
+        public static string DynamoViewViewMenuConnectorShowTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuConnectorShowTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Connector Type.
         /// </summary>
-        public static string DynamoViewViewMenuConnectorType {
-            get {
+        public static string DynamoViewViewMenuConnectorType
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuConnectorType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Curves.
         /// </summary>
-        public static string DynamoViewViewMenuConnectorTypeCurve {
-            get {
+        public static string DynamoViewViewMenuConnectorTypeCurve
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuConnectorTypeCurve", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Polylines.
         /// </summary>
-        public static string DynamoViewViewMenuConnectorTypePolylines {
-            get {
+        public static string DynamoViewViewMenuConnectorTypePolylines
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuConnectorTypePolylines", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide Console.
         /// </summary>
-        public static string DynamoViewViewMenuHideConsole {
-            get {
+        public static string DynamoViewViewMenuHideConsole
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuHideConsole", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Pan.
         /// </summary>
-        public static string DynamoViewViewMenuPan {
-            get {
+        public static string DynamoViewViewMenuPan
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPan", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pan Down (Mouse wheel drag down).
         /// </summary>
-        public static string DynamoViewViewMenuPanDown {
-            get {
+        public static string DynamoViewViewMenuPanDown
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPanDown", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pan Left (Mouse wheel drag left).
         /// </summary>
-        public static string DynamoViewViewMenuPanLeft {
-            get {
+        public static string DynamoViewViewMenuPanLeft
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPanLeft", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pan Right (Mouse wheel drag right).
         /// </summary>
-        public static string DynamoViewViewMenuPanRight {
-            get {
+        public static string DynamoViewViewMenuPanRight
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPanRight", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pan Up (Mouse wheel drag up).
         /// </summary>
-        public static string DynamoViewViewMenuPanUp {
-            get {
+        public static string DynamoViewViewMenuPanUp
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPanUp", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Navigate Background 3D Preview.
         /// </summary>
-        public static string DynamoViewViewMenuPreviewNavigate {
-            get {
+        public static string DynamoViewViewMenuPreviewNavigate
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuPreviewNavigate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Showing Background 3D Preview.
         /// </summary>
-        public static string DynamoViewViewMenuShowBackground3DPreview {
-            get {
+        public static string DynamoViewViewMenuShowBackground3DPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuShowBackground3DPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show _Connectors.
         /// </summary>
-        public static string DynamoViewViewMenuShowConnectors {
-            get {
+        public static string DynamoViewViewMenuShowConnectors
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuShowConnectors", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Show Console.
         /// </summary>
-        public static string DynamoViewViewMenuShowConsole {
-            get {
+        public static string DynamoViewViewMenuShowConsole
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuShowConsole", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Show Helpers.
         /// </summary>
-        public static string DynamoViewViewMenuShowGrid {
-            get {
+        public static string DynamoViewViewMenuShowGrid
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuShowGrid", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Zoom.
         /// </summary>
-        public static string DynamoViewViewMenuZoom {
-            get {
+        public static string DynamoViewViewMenuZoom
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuZoom", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom In (Mouse wheel down).
         /// </summary>
-        public static string DynamoViewViewMenuZoomIn {
-            get {
+        public static string DynamoViewViewMenuZoomIn
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuZoomIn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom Out (Mouse wheel up).
         /// </summary>
-        public static string DynamoViewViewMenuZoomOut {
-            get {
+        public static string DynamoViewViewMenuZoomOut
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoViewViewMenuZoomOut", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo 1.x file format.
         /// </summary>
-        public static string DynamoXmlFileFormat {
-            get {
+        public static string DynamoXmlFileFormat
+        {
+            get
+            {
                 return ResourceManager.GetString("DynamoXmlFileFormat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Group Title.
         /// </summary>
-        public static string EditAnnotationTitle {
-            get {
+        public static string EditAnnotationTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("EditAnnotationTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Node Name.
         /// </summary>
-        public static string EditNodeWindowTitle {
-            get {
+        public static string EditNodeWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("EditNodeWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Write note here.
         /// </summary>
-        public static string EditNoteWindowTitle {
-            get {
+        public static string EditNoteWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("EditNoteWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Accept.
         /// </summary>
-        public static string EditWindowAcceptButton {
-            get {
+        public static string EditWindowAcceptButton
+        {
+            get
+            {
                 return ResourceManager.GetString("EditWindowAcceptButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set value....
         /// </summary>
-        public static string EditWindowTitle {
-            get {
+        public static string EditWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("EditWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Element Binding allows a two-way interaction between Dynamo and the host application like Revit or Civil3D where a user can select an element in the host document and have Dynamo &quot;bind&quot; that element to a node in the workspace..
         /// </summary>
-        public static string ElementBindingDesc {
-            get {
+        public static string ElementBindingDesc
+        {
+            get
+            {
                 return ResourceManager.GetString("ElementBindingDesc", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A Save As command will create a workspace which is treated as a completely new file by Dynamo and existing element binding data will be lost. New element binding data will be created as normal as you run this file. Use the Save command instead if you wish to preserve element binding with the host document..
         /// </summary>
-        public static string ElementBindingWarningMessage {
-            get {
+        public static string ElementBindingWarningMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ElementBindingWarningMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Element Binding Warning.
         /// </summary>
-        public static string ElementBindingWarningTitle {
-            get {
+        public static string ElementBindingWarningTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ElementBindingWarningTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An error occurred when loading the application icon: {0}.
         /// </summary>
-        public static string ErrorLoadingIcon {
-            get {
+        public static string ErrorLoadingIcon
+        {
+            get
+            {
                 return ResourceManager.GetString("ErrorLoadingIcon", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You can return to this guide later from the Help menu..
         /// </summary>
-        public static string ExitTourWindowContent {
-            get {
+        public static string ExitTourWindowContent
+        {
+            get
+            {
                 return ResourceManager.GetString("ExitTourWindowContent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
-        public static string ExportPreferencesText {
-            get {
+        public static string ExportPreferencesText
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportPreferencesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Folder to Export.
         /// </summary>
-        public static string ExportSettingsDialogTitle {
-            get {
+        public static string ExportSettingsDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportSettingsDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export Failed.
         /// </summary>
-        public static string ExportSettingsFailedMessage {
-            get {
+        public static string ExportSettingsFailedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportSettingsFailedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Extension tab added to the extensions side bar..
         /// </summary>
-        public static string ExtensionAdded {
-            get {
+        public static string ExtensionAdded
+        {
+            get
+            {
                 return ResourceManager.GetString("ExtensionAdded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No new tab is added, as the extension is already present in the extensions side bar..
         /// </summary>
-        public static string ExtensionAlreadyPresent {
-            get {
+        public static string ExtensionAlreadyPresent
+        {
+            get
+            {
                 return ResourceManager.GetString("ExtensionAlreadyPresent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to All Files ({0})|{0}.
         /// </summary>
-        public static string FileDialogAllFiles {
-            get {
+        public static string FileDialogAllFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogAllFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Assembly Library Files ({0})|{0}.
         /// </summary>
-        public static string FileDialogAssemblyFiles {
-            get {
+        public static string FileDialogAssemblyFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogAssemblyFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Node, DLL, XML ({0})|{0}.
         /// </summary>
-        public static string FileDialogCustomNodeDLLXML {
-            get {
+        public static string FileDialogCustomNodeDLLXML
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogCustomNodeDLLXML", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture.png.
         /// </summary>
-        public static string FileDialogDefaultPNGName {
-            get {
+        public static string FileDialogDefaultPNGName
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDefaultPNGName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to model.stl.
         /// </summary>
-        public static string FileDialogDefaultSTLModelName {
-            get {
+        public static string FileDialogDefaultSTLModelName
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDefaultSTLModelName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DesignScript Files ({0})|{0}.
         /// </summary>
-        public static string FileDialogDesignScriptFiles {
-            get {
+        public static string FileDialogDesignScriptFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDesignScriptFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} Custom Node ({1})|{1}.
         /// </summary>
-        public static string FileDialogDynamoCustomNode {
-            get {
+        public static string FileDialogDynamoCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDynamoCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} Definitions ({1})|{1}.
         /// </summary>
-        public static string FileDialogDynamoDefinitions {
-            get {
+        public static string FileDialogDynamoDefinitions
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDynamoDefinitions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} Workspace ({1})|{1}.
         /// </summary>
-        public static string FileDialogDynamoWorkspace {
-            get {
+        public static string FileDialogDynamoWorkspace
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogDynamoWorkspace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Settings Files ({0})|{0}.
         /// </summary>
-        public static string FileDialogImportSettingsFiles {
-            get {
+        public static string FileDialogImportSettingsFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogImportSettingsFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Library Files ({0})|{0}.
         /// </summary>
-        public static string FileDialogLibraryFiles {
-            get {
+        public static string FileDialogLibraryFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogLibraryFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open in Manual Execution Mode.
         /// </summary>
-        public static string FileDialogManualMode {
-            get {
+        public static string FileDialogManualMode
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogManualMode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PNG Image|{0}.
         /// </summary>
-        public static string FileDialogPNGFiles {
-            get {
+        public static string FileDialogPNGFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogPNGFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to STL Models|{0}.
         /// </summary>
-        public static string FileDialogSTLModels {
-            get {
+        public static string FileDialogSTLModels
+        {
+            get
+            {
                 return ResourceManager.GetString("FileDialogSTLModels", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish Fail!.
         /// </summary>
-        public static string FileNotPublishCaption {
-            get {
+        public static string FileNotPublishCaption
+        {
+            get
+            {
                 return ResourceManager.GetString("FileNotPublishCaption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File(s) were not found or are contained inside of a package. Please only add files that are located outside of packages.
         ///
         ///Failed to publish file(s): 
         ///{0}.
         /// </summary>
-        public static string FileNotPublishMessage {
-            get {
+        public static string FileNotPublishMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("FileNotPublishMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No file selected..
         /// </summary>
-        public static string FilePathConverterNoFileSelected {
-            get {
+        public static string FilePathConverterNoFileSelected
+        {
+            get
+            {
                 return ResourceManager.GetString("FilePathConverterNoFileSelected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Trust this file’s location in the future..
         /// </summary>
-        public static string FileTrustWarningCheckBoxText {
-            get {
+        public static string FileTrustWarningCheckBoxText
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningCheckBoxText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DynamoCoreWpf;FileTrustWarningDocumentation.html.
         /// </summary>
-        public static string FileTrustWarningDocumentationUriString {
-            get {
+        public static string FileTrustWarningDocumentationUriString
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningDocumentationUriString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No, close file.
         /// </summary>
-        public static string FileTrustWarningPopupNoCloseFile {
-            get {
+        public static string FileTrustWarningPopupNoCloseFile
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupNoCloseFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
-        public static string FileTrustWarningPopupSettings {
-            get {
+        public static string FileTrustWarningPopupSettings
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupSettings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This file is stored in an untrusted location. Do you want to open this file?.
         /// </summary>
-        public static string FileTrustWarningPopupText {
-            get {
+        public static string FileTrustWarningPopupText
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open external file?.
         /// </summary>
-        public static string FileTrustWarningPopupTitle {
-            get {
+        public static string FileTrustWarningPopupTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to External content may bring risks to your system security..
         /// </summary>
-        public static string FileTrustWarningPopupTooltip1 {
-            get {
+        public static string FileTrustWarningPopupTooltip1
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupTooltip1", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The file&apos;s current location will be added to trusted locations.
         ///You can manage this in Preferences -&gt; Security..
         /// </summary>
-        public static string FileTrustWarningPopupTooltip2 {
-            get {
+        public static string FileTrustWarningPopupTooltip2
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupTooltip2", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
-        public static string FileTrustWarningPopupYes {
-            get {
+        public static string FileTrustWarningPopupYes
+        {
+            get
+            {
                 return ResourceManager.GetString("FileTrustWarningPopupYes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filter results.
         /// </summary>
-        public static string FilterIconTooltip {
-            get {
+        public static string FilterIconTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("FilterIconTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You do not have write permission to {0}..
         /// </summary>
-        public static string FolderNotWritableError {
-            get {
+        public static string FolderNotWritableError
+        {
+            get
+            {
                 return ResourceManager.GetString("FolderNotWritableError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to /DynamoCoreWpf;component/UI/Images/error.png.
         /// </summary>
-        public static string FooterNotificationErrorImage {
-            get {
+        public static string FooterNotificationErrorImage
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationErrorImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to cycle through nodes with errors..
         /// </summary>
-        public static string FooterNotificationErrorTooltip {
-            get {
+        public static string FooterNotificationErrorTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationErrorTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to /DynamoCoreWpf;component/UI/Images/info.png.
         /// </summary>
-        public static string FooterNotificationInfoImage {
-            get {
+        public static string FooterNotificationInfoImage
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationInfoImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to cycle through nodes with info states..
         /// </summary>
-        public static string FooterNotificationInfoTooltip {
-            get {
+        public static string FooterNotificationInfoTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationInfoTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to /DynamoCoreWpf;component/UI/Images/warning_16px.png.
         /// </summary>
-        public static string FooterNotificationWarningImage {
-            get {
+        public static string FooterNotificationWarningImage
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationWarningImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to cycle through nodes with warnings..
         /// </summary>
-        public static string FooterNotificationWarningTooltip {
-            get {
+        public static string FooterNotificationWarningTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("FooterNotificationWarningTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string GenericTaskDialogOptionCancel {
-            get {
+        public static string GenericTaskDialogOptionCancel
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogOptionCancel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
-        public static string GenericTaskDialogOptionNo {
-            get {
+        public static string GenericTaskDialogOptionNo
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogOptionNo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
-        public static string GenericTaskDialogOptionOK {
-            get {
+        public static string GenericTaskDialogOptionOK
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogOptionOK", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
-        public static string GenericTaskDialogOptionYes {
-            get {
+        public static string GenericTaskDialogOptionYes
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogOptionYes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sample Left Button.
         /// </summary>
-        public static string GenericTaskDialogSampleLeftButton {
-            get {
+        public static string GenericTaskDialogSampleLeftButton
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogSampleLeftButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sample Right Button.
         /// </summary>
-        public static string GenericTaskDialogSampleRightButton {
-            get {
+        public static string GenericTaskDialogSampleRightButton
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogSampleRightButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Generic Task Dialog.
         /// </summary>
-        public static string GenericTaskDialogTitle {
-            get {
+        public static string GenericTaskDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GenericTaskDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Centimeters.
         /// </summary>
-        public static string GESUnitCentimeters {
-            get {
+        public static string GESUnitCentimeters
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitCentimeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Feet.
         /// </summary>
-        public static string GESUnitFeet {
-            get {
+        public static string GESUnitFeet
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitFeet", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Inches.
         /// </summary>
-        public static string GESUnitInches {
-            get {
+        public static string GESUnitInches
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitInches", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Kilometers.
         /// </summary>
-        public static string GESUnitKilometers {
-            get {
+        public static string GESUnitKilometers
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitKilometers", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Meters.
         /// </summary>
-        public static string GESUnitMeters {
-            get {
+        public static string GESUnitMeters
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitMeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Miles.
         /// </summary>
-        public static string GESUnitMiles {
-            get {
+        public static string GESUnitMiles
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitMiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Millimeters.
         /// </summary>
-        public static string GESUnitMillimeters {
-            get {
+        public static string GESUnitMillimeters
+        {
+            get
+            {
                 return ResourceManager.GetString("GESUnitMillimeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _User Interface Tour.
         /// </summary>
-        public static string GetStartedGuide {
-            get {
+        public static string GetStartedGuide
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuide", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start your visual programming journey with this short guide. Here you&apos;ll learn some basics about the Dynamo interface and features..
         /// </summary>
-        public static string GetStartedGuideDescription {
-            get {
+        public static string GetStartedGuideDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The library contains all default functions #(nodes)=https://primer2.dynamobim.org/4_nodes_and_wires of Dynamo, as well as custom nodes you may have loaded. \n\nTo find a node, search the library or browse its categories..
         /// </summary>
-        public static string GetStartedGuideLibraryText {
-            get {
+        public static string GetStartedGuideLibraryText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideLibraryText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Library.
         /// </summary>
-        public static string GetStartedGuideLibraryTitle {
-            get {
+        public static string GetStartedGuideLibraryTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideLibraryTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Preferences to customize your Dynamo experience. \n\nYou can change language and time zone settings, adjust the visual style of your workspace, and more..
         /// </summary>
-        public static string GetStartedGuidePreferencesText {
-            get {
+        public static string GetStartedGuidePreferencesText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuidePreferencesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preferences.
         /// </summary>
-        public static string GetStartedGuidePreferencesTitle {
-            get {
+        public static string GetStartedGuidePreferencesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuidePreferencesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rate this guide.
         /// </summary>
-        public static string GetStartedGuideRatingTextTitle {
-            get {
+        public static string GetStartedGuideRatingTextTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideRatingTextTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use the Help menu to access tools and resources to help you get started. \n\nYou can explore sample scripts, browse the Dynamo Dictionary, find other guides, and more..
         /// </summary>
-        public static string GetStartedGuideResourcesText {
-            get {
+        public static string GetStartedGuideResourcesText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideResourcesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Resources.
         /// </summary>
-        public static string GetStartedGuideResourcesTitle {
-            get {
+        public static string GetStartedGuideResourcesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideResourcesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use the Run Status Bar to run a Dynamo graph (a script that contains the logic or algorithm). \n\nYou can select your preferred run type: -Automatic: The graph runs each time you make a change.- -Manual: The graph runs only when you click Run-.
         /// </summary>
-        public static string GetStartedGuideRunStatusBarText {
-            get {
+        public static string GetStartedGuideRunStatusBarText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideRunStatusBarText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run Status Bar.
         /// </summary>
-        public static string GetStartedGuideRunStatusBarTitle {
-            get {
+        public static string GetStartedGuideRunStatusBarTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideRunStatusBarTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more about Dynamo in the #online help=https://primer2.dynamobim.org/.
         /// </summary>
-        public static string GetStartedGuideSurveyText {
-            get {
+        public static string GetStartedGuideSurveyText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideSurveyText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Finished.
         /// </summary>
-        public static string GetStartedGuideSurveyTitle {
-            get {
+        public static string GetStartedGuideSurveyTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideSurveyTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to From the toolbar, you can: -Open a new workspace- -Open a saved Dynamo file- -Save your current Dynamo file- -Undo or redo changes-.
         /// </summary>
-        public static string GetStartedGuideToolbarText {
-            get {
+        public static string GetStartedGuideToolbarText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideToolbarText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Toolbar.
         /// </summary>
-        public static string GetStartedGuideToolbarTitle {
-            get {
+        public static string GetStartedGuideToolbarTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideToolbarTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start your visual programming journey with this short guide. \n\nHere you&apos;ll learn some basics about the Dynamo interface and features..
         /// </summary>
-        public static string GetStartedGuideWelcomeText {
-            get {
+        public static string GetStartedGuideWelcomeText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideWelcomeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Welcome To Dynamo.
         /// </summary>
-        public static string GetStartedGuideWelcomeTitle {
-            get {
+        public static string GetStartedGuideWelcomeTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedGuideWelcomeTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Get Started.
         /// </summary>
-        public static string GetStartedLinkText {
-            get {
+        public static string GetStartedLinkText
+        {
+            get
+            {
                 return ResourceManager.GetString("GetStartedLinkText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel and Show Issues.
         /// </summary>
-        public static string GraphIssuesOnSave_CancelBtn {
-            get {
+        public static string GraphIssuesOnSave_CancelBtn
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSave_CancelBtn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There are unresolved issues with the graph type. If this graph is designed to be used outside of Dynamo, resolve all issues and save the graph again..
         /// </summary>
-        public static string GraphIssuesOnSave_Description {
-            get {
+        public static string GraphIssuesOnSave_Description
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSave_Description", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save with Issues.
         /// </summary>
-        public static string GraphIssuesOnSave_ProceedBtn {
-            get {
+        public static string GraphIssuesOnSave_ProceedBtn
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSave_ProceedBtn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You are trying to save a graph with unresolved issues.
         /// </summary>
-        public static string GraphIssuesOnSave_Summary {
-            get {
+        public static string GraphIssuesOnSave_Summary
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSave_Summary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph Type Issues found.
         /// </summary>
-        public static string GraphIssuesOnSave_Title {
-            get {
+        public static string GraphIssuesOnSave_Title
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSave_Title", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The selected save location path is too long. Please change the save location and try again..
         /// </summary>
-        public static string GraphIssuesOnSavePath_Description {
-            get {
+        public static string GraphIssuesOnSavePath_Description
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSavePath_Description", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You are trying to save a graph with a path that is too long..
         /// </summary>
-        public static string GraphIssuesOnSavePath_Summary {
-            get {
+        public static string GraphIssuesOnSavePath_Summary
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSavePath_Summary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save Path Issues Found.
         /// </summary>
-        public static string GraphIssuesOnSavePath_Title {
-            get {
+        public static string GraphIssuesOnSavePath_Title
+        {
+            get
+            {
                 return ResourceManager.GetString("GraphIssuesOnSavePath_Title", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Group to This Group.
         /// </summary>
-        public static string GroupContextMenuAddGroupToGroup {
-            get {
+        public static string GroupContextMenuAddGroupToGroup
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuAddGroupToGroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Background.
         /// </summary>
-        public static string GroupContextMenuBackground {
-            get {
+        public static string GroupContextMenuBackground
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuBackground", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Color.
         /// </summary>
-        public static string GroupContextMenuColor {
-            get {
+        public static string GroupContextMenuColor
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuColor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete Group.
         /// </summary>
-        public static string GroupContextMenuDeleteGroup {
-            get {
+        public static string GroupContextMenuDeleteGroup
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuDeleteGroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Font Size.
         /// </summary>
-        public static string GroupContextMenuFont {
-            get {
+        public static string GroupContextMenuFont
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuFont", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cleanup Node Layout.
         /// </summary>
-        public static string GroupContextMenuGraphLayout {
-            get {
+        public static string GroupContextMenuGraphLayout
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuGraphLayout", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preview Geometry.
         /// </summary>
-        public static string GroupContextMenuPreview {
-            get {
+        public static string GroupContextMenuPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Ungr_oup.
         /// </summary>
-        public static string GroupContextMenuUngroup {
-            get {
+        public static string GroupContextMenuUngroup
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupContextMenuUngroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description &lt;Double click here to edit group description&gt;.
         /// </summary>
-        public static string GroupDefaultText {
-            get {
+        public static string GroupDefaultText
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupDefaultText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Title &lt;Double click here to edit group title&gt;.
         /// </summary>
-        public static string GroupNameDefaultText {
-            get {
+        public static string GroupNameDefaultText
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupNameDefaultText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Group Style.
         /// </summary>
-        public static string GroupStyleContextAnnotation {
-            get {
+        public static string GroupStyleContextAnnotation
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupStyleContextAnnotation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Font size.
         /// </summary>
-        public static string GroupStyleFontSizeToolTip {
-            get {
+        public static string GroupStyleFontSizeToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupStyleFontSizeToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string GroupStylesCancelButtonText {
-            get {
+        public static string GroupStylesCancelButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupStylesCancelButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string GroupStylesSaveButtonText {
-            get {
+        public static string GroupStylesSaveButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("GroupStylesSaveButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide Classic Node Library.
         /// </summary>
-        public static string HideClassicNodeLibrary {
-            get {
+        public static string HideClassicNodeLibrary
+        {
+            get
+            {
                 return ResourceManager.GetString("HideClassicNodeLibrary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hide Wires.
         /// </summary>
-        public static string HideWiresPopupMenuItem {
-            get {
+        public static string HideWiresPopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("HideWiresPopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import Library.
         /// </summary>
-        public static string ImportLibraryDialogTitle {
-            get {
+        public static string ImportLibraryDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportLibraryDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You can import custom settings here, which will overwrite your current settings. If you&apos;d like to preserve a copy of your current settings, export them before importing new settings. Settings not shown in the Preferences panel will be applied once Dynamo and any host program restarts..
         /// </summary>
-        public static string ImportPreferencesInfo {
-            get {
+        public static string ImportPreferencesInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportPreferencesInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
-        public static string ImportPreferencesText {
-            get {
+        public static string ImportPreferencesText
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportPreferencesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import Settings.
         /// </summary>
-        public static string ImportSettingsDialogTitle {
-            get {
+        public static string ImportSettingsDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportSettingsDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import Failed.
         /// </summary>
-        public static string ImportSettingsFailedMessage {
-            get {
+        public static string ImportSettingsFailedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportSettingsFailedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import Success.
         /// </summary>
-        public static string ImportSettingsSuccessMessage {
-            get {
+        public static string ImportSettingsSuccessMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportSettingsSuccessMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom to Fit.
         /// </summary>
-        public static string InCanvasFitViewButtonToolTip {
-            get {
+        public static string InCanvasFitViewButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasFitViewButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable background 3D preview navigation (Ctrl + B).
         /// </summary>
-        public static string InCanvasGeomButtonToolTip {
-            get {
+        public static string InCanvasGeomButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasGeomButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspace Geometry Scaling.
         /// </summary>
-        public static string InCanvasGeometryScalingToolTip {
-            get {
+        public static string InCanvasGeometryScalingToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasGeometryScalingToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable graph view navigation (Ctrl + B).
         /// </summary>
-        public static string InCanvasNodeButtonToolTip {
-            get {
+        public static string InCanvasNodeButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasNodeButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Orbit.
         /// </summary>
-        public static string InCanvasOrbitButtonToolTip {
-            get {
+        public static string InCanvasOrbitButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasOrbitButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pan.
         /// </summary>
-        public static string InCanvasPanButtonToolTip {
-            get {
+        public static string InCanvasPanButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasPanButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom In.
         /// </summary>
-        public static string InCanvasZoomInButtonToolTip {
-            get {
+        public static string InCanvasZoomInButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasZoomInButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom Out.
         /// </summary>
-        public static string InCanvasZoomOutButtonToolTip {
-            get {
+        public static string InCanvasZoomOutButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("InCanvasZoomOutButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Upload Error.
         /// </summary>
-        public static string InfectedPackageErrorString {
-            get {
+        public static string InfectedPackageErrorString
+        {
+            get
+            {
                 return ResourceManager.GetString("InfectedPackageErrorString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This is an infected package. Please upload a clean version..
         /// </summary>
-        public static string InfectedPackageMessageString {
-            get {
+        public static string InfectedPackageMessageString
+        {
+            get
+            {
                 return ResourceManager.GetString("InfectedPackageMessageString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Read more....
         /// </summary>
-        public static string InfoBubbleDocumentationLinkText {
-            get {
+        public static string InfoBubbleDocumentationLinkText
+        {
+            get
+            {
                 return ResourceManager.GetString("InfoBubbleDocumentationLinkText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string InfoBubbleError {
-            get {
+        public static string InfoBubbleError
+        {
+            get
+            {
                 return ResourceManager.GetString("InfoBubbleError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Info.
         /// </summary>
-        public static string InfoBubbleInfo {
-            get {
+        public static string InfoBubbleInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("InfoBubbleInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Warning.
         /// </summary>
-        public static string InfoBubbleWarning {
-            get {
+        public static string InfoBubbleWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("InfoBubbleWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Manager.
         /// </summary>
-        public static string InstalledPackagePartialHyperlinkMessage {
-            get {
+        public static string InstalledPackagePartialHyperlinkMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackagePartialHyperlinkMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to View your installed packages in the .
         /// </summary>
-        public static string InstalledPackagePartialTextMessage {
-            get {
+        public static string InstalledPackagePartialTextMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackagePartialTextMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Additional Files.
         /// </summary>
-        public static string InstalledPackageViewAdditionalFileLabel {
-            get {
+        public static string InstalledPackageViewAdditionalFileLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewAdditionalFileLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Additional Libraries.
         /// </summary>
-        public static string InstalledPackageViewAdditionalLabel {
-            get {
+        public static string InstalledPackageViewAdditionalLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewAdditionalLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deprecate.
         /// </summary>
-        public static string InstalledPackageViewContextMenuDeprecate {
-            get {
+        public static string InstalledPackageViewContextMenuDeprecate
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuDeprecate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set this package as deprecated.  Only allowed if you&apos;re a current maintainer of the package..
         /// </summary>
-        public static string InstalledPackageViewContextMenuDeprecateTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuDeprecateTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuDeprecateTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Get Latest Version.
         /// </summary>
-        public static string InstalledPackageViewContextMenuGetLatest {
-            get {
+        public static string InstalledPackageViewContextMenuGetLatest
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuGetLatest", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Check if there is a newer version of this package and download it..
         /// </summary>
-        public static string InstalledPackageViewContextMenuGetLatestTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuGetLatestTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuGetLatestTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish....
         /// </summary>
-        public static string InstalledPackageViewContextMenuPublish {
-            get {
+        public static string InstalledPackageViewContextMenuPublish
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuPublish", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish this package, if it has yet to be published..
         /// </summary>
-        public static string InstalledPackageViewContextMenuPublishTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuPublishTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuPublishTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish Version....
         /// </summary>
-        public static string InstalledPackageViewContextMenuPublishVersion {
-            get {
+        public static string InstalledPackageViewContextMenuPublishVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuPublishVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish a new version of this package, assuming it has already been published. Only allowed if you&apos;re a current maintainer of the package..
         /// </summary>
-        public static string InstalledPackageViewContextMenuPublishVersionTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuPublishVersionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuPublishVersionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove deprecation.
         /// </summary>
-        public static string InstalledPackageViewContextMenuRemoveDeprecation {
-            get {
+        public static string InstalledPackageViewContextMenuRemoveDeprecation
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuRemoveDeprecation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove package deprecation. Only allowed if you&apos;re a current maintainer of the package..
         /// </summary>
-        public static string InstalledPackageViewContextMenuRemoveDeprecationTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuRemoveDeprecationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuRemoveDeprecationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Root Directory.
         /// </summary>
-        public static string InstalledPackageViewContextMenuShowRootDir {
-            get {
+        public static string InstalledPackageViewContextMenuShowRootDir
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuShowRootDir", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Go to the root folder of this package.
         /// </summary>
-        public static string InstalledPackageViewContextMenuShowRootDirTooltip {
-            get {
+        public static string InstalledPackageViewContextMenuShowRootDirTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewContextMenuShowRootDirTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Nodes.
         /// </summary>
-        public static string InstalledPackageViewCustomNodesLabel {
-            get {
+        public static string InstalledPackageViewCustomNodesLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewCustomNodesLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Libraries.
         /// </summary>
-        public static string InstalledPackageViewNodeLibrariesLabel {
-            get {
+        public static string InstalledPackageViewNodeLibrariesLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewNodeLibrariesLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pending uninstall.
         /// </summary>
-        public static string InstalledPackageViewPendingInstallButton {
-            get {
+        public static string InstalledPackageViewPendingInstallButton
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewPendingInstallButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Installed Packages.
         /// </summary>
-        public static string InstalledPackageViewTitle {
-            get {
+        public static string InstalledPackageViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("InstalledPackageViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install Dynamo.
         /// </summary>
-        public static string InstallMessageCaption {
-            get {
+        public static string InstallMessageCaption
+        {
+            get
+            {
                 return ResourceManager.GetString("InstallMessageCaption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please disable Use Instancing in the Display Settings section of Visual Settings..
         /// </summary>
-        public static string InstancingRenderFailureDescription {
-            get {
+        public static string InstancingRenderFailureDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("InstancingRenderFailureDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Interactive Guides.
         /// </summary>
-        public static string InteractiveGuides {
-            get {
+        public static string InteractiveGuides
+        {
+            get
+            {
                 return ResourceManager.GetString("InteractiveGuides", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Nothing is being dragged. If you see this message, most likely your recent Dynamo interaction is not recommended..
         /// </summary>
-        public static string InvalidDraggingOperationMessgae {
-            get {
+        public static string InvalidDraggingOperationMessgae
+        {
+            get
+            {
                 return ResourceManager.GetString("InvalidDraggingOperationMessgae", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Invalid URL for login page!.
         /// </summary>
-        public static string InvalidLoginUrl {
-            get {
+        public static string InvalidLoginUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("InvalidLoginUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Could not sign in at this moment. Check the date, time and time zone settings and try to sign in again..
         /// </summary>
-        public static string InvalidTimeZoneMessage {
-            get {
+        public static string InvalidTimeZoneMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("InvalidTimeZoneMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No replication guide will be added..
         /// </summary>
-        public static string LacingAutoToolTip {
-            get {
+        public static string LacingAutoToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingAutoToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to For two lists [a,b,c][1,2,3] returns [a1,a2,a3][b1,b2,b3][c1,c2,c3]..
         /// </summary>
-        public static string LacingCrossProductToolTip {
-            get {
+        public static string LacingCrossProductToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingCrossProductToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Argument lacing is disabled for this node..
         /// </summary>
-        public static string LacingDisabledToolTip {
-            get {
+        public static string LacingDisabledToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingDisabledToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to For two lists [a,b,c][1,2,3] returns {a1}..
         /// </summary>
-        public static string LacingFirstToolTip {
-            get {
+        public static string LacingFirstToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingFirstToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to For two lists [a,b,c][1,2] returns [a1,b2,c2]..
         /// </summary>
-        public static string LacingLongestToolTip {
-            get {
+        public static string LacingLongestToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingLongestToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to For two lists [a,b,c][1,2] returns [a1,b2]..
         /// </summary>
-        public static string LacingShortestToolTip {
-            get {
+        public static string LacingShortestToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("LacingShortestToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to View layout.
         /// </summary>
-        public static string LayoutIconTooltip {
-            get {
+        public static string LayoutIconTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("LayoutIconTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more.
         /// </summary>
-        public static string LearnMore {
-            get {
+        public static string LearnMore
+        {
+            get
+            {
                 return ResourceManager.GetString("LearnMore", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to See the console log for the details of the import failure..
         /// </summary>
-        public static string LibraryLoadFailureMessageSuffix {
-            get {
+        public static string LibraryLoadFailureMessageSuffix
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryLoadFailureMessageSuffix", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit....
         /// </summary>
-        public static string LibraryViewContextMenuEditNode {
-            get {
+        public static string LibraryViewContextMenuEditNode
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryViewContextMenuEditNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No matches found.
         /// </summary>
-        public static string LibraryViewNoMatchesFound {
-            get {
+        public static string LibraryViewNoMatchesFound
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryViewNoMatchesFound", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
-        public static string LibraryViewSearchText {
-            get {
+        public static string LibraryViewSearchText
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryViewSearchText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Library.
         /// </summary>
-        public static string LibraryViewTitle {
-            get {
+        public static string LibraryViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Drag to adjust Library zoom scale between 25% and 300%. You can also adjust this in Library by pressing “Ctrl” and scrolling the mouse wheel..
         /// </summary>
-        public static string LibraryZoomScaleTooltipText {
-            get {
+        public static string LibraryZoomScaleTooltipText
+        {
+            get
+            {
                 return ResourceManager.GetString("LibraryZoomScaleTooltipText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package has conflicts with one or more loaded packages..
         /// </summary>
-        public static string LoadedPackagesConflictMessageBoxTitle {
-            get {
+        public static string LoadedPackagesConflictMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("LoadedPackagesConflictMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign Out.
         /// </summary>
-        public static string LogoutMenuItemText {
-            get {
+        public static string LogoutMenuItemText
+        {
+            get
+            {
                 return ResourceManager.GetString("LogoutMenuItemText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide major, minor, and build version number..
         /// </summary>
-        public static string MajorVersionNonNegative {
-            get {
+        public static string MajorVersionNonNegative
+        {
+            get
+            {
                 return ResourceManager.GetString("MajorVersionNonNegative", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Manual.
         /// </summary>
-        public static string Manual {
-            get {
+        public static string Manual
+        {
+            get
+            {
                 return ResourceManager.GetString("Manual", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package {1} is already installed.
         ///
         ///{0} will attempt to uninstall this package before installing {2}..
         /// </summary>
-        public static string MessageAlreadyInstallDynamo {
-            get {
+        public static string MessageAlreadyInstallDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageAlreadyInstallDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete {0} ?  This will delete the packages root directory.
         ///
         ///You can always redownload the package..
         /// </summary>
-        public static string MessageConfirmToDeletePackage {
-            get {
+        public static string MessageConfirmToDeletePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToDeletePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to install {0} {1} ?.
         /// </summary>
-        public static string MessageConfirmToInstallPackage {
-            get {
+        public static string MessageConfirmToInstallPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToInstallPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to install {0} {1} to {2} ?.
         /// </summary>
-        public static string MessageConfirmToInstallPackageToFolder {
-            get {
+        public static string MessageConfirmToInstallPackageToFolder
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToInstallPackageToFolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You have unsaved changes to custom node workspace: &quot;{0}&quot;.
         ///
         ///Would you like to save your changes?.
         /// </summary>
-        public static string MessageConfirmToSaveCustomNode {
-            get {
+        public static string MessageConfirmToSaveCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToSaveCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You have unsaved changes to the Home workspace.
         ///
         ///Would you like to save your changes?.
         /// </summary>
-        public static string MessageConfirmToSaveHomeWorkSpace {
-            get {
+        public static string MessageConfirmToSaveHomeWorkSpace
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToSaveHomeWorkSpace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You have unsaved changes to {0}.
         ///
         ///Would you like to save your changes?.
         /// </summary>
-        public static string MessageConfirmToSaveNamedHomeWorkSpace {
-            get {
+        public static string MessageConfirmToSaveNamedHomeWorkSpace
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToSaveNamedHomeWorkSpace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to We can&apos;t save &quot;{0}&quot; because the file is read-only or contains unresolved or invalid nodes. To keep changes, would you like to &quot;Save As...&quot; with a different name or path?.
         /// </summary>
-        public static string MessageConfirmToSaveReadOnlyCustomNode {
-            get {
+        public static string MessageConfirmToSaveReadOnlyCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageConfirmToSaveReadOnlyCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A built-in node with the given name already exists..
         /// </summary>
-        public static string MessageCustomNodeNameExist {
-            get {
+        public static string MessageCustomNodeNameExist
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageCustomNodeNameExist", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Node name cannot contain any of the following special characters:
         ///    # % * ? \ : or any of the non-printable characters..
         /// </summary>
-        public static string MessageCustomNodeNameInvalid {
-            get {
+        public static string MessageCustomNodeNameInvalid
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageCustomNodeNameInvalid", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You must enter a new category or choose one from the existing categories..
         /// </summary>
-        public static string MessageCustomNodeNeedNewCategory {
-            get {
+        public static string MessageCustomNodeNeedNewCategory
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageCustomNodeNeedNewCategory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You must supply a name..
         /// </summary>
-        public static string MessageCustomNodeNoName {
-            get {
+        public static string MessageCustomNodeNoName
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageCustomNodeNoName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error Opening File.
         /// </summary>
-        public static string MessageErrorOpeningFileGeneral {
-            get {
+        public static string MessageErrorOpeningFileGeneral
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageErrorOpeningFileGeneral", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loading the packages is taking longer than expected. What would you like to do?.
         /// </summary>
-        public static string MessageExcessiveLoadTime {
-            get {
+        public static string MessageExcessiveLoadTime
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageExcessiveLoadTime", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Still loading.
         /// </summary>
-        public static string MessageExcessiveLoadTimeTitle {
-            get {
+        public static string MessageExcessiveLoadTimeTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageExcessiveLoadTimeTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to add file: {0}.
         /// </summary>
-        public static string MessageFailedToAddFile {
-            get {
+        public static string MessageFailedToAddFile
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToAddFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to apply NodeViewCustomization for {0}.
         /// </summary>
-        public static string MessageFailedToApplyCustomization {
-            get {
+        public static string MessageFailedToApplyCustomization
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToApplyCustomization", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &apos;AttachmentToRowColumnConverter&apos; expects a &apos;ConverterParameter&apos; value to be either &apos;Row&apos; or &apos;Column&apos;.
         /// </summary>
-        public static string MessageFailedToAttachToRowColumn {
-            get {
+        public static string MessageFailedToAttachToRowColumn
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToAttachToRowColumn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} failed to delete the package.  You may need to delete the package&apos;s root directory manually..
         /// </summary>
-        public static string MessageFailedToDelete {
-            get {
+        public static string MessageFailedToDelete
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToDelete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to download package with id: {0}.  Please try again and report the package if you continue to have problems..
         /// </summary>
-        public static string MessageFailedToDownloadPackage {
-            get {
+        public static string MessageFailedToDownloadPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToDownloadPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to download version {0} of package with id: {1}.  Please try again and report the package if you continue to have problems..
         /// </summary>
-        public static string MessageFailedToDownloadPackageVersion {
-            get {
+        public static string MessageFailedToDownloadPackageVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToDownloadPackageVersion", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to No group could be found with that Id..
+        /// </summary>
+        public static string MessageFailedToFindGroupById
+        {
+            get
+            {
+                return ResourceManager.GetString("MessageFailedToFindGroupById", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to No node could be found with that Id..
         /// </summary>
-        public static string MessageFailedToFindNodeById {
-            get {
+        public static string MessageFailedToFindNodeById
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToFindNodeById", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error opening corrupted file: {0}.
         /// </summary>
-        public static string MessageFailedToOpenCorruptedFile {
-            get {
+        public static string MessageFailedToOpenCorruptedFile
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToOpenCorruptedFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to save the Workspace as image..
         /// </summary>
-        public static string MessageFailedToSaveAsImage {
-            get {
+        public static string MessageFailedToSaveAsImage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToSaveAsImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} failed to unload the package..
         /// </summary>
-        public static string MessageFailedToUnload {
-            get {
+        public static string MessageFailedToUnload
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailedToUnload", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} failed to uninstall the package: {1}.  The package may need to be reinstalled manually..
         /// </summary>
-        public static string MessageFailToUninstallPackage {
-            get {
+        public static string MessageFailToUninstallPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageFailToUninstallPackage", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to The file is currently in use by another application.
+        ///	
+        ///Please close the file before trying to overwrite it..
+        /// </summary>
+        public static string MessageFileInUseByApplication
+        {
+            get
+            {
+                return ResourceManager.GetString("MessageFileInUseByApplication", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Package {0} has one or more dependencies that conflict with the following packages that are in use in the workspace: {1}. Dependency conflicts could cause unintended behavior to occur.
         ///    
@@ -4559,12 +5586,14 @@ namespace Dynamo.Wpf.Properties {
         ///
         ///If not, {2} needs to uninstall {1} to continue but cannot as they are in use. Try restarting {2} and download {0} again..
         /// </summary>
-        public static string MessageForceInstallOrUninstallToContinue {
-            get {
+        public static string MessageForceInstallOrUninstallToContinue
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageForceInstallOrUninstallToContinue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package {0} has one or more dependencies that conflict with the following package(s):
         ///
@@ -4574,41 +5603,49 @@ namespace Dynamo.Wpf.Properties {
         ///
         ///To avoid unintended behavior, uninstall the conflicting loaded package(s), restart Dynamo, and download {0} again..
         /// </summary>
-        public static string MessageForceInstallOrUninstallUponRestart {
-            get {
+        public static string MessageForceInstallOrUninstallUponRestart
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageForceInstallOrUninstallUponRestart", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There was a problem getting the node from the workspace..
         /// </summary>
-        public static string MessageGettingNodeError {
-            get {
+        public static string MessageGettingNodeError
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageGettingNodeError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to load an invalid package..
         /// </summary>
-        public static string MessageInvalidPackage {
-            get {
+        public static string MessageInvalidPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageInvalidPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To load the built-in package {1}, {0} needs to first delete any conflicting packages.
         ///
         ///Delete the following packages: {2}?.
         /// </summary>
-        public static string MessageLoadBuiltInPackage {
-            get {
+        public static string MessageLoadBuiltInPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageLoadBuiltInPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To load the built-in package {1}, {0} needs to first delete any conflicting packages.
         ///Restart {0} to complete the deletion, then try and load the built-in pacakge again.
@@ -4616,276 +5653,334 @@ namespace Dynamo.Wpf.Properties {
         ///Delete the following packages: {2}?
         ///    .
         /// </summary>
-        public static string MessageLoadBuiltInWithRestartPackage {
-            get {
+        public static string MessageLoadBuiltInWithRestartPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageLoadBuiltInWithRestartPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} elapsed for loading {1} main window..
         /// </summary>
-        public static string MessageLoadingTime {
-            get {
+        public static string MessageLoadingTime
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageLoadingTime", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} and its host application must restart before delete takes effect..
         /// </summary>
-        public static string MessageNeedToRestartAfterDelete {
-            get {
+        public static string MessageNeedToRestartAfterDelete
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNeedToRestartAfterDelete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deleting Package.
         /// </summary>
-        public static string MessageNeedToRestartAfterDeleteTitle {
-            get {
+        public static string MessageNeedToRestartAfterDeleteTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNeedToRestartAfterDeleteTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} and its host application must restart before unload takes effect..
         /// </summary>
-        public static string MessageNeedToRestartAfterUnload {
-            get {
+        public static string MessageNeedToRestartAfterUnload
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNeedToRestartAfterUnload", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unloading Package.
         /// </summary>
-        public static string MessageNeedToRestartAfterUnloadTitle {
-            get {
+        public static string MessageNeedToRestartAfterUnloadTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNeedToRestartAfterUnloadTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There is a null function definition for this node..
         /// </summary>
-        public static string MessageNodeWithNullFunction {
-            get {
+        public static string MessageNodeWithNullFunction
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNodeWithNullFunction", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No description provided.
         /// </summary>
-        public static string MessageNoNodeDescription {
-            get {
+        public static string MessageNoNodeDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageNoNodeDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The package or one of its dependencies contains Python scripts or binaries. Do you want to continue?.
         /// </summary>
-        public static string MessagePackageContainPythonScript {
-            get {
+        public static string MessagePackageContainPythonScript
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageContainPythonScript", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} has dependencies that conflict with the following built-in package(s): {1}. Dependency conflicts could cause unintended behavior to occur.
         ///    
         ///Do you wish to continue trying to install {0}?.
         /// </summary>
-        public static string MessagePackageDepsInBuiltinPackages {
-            get {
+        public static string MessagePackageDepsInBuiltinPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageDepsInBuiltinPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This package or one of its dependencies were created for a newer version of Dynamo. It may not work in this version. Do you want to continue?.
         /// </summary>
-        public static string MessagePackageNewerDynamo {
-            get {
+        public static string MessagePackageNewerDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageNewerDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} was not found and could not be downloaded..
         /// </summary>
-        public static string MessagePackageNotFound {
-            get {
+        public static string MessagePackageNotFound
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageNotFound", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This package or one of its dependencies were created for a previous version of Dynamo. It may not work in this version. Do you want to continue?.
         /// </summary>
-        public static string MessagePackageOlderDynamo {
-            get {
+        public static string MessagePackageOlderDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageOlderDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The package or one of its dependencies targets a different environment, such as Revit, Civil 3D, Advance Steel, Alias or FormIt. This can cause instability and unexpected problems. Do you want to continue?.
         /// </summary>
-        public static string MessagePackageTargetOtherHosts {
-            get {
+        public static string MessagePackageTargetOtherHosts
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageTargetOtherHosts", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The package or one of its dependencies targets a different environment, such as Revit, Civil 3D, Advance Steel, Alias or FormIt. This can cause instability and unexpected problems..
         /// </summary>
-        public static string MessagePackageTargetOtherHosts2 {
-            get {
+        public static string MessagePackageTargetOtherHosts2
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageTargetOtherHosts2", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package targets a different host than current host application..
         /// </summary>
-        public static string MessagePackageTargetOtherHostShort {
-            get {
+        public static string MessagePackageTargetOtherHostShort
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageTargetOtherHostShort", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Version {0} of {1} could not be found..
         /// </summary>
-        public static string MessagePackageVersionNotFound {
-            get {
+        public static string MessagePackageVersionNotFound
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackageVersionNotFound", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to #Learn more=https://primer2.dynamobim.org/1_developer_primer_intro/3_developing_for_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-net8.
         /// </summary>
-        public static string MessagePackOlderDynamoLink {
-            get {
+        public static string MessagePackOlderDynamoLink
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePackOlderDynamoLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cannot contain special characters (# % * ? \ : [ ]).
         /// </summary>
-        public static string MessagePortNameInvalid {
-            get {
+        public static string MessagePortNameInvalid
+        {
+            get
+            {
                 return ResourceManager.GetString("MessagePortNameInvalid", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your custom port properties will be lost once the port is removed..
         /// </summary>
-        public static string MessageRemovePythonPort {
-            get {
+        public static string MessageRemovePythonPort
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageRemovePythonPort", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} cannot be installed as it conflicts with a different version of the built-in package, {1}, which is already installed.
         ///    
         ///You can try disabling loading packages from built-in package paths, or unload the conflicting package, then restart {2} and download {0} again..
         /// </summary>
-        public static string MessageSamePackageDiffVersInBuiltinPackages {
-            get {
+        public static string MessageSamePackageDiffVersInBuiltinPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSamePackageDiffVersInBuiltinPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package {0} cannot be installed as it conflicts with a different version, {1}, which is already installed. 
         ///
         ///Do you wish to uninstall {1}? Restart {2} to complete the uninstall and try downloading {0} again..
         /// </summary>
-        public static string MessageSamePackageDiffVersInLocalPackages {
-            get {
+        public static string MessageSamePackageDiffVersInLocalPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSamePackageDiffVersInLocalPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The same version of {0} is already installed as a built-in package and does not need to be installed again..
         /// </summary>
-        public static string MessageSamePackageSameVersInBuiltinPackages {
-            get {
+        public static string MessageSamePackageSameVersInBuiltinPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSamePackageSameVersInBuiltinPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The same version of {0} is already installed and does not need to be installed again..
         /// </summary>
-        public static string MessageSamePackageSameVersInLocalPackages {
-            get {
+        public static string MessageSamePackageSameVersInLocalPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSamePackageSameVersInLocalPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You must select at least one custom node..
         /// </summary>
-        public static string MessageSelectAtLeastOneNode {
-            get {
+        public static string MessageSelectAtLeastOneNode
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSelectAtLeastOneNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The selected symbol was not found in the workspace.
         /// </summary>
-        public static string MessageSelectSymbolNotFound {
-            get {
+        public static string MessageSelectSymbolNotFound
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSelectSymbolNotFound", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The node is part of the {0} package called &quot;{1}&quot; - do you want to submit a new version of this package?
         ///
         ///If not, this node will be moved to the new package you are creating.&quot;.
         /// </summary>
-        public static string MessageSubmitSameNamePackage {
-            get {
+        public static string MessageSubmitSameNamePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageSubmitSameNamePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to deprecate {0} ?  This request will be rejected if you are not a maintainer of the package.  It indicates that you will no longer support the package, although the package will still appear when explicitly searched for. 
         ///
         ///You can always undeprecate the package..
         /// </summary>
-        public static string MessageToDeprecatePackage {
-            get {
+        public static string MessageToDeprecatePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageToDeprecatePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to undeprecate {0} ?  This request will be rejected if you are not a maintainer of the package.  It indicates that you will continue to support the package and the package will appear when users are browsing packages.
         ///
         ///You can always re-deprecate the package..
         /// </summary>
-        public static string MessageToUndeprecatePackage {
-            get {
+        public static string MessageToUndeprecatePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageToUndeprecatePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {1} cannot be loaded.
         ///Installing it will conflict with one or more node definitions that already exist in {0}, which is currently loaded. 
@@ -4894,561 +5989,685 @@ namespace Dynamo.Wpf.Properties {
         ///
         ///Uninstall the following packages: {0}?.
         /// </summary>
-        public static string MessageUninstallCustomNodeToContinue {
-            get {
+        public static string MessageUninstallCustomNodeToContinue
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageUninstallCustomNodeToContinue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to &quot;The package {0} is already installed. To reinstall it, you must first uninstall it and restart to complete the uninstall. Would you like to mark {0} for uninstall?&quot;.
         /// </summary>
-        public static string MessageUninstallSamePackage {
-            get {
+        public static string MessageUninstallSamePackage
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageUninstallSamePackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unknown error opening file: {0}.
         /// </summary>
-        public static string MessageUnkownErrorOpeningFile {
-            get {
+        public static string MessageUnkownErrorOpeningFile
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageUnkownErrorOpeningFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The following workspaces have not been saved:.
         /// </summary>
-        public static string MessageUnsavedChanges0 {
-            get {
+        public static string MessageUnsavedChanges0
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageUnsavedChanges0", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to . Please save them and try again..
         /// </summary>
-        public static string MessageUnsavedChanges1 {
-            get {
+        public static string MessageUnsavedChanges1
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageUnsavedChanges1", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You must provide a Minor version as a non-negative integer..
         /// </summary>
-        public static string MinorVersionNonNegative {
-            get {
+        public static string MinorVersionNonNegative
+        {
+            get
+            {
                 return ResourceManager.GetString("MinorVersionNonNegative", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Number of results.
         /// </summary>
-        public static string MLRecommendationNumberOfResults {
-            get {
+        public static string MLRecommendationNumberOfResults
+        {
+            get
+            {
                 return ResourceManager.GetString("MLRecommendationNumberOfResults", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to More.
         /// </summary>
-        public static string MoreButton {
-            get {
+        public static string MoreButton
+        {
+            get
+            {
                 return ResourceManager.GetString("MoreButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Must be at least 3 characters.
         /// </summary>
-        public static string NameNeedMoreCharacters {
-            get {
+        public static string NameNeedMoreCharacters
+        {
+            get
+            {
                 return ResourceManager.GetString("NameNeedMoreCharacters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Next guide: .
         /// </summary>
-        public static string NextGuideText {
-            get {
+        public static string NextGuideText
+        {
+            get
+            {
                 return ResourceManager.GetString("NextGuideText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sort results by.
         /// </summary>
-        public static string NodeAutocomplete {
-            get {
+        public static string NodeAutocomplete
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeAutocomplete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DynamoCoreWpf;NodeAutocompleteDocumentation.html.
         /// </summary>
-        public static string NodeAutocompleteDocumentationUriString {
-            get {
+        public static string NodeAutocompleteDocumentationUriString
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeAutocompleteDocumentationUriString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node AutoComplete is not available on ports belonging to collapsed groups..
         /// </summary>
-        public static string NodeAutoCompleteNotAvailableForCollapsedGroups {
-            get {
+        public static string NodeAutoCompleteNotAvailableForCollapsedGroups
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeAutoCompleteNotAvailableForCollapsedGroups", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable Periodic Update.
         /// </summary>
-        public static string NodeContextMenuEnablePeriodicUpdate {
-            get {
+        public static string NodeContextMenuEnablePeriodicUpdate
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuEnablePeriodicUpdate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        public static string NodeContextMenuHelp {
-            get {
+        public static string NodeContextMenuHelp
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuHelp", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Is Input.
         /// </summary>
-        public static string NodeContextMenuIsInput {
-            get {
+        public static string NodeContextMenuIsInput
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuIsInput", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Is Output.
         /// </summary>
-        public static string NodeContextMenuIsOutput {
-            get {
+        public static string NodeContextMenuIsOutput
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuIsOutput", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preview Geometry.
         /// </summary>
-        public static string NodeContextMenuPreview {
-            get {
+        public static string NodeContextMenuPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rename.
         /// </summary>
-        public static string NodeContextMenuRenameNode {
-            get {
+        public static string NodeContextMenuRenameNode
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuRenameNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Labels.
         /// </summary>
-        public static string NodeContextMenuShowLabels {
-            get {
+        public static string NodeContextMenuShowLabels
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeContextMenuShowLabels", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Help Data is dumped to \&quot;{0}\&quot;..
         /// </summary>
-        public static string NodeHelpIsDumped {
-            get {
+        public static string NodeHelpIsDumped
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpIsDumped", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CATEGORY.
         /// </summary>
-        public static string NodeHelpWindowNodeCategory {
-            get {
+        public static string NodeHelpWindowNodeCategory
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpWindowNodeCategory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DESCRIPTION.
         /// </summary>
-        public static string NodeHelpWindowNodeDescription {
-            get {
+        public static string NodeHelpWindowNodeDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpWindowNodeDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to INPUTS.
         /// </summary>
-        public static string NodeHelpWindowNodeInput {
-            get {
+        public static string NodeHelpWindowNodeInput
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpWindowNodeInput", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to OUTPUTS.
         /// </summary>
-        public static string NodeHelpWindowNodeOutput {
-            get {
+        public static string NodeHelpWindowNodeOutput
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpWindowNodeOutput", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to NODE TYPE.
         /// </summary>
-        public static string NodeHelpWindowNodeType {
-            get {
+        public static string NodeHelpWindowNodeType
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeHelpWindowNodeType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to create node: .
         /// </summary>
-        public static string NodeInCanvasSearchCreationError {
-            get {
+        public static string NodeInCanvasSearchCreationError
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInCanvasSearchCreationError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dismisses the info messages on this node. Utilize when you want to design in graph failures, or the info message will not be relevant during graph execution..
         /// </summary>
-        public static string NodeInfoDismissButtonToolTip {
-            get {
+        public static string NodeInfoDismissButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInfoDismissButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dismiss.
         /// </summary>
-        public static string NodeInformationalStateDismiss {
-            get {
+        public static string NodeInformationalStateDismiss
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateDismiss", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dismiss all.
         /// </summary>
-        public static string NodeInformationalStateDismissAll {
-            get {
+        public static string NodeInformationalStateDismissAll
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateDismissAll", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dismissed Alerts.
         /// </summary>
-        public static string NodeInformationalStateDismissedAlerts {
-            get {
+        public static string NodeInformationalStateDismissedAlerts
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateDismissedAlerts", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show all errors.
         /// </summary>
-        public static string NodeInformationalStateShowAllErrors {
-            get {
+        public static string NodeInformationalStateShowAllErrors
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateShowAllErrors", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show all info.
         /// </summary>
-        public static string NodeInformationalStateShowAllInfo {
-            get {
+        public static string NodeInformationalStateShowAllInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateShowAllInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show all warnings.
         /// </summary>
-        public static string NodeInformationalStateShowAllWarnings {
-            get {
+        public static string NodeInformationalStateShowAllWarnings
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateShowAllWarnings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show less.
         /// </summary>
-        public static string NodeInformationalStateShowLess {
-            get {
+        public static string NodeInformationalStateShowLess
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeInformationalStateShowLess", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Renamed.
         /// </summary>
-        public static string NodeRenamedLabel {
-            get {
+        public static string NodeRenamedLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeRenamedLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Freeze.
         /// </summary>
-        public static string NodesRunStatus {
-            get {
+        public static string NodesRunStatus
+        {
+            get
+            {
                 return ResourceManager.GetString("NodesRunStatus", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description: .
         /// </summary>
-        public static string NodeTooltipDescription {
-            get {
+        public static string NodeTooltipDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeTooltipDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Original node name: .
         /// </summary>
-        public static string NodeTooltipOriginalName {
-            get {
+        public static string NodeTooltipOriginalName
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeTooltipOriginalName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package: .
         /// </summary>
-        public static string NodeTooltipPackage {
-            get {
+        public static string NodeTooltipPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeTooltipPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Renamed from {0}.
         /// </summary>
-        public static string NodeTooltipRenamed {
-            get {
+        public static string NodeTooltipRenamed
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeTooltipRenamed", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There was an error while finding node view customizations for {0}. Contact the author of this assembly for more information..
         /// </summary>
-        public static string NodeViewCustomizationFindErrorMessage {
-            get {
+        public static string NodeViewCustomizationFindErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeViewCustomizationFindErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dismisses the warning messages on this node. Utilize when you want to design in graph failures, or the warning message will not be relevant during graph execution..
         /// </summary>
-        public static string NodeWarningDismissButtonToolTip {
-            get {
+        public static string NodeWarningDismissButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("NodeWarningDismissButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to none.
         /// </summary>
-        public static string NoneString {
-            get {
+        public static string NoneString
+        {
+            get
+            {
                 return ResourceManager.GetString("NoneString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string NoteViewContextMenuDelete {
-            get {
+        public static string NoteViewContextMenuDelete
+        {
+            get
+            {
                 return ResourceManager.GetString("NoteViewContextMenuDelete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit....
         /// </summary>
-        public static string NoteViewContextMenuEdit {
-            get {
+        public static string NoteViewContextMenuEdit
+        {
+            get
+            {
                 return ResourceManager.GetString("NoteViewContextMenuEdit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to view latest news from Dynamo Team..
         /// </summary>
-        public static string NotificationCenterButtonTooltip {
-            get {
+        public static string NotificationCenterButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("NotificationCenterButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To access the Recommended Nodes feature, please read and accept Dynamo &gt; Agreements for Data Collection..
         /// </summary>
-        public static string NotificationToAgreeMLNodeautocompleteTOU {
-            get {
+        public static string NotificationToAgreeMLNodeautocompleteTOU
+        {
+            get
+            {
                 return ResourceManager.GetString("NotificationToAgreeMLNodeautocompleteTOU", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to null.
         /// </summary>
-        public static string NullString {
-            get {
+        public static string NullString
+        {
+            get
+            {
                 return ResourceManager.GetString("NullString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Type Match.
         /// </summary>
-        public static string ObjectType {
-            get {
+        public static string ObjectType
+        {
+            get
+            {
                 return ResourceManager.GetString("ObjectType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
-        public static string OKButton {
-            get {
+        public static string OKButton
+        {
+            get
+            {
                 return ResourceManager.GetString("OKButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Getting Started.
         /// </summary>
-        public static string OnboardingGuide {
-            get {
+        public static string OnboardingGuide
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuide", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This new node needs to be connected to another to make it part of the graph. Give it a try, then click the Next arrow..
         /// </summary>
-        public static string OnboardingGuideConnectNodesText {
-            get {
+        public static string OnboardingGuideConnectNodesText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideConnectNodesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Connect the nodes.
         /// </summary>
-        public static string OnboardingGuideConnectNodesTitle {
-            get {
+        public static string OnboardingGuideConnectNodesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideConnectNodesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn about the basic building blocks of Dynamo. Get hands-on practice working with a graph..
         /// </summary>
-        public static string OnboardingGuideDescription {
-            get {
+        public static string OnboardingGuideDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Let’s run the graph and see the results of the adjustments you made. Click Run..
         /// </summary>
-        public static string OnboardingGuideRunGraphText {
-            get {
+        public static string OnboardingGuideRunGraphText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideRunGraphText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run the graph.
         /// </summary>
-        public static string OnboardingGuideRunGraphTitle {
-            get {
+        public static string OnboardingGuideRunGraphTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideRunGraphTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You&apos;ve finished the Getting Started guide..
         /// </summary>
-        public static string OnboardingGuideSurveyText {
-            get {
+        public static string OnboardingGuideSurveyText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideSurveyText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn about the basic building blocks of Dynamo. Get hands-on practice working with a graph..
         /// </summary>
-        public static string OnboardingGuideWelcomeText {
-            get {
+        public static string OnboardingGuideWelcomeText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideWelcomeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Get started with Dynamo.
         /// </summary>
-        public static string OnboardingGuideWelcomeTitle {
-            get {
+        public static string OnboardingGuideWelcomeTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingGuideWelcomeTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Nodes are the building blocks of graphs. Nodes perform operations, such as storing a number or creating geometry.\n\nYou can learn more about a node by hovering over its parts. This node is missing an input.\n\nHover over the input port to see what types of data it accepts..
         /// </summary>
-        public static string OnboardingNodesText {
-            get {
+        public static string OnboardingNodesText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingNodesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Nodes.
         /// </summary>
-        public static string OnboardingNodesTitle {
-            get {
+        public static string OnboardingNodesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingNodesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The library contains the nodes used to build graphs. To find a node, you can search the library or browse its categories.
         ///
@@ -5456,2327 +6675,2885 @@ namespace Dynamo.Wpf.Properties {
         ///
         ///Try placing the highlighted **ByOrigin** node..
         /// </summary>
-        public static string OnboardingPlaceNodeText {
-            get {
+        public static string OnboardingPlaceNodeText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingPlaceNodeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Placing nodes.
         /// </summary>
-        public static string OnboardingPlaceNodeTitle {
-            get {
+        public static string OnboardingPlaceNodeTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingPlaceNodeTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Well done! You just ran your first graph in Dynamo. \n\nStay tuned for more guides on Dynamo basics. In the meantime, continue your learning journey in #Dynamo Primer=https://primer2.dynamobim.org/ ..
         /// </summary>
-        public static string OnboardingSuccessText {
-            get {
+        public static string OnboardingSuccessText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingSuccessText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Success.
         /// </summary>
-        public static string OnboardingSuccessTitle {
-            get {
+        public static string OnboardingSuccessTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingSuccessTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This is the workspace, where you’ll develop visual programs and preview the results. \n\nEach visual program is powered by a **graph** . Graphs can process data, create geometry, and more. In this guide, we’ll work with a sample graph..
         /// </summary>
-        public static string OnboardingWorkspaceText {
-            get {
+        public static string OnboardingWorkspaceText
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingWorkspaceText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspace.
         /// </summary>
-        public static string OnboardingWorkspaceTitle {
-            get {
+        public static string OnboardingWorkspaceTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnboardingWorkspaceTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please, load assembly just one time.
         ///Next assemblies were loaded several times:
         ///.
         /// </summary>
-        public static string OneAssemblyWasLoadedSeveralTimesErrorMessage {
-            get {
+        public static string OneAssemblyWasLoadedSeveralTimesErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("OneAssemblyWasLoadedSeveralTimesErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to only.
         /// </summary>
-        public static string OnlyTitle {
-            get {
+        public static string OnlyTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OnlyTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open {0} Definition....
         /// </summary>
-        public static string OpenDynamoDefinitionDialogTitle {
-            get {
+        public static string OpenDynamoDefinitionDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("OpenDynamoDefinitionDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Compatible.
         /// </summary>
-        public static string PackageCompatible {
-            get {
+        public static string PackageCompatible
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageCompatible", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Versions compatible with the current setup.
         /// </summary>
-        public static string PackageCompatibleFilterTooltip {
-            get {
+        public static string PackageCompatibleFilterTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageCompatibleFilterTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This package contains custom nodes that are in use. These custom nodes need to be deleted or the graph needs to be closed before the package can be deleted..
         /// </summary>
-        public static string PackageContextMenuDeletePackageCustomNodesInUseTooltip {
-            get {
+        public static string PackageContextMenuDeletePackageCustomNodesInUseTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuDeletePackageCustomNodesInUseTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string PackageContextMenuDeletePackageText {
-            get {
+        public static string PackageContextMenuDeletePackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuDeletePackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete this package from the Dynamo package locations. Once deleted, it will not be loaded into Dynamo anymore until it is re-installed.
         /// </summary>
-        public static string PackageContextMenuDeletePackageTooltip {
-            get {
+        public static string PackageContextMenuDeletePackageTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuDeletePackageTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unload.
         /// </summary>
-        public static string PackageContextMenuUnloadPackageText {
-            get {
+        public static string PackageContextMenuUnloadPackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnloadPackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unload this package so that it will not be loaded into Dynamo. The package will not be deleted from the Dynamo package locations.
         /// </summary>
-        public static string PackageContextMenuUnloadPackageTooltip {
-            get {
+        public static string PackageContextMenuUnloadPackageTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnloadPackageTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel Delete.
         /// </summary>
-        public static string PackageContextMenuUnmarkDeletePackageText {
-            get {
+        public static string PackageContextMenuUnmarkDeletePackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnmarkDeletePackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove the scheduled delete status.
         /// </summary>
-        public static string PackageContextMenuUnmarkDeletePackageTooltip {
-            get {
+        public static string PackageContextMenuUnmarkDeletePackageTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnmarkDeletePackageTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel Unload.
         /// </summary>
-        public static string PackageContextMenuUnmarkUnloadPackageText {
-            get {
+        public static string PackageContextMenuUnmarkUnloadPackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnmarkUnloadPackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove the scheduled unload status.
         /// </summary>
-        public static string PackageContextMenuUnmarkUnloadPackageTooltip {
-            get {
+        public static string PackageContextMenuUnmarkUnloadPackageTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageContextMenuUnmarkUnloadPackageTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This package is outdated and cannot be installed..
         /// </summary>
-        public static string PackageDeprecatedTooltip {
-            get {
+        public static string PackageDeprecatedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDeprecatedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to COMPATIBILITY.
         /// </summary>
-        public static string PackageDetailsCompatibility {
-            get {
+        public static string PackageDetailsCompatibility
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsCompatibility", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Compatible with your current setup.
         /// </summary>
-        public static string PackageDetailsCompatibilityWithSetup {
-            get {
+        public static string PackageDetailsCompatibilityWithSetup
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsCompatibilityWithSetup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copyright Holder.
         /// </summary>
-        public static string PackageDetailsCopyRightHolder {
-            get {
+        public static string PackageDetailsCopyRightHolder
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsCopyRightHolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copyright Year.
         /// </summary>
-        public static string PackageDetailsCopyRightYear {
-            get {
+        public static string PackageDetailsCopyRightYear
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsCopyRightYear", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Depends on.
         /// </summary>
-        public static string PackageDetailsDependsOn {
-            get {
+        public static string PackageDetailsDependsOn
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsDependsOn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DESCRIPTION.
         /// </summary>
-        public static string PackageDetailsDescription {
-            get {
+        public static string PackageDetailsDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to GROUP.
         /// </summary>
-        public static string PackageDetailsGroup {
-            get {
+        public static string PackageDetailsGroup
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsGroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Host.
         /// </summary>
-        public static string PackageDetailsHost {
-            get {
+        public static string PackageDetailsHost
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsHost", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to This version may be incompatible with your current setup.
+        /// </summary>
+        public static string PackageDetailsIncompatibileVersionTooltip
+        {
+            get
+            {
+                return ResourceManager.GetString("PackageDetailsIncompatibileVersionTooltip", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to KEYWORDS.
         /// </summary>
-        public static string PackageDetailsKeywords {
-            get {
+        public static string PackageDetailsKeywords
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsKeywords", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to LICENSE OF LATEST PACKAGE.
         /// </summary>
-        public static string PackageDetailsLicense {
-            get {
+        public static string PackageDetailsLicense
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsLicense", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to LINKS.
         /// </summary>
-        public static string PackageDetailsLinks {
-            get {
+        public static string PackageDetailsLinks
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsLinks", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package.
         /// </summary>
-        public static string PackageDetailsPackage {
-            get {
+        public static string PackageDetailsPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Python.
         /// </summary>
-        public static string PackageDetailsPython {
-            get {
+        public static string PackageDetailsPython
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsPython", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Release notes.
         /// </summary>
-        public static string PackageDetailsReleaseNotes {
-            get {
+        public static string PackageDetailsReleaseNotes
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsReleaseNotes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Size.
         /// </summary>
-        public static string PackageDetailsSize {
-            get {
+        public static string PackageDetailsSize
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsSize", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to The compatibility of this version has not been verified. It may or may not be compatible with your current setup.
+        /// </summary>
+        public static string PackageDetailsUnknownCompatibilityVersionTooltip
+        {
+            get
+            {
+                return ResourceManager.GetString("PackageDetailsUnknownCompatibilityVersionTooltip", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Versions.
         /// </summary>
-        public static string PackageDetailsVersions {
-            get {
+        public static string PackageDetailsVersions
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsVersions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to VERSIONS AND PACKAGE REQUIREMENTS.
         /// </summary>
-        public static string PackageDetailsVersionsAndPackageRequirements {
-            get {
+        public static string PackageDetailsVersionsAndPackageRequirements
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDetailsVersionsAndPackageRequirements", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Download Confirmation.
         /// </summary>
-        public static string PackageDownloadConfirmMessageBoxTitle {
-            get {
+        public static string PackageDownloadConfirmMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadConfirmMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Download Error.
         /// </summary>
-        public static string PackageDownloadErrorMessageBoxTitle {
-            get {
+        public static string PackageDownloadErrorMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadErrorMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Download.
         /// </summary>
-        public static string PackageDownloadMessageBoxTitle {
-            get {
+        public static string PackageDownloadMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Downloaded.
         /// </summary>
-        public static string PackageDownloadStateDownloaded {
-            get {
+        public static string PackageDownloadStateDownloaded
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateDownloaded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Downloading.
         /// </summary>
-        public static string PackageDownloadStateDownloading {
-            get {
+        public static string PackageDownloadStateDownloading
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateDownloading", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string PackageDownloadStateError {
-            get {
+        public static string PackageDownloadStateError
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Installed.
         /// </summary>
-        public static string PackageDownloadStateInstalled {
-            get {
+        public static string PackageDownloadStateInstalled
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateInstalled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Installing.
         /// </summary>
-        public static string PackageDownloadStateInstalling {
-            get {
+        public static string PackageDownloadStateInstalling
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateInstalling", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Starting.
         /// </summary>
-        public static string PackageDownloadStateStarting {
-            get {
+        public static string PackageDownloadStateStarting
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDownloadStateStarting", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Due to limitations in the .NET framework, it is not possible to update your package assembly while it is already loaded.  Please update the assembly while {0} is not running and try again..
         /// </summary>
-        public static string PackageDuplicateAssemblyWarning {
-            get {
+        public static string PackageDuplicateAssemblyWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDuplicateAssemblyWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cannot update assembly.
         /// </summary>
-        public static string PackageDuplicateAssemblyWarningTitle {
-            get {
+        public static string PackageDuplicateAssemblyWarningTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageDuplicateAssemblyWarningTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
-        public static string PackageFilter_Name_All {
-            get {
+        public static string PackageFilter_Name_All
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilter_Name_All", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to VERSION COMPATIBILITY.
         /// </summary>
-        public static string PackageFilterByCompatibility {
-            get {
+        public static string PackageFilterByCompatibility
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterByCompatibility", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DEPENDENCY.
         /// </summary>
-        public static string PackageFilterByDependency {
-            get {
+        public static string PackageFilterByDependency
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterByDependency", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to HOST.
         /// </summary>
-        public static string PackageFilterByHost {
-            get {
+        public static string PackageFilterByHost
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterByHost", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to STATUS.
         /// </summary>
-        public static string PackageFilterByStatus {
-            get {
+        public static string PackageFilterByStatus
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterByStatus", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Discontinued packages.
         /// </summary>
-        public static string PackageFilterDeprecatedTooltip {
-            get {
+        public static string PackageFilterDeprecatedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterDeprecatedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Packages that require other packages to be installed.
         /// </summary>
-        public static string PackageFilterHasDependenciesTooltip {
-            get {
+        public static string PackageFilterHasDependenciesTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterHasDependenciesTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stand-alone packages.
         /// </summary>
-        public static string PackageFilterHasNoDependenciesTooltip {
-            get {
+        public static string PackageFilterHasNoDependenciesTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterHasNoDependenciesTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Published in the last 30 days.
         /// </summary>
-        public static string PackageFilterNewTooltip {
-            get {
+        public static string PackageFilterNewTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterNewTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Updated in the last 30 days.
         /// </summary>
-        public static string PackageFilterUpdatedTooltip {
-            get {
+        public static string PackageFilterUpdatedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFilterUpdatedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A problem occurred when trying to install the package. Dynamo is unable to obtain read/write access to
         ///{0}.
         /// </summary>
-        public static string PackageFolderNotAccessible {
-            get {
+        public static string PackageFolderNotAccessible
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageFolderNotAccessible", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filter packages that depend on applications outside Dynamo. This feature currently can only filter packages which have been marked manually by package authors during publish..
         /// </summary>
-        public static string PackageHostDependencyFilter {
-            get {
+        public static string PackageHostDependencyFilter
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageHostDependencyFilter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Packages that depend on selected external application.
         /// </summary>
-        public static string PackageHostDependencyFilterContextItem {
-            get {
+        public static string PackageHostDependencyFilterContextItem
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageHostDependencyFilterContextItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This package contains node(s) that depend on applications outside Dynamo. To fully utilize node(s) in this package, you will need to have these external applications installed..
         /// </summary>
-        public static string PackageHostDependencyTooltip {
-            get {
+        public static string PackageHostDependencyTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageHostDependencyTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Incompatible.
         /// </summary>
-        public static string PackageIncompatible {
-            get {
+        public static string PackageIncompatible
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageIncompatible", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Versions maybe incompatible with the current setup.
         /// </summary>
-        public static string PackageIncompatibleFilterTooltip {
-            get {
+        public static string PackageIncompatibleFilterTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageIncompatibleFilterTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clear all.
         /// </summary>
-        public static string PackageManagerClearAllButtonText {
-            get {
+        public static string PackageManagerClearAllButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerClearAllButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to  files published.
         /// </summary>
-        public static string PackageManagerFinishedPackageFilesPublishedMessage {
-            get {
+        public static string PackageManagerFinishedPackageFilesPublishedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerFinishedPackageFilesPublishedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to  files uploaded.
         /// </summary>
-        public static string PackageManagerFinishedPackageFilesUploadedMessage {
-            get {
+        public static string PackageManagerFinishedPackageFilesUploadedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerFinishedPackageFilesUploadedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Path.
         /// </summary>
-        public static string PackageManagerFinishedPackagePackagePath {
-            get {
+        public static string PackageManagerFinishedPackagePackagePath
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerFinishedPackagePackagePath", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to This version is incompatible with your current setup (Dynamo and host version, if applicable). It may not work properly. Do you want to install it anyway?.
+        /// </summary>
+        public static string PackageManagerIncompatibleVersionDownloadMsg
+        {
+            get
+            {
+                return ResourceManager.GetString("PackageManagerIncompatibleVersionDownloadMsg", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Incompatible version.
+        /// </summary>
+        public static string PackageManagerIncompatibleVersionDownloadTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("PackageManagerIncompatibleVersionDownloadTitle", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Install.
         /// </summary>
-        public static string PackageManagerInstall {
-            get {
+        public static string PackageManagerInstall
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerInstall", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Installed Packages.
         /// </summary>
-        public static string PackageManagerInstalledPackagesTab {
-            get {
+        public static string PackageManagerInstalledPackagesTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerInstalledPackagesTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loading the packages is taking longer than expected. Please wait, or restart the Package Manager..
         /// </summary>
-        public static string PackageManagerLoadingTimedOutWarningMessage {
-            get {
+        public static string PackageManagerLoadingTimedOutWarningMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerLoadingTimedOutWarningMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to packageManagerMyPackages.
         /// </summary>
-        public static string PackageManagerMyPackagesControlName {
-            get {
+        public static string PackageManagerMyPackagesControlName
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerMyPackagesControlName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish Version.
         /// </summary>
-        public static string PackageManagerMyPackagesPublishVersion {
-            get {
+        public static string PackageManagerMyPackagesPublishVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerMyPackagesPublishVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to My Packages.
         /// </summary>
-        public static string PackageManagerMyPackagesTab {
-            get {
+        public static string PackageManagerMyPackagesTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerMyPackagesTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Once you install a package, you can find it here..
         /// </summary>
-        public static string PackageManagerNoInstalledPackagesSubMessage {
-            get {
+        public static string PackageManagerNoInstalledPackagesSubMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerNoInstalledPackagesSubMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deprecated.
         /// </summary>
-        public static string PackageManagerPackageDeprecated {
-            get {
+        public static string PackageManagerPackageDeprecated
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPackageDeprecated", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
-        public static string PackageManagerPackageNew {
-            get {
+        public static string PackageManagerPackageNew
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPackageNew", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Settings.
         /// </summary>
-        public static string PackageManagerPackageSettingsTab {
-            get {
+        public static string PackageManagerPackageSettingsTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPackageSettingsTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Updated.
         /// </summary>
-        public static string PackageManagerPackageUpdated {
-            get {
+        public static string PackageManagerPackageUpdated
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPackageUpdated", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide file(s).
         /// </summary>
-        public static string PackageManagerProvideFiles {
-            get {
+        public static string PackageManagerProvideFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvideFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide package name.
         /// </summary>
-        public static string PackageManagerProvidePackageName {
-            get {
+        public static string PackageManagerProvidePackageName
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvidePackageName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide package name and file(s).
         /// </summary>
-        public static string PackageManagerProvidePackageNameAndFiles {
-            get {
+        public static string PackageManagerProvidePackageNameAndFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvidePackageNameAndFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide package name and version number.
         /// </summary>
-        public static string PackageManagerProvidePackageNameAndVersion {
-            get {
+        public static string PackageManagerProvidePackageNameAndVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvidePackageNameAndVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide version number.
         /// </summary>
-        public static string PackageManagerProvideVersion {
-            get {
+        public static string PackageManagerProvideVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvideVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Provide version number and file(s).
         /// </summary>
-        public static string PackageManagerProvideVersionAndFiles {
-            get {
+        public static string PackageManagerProvideVersionAndFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerProvideVersionAndFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Virus scan in progress. Your package will be searchable in approximately 15 minutes..
         /// </summary>
-        public static string PackageManagerPublishOnlineFinishedMessage {
-            get {
+        public static string PackageManagerPublishOnlineFinishedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPublishOnlineFinishedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish a Package.
         /// </summary>
-        public static string PackageManagerPublishPackageButton {
-            get {
+        public static string PackageManagerPublishPackageButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPublishPackageButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish a Package.
         /// </summary>
-        public static string PackageManagerPublishTab {
-            get {
+        public static string PackageManagerPublishTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerPublishTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Ready to publish.
         /// </summary>
-        public static string PackageManagerReadyToPublish {
-            get {
+        public static string PackageManagerReadyToPublish
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerReadyToPublish", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search for Packages.
         /// </summary>
-        public static string PackageManagerSearchPackagesButton {
-            get {
+        public static string PackageManagerSearchPackagesButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerSearchPackagesButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search for Packages.
         /// </summary>
-        public static string PackageManagerSearchTab {
-            get {
+        public static string PackageManagerSearchTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerSearchTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preferences.
         /// </summary>
-        public static string PackageManagerSettingsHyperlink {
-            get {
+        public static string PackageManagerSettingsHyperlink
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerSettingsHyperlink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit your package settings in .
         /// </summary>
-        public static string PackageManagerSettingsRunPrefix {
-            get {
+        public static string PackageManagerSettingsRunPrefix
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerSettingsRunPrefix", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Manager.
         /// </summary>
-        public static string PackageManagerTitle {
-            get {
+        public static string PackageManagerTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Once signed in, you can find your published packages here..
         /// </summary>
-        public static string PackageManagerUserNotSignedPackagesSubMessage {
-            get {
+        public static string PackageManagerUserNotSignedPackagesSubMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageManagerUserNotSignedPackagesSubMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The name of the package cannot contain.
         /// </summary>
-        public static string PackageNameCannotContainTheseCharacters {
-            get {
+        public static string PackageNameCannotContainTheseCharacters
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageNameCannotContainTheseCharacters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your package must contain at least one file..
         /// </summary>
-        public static string PackageNeedAtLeastOneFile {
-            get {
+        public static string PackageNeedAtLeastOneFile
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageNeedAtLeastOneFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The root directory of the package does not exist. Please try and re-install the package..
         /// </summary>
-        public static string PackageNotExisted {
-            get {
+        public static string PackageNotExisted
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageNotExisted", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Path.
         /// </summary>
-        public static string PackagePathAddPathButtonName {
-            get {
+        public static string PackagePathAddPathButtonName
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathAddPathButtonName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The import path &quot;{0}&quot; was added to &quot;Node and Package Paths&quot;. If you want to update or remove this path, please open &quot;Dynamo &gt; Preferences &gt;Package Manager &gt; Node and Package Paths...&quot;.
         /// </summary>
-        public static string PackagePathAutoAddNotificationDetailedDescription {
-            get {
+        public static string PackagePathAutoAddNotificationDetailedDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathAutoAddNotificationDetailedDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A library (*.dll, *.ds) was recently imported into Dynamo. Its path was automatically added to &quot;Preferences &gt; Node and Package Paths...&quot;.
         /// </summary>
-        public static string PackagePathAutoAddNotificationShortDescription {
-            get {
+        public static string PackagePathAutoAddNotificationShortDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathAutoAddNotificationShortDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Path Added.
         /// </summary>
-        public static string PackagePathAutoAddNotificationTitle {
-            get {
+        public static string PackagePathAutoAddNotificationTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathAutoAddNotificationTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package/Library Search Paths.
         /// </summary>
-        public static string PackagePathPreferencesTitle {
-            get {
+        public static string PackagePathPreferencesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathPreferencesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This path is built-in and cannot be modified..
         /// </summary>
-        public static string PackagePathProtected {
-            get {
+        public static string PackagePathProtected
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathProtected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node and Package File Locations.
         /// </summary>
-        public static string PackagePathsExpanderName {
-            get {
+        public static string PackagePathsExpanderName
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathsExpanderName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Path.
         /// </summary>
-        public static string PackagePathUpdatePathTooltip {
-            get {
+        public static string PackagePathUpdatePathTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathUpdatePathTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Accept Changes.
         /// </summary>
-        public static string PackagePathViewAccept {
-            get {
+        public static string PackagePathViewAccept
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewAccept", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Paths:.
         /// </summary>
-        public static string PackagePathViewHeading {
-            get {
+        public static string PackagePathViewHeading
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewHeading", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo Built-In Packages.
         /// </summary>
-        public static string PackagePathViewModel_BuiltInPackages {
-            get {
+        public static string PackagePathViewModel_BuiltInPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewModel_BuiltInPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add paths to make nodes and packages show up in the library..
         /// </summary>
-        public static string PackagePathViewSummary1 {
-            get {
+        public static string PackagePathViewSummary1
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewSummary1", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Manage Node and Package Paths.
         /// </summary>
-        public static string PackagePathViewTitle {
-            get {
+        public static string PackagePathViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Move the selected path downward.
         /// </summary>
-        public static string PackagePathViewToolTipDown {
-            get {
+        public static string PackagePathViewToolTipDown
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewToolTipDown", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove the selected path from list.
         /// </summary>
-        public static string PackagePathViewToolTipMinus {
-            get {
+        public static string PackagePathViewToolTipMinus
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewToolTipMinus", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add a new path to the list.
         /// </summary>
-        public static string PackagePathViewToolTipPlus {
-            get {
+        public static string PackagePathViewToolTipPlus
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewToolTipPlus", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Move the selected path upward.
         /// </summary>
-        public static string PackagePathViewToolTipUp {
-            get {
+        public static string PackagePathViewToolTipUp
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagePathViewToolTipUp", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Repository.
         /// </summary>
-        public static string PackageRepositoryLabel {
-            get {
+        public static string PackageRepositoryLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageRepositoryLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You don’t have any installed packages yet..
         /// </summary>
-        public static string PackagerManageNoInstalledPackagesMessage {
-            get {
+        public static string PackagerManageNoInstalledPackagesMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagerManageNoInstalledPackagesMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You haven’t published any packages yet..
         /// </summary>
-        public static string PackagerManageNoPublishedPackagesMessage {
-            get {
+        public static string PackagerManageNoPublishedPackagesMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagerManageNoPublishedPackagesMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Once you publish a package, you can find it here..
         /// </summary>
-        public static string PackagerManageNoPublishedPackagesSubMessage {
-            get {
+        public static string PackagerManageNoPublishedPackagesSubMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagerManageNoPublishedPackagesSubMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign in to your Dynamo account to view your published packages..
         /// </summary>
-        public static string PackagerManageUserNotSignedPackagesMessage {
-            get {
+        public static string PackagerManageUserNotSignedPackagesMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagerManageUserNotSignedPackagesMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search for packages.
         /// </summary>
-        public static string PackageSearchHeader {
-            get {
+        public static string PackageSearchHeader
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchHeader", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ORDER.
         /// </summary>
-        public static string PackageSearchOrder {
-            get {
+        public static string PackageSearchOrder
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchOrder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Requirements.
         /// </summary>
-        public static string PackageSearchResultRequirements {
-            get {
+        public static string PackageSearchResultRequirements
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchResultRequirements", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Info.
         /// </summary>
-        public static string PackageSearchResultViewDetails {
-            get {
+        public static string PackageSearchResultViewDetails
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchResultViewDetails", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SORT BY.
         /// </summary>
-        public static string PackageSearchSortBy {
-            get {
+        public static string PackageSearchSortBy
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchSortBy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search returned no results!.
         /// </summary>
-        public static string PackageSearchStateNoResult {
-            get {
+        public static string PackageSearchStateNoResult
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchStateNoResult", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Searching....
         /// </summary>
-        public static string PackageSearchStateSearching {
-            get {
+        public static string PackageSearchStateSearching
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchStateSearching", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Syncing with server....
         /// </summary>
-        public static string PackageSearchStateSyncingWithServer {
-            get {
+        public static string PackageSearchStateSyncingWithServer
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchStateSyncingWithServer", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
-        public static string PackageSearchViewClearButton {
-            get {
+        public static string PackageSearchViewClearButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewClearButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clear Downloads.
         /// </summary>
-        public static string PackageSearchViewClearButtonTooltip {
-            get {
+        public static string PackageSearchViewClearButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewClearButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Active.
         /// </summary>
-        public static string PackageSearchViewContextMenuFilterActive {
-            get {
+        public static string PackageSearchViewContextMenuFilterActive
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuFilterActive", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Has dependecies.
         /// </summary>
-        public static string PackageSearchViewContextMenuFilterDependencies {
-            get {
+        public static string PackageSearchViewContextMenuFilterDependencies
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuFilterDependencies", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deprecated.
         /// </summary>
-        public static string PackageSearchViewContextMenuFilterDeprecated {
-            get {
+        public static string PackageSearchViewContextMenuFilterDeprecated
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuFilterDeprecated", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Has no dependecies.
         /// </summary>
-        public static string PackageSearchViewContextMenuFilterNoDependencies {
-            get {
+        public static string PackageSearchViewContextMenuFilterNoDependencies
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuFilterNoDependencies", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Ascending.
         /// </summary>
-        public static string PackageSearchViewContextMenuOrderAscending {
-            get {
+        public static string PackageSearchViewContextMenuOrderAscending
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuOrderAscending", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Descending.
         /// </summary>
-        public static string PackageSearchViewContextMenuOrderDescending {
-            get {
+        public static string PackageSearchViewContextMenuOrderDescending
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuOrderDescending", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Author.
         /// </summary>
-        public static string PackageSearchViewContextMenuSortByAuthor {
-            get {
+        public static string PackageSearchViewContextMenuSortByAuthor
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuSortByAuthor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Downloads.
         /// </summary>
-        public static string PackageSearchViewContextMenuSortByDownloads {
-            get {
+        public static string PackageSearchViewContextMenuSortByDownloads
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuSortByDownloads", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string PackageSearchViewContextMenuSortByName {
-            get {
+        public static string PackageSearchViewContextMenuSortByName
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuSortByName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Votes.
         /// </summary>
-        public static string PackageSearchViewContextMenuSortByVotes {
-            get {
+        public static string PackageSearchViewContextMenuSortByVotes
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuSortByVotes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Most Recent Update.
         /// </summary>
-        public static string PackageSearchViewContextMenuSortyByUpdate {
-            get {
+        public static string PackageSearchViewContextMenuSortyByUpdate
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewContextMenuSortyByUpdate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The maintainers of this package have indicated that they will no longer be updating it.  Use at your own risk!.
         /// </summary>
-        public static string PackageSearchViewDeprecatedTooltip {
-            get {
+        public static string PackageSearchViewDeprecatedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewDeprecatedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string PackageSearchViewDescription {
-            get {
+        public static string PackageSearchViewDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filter by.
         /// </summary>
-        public static string PackageSearchViewFilterByButton {
-            get {
+        public static string PackageSearchViewFilterByButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewFilterByButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ⇓ Install.
         /// </summary>
-        public static string PackageSearchViewInstallButton {
-            get {
+        public static string PackageSearchViewInstallButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewInstallButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install latest version.
         /// </summary>
-        public static string PackageSearchViewInstallLatestVersion {
-            get {
+        public static string PackageSearchViewInstallLatestVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewInstallLatestVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install to folder....
         /// </summary>
-        public static string PackageSearchViewInstallLatestVersionTo {
-            get {
+        public static string PackageSearchViewInstallLatestVersionTo
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewInstallLatestVersionTo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install this version.
         /// </summary>
-        public static string PackageSearchViewInstallThisVersion {
-            get {
+        public static string PackageSearchViewInstallThisVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewInstallThisVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install this version to folder....
         /// </summary>
-        public static string PackageSearchViewInstallThisVersionTo {
-            get {
+        public static string PackageSearchViewInstallThisVersionTo
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewInstallThisVersionTo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keywords.
         /// </summary>
-        public static string PackageSearchViewKeywords {
-            get {
+        public static string PackageSearchViewKeywords
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewKeywords", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search....
         /// </summary>
-        public static string PackageSearchViewSearchTextBox {
-            get {
+        public static string PackageSearchViewSearchTextBox
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewSearchTextBox", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please wait....
         /// </summary>
-        public static string PackageSearchViewSearchTextBoxSyncing {
-            get {
+        public static string PackageSearchViewSearchTextBoxSyncing
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewSearchTextBoxSyncing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sort by.
         /// </summary>
-        public static string PackageSearchViewSortByButton {
-            get {
+        public static string PackageSearchViewSortByButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewSortByButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Online Package Search.
         /// </summary>
-        public static string PackageSearchViewTitle {
-            get {
+        public static string PackageSearchViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Vote in support of this package.
         /// </summary>
-        public static string PackageSearchViewUpvoteButtonTooltip {
-            get {
+        public static string PackageSearchViewUpvoteButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewUpvoteButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Versions.
         /// </summary>
-        public static string PackageSearchViewVersions {
-            get {
+        public static string PackageSearchViewVersions
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewVersions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Visit package repository.
         /// </summary>
-        public static string PackageSearchViewVisitRepositoryBuutton {
-            get {
+        public static string PackageSearchViewVisitRepositoryBuutton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewVisitRepositoryBuutton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Visit package website.
         /// </summary>
-        public static string PackageSearchViewVisitWebSiteButton {
-            get {
+        public static string PackageSearchViewVisitWebSiteButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSearchViewVisitWebSiteButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Packages.
         /// </summary>
-        public static string PackagesGuide {
-            get {
+        public static string PackagesGuide
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuide", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Continue.
         /// </summary>
-        public static string PackagesGuideContinueButton {
-            get {
+        public static string PackagesGuideContinueButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideContinueButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nIf you need other software or tools in order to use this package, they are listed under Versions and Package Requirements..
         /// </summary>
-        public static string PackagesGuideDependenciesText {
-            get {
+        public static string PackagesGuideDependenciesText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideDependenciesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package dependencies.
         /// </summary>
-        public static string PackagesGuideDependenciesTitle {
-            get {
+        public static string PackagesGuideDependenciesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideDependenciesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A package is a toolkit of utilities that let you do more with Dynamo, beyond its core functionality. This guide shows how to find, install, and use packages. It installs a sample Autodesk package for you to explore..
         /// </summary>
-        public static string PackagesGuideDescription {
-            get {
+        public static string PackagesGuideDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To continue the guide and install the sample package, you must accept the Terms of Service. \n\n **Click Continue.** Then in the terms, **click I Accept.** \n\n\n\n.
         /// </summary>
-        public static string PackagesGuideExitAcceptTerms {
-            get {
+        public static string PackagesGuideExitAcceptTerms
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideExitAcceptTerms", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        public static string PackagesGuideExitButton {
-            get {
+        public static string PackagesGuideExitButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideExitButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Do you want to exit the guide?.
         /// </summary>
-        public static string PackagesGuideExitTitle {
-            get {
+        public static string PackagesGuideExitTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideExitTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Packages provide additional functions that you can use in Dynamo. \n\nTo find a package or see what’s available, \n**Click Packages &gt; Package Manager...**..
         /// </summary>
-        public static string PackagesGuideFindPackageText {
-            get {
+        public static string PackagesGuideFindPackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideFindPackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Find a package.
         /// </summary>
-        public static string PackagesGuideFindPackageTitle {
-            get {
+        public static string PackagesGuideFindPackageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideFindPackageTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package installations are typically quick, depending on their size and other factors. \n\n**Click Install** to install the latest version of the sample Autodesk package and proceed with this guide..
         /// </summary>
-        public static string PackagesGuideInstallAPackageText {
-            get {
+        public static string PackagesGuideInstallAPackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideInstallAPackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Install a package.
         /// </summary>
-        public static string PackagesGuideInstallAPackageTitle {
-            get {
+        public static string PackagesGuideInstallAPackageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideInstallAPackageTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package installations are typically quick, depending on their size and other factors. \n
         ///To install the latest version of a package, click Install. \n
         ///%./UI/Images/alert.png% The sample Autodesk package is already installed on your computer..
         /// </summary>
-        public static string PackagesGuideInstalledPackageText {
-            get {
+        public static string PackagesGuideInstalledPackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideInstalledPackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn about packages.
         /// </summary>
-        public static string PackagesGuideLearnAbout {
-            get {
+        public static string PackagesGuideLearnAbout
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideLearnAbout", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nWhen you install a package, it appears in the library under Add-ons.   \n\n**Click to expand the package** so you can see its nodes (functions)..
         /// </summary>
-        public static string PackagesGuideNavigatePackagesText {
-            get {
+        public static string PackagesGuideNavigatePackagesText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideNavigatePackagesText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Navigate to packages.
         /// </summary>
-        public static string PackagesGuideNavigatePackagesTitle {
-            get {
+        public static string PackagesGuideNavigatePackagesTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideNavigatePackagesTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use package nodes.
         /// </summary>
-        public static string PackagesGuidePackagesNodeTitle {
-            get {
+        public static string PackagesGuidePackagesNodeTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuidePackagesNodeTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nYou can find packages whose title, author, or keywords contain the search phrase. To filter and sort the results, use the and icons next to the search bar..
         /// </summary>
-        public static string PackagesGuideSearchFilterText {
-            get {
+        public static string PackagesGuideSearchFilterText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSearchFilterText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search, filter, and sort.
         /// </summary>
-        public static string PackagesGuideSearchFilterTitle {
-            get {
+        public static string PackagesGuideSearchFilterTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSearchFilterTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nSearch results display summary information for each package: -author- -likes and downloads- -date of the most recent version- \n**Click View Details** to see more information about a package..
         /// </summary>
-        public static string PackagesGuideSearchResultsText {
-            get {
+        public static string PackagesGuideSearchResultsText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSearchResultsText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search results.
         /// </summary>
-        public static string PackagesGuideSearchResultsTitle {
-            get {
+        public static string PackagesGuideSearchResultsTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSearchResultsTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more about packages in the #online help=https://dynamobim.org/issues/extend-dynamo-with-packages.
         /// </summary>
-        public static string PackagesGuideSurveyText {
-            get {
+        public static string PackagesGuideSurveyText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSurveyText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Finished.
         /// </summary>
-        public static string PackagesGuideSurveyTitle {
-            get {
+        public static string PackagesGuideSurveyTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideSurveyTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nPackages may come from third parties. Be aware that packages may pose security risks. #More information=https://dynamobim.org/issues/extend-dynamo-with-packages  \n\n**Click I Accept** in the Terms of Service to accept it and proceed with this guide..
         /// </summary>
-        public static string PackagesGuideTermsOfServiceText {
-            get {
+        public static string PackagesGuideTermsOfServiceText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideTermsOfServiceText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Accept the Terms of Service.
         /// </summary>
-        public static string PackagesGuideTermsOfServiceTitle {
-            get {
+        public static string PackagesGuideTermsOfServiceTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideTermsOfServiceTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to \nPackages may come from third parties.\n\nBe aware that packages may pose security risks. #More information=https://dynamobim.org/issues/extend-dynamo-with-packages/.
         /// </summary>
-        public static string PackagesGuideThirdPartyText {
-            get {
+        public static string PackagesGuideThirdPartyText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideThirdPartyText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Third-party packages.
         /// </summary>
-        public static string PackagesGuideThirdPartyTitle {
-            get {
+        public static string PackagesGuideThirdPartyTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideThirdPartyTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To learn how to use nodes in a package, hover over a node to see a description. To add a node to the workspace, click its name in the list..
         /// </summary>
-        public static string PackagesGuideUsePackageText {
-            get {
+        public static string PackagesGuideUsePackageText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideUsePackageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use package nodes.
         /// </summary>
-        public static string PackagesGuideUsePackageTitle {
-            get {
+        public static string PackagesGuideUsePackageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesGuideUsePackageTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package has conflicts with one or more packages in use..
         /// </summary>
-        public static string PackagesInUseConflictMessageBoxTitle {
-            get {
+        public static string PackagesInUseConflictMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackagesInUseConflictMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sort Packages..
         /// </summary>
-        public static string PackageSortToolTip {
-            get {
+        public static string PackageSortToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageSortToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string PackageStateError {
-            get {
+        public static string PackageStateError
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         ///This package has not been loaded due to the following error:
         ///{0}..
         /// </summary>
-        public static string PackageStateErrorTooltip {
-            get {
+        public static string PackageStateErrorTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateErrorTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loaded.
         /// </summary>
-        public static string PackageStateLoaded {
-            get {
+        public static string PackageStateLoaded
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateLoaded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loaded.
         ///This package is loaded and ready to be used..
         /// </summary>
-        public static string PackageStateLoadedTooltip {
-            get {
+        public static string PackageStateLoadedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateLoadedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Scheduled for Delete.
         /// </summary>
-        public static string PackageStateScheduledForDeletion {
-            get {
+        public static string PackageStateScheduledForDeletion
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateScheduledForDeletion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Scheduled for Delete.
         ///This package will be deleted after the next Dynamo restart..
         /// </summary>
-        public static string PackageStateScheduledForDeletionTooltip {
-            get {
+        public static string PackageStateScheduledForDeletionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateScheduledForDeletionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Scheduled for Unload.
         /// </summary>
-        public static string PackageStateScheduledForUnload {
-            get {
+        public static string PackageStateScheduledForUnload
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateScheduledForUnload", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Scheduled for Unload.
         ///This package will be unloaded after the next Dynamo restart..
         /// </summary>
-        public static string PackageStateScheduledForUnloadTooltip {
-            get {
+        public static string PackageStateScheduledForUnloadTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateScheduledForUnloadTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unknown.
         /// </summary>
-        public static string PackageStateUnknown {
-            get {
+        public static string PackageStateUnknown
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateUnknown", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unloaded.
         /// </summary>
-        public static string PackageStateUnloaded {
-            get {
+        public static string PackageStateUnloaded
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateUnloaded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unloaded.
         ///This package has been marked as unloaded..
         /// </summary>
-        public static string PackageStateUnloadedTooltip {
-            get {
+        public static string PackageStateUnloadedTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageStateUnloadedTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PKG.
         /// </summary>
-        public static string PackageTypeShortString {
-            get {
+        public static string PackageTypeShortString
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageTypeShortString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unknown compatibility.
         /// </summary>
-        public static string PackageUnknownCompatibility {
-            get {
+        public static string PackageUnknownCompatibility
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUnknownCompatibility", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Compatibility of package version cannot be verified.
         /// </summary>
-        public static string PackageUnknownCompatibilityFilterTooltip {
-            get {
+        public static string PackageUnknownCompatibilityFilterTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUnknownCompatibilityFilterTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to None.
         /// </summary>
-        public static string PackageUploadNoDependency {
-            get {
+        public static string PackageUploadNoDependency
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadNoDependency", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Compressing....
         /// </summary>
-        public static string PackageUploadStateCompressing {
-            get {
+        public static string PackageUploadStateCompressing
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateCompressing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copying....
         /// </summary>
-        public static string PackageUploadStateCopying {
-            get {
+        public static string PackageUploadStateCopying
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateCopying", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error!.
         /// </summary>
-        public static string PackageUploadStateError {
-            get {
+        public static string PackageUploadStateError
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Ready.
         /// </summary>
-        public static string PackageUploadStateReady {
-            get {
+        public static string PackageUploadStateReady
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateReady", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Uploaded.
         /// </summary>
-        public static string PackageUploadStateUploaded {
-            get {
+        public static string PackageUploadStateUploaded
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateUploaded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Uploading....
         /// </summary>
-        public static string PackageUploadStateUploading {
-            get {
+        public static string PackageUploadStateUploading
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUploadStateUploading", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package may not work in this version of {0}!.
         /// </summary>
-        public static string PackageUseNewerDynamoMessageBoxTitle {
-            get {
+        public static string PackageUseNewerDynamoMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUseNewerDynamoMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package may not work in this version of {0}!.
         /// </summary>
-        public static string PackageUseOlderDynamoMessageBoxTitle {
-            get {
+        public static string PackageUseOlderDynamoMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageUseOlderDynamoMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Load.
         /// </summary>
-        public static string PackageViewContextMenuLoadText {
-            get {
+        public static string PackageViewContextMenuLoadText
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageViewContextMenuLoadText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Load this package into Dynamo. Other packages with the same name will be automatically deleted.
         /// </summary>
-        public static string PackageViewContextMenuLoadTooltip {
-            get {
+        public static string PackageViewContextMenuLoadTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageViewContextMenuLoadTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Warning.
         /// </summary>
-        public static string PackageWarningMessageBoxTitle {
-            get {
+        public static string PackageWarningMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageWarningMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Website.
         /// </summary>
-        public static string PackageWebsiteLabel {
-            get {
+        public static string PackageWebsiteLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PackageWebsiteLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Background Preview had an issue.
         /// </summary>
-        public static string PartialRenderFailureTitle {
-            get {
+        public static string PartialRenderFailureTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PartialRenderFailureTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Periodic.
         /// </summary>
-        public static string Periodic {
-            get {
+        public static string Periodic
+        {
+            get
+            {
                 return ResourceManager.GetString("Periodic", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Issues found.
         /// </summary>
-        public static string PersistentVisualStatusOfLinterIssues {
-            get {
+        public static string PersistentVisualStatusOfLinterIssues
+        {
+            get
+            {
                 return ResourceManager.GetString("PersistentVisualStatusOfLinterIssues", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description of port.
         /// </summary>
-        public static string PortPropertiesPromptDescriptionTooltip {
-            get {
+        public static string PortPropertiesPromptDescriptionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptDescriptionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Input Port Properties.
         /// </summary>
-        public static string PortPropertiesPromptInputWindowTitle {
-            get {
+        public static string PortPropertiesPromptInputWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptInputWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Port name.
         /// </summary>
-        public static string PortPropertiesPromptNameTooltip {
-            get {
+        public static string PortPropertiesPromptNameTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptNameTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Output Port Properties.
         /// </summary>
-        public static string PortPropertiesPromptOutputWindowTitle {
-            get {
+        public static string PortPropertiesPromptOutputWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptOutputWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string PortPropertiesPromptWindowDescription {
-            get {
+        public static string PortPropertiesPromptWindowDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptWindowDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string PortPropertiesPromptWindowName {
-            get {
+        public static string PortPropertiesPromptWindowName
+        {
+            get
+            {
                 return ResourceManager.GetString("PortPropertiesPromptWindowName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Default Value.
         /// </summary>
-        public static string PortViewContextMenuUserDefaultValue {
-            get {
+        public static string PortViewContextMenuUserDefaultValue
+        {
+            get
+            {
                 return ResourceManager.GetString("PortViewContextMenuUserDefaultValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graphic Elements Scale.
         /// </summary>
-        public static string PreferencesGrahicHelpersScale {
-            get {
+        public static string PreferencesGrahicHelpersScale
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesGrahicHelpersScale", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select a scale for the background graphic helpers (grids, axes)..
         /// </summary>
-        public static string PreferencesGrahicHelpersScaleTooltip {
-            get {
+        public static string PreferencesGrahicHelpersScaleTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesGrahicHelpersScaleTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Imperial.
         /// </summary>
-        public static string PreferencesHostGenericScaleImperialUnits {
-            get {
+        public static string PreferencesHostGenericScaleImperialUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesHostGenericScaleImperialUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Metric.
         /// </summary>
-        public static string PreferencesHostGenericScaleMetricUnits {
-            get {
+        public static string PreferencesHostGenericScaleMetricUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesHostGenericScaleMetricUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preferences must be closed before you proceed. All changes saved automatically..
         /// </summary>
-        public static string PreferencesMustBeClosedMessage {
-            get {
+        public static string PreferencesMustBeClosedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesMustBeClosedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Ranking Method.
         /// </summary>
-        public static string PreferencesNodeAutocompleteMethod {
-            get {
+        public static string PreferencesNodeAutocompleteMethod
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesNodeAutocompleteMethod", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Choose a package path from this list to download new packages to..
         /// </summary>
-        public static string PreferencesPackageDownloadDirectoryTooltip {
-            get {
+        public static string PreferencesPackageDownloadDirectoryTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesPackageDownloadDirectoryTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Settings.
         /// </summary>
-        public static string PreferencesPackageManagerSettingsTab {
-            get {
+        public static string PreferencesPackageManagerSettingsTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesPackageManagerSettingsTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Security.
         /// </summary>
-        public static string PreferencesSecuritySettingsTab {
-            get {
+        public static string PreferencesSecuritySettingsTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSecuritySettingsTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto-Backup Interval.
         /// </summary>
-        public static string PreferencesSettingBackupInterval {
-            get {
+        public static string PreferencesSettingBackupInterval
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingBackupInterval", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Python Template File Path.
         /// </summary>
-        public static string PreferencesSettingCustomPythomTemplate {
-            get {
+        public static string PreferencesSettingCustomPythomTemplate
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingCustomPythomTemplate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Backup Location.
         /// </summary>
-        public static string PreferencesSettingDefaultBackupLocation {
-            get {
+        public static string PreferencesSettingDefaultBackupLocation
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingDefaultBackupLocation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Hardware Acceleration.
         /// </summary>
-        public static string PreferencesSettingHardwareAcceleration {
-            get {
+        public static string PreferencesSettingHardwareAcceleration
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingHardwareAcceleration", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Maximum Number of Recent Files.
         /// </summary>
-        public static string PreferencesSettingMaxRecentFiles {
-            get {
+        public static string PreferencesSettingMaxRecentFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingMaxRecentFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reset Backup Location.
         /// </summary>
-        public static string PreferencesSettingResetBackupLocationTooltip {
-            get {
+        public static string PreferencesSettingResetBackupLocationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingResetBackupLocationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reset Template Location.
         /// </summary>
-        public static string PreferencesSettingResetTemplateLocationTooltip {
-            get {
+        public static string PreferencesSettingResetTemplateLocationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingResetTemplateLocationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Invalid Backup location.
         /// </summary>
-        public static string PreferencesSettingsBackupFailedMessage {
-            get {
+        public static string PreferencesSettingsBackupFailedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsBackupFailedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Backup location Failed.
         /// </summary>
-        public static string PreferencesSettingsBackupFailedTitle {
-            get {
+        public static string PreferencesSettingsBackupFailedTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsBackupFailedTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Folder to Backup.
         /// </summary>
-        public static string PreferencesSettingsBackupLocationDialogTitle {
-            get {
+        public static string PreferencesSettingsBackupLocationDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsBackupLocationDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed to update template location.
         /// </summary>
-        public static string PreferencesSettingsTemplateFailedMessage {
-            get {
+        public static string PreferencesSettingsTemplateFailedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsTemplateFailedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Invalid Template Location.
         /// </summary>
-        public static string PreferencesSettingsTemplateFailedTitle {
-            get {
+        public static string PreferencesSettingsTemplateFailedTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsTemplateFailedTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Folder for Templates.
         /// </summary>
-        public static string PreferencesSettingsTemplateLocationDialogTitle {
-            get {
+        public static string PreferencesSettingsTemplateLocationDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingsTemplateLocationDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Templates Path.
         /// </summary>
-        public static string PreferencesSettingTemplateLocationLabel {
-            get {
+        public static string PreferencesSettingTemplateLocationLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingTemplateLocationLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Backup Location.
         /// </summary>
-        public static string PreferencesSettingUpdateBackupLocationTooltip {
-            get {
+        public static string PreferencesSettingUpdateBackupLocationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingUpdateBackupLocationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Template Location.
         /// </summary>
-        public static string PreferencesSettingUpdateTemplateLocationTooltip {
-            get {
+        public static string PreferencesSettingUpdateTemplateLocationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesSettingUpdateTemplateLocationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Revit to scale background graphic helpers.
         /// </summary>
-        public static string PreferencesUseHostScaleUnits {
-            get {
+        public static string PreferencesUseHostScaleUnits
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesUseHostScaleUnits", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, the current Revit document units will be used to scale the background graphic helpers (grids, axes). Otherwise, the Graphic Elements Scale drop-down will determine scale..
         /// </summary>
-        public static string PreferencesUseHostScaleUnitsToolTip {
-            get {
+        public static string PreferencesUseHostScaleUnitsToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesUseHostScaleUnitsToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Style name already in use.
         /// </summary>
-        public static string PreferencesViewAlreadyExistingStyleWarning {
-            get {
+        public static string PreferencesViewAlreadyExistingStyleWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewAlreadyExistingStyleWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Beta.
         /// </summary>
-        public static string PreferencesViewBetaTag {
-            get {
+        public static string PreferencesViewBetaTag
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewBetaTag", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Python Engine.
         /// </summary>
-        public static string PreferencesViewDefaultPythonEngine {
-            get {
+        public static string PreferencesViewDefaultPythonEngine
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewDefaultPythonEngine", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set the default run mode for your graphs. In Manual mode,  graph changes are executed when you click Run. Use this mode when working in large graphs, unfamiliar graphs, or host programs.
         ///
@@ -7784,2902 +9561,3555 @@ namespace Dynamo.Wpf.Properties {
         ///
         ///In certain complex graphs or host program scenarios, Automatic mode may cause instability issues or other problems. If this happens, try switching to Manual mode..
         /// </summary>
-        public static string PreferencesViewDefaultRunSettingsInfoTooltip {
-            get {
+        public static string PreferencesViewDefaultRunSettingsInfoTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewDefaultRunSettingsInfoTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Disable Loading Built-In Packages.
         /// </summary>
-        public static string PreferencesViewDisableBuiltInPackages {
-            get {
+        public static string PreferencesViewDisableBuiltInPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewDisableBuiltInPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Disable Loading Custom Packages.
         /// </summary>
-        public static string PreferencesViewDisableCustomPackages {
-            get {
+        public static string PreferencesViewDisableCustomPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewDisableCustomPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please enter a valid name.
         /// </summary>
-        public static string PreferencesViewEmptyStyleWarning {
-            get {
+        public static string PreferencesViewEmptyStyleWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEmptyStyleWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable Node Autocomplete.
         /// </summary>
-        public static string PreferencesViewEnableNodeAutoComplete {
-            get {
+        public static string PreferencesViewEnableNodeAutoComplete
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnableNodeAutoComplete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more about Node Autocomplete feature..
         /// </summary>
-        public static string PreferencesViewEnableNodeAutoCompleteTooltipText {
-            get {
+        public static string PreferencesViewEnableNodeAutoCompleteTooltipText
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnableNodeAutoCompleteTooltipText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Receive notification.
         /// </summary>
-        public static string PreferencesViewEnableNotificationCenter {
-            get {
+        public static string PreferencesViewEnableNotificationCenter
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnableNotificationCenter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable Paneling nodes.
         /// </summary>
-        public static string PreferencesViewEnablePanelingNodes {
-            get {
+        public static string PreferencesViewEnablePanelingNodes
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnablePanelingNodes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to On launch, remember open extensions panels from last session.
         /// </summary>
-        public static string PreferencesViewEnablePersistExtensions {
-            get {
+        public static string PreferencesViewEnablePersistExtensions
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnablePersistExtensions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable T-Spline nodes.
         /// </summary>
-        public static string PreferencesViewEnableTSplineNodes {
-            get {
+        public static string PreferencesViewEnableTSplineNodes
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewEnableTSplineNodes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Experimental.
         /// </summary>
-        public static string PreferencesViewExperimentalLabel {
-            get {
+        public static string PreferencesViewExperimentalLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewExperimentalLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Extensions.
         /// </summary>
-        public static string PreferencesViewExtensions {
-            get {
+        public static string PreferencesViewExtensions
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewExtensions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Features.
         /// </summary>
-        public static string PreferencesViewFeaturesTab {
-            get {
+        public static string PreferencesViewFeaturesTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewFeaturesTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Font Size.
         /// </summary>
-        public static string PreferencesViewFontSizeLabel {
-            get {
+        public static string PreferencesViewFontSizeLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewFontSizeLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Backup Settings.
         /// </summary>
-        public static string PreferencesViewGeneralSettingsBackup {
-            get {
+        public static string PreferencesViewGeneralSettingsBackup
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewGeneralSettingsBackup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Geometry Scaling.
         /// </summary>
-        public static string PreferencesViewGeneralSettingsGeoScaling {
-            get {
+        public static string PreferencesViewGeneralSettingsGeoScaling
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewGeneralSettingsGeoScaling", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run Settings.
         /// </summary>
-        public static string PreferencesViewGeneralSettingsRun {
-            get {
+        public static string PreferencesViewGeneralSettingsRun
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewGeneralSettingsRun", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Templates.
         /// </summary>
-        public static string PreferencesViewGeneralSettingsTemplate {
-            get {
+        public static string PreferencesViewGeneralSettingsTemplate
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewGeneralSettingsTemplate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to General.
         /// </summary>
-        public static string PreferencesViewGeneralTab {
-            get {
+        public static string PreferencesViewGeneralTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewGeneralTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, file names of exported images include date and time of export..
         /// </summary>
-        public static string PreferencesViewIncludeTimestampExportPathTooltip {
-            get {
+        public static string PreferencesViewIncludeTimestampExportPathTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewIncludeTimestampExportPathTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
-        public static string PreferencesViewLanguageLabel {
-            get {
+        public static string PreferencesViewLanguageLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewLanguageLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo must be relaunched to apply the language selection..
         /// </summary>
-        public static string PreferencesViewLanguageSwitchHelp {
-            get {
+        public static string PreferencesViewLanguageSwitchHelp
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewLanguageSwitchHelp", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Markdown documentation can be added to your package that will leverage the Documentation Browser to display author generated information on a per-node basis..
         /// </summary>
-        public static string PreferencesViewMarkdownDirectoryTooltip {
-            get {
+        public static string PreferencesViewMarkdownDirectoryTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewMarkdownDirectoryTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Autocomplete.
         /// </summary>
-        public static string PreferencesViewNodeAutocomplete {
-            get {
+        public static string PreferencesViewNodeAutocomplete
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewNodeAutocomplete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Notification Center.
         /// </summary>
-        public static string PreferencesViewNotificationCenter {
-            get {
+        public static string PreferencesViewNotificationCenter
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewNotificationCenter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New Package Download Path.
         /// </summary>
-        public static string PreferencesViewPackageDownloadDirectory {
-            get {
+        public static string PreferencesViewPackageDownloadDirectory
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewPackageDownloadDirectory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Python.
         /// </summary>
-        public static string PreferencesViewPython {
-            get {
+        public static string PreferencesViewPython
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewPython", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Python Editor.
         /// </summary>
-        public static string PreferencesViewPythonEditorLable {
-            get {
+        public static string PreferencesViewPythonEditorLable
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewPythonEditorLable", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Requires relaunch of Dynamo.
         /// </summary>
-        public static string PreferencesViewRequiresRelaunchOfDynamo {
-            get {
+        public static string PreferencesViewRequiresRelaunchOfDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewRequiresRelaunchOfDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default Run Settings.
         /// </summary>
-        public static string PreferencesViewRunSettingsLabel {
-            get {
+        public static string PreferencesViewRunSettingsLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewRunSettingsLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to All changes saved automatically.
         /// </summary>
-        public static string PreferencesViewSavedChangesLabel {
-            get {
+        public static string PreferencesViewSavedChangesLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewSavedChangesLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Last saved:.
         /// </summary>
-        public static string PreferencesViewSavedChangesTooltip {
-            get {
+        public static string PreferencesViewSavedChangesTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewSavedChangesTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Selected package path for download.
         /// </summary>
-        public static string PreferencesViewSelectedPackagePathForDownload {
-            get {
+        public static string PreferencesViewSelectedPackagePathForDownload
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewSelectedPackagePathForDownload", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Include Timestamp in Export Image Path.
         /// </summary>
-        public static string PreferencesViewSettingIncludeTimestampExportPath {
-            get {
+        public static string PreferencesViewSettingIncludeTimestampExportPath
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewSettingIncludeTimestampExportPath", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show CodeBlockNode Line Numbers.
         /// </summary>
-        public static string PreferencesViewShowCodeBlockNodeLineNumber {
-            get {
+        public static string PreferencesViewShowCodeBlockNodeLineNumber
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewShowCodeBlockNodeLineNumber", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Preview Bubbles.
         /// </summary>
-        public static string PreferencesViewShowPreviewBubbles {
-            get {
+        public static string PreferencesViewShowPreviewBubbles
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewShowPreviewBubbles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to To preview the execution state of your graph, wires connected to ports that will be affected by a graph run are highlighted in orange. Available only when the current workspace is in Manual run mode..
         /// </summary>
-        public static string PreferencesViewShowRunPreviewTooltip {
-            get {
+        public static string PreferencesViewShowRunPreviewTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewShowRunPreviewTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pauses the splash screen when loading is complete, enabling you to launch Dynamo manually, sign in to your Autodesk account, or import settings..
         /// </summary>
-        public static string PreferencesViewShowStaticSplashScreenTooltip {
-            get {
+        public static string PreferencesViewShowStaticSplashScreenTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewShowStaticSplashScreenTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Whitespace in Python Editor.
         /// </summary>
-        public static string PreferencesViewShowWhitespaceInPythonEditor {
-            get {
+        public static string PreferencesViewShowWhitespaceInPythonEditor
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewShowWhitespaceInPythonEditor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preferences.
         /// </summary>
-        public static string PreferencesViewTitle {
-            get {
+        public static string PreferencesViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Trust warning.
         /// </summary>
-        public static string PreferencesViewTrustWarningHeader {
-            get {
+        public static string PreferencesViewTrustWarningHeader
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewTrustWarningHeader", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Disable trust warning.
         /// </summary>
-        public static string PreferencesViewTrustWarningLabel {
-            get {
+        public static string PreferencesViewTrustWarningLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewTrustWarningLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This applies to Dynamo, Dynamo Player and Generative Design Player. We recommend keeping this toggle off to avoid inadvertently opening a file from an untrusted location..
         /// </summary>
-        public static string PreferencesViewTrustWarningTooltipText {
-            get {
+        public static string PreferencesViewTrustWarningTooltipText
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewTrustWarningTooltipText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Display Settings.
         /// </summary>
-        public static string PreferencesViewVisualSettingsDisplaySettings {
-            get {
+        public static string PreferencesViewVisualSettingsDisplaySettings
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsDisplaySettings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Style Name.
         /// </summary>
-        public static string PreferencesViewVisualSettingsGroupStyleInput {
-            get {
+        public static string PreferencesViewVisualSettingsGroupStyleInput
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsGroupStyleInput", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Group Styles.
         /// </summary>
-        public static string PreferencesViewVisualSettingsGroupStyles {
-            get {
+        public static string PreferencesViewVisualSettingsGroupStyles
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsGroupStyles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Edges.
         /// </summary>
-        public static string PreferencesViewVisualSettingShowEdges {
-            get {
+        public static string PreferencesViewVisualSettingShowEdges
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingShowEdges", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Isolate Selected Geometry.
         /// </summary>
-        public static string PreferencesViewVisualSettingsIsolateSelectedGeo {
-            get {
+        public static string PreferencesViewVisualSettingsIsolateSelectedGeo
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsIsolateSelectedGeo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Render Precision.
         /// </summary>
-        public static string PreferencesViewVisualSettingsRenderPrecision {
-            get {
+        public static string PreferencesViewVisualSettingsRenderPrecision
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsRenderPrecision", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Visual Settings.
         /// </summary>
-        public static string PreferencesViewVisualSettingsTab {
-            get {
+        public static string PreferencesViewVisualSettingsTab
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingsTab", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Instancing (Beta).
         /// </summary>
-        public static string PreferencesViewVisualSettingUseInstancing {
-            get {
+        public static string PreferencesViewVisualSettingUseInstancing
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewVisualSettingUseInstancing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0%.
         /// </summary>
-        public static string PreferencesViewZoomScaling0Percent {
-            get {
+        public static string PreferencesViewZoomScaling0Percent
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewZoomScaling0Percent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 100%.
         /// </summary>
-        public static string PreferencesViewZoomScaling100Percent {
-            get {
+        public static string PreferencesViewZoomScaling100Percent
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewZoomScaling100Percent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 25%.
         /// </summary>
-        public static string PreferencesViewZoomScaling25Percent {
-            get {
+        public static string PreferencesViewZoomScaling25Percent
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewZoomScaling25Percent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 300%.
         /// </summary>
-        public static string PreferencesViewZoomScaling300Percent {
-            get {
+        public static string PreferencesViewZoomScaling300Percent
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewZoomScaling300Percent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom Scaling.
         /// </summary>
-        public static string PreferencesViewZoomScalingSettings {
-            get {
+        public static string PreferencesViewZoomScalingSettings
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesViewZoomScalingSettings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, Dynamo benefits from hardware acceleration to improve smoothness of graphics and overall performance, as work is offloaded from central processing units (CPUs) to graphics processing units (GPUs)..
         /// </summary>
-        public static string PreferencesWindowHardwareAccelerationTooltip {
-            get {
+        public static string PreferencesWindowHardwareAccelerationTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowHardwareAccelerationTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, selecting a geometry node will highlight the geometry it produces in the background 3D preview..
         /// </summary>
-        public static string PreferencesWindowIsolateSelectedGeoTooltip {
-            get {
+        public static string PreferencesWindowIsolateSelectedGeoTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowIsolateSelectedGeoTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, line numbers will be displayed in the Code Block node editor..
         /// </summary>
-        public static string PreferencesWindowShowCodeBlockNodeLineNumberTooltip {
-            get {
+        public static string PreferencesWindowShowCodeBlockNodeLineNumberTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowShowCodeBlockNodeLineNumberTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, more detailed edges will be displayed for geometry from topology subtypes..
         /// </summary>
-        public static string PreferencesWindowShowEdgesTooltip {
-            get {
+        public static string PreferencesWindowShowEdgesTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowShowEdgesTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, a preview of the node’s output will be displayed when hovering over the bottom of a node..
         /// </summary>
-        public static string PreferencesWindowShowPreviewBubblesTooltip {
-            get {
+        public static string PreferencesWindowShowPreviewBubblesTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowShowPreviewBubblesTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When toggled on, some symmetric geometry types such as cubes, rectangles, or spheres will render faster due to mutiple copies being drawn at once vs sequentially..
         /// </summary>
-        public static string PreferencesWindowUseInstancingTooltip {
-            get {
+        public static string PreferencesWindowUseInstancingTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferencesWindowUseInstancingTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preferred confidence level.
         /// </summary>
-        public static string PreferredConfidenceLevel {
-            get {
+        public static string PreferredConfidenceLevel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferredConfidenceLevel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confidence level appears next to each recommended node and represents estimated probability that the node is a good choice. When toggled on, this setting hides recommended nodes that don’t meet the specified confidence level. You can click the Low Confidence header to show the nodes..
         /// </summary>
-        public static string PreferredConfidenceLevelInfo {
-            get {
+        public static string PreferredConfidenceLevelInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("PreferredConfidenceLevelInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your package will be scanned for viruses, and will be available for download once it successfully passes the scan..
         /// </summary>
-        public static string PrePackagePublishMessage {
-            get {
+        public static string PrePackagePublishMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PrePackagePublishMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Upload Scan.
         /// </summary>
-        public static string PrePackagePublishTitle {
-            get {
+        public static string PrePackagePublishTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PrePackagePublishTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A preset by this name already exists, do you wish to overwrite?.
         /// </summary>
-        public static string PresetOverwrite {
-            get {
+        public static string PresetOverwrite
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetOverwrite", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A description of the preset state..
         /// </summary>
-        public static string PresetPromptDescriptionTooltip {
-            get {
+        public static string PresetPromptDescriptionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetPromptDescriptionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A unique name for the preset..
         /// </summary>
-        public static string PresetPromptNameTooltip {
-            get {
+        public static string PresetPromptNameTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetPromptNameTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string PresetsWindowDescription {
-            get {
+        public static string PresetsWindowDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetsWindowDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enter a description for this preset..
         /// </summary>
-        public static string PresetsWindowDescriptionHint {
-            get {
+        public static string PresetsWindowDescriptionHint
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetsWindowDescriptionHint", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string PresetsWindowName {
-            get {
+        public static string PresetsWindowName
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetsWindowName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preset State Properties.
         /// </summary>
-        public static string PresetsWindowTitle {
-            get {
+        public static string PresetsWindowTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetsWindowTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Characters Remaining.
         /// </summary>
-        public static string PresetTextRemaining {
-            get {
+        public static string PresetTextRemaining
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetTextRemaining", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No input nodes selected. Select at least one input node to create a preset..
         /// </summary>
-        public static string PresetWarningMessage {
-            get {
+        public static string PresetWarningMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PresetWarningMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to List.
         /// </summary>
-        public static string PreviewListLabel {
-            get {
+        public static string PreviewListLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PreviewListLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to  This Feature is in Preview! .
         /// </summary>
-        public static string PreviewText {
-            get {
+        public static string PreviewText
+        {
+            get
+            {
                 return ResourceManager.GetString("PreviewText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] psDynamoLine {
-            get {
+        public static byte[] psDynamoLine
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("psDynamoLine", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] psDynamoMesh {
-            get {
+        public static byte[] psDynamoMesh
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("psDynamoMesh", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] psDynamoPoint {
-            get {
+        public static byte[] psDynamoPoint
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("psDynamoPoint", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish Online.
         /// </summary>
-        public static string PublishPackage {
-            get {
+        public static string PublishPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Published Successfully.
         /// </summary>
-        public static string PublishPackageDialogCaption {
-            get {
+        public static string PublishPackageDialogCaption
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageDialogCaption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Learn more about packages.
         /// </summary>
-        public static string PublishPackageDocTooltipText {
-            get {
+        public static string PublishPackageDocTooltipText
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageDocTooltipText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to External Package Dependencies.
         /// </summary>
-        public static string PublishPackageExternalPackageDependencies {
-            get {
+        public static string PublishPackageExternalPackageDependencies
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageExternalPackageDependencies", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Group.
         /// </summary>
-        public static string PublishPackageGroupWatermark {
-            get {
+        public static string PublishPackageGroupWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageGroupWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keywords.
         /// </summary>
-        public static string PublishPackageKeywordsWatermark {
-            get {
+        public static string PublishPackageKeywordsWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageKeywordsWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish Locally.
         /// </summary>
-        public static string PublishPackageLocally {
-            get {
+        public static string PublishPackageLocally
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageLocally", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package published successfully. 
         ///Want to publish a different package?.
         /// </summary>
-        public static string PublishPackageMessage {
-            get {
+        public static string PublishPackageMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DynamoCoreWpf;PublishPackageDocumentation.html.
         /// </summary>
-        public static string PublishPackageMoreInfoFile {
-            get {
+        public static string PublishPackageMoreInfoFile
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageMoreInfoFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DLL file containing types and methods that Dynamo imports as nodes. Mark ZeroTouch, NodeModel, or NodeViewCustomization DLLs and types you want to import into Dynamo as node libraries..
         /// </summary>
-        public static string PublishPackageNodeLibraryTooltip {
-            get {
+        public static string PublishPackageNodeLibraryTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageNodeLibraryTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Contents.
         /// </summary>
-        public static string PublishPackagePackageContent {
-            get {
+        public static string PublishPackagePackageContent
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackagePackageContent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preview package contents (read only).
         /// </summary>
-        public static string PublishPackagePreviewPackageContentsMessage {
-            get {
+        public static string PublishPackagePreviewPackageContentsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackagePreviewPackageContentsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove from package.
         /// </summary>
-        public static string PublishPackageRemoveFromPacakgeTooltip {
-            get {
+        public static string PublishPackageRemoveFromPacakgeTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageRemoveFromPacakgeTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
-        public static string PublishPackageResetButton {
-            get {
+        public static string PublishPackageResetButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageResetButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Retain folder structure.
         /// </summary>
-        public static string PublishPackageRetainFolderStructureToggleButtonText {
-            get {
+        public static string PublishPackageRetainFolderStructureToggleButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageRetainFolderStructureToggleButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to When this setting is enabled, the folder structure of uploaded files will be retained. Otherwise, files will be placed into predefined folders.
         ///
         ///Note: Incorrect folder structure may affect the functionality of packages that rely on the correct file organization. When in doubt, leave this setting off.
         ///    .
         /// </summary>
-        public static string PublishPackageRetainFolderStructureTooltip {
-            get {
+        public static string PublishPackageRetainFolderStructureTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageRetainFolderStructureTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select Node Libraries.
         /// </summary>
-        public static string PublishPackageSelectNodeLibraries {
-            get {
+        public static string PublishPackageSelectNodeLibraries
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageSelectNodeLibraries", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select package contents.
         /// </summary>
-        public static string PublishPackageSelectPackageContentsMessage {
-            get {
+        public static string PublishPackageSelectPackageContentsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageSelectPackageContentsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
-        public static string PublishPackageVersionBuildWatermark {
-            get {
+        public static string PublishPackageVersionBuildWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageVersionBuildWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
-        public static string PublishPackageVersionMajorWatermark {
-            get {
+        public static string PublishPackageVersionMajorWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageVersionMajorWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
-        public static string PublishPackageVersionMinorWatermark {
-            get {
+        public static string PublishPackageVersionMinorWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageVersionMinorWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Directory.
         /// </summary>
-        public static string PublishPackageViewAddDirectoryButton {
-            get {
+        public static string PublishPackageViewAddDirectoryButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewAddDirectoryButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Directory And Its Files To Package.
         /// </summary>
-        public static string PublishPackageViewAddDirectoryButtonTooltip {
-            get {
+        public static string PublishPackageViewAddDirectoryButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewAddDirectoryButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Files.
         /// </summary>
-        public static string PublishPackageViewAddFileButton {
-            get {
+        public static string PublishPackageViewAddFileButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewAddFileButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add File To Package.
         /// </summary>
-        public static string PublishPackageViewAddFileButtonTooltip {
-            get {
+        public static string PublishPackageViewAddFileButtonTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewAddFileButtonTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Build.
         /// </summary>
-        public static string PublishPackageViewBuildPackageVersionLabel {
-            get {
+        public static string PublishPackageViewBuildPackageVersionLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewBuildPackageVersionLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Is Node Library.
         /// </summary>
-        public static string PublishPackageViewContextMenuIsNodeLibrary {
-            get {
+        public static string PublishPackageViewContextMenuIsNodeLibrary
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewContextMenuIsNodeLibrary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copyright Holder (optional).
         /// </summary>
-        public static string PublishPackageViewCopyrightHolder {
-            get {
+        public static string PublishPackageViewCopyrightHolder
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightHolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to If blank, default is your username.
         /// </summary>
-        public static string PublishPackageViewCopyrightHolderSubLabel {
-            get {
+        public static string PublishPackageViewCopyrightHolderSubLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightHolderSubLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The package&apos;s copyright holder..
         /// </summary>
-        public static string PublishPackageViewCopyrightHolderTooltip {
-            get {
+        public static string PublishPackageViewCopyrightHolderTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightHolderTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Author name.
         /// </summary>
-        public static string PublishPackageViewCopyrightHolderWatermark {
-            get {
+        public static string PublishPackageViewCopyrightHolderWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightHolderWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copyright Year (optional).
         /// </summary>
-        public static string PublishPackageViewCopyrightYear {
-            get {
+        public static string PublishPackageViewCopyrightYear
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightYear", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to If blank, default is publishing year.
         /// </summary>
-        public static string PublishPackageViewCopyrightYearSubLabel {
-            get {
+        public static string PublishPackageViewCopyrightYearSubLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightYearSubLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The copyright year for the package..
         /// </summary>
-        public static string PublishPackageViewCopyrightYearTooltip {
-            get {
+        public static string PublishPackageViewCopyrightYearTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightYearTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publishing year.
         /// </summary>
-        public static string PublishPackageViewCopyrightYearWatermark {
-            get {
+        public static string PublishPackageViewCopyrightYearWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewCopyrightYearWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File Path.
         /// </summary>
-        public static string PublishPackageViewFilePath {
-            get {
+        public static string PublishPackageViewFilePath
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewFilePath", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to GitHub repository link for the package..
         /// </summary>
-        public static string PublishPackageViewGithubLinkTooltip {
-            get {
+        public static string PublishPackageViewGithubLinkTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewGithubLinkTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The package&apos;s licence..
         /// </summary>
-        public static string PublishPackageViewLicenceTooltip {
-            get {
+        public static string PublishPackageViewLicenceTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewLicenceTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to License (optional).
         /// </summary>
-        public static string PublishPackageViewLicense {
-            get {
+        public static string PublishPackageViewLicense
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewLicense", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Applies to the latest package version. If blank, the package will be licensed under.
         /// </summary>
-        public static string PublishPackageViewLicenseSubLabel {
-            get {
+        public static string PublishPackageViewLicenseSubLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewLicenseSubLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to License.
         /// </summary>
-        public static string PublishPackageViewLicenseWatermark {
-            get {
+        public static string PublishPackageViewLicenseWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewLicenseWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Major.
         /// </summary>
-        public static string PublishPackageViewMajorPackageVersionLabel {
-            get {
+        public static string PublishPackageViewMajorPackageVersionLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewMajorPackageVersionLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Markdown Files Path (optional).
         /// </summary>
-        public static string PublishPackageViewMarkdownFilesDirectory {
-            get {
+        public static string PublishPackageViewMarkdownFilesDirectory
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewMarkdownFilesDirectory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An optional location for documenting your package in the markdown format..
         /// </summary>
-        public static string PublishPackageViewMarkdownFilesDirectoryToolTip {
-            get {
+        public static string PublishPackageViewMarkdownFilesDirectoryToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewMarkdownFilesDirectoryToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Minor.
         /// </summary>
-        public static string PublishPackageViewMinorPackageVersionLabel {
-            get {
+        public static string PublishPackageViewMinorPackageVersionLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewMinorPackageVersionLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Node Library.
         /// </summary>
-        public static string PublishPackageViewNodeLibrary {
-            get {
+        public static string PublishPackageViewNodeLibrary
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewNodeLibrary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dependencies.
         /// </summary>
-        public static string PublishPackageViewPackageDependencies {
-            get {
+        public static string PublishPackageViewPackageDependencies
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageDependencies", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string PublishPackageViewPackageDescription {
-            get {
+        public static string PublishPackageViewPackageDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A description that helps people understand what the package might be used for..
         /// </summary>
-        public static string PublishPackageViewPackageDescriptionTooltip {
-            get {
+        public static string PublishPackageViewPackageDescriptionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageDescriptionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Group (optional).
         /// </summary>
-        public static string PublishPackageViewPackageGroup {
-            get {
+        public static string PublishPackageViewPackageGroup
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageGroup", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A group to help categorize this package.  Might be useful for a collection of packages related to a firm, school, etc..
         /// </summary>
-        public static string PublishPackageViewPackageGroupTooltip {
-            get {
+        public static string PublishPackageViewPackageGroupTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageGroupTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Host (optional).
         /// </summary>
-        public static string PublishPackageViewPackageHostDependency {
-            get {
+        public static string PublishPackageViewPackageHostDependency
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageHostDependency", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An indication of what applications outside of Dynamo your package depends on, such as Revit, Civil 3D or Photoshop. Users of your package will need to install these applications to fully utilize your package..
         /// </summary>
-        public static string PublishPackageViewPackageHostDependencyTooltip {
-            get {
+        public static string PublishPackageViewPackageHostDependencyTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageHostDependencyTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keywords (optional).
         /// </summary>
-        public static string PublishPackageViewPackageKeywords {
-            get {
+        public static string PublishPackageViewPackageKeywords
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageKeywords", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keywords help find your package in the database.  Separate them by spaces..
         /// </summary>
-        public static string PublishPackageViewPackageKeywordsTooltip {
-            get {
+        public static string PublishPackageViewPackageKeywordsTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageKeywordsTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string PublishPackageViewPackageName {
-            get {
+        public static string PublishPackageViewPackageName
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A unique name for the package..
         /// </summary>
-        public static string PublishPackageViewPackageNameTooltip {
-            get {
+        public static string PublishPackageViewPackageNameTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageNameTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package name.
         /// </summary>
-        public static string PublishPackageViewPackageNameWatermark {
-            get {
+        public static string PublishPackageViewPackageNameWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageNameWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Version.
         /// </summary>
-        public static string PublishPackageViewPackageVersion {
-            get {
+        public static string PublishPackageViewPackageVersion
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageVersion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A version name helps a submitter keep track of updates to the package. When a new version of a package is added, version number must be increased..
         /// </summary>
-        public static string PublishPackageViewPackageVersionTooltip {
-            get {
+        public static string PublishPackageViewPackageVersionTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPackageVersionTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish a Package.
         /// </summary>
-        public static string PublishPackageViewPublish {
-            get {
+        public static string PublishPackageViewPublish
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPublish", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to URL.
         /// </summary>
-        public static string PublishPackageViewPublisherURLWatermark {
-            get {
+        public static string PublishPackageViewPublisherURLWatermark
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPublisherURLWatermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Website Url (optional).
         /// </summary>
-        public static string PublishPackageViewPublisherWebSite {
-            get {
+        public static string PublishPackageViewPublisherWebSite
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPublisherWebSite", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Website link for the package..
         /// </summary>
-        public static string PublishPackageViewPublisherWebsiteTooltip {
-            get {
+        public static string PublishPackageViewPublisherWebsiteTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewPublisherWebsiteTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Removes this item from the package contents list..
         /// </summary>
-        public static string PublishPackageViewRemoveItemToolTip {
-            get {
+        public static string PublishPackageViewRemoveItemToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewRemoveItemToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Repository Url (optional).
         /// </summary>
-        public static string PublishPackageViewRepositoryUrl {
-            get {
+        public static string PublishPackageViewRepositoryUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewRepositoryUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
-        public static string PublishPackageViewResetMarkdownDirectoryButton {
-            get {
+        public static string PublishPackageViewResetMarkdownDirectoryButton
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewResetMarkdownDirectoryButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clears this package&apos;s Markdown directory..
         /// </summary>
-        public static string PublishPackageViewResetMarkdownDirectoryButtonToolTip {
-            get {
+        public static string PublishPackageViewResetMarkdownDirectoryButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewResetMarkdownDirectoryButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Publish a {0} Package.
         /// </summary>
-        public static string PublishPackageViewTitle {
-            get {
+        public static string PublishPackageViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("PublishPackageViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add a file path for Python Node Template.
         /// </summary>
-        public static string PythonTemplateAddPathTooltip {
-            get {
+        public static string PythonTemplateAddPathTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("PythonTemplateAddPathTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Drag to adjust Python Editor zoom scale between 25% and 300%. You can also adjust this in Python Editor by pressing &quot;Ctrl&quot; and scrolling the mouse wheel..
         /// </summary>
-        public static string PythonZoomScaleTooltipText {
-            get {
+        public static string PythonZoomScaleTooltipText
+        {
+            get
+            {
                 return ResourceManager.GetString("PythonZoomScaleTooltipText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Query.
         /// </summary>
-        public static string QueryMember {
-            get {
+        public static string QueryMember
+        {
+            get
+            {
                 return ResourceManager.GetString("QueryMember", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reducing this number will discard all recent files beyond your chosen number..
         /// </summary>
-        public static string RecentFileNumberInfo {
-            get {
+        public static string RecentFileNumberInfo
+        {
+            get
+            {
                 return ResourceManager.GetString("RecentFileNumberInfo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Recommended Nodes.
         /// </summary>
-        public static string RecommendedNodes {
-            get {
+        public static string RecommendedNodes
+        {
+            get
+            {
                 return ResourceManager.GetString("RecommendedNodes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove port?.
         /// </summary>
-        public static string RemovePythonPortWarningMessageBoxTitle {
-            get {
+        public static string RemovePythonPortWarningMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("RemovePythonPortWarningMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit Port Properties.
         /// </summary>
-        public static string RenamePortPopupMenuItem {
-            get {
+        public static string RenamePortPopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("RenamePortPopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please check if you intended to render this amount of geometry, and consider turning off the preview of other nodes within your graph, lowering the amount of Geometry you wish to render, or turning down the render precision..
         /// </summary>
-        public static string RenderingMemoryOutageDescription {
-            get {
+        public static string RenderingMemoryOutageDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("RenderingMemoryOutageDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo has run out of memory trying to render your geometry. The geometry preview has been disabled..
         /// </summary>
-        public static string RenderingMemoryOutageSummary {
-            get {
+        public static string RenderingMemoryOutageSummary
+        {
+            get
+            {
                 return ResourceManager.GetString("RenderingMemoryOutageSummary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Apply Changes.
         /// </summary>
-        public static string RerunButton {
-            get {
+        public static string RerunButton
+        {
+            get
+            {
                 return ResourceManager.GetString("RerunButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rerun the graph..
         /// </summary>
-        public static string RerunButtonToolTip {
-            get {
+        public static string RerunButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("RerunButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your changes will be lost if you proceed..
         /// </summary>
-        public static string ResetChangesWarningPopupMessage {
-            get {
+        public static string ResetChangesWarningPopupMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ResetChangesWarningPopupMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Reset CPython.
         /// </summary>
-        public static string ResetCPythonButtonText {
-            get {
+        public static string ResetCPythonButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("ResetCPythonButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Resets CPython environment by reloading modules..
         /// </summary>
-        public static string ResetCPythonButtonToolTip {
-            get {
+        public static string ResetCPythonButtonToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("ResetCPythonButtonToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run blocked..
         /// </summary>
-        public static string RunBlockedMessage {
-            get {
+        public static string RunBlockedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunBlockedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed..
         /// </summary>
-        public static string RunCompletedMessage {
-            get {
+        public static string RunCompletedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with errors..
         /// </summary>
-        public static string RunCompletedWithErrorsMessage {
-            get {
+        public static string RunCompletedWithErrorsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithErrorsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with errors on setting new working range..
         /// </summary>
-        public static string RunCompletedWithScaleChangeAndErrorsMessage {
-            get {
+        public static string RunCompletedWithScaleChangeAndErrorsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithScaleChangeAndErrorsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with warnings on setting new working range..
         /// </summary>
-        public static string RunCompletedWithScaleChangeAndWarningsMessage {
-            get {
+        public static string RunCompletedWithScaleChangeAndWarningsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithScaleChangeAndWarningsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with new working range..
         /// </summary>
-        public static string RunCompletedWithScaleChangeMessage {
-            get {
+        public static string RunCompletedWithScaleChangeMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithScaleChangeMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with dismissed warnings..
         /// </summary>
-        public static string RunCompletedWithWarningsDismissedMessage {
-            get {
+        public static string RunCompletedWithWarningsDismissedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithWarningsDismissedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run completed with warnings..
         /// </summary>
-        public static string RunCompletedWithWarningsMessage {
-            get {
+        public static string RunCompletedWithWarningsMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunCompletedWithWarningsMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Ready to run..
         /// </summary>
-        public static string RunReady {
-            get {
+        public static string RunReady
+        {
+            get
+            {
                 return ResourceManager.GetString("RunReady", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run started....
         /// </summary>
-        public static string RunStartedMessage {
-            get {
+        public static string RunStartedMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunStartedMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run started with new working range....
         /// </summary>
-        public static string RunStartedWithScaleChangeMessage {
-            get {
+        public static string RunStartedWithScaleChangeMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("RunStartedWithScaleChangeMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed in real time. Best suited for smaller graphs, known graphs, and Dynamo Sandbox..
         /// </summary>
-        public static string RunTypeToolTipAutomatically {
-            get {
+        public static string RunTypeToolTipAutomatically
+        {
+            get
+            {
                 return ResourceManager.GetString("RunTypeToolTipAutomatically", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed when you click Run. Use this mode when working in large graphs, unfamiliar graphs, or host applications..
         /// </summary>
-        public static string RunTypeToolTipManually {
-            get {
+        public static string RunTypeToolTipManually
+        {
+            get
+            {
                 return ResourceManager.GetString("RunTypeToolTipManually", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Periodic running is disabled when there are no nodes in your graph that support it..
         /// </summary>
-        public static string RunTypeToolTipPeriodicallyDisabled {
-            get {
+        public static string RunTypeToolTipPeriodicallyDisabled
+        {
+            get
+            {
                 return ResourceManager.GetString("RunTypeToolTipPeriodicallyDisabled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Graph changes are executed at a specified interval. Only available when the graph contains specific nodes, such as DateTime.Now or WebRequest..
         /// </summary>
-        public static string RunTypeToolTipPeriodicallyEnabled {
-            get {
+        public static string RunTypeToolTipPeriodicallyEnabled
+        {
+            get
+            {
                 return ResourceManager.GetString("RunTypeToolTipPeriodicallyEnabled", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string Save {
-            get {
+        public static string Save
+        {
+            get
+            {
                 return ResourceManager.GetString("Save", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save your model to STL..
         /// </summary>
-        public static string SaveModelToSTLDialogTitle {
-            get {
+        public static string SaveModelToSTLDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SaveModelToSTLDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save your Workbench to an Image.
         /// </summary>
-        public static string SaveWorkbenToImageDialogTitle {
-            get {
+        public static string SaveWorkbenToImageDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SaveWorkbenToImageDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Extra large.
         /// </summary>
-        public static string ScalingExtraLargeButton {
-            get {
+        public static string ScalingExtraLargeButton
+        {
+            get
+            {
                 return ResourceManager.GetString("ScalingExtraLargeButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Large.
         /// </summary>
-        public static string ScalingLargeButton {
-            get {
+        public static string ScalingLargeButton
+        {
+            get
+            {
                 return ResourceManager.GetString("ScalingLargeButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Medium.
         /// </summary>
-        public static string ScalingMediumButton {
-            get {
+        public static string ScalingMediumButton
+        {
+            get
+            {
                 return ResourceManager.GetString("ScalingMediumButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Small.
         /// </summary>
-        public static string ScalingSmallButton {
-            get {
+        public static string ScalingSmallButton
+        {
+            get
+            {
                 return ResourceManager.GetString("ScalingSmallButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to screenshot_3D.
         /// </summary>
-        public static string ScreenShotFrom3DParameter {
-            get {
+        public static string ScreenShotFrom3DParameter
+        {
+            get
+            {
                 return ResourceManager.GetString("ScreenShotFrom3DParameter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to screenshot_3D_shortcut.
         /// </summary>
-        public static string ScreenShotFrom3DShortcutParameter {
-            get {
+        public static string ScreenShotFrom3DShortcutParameter
+        {
+            get
+            {
                 return ResourceManager.GetString("ScreenShotFrom3DShortcutParameter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Script tags detected in the help document have been removed..
         /// </summary>
-        public static string ScriptTagsRemovalWarning {
-            get {
+        public static string ScriptTagsRemovalWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("ScriptTagsRemovalWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Top Result.
         /// </summary>
-        public static string SearchViewTopResult {
-            get {
+        public static string SearchViewTopResult
+        {
+            get
+            {
                 return ResourceManager.GetString("SearchViewTopResult", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Path.
         /// </summary>
-        public static string SecurityPathAddPathButtonName {
-            get {
+        public static string SecurityPathAddPathButtonName
+        {
+            get
+            {
                 return ResourceManager.GetString("SecurityPathAddPathButtonName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Warning.
         /// </summary>
-        public static string SecurityWarningExpanderName {
-            get {
+        public static string SecurityWarningExpanderName
+        {
+            get
+            {
                 return ResourceManager.GetString("SecurityWarningExpanderName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select All.
         /// </summary>
-        public static string SelectAllTitle {
-            get {
+        public static string SelectAllTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SelectAllTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Selection Error.
         /// </summary>
-        public static string SelectionErrorMessageBoxTitle {
-            get {
+        public static string SelectionErrorMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SelectionErrorMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Change.
         /// </summary>
-        public static string SelectNodeButtonChange {
-            get {
+        public static string SelectNodeButtonChange
+        {
+            get
+            {
                 return ResourceManager.GetString("SelectNodeButtonChange", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Select.
         /// </summary>
-        public static string SelectNodeButtonSelect {
-            get {
+        public static string SelectNodeButtonSelect
+        {
+            get
+            {
                 return ResourceManager.GetString("SelectNodeButtonSelect", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export as Image.
         /// </summary>
-        public static string ShortcutExportAsImageMainMenu {
-            get {
+        public static string ShortcutExportAsImageMainMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("ShortcutExportAsImageMainMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Background 3D Preview.
         /// </summary>
-        public static string ShortcutExportBackground3DPreview {
-            get {
+        public static string ShortcutExportBackground3DPreview
+        {
+            get
+            {
                 return ResourceManager.GetString("ShortcutExportBackground3DPreview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspace.
         /// </summary>
-        public static string ShortcutExportWorkspace {
-            get {
+        public static string ShortcutExportWorkspace
+        {
+            get
+            {
                 return ResourceManager.GetString("ShortcutExportWorkspace", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Classic Node Library.
         /// </summary>
-        public static string ShowClassicNodeLibrary {
-            get {
+        public static string ShowClassicNodeLibrary
+        {
+            get
+            {
                 return ResourceManager.GetString("ShowClassicNodeLibrary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show/hide.
         /// </summary>
-        public static string ShowHideLibraryIconTooltip {
-            get {
+        public static string ShowHideLibraryIconTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("ShowHideLibraryIconTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preview the execution state of your graph. Nodes that are scheduled for execution will highlight in the graph.
         /// </summary>
-        public static string ShowRunPreviewDisableToolTip {
-            get {
+        public static string ShowRunPreviewDisableToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("ShowRunPreviewDisableToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Execution preview is not available when running automatically.
         /// </summary>
-        public static string ShowRunPreviewEnableToolTip {
-            get {
+        public static string ShowRunPreviewEnableToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("ShowRunPreviewEnableToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Wires.
         /// </summary>
-        public static string ShowWiresPopupMenuItem {
-            get {
+        public static string ShowWiresPopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("ShowWiresPopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sidebar.
         /// </summary>
-        public static string SideBarPanelViewTitle {
-            get {
+        public static string SideBarPanelViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SideBarPanelViewTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign in to access online services that integrate with your desktop software..
         /// </summary>
-        public static string SignInButtonContentToolTip {
-            get {
+        public static string SignInButtonContentToolTip
+        {
+            get
+            {
                 return ResourceManager.GetString("SignInButtonContentToolTip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign In.
         /// </summary>
-        public static string SignInButtonText {
-            get {
+        public static string SignInButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("SignInButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Signing In.
         /// </summary>
-        public static string SigningInButtonText {
-            get {
+        public static string SigningInButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("SigningInButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Signing out of Dynamo will sign you out of all Autodesk desktop products..
         /// </summary>
-        public static string SignOutConfirmationDialogText {
-            get {
+        public static string SignOutConfirmationDialogText
+        {
+            get
+            {
                 return ResourceManager.GetString("SignOutConfirmationDialogText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign out of Dynamo.
         /// </summary>
-        public static string SignOutConfirmationDialogTitle {
-            get {
+        public static string SignOutConfirmationDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SignOutConfirmationDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Please update the permissions or go to Preferences &gt;Node and Package Paths...&apos; to change your default directory..
         /// </summary>
-        public static string SolutionToFolderNotWritatbleError {
-            get {
+        public static string SolutionToFolderNotWritatbleError
+        {
+            get
+            {
                 return ResourceManager.GetString("SolutionToFolderNotWritatbleError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import Settings.
         /// </summary>
-        public static string SplashScreenImportSettings {
-            get {
+        public static string SplashScreenImportSettings
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenImportSettings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Something went wrong when importing your custom setting file. Please try again or proceed with default settings..
         /// </summary>
-        public static string SplashScreenImportSettingsFailDescription {
-            get {
+        public static string SplashScreenImportSettingsFailDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenImportSettingsFailDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Launching Dynamo View....
         /// </summary>
-        public static string SplashScreenLaunchingDynamo {
-            get {
+        public static string SplashScreenLaunchingDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenLaunchingDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Launch Dynamo.
         /// </summary>
-        public static string SplashScreenLaunchTitle {
-            get {
+        public static string SplashScreenLaunchTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenLaunchTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loading time.
         /// </summary>
-        public static string SplashScreenLoadingTimeLabel {
-            get {
+        public static string SplashScreenLoadingTimeLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenLoadingTimeLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Don&apos;t show this again.
         /// </summary>
-        public static string SplashScreenShowScreenAgainLabel {
-            get {
+        public static string SplashScreenShowScreenAgainLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenShowScreenAgainLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign In.
         /// </summary>
-        public static string SplashScreenSignIn {
-            get {
+        public static string SplashScreenSignIn
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenSignIn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Signing In.
         /// </summary>
-        public static string SplashScreenSigningIn {
-            get {
+        public static string SplashScreenSigningIn
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenSigningIn", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sign Out.
         /// </summary>
-        public static string SplashScreenSignOut {
-            get {
+        public static string SplashScreenSignOut
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenSignOut", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Total loading time:.
         /// </summary>
-        public static string SplashScreenTotalLoadingTimeLabel {
-            get {
+        public static string SplashScreenTotalLoadingTimeLabel
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenTotalLoadingTimeLabel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Loading View Extensions....
         /// </summary>
-        public static string SplashScreenViewExtensions {
-            get {
+        public static string SplashScreenViewExtensions
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenViewExtensions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Welcome to Dynamo!.
         /// </summary>
-        public static string SplashScreenWelcomeToDynamo {
-            get {
+        public static string SplashScreenWelcomeToDynamo
+        {
+            get
+            {
                 return ResourceManager.GetString("SplashScreenWelcomeToDynamo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Advanced Tutorials.
         /// </summary>
-        public static string StartPageAdvancedTutorials {
-            get {
+        public static string StartPageAdvancedTutorials
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageAdvancedTutorials", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ASK.
         /// </summary>
-        public static string StartPageAsk {
-            get {
+        public static string StartPageAsk
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageAsk", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Backup location.
         /// </summary>
-        public static string StartPageBackupLocation {
-            get {
+        public static string StartPageBackupLocation
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageBackupLocation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to BACKUP.
         /// </summary>
-        public static string StartPageBackupNoCrash {
-            get {
+        public static string StartPageBackupNoCrash
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageBackupNoCrash", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to RECOVER FROM BACKUP.
         /// </summary>
-        public static string StartPageBackupOnCrash {
-            get {
+        public static string StartPageBackupOnCrash
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageBackupOnCrash", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CODE.
         /// </summary>
-        public static string StartPageCode {
-            get {
+        public static string StartPageCode
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageCode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Discussion forum.
         /// </summary>
-        public static string StartPageDiscussionForum {
-            get {
+        public static string StartPageDiscussionForum
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageDiscussionForum", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo Dictionary.
         /// </summary>
-        public static string StartPageDynamoDictionary {
-            get {
+        public static string StartPageDynamoDictionary
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageDynamoDictionary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo Primer.
         /// </summary>
-        public static string StartPageDynamoPrimer {
-            get {
+        public static string StartPageDynamoPrimer
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageDynamoPrimer", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to FILES.
         /// </summary>
-        public static string StartPageFiles {
-            get {
+        public static string StartPageFiles
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageFiles", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Github repository.
         /// </summary>
-        public static string StartPageGithubRepository {
-            get {
+        public static string StartPageGithubRepository
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageGithubRepository", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to More Samples.
         /// </summary>
-        public static string StartPageMoreSamples {
-            get {
+        public static string StartPageMoreSamples
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageMoreSamples", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Custom Node.
         /// </summary>
-        public static string StartPageNewCustomNode {
-            get {
+        public static string StartPageNewCustomNode
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageNewCustomNode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
-        public static string StartPageNewFile {
-            get {
+        public static string StartPageNewFile
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageNewFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
-        public static string StartPageOpenFile {
-            get {
+        public static string StartPageOpenFile
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageOpenFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to RECENT.
         /// </summary>
-        public static string StartPageRecent {
-            get {
+        public static string StartPageRecent
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageRecent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to REFERENCE.
         /// </summary>
-        public static string StartPageReference {
-            get {
+        public static string StartPageReference
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageReference", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SAMPLES.
         /// </summary>
-        public static string StartPageSamples {
-            get {
+        public static string StartPageSamples
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageSamples", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Send issues.
         /// </summary>
-        public static string StartPageSendIssues {
-            get {
+        public static string StartPageSendIssues
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageSendIssues", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Samples In Folder.
         /// </summary>
-        public static string StartPageShowSamples {
-            get {
+        public static string StartPageShowSamples
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageShowSamples", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Video Tutorials.
         /// </summary>
-        public static string StartPageVideoTutorials {
-            get {
+        public static string StartPageVideoTutorials
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageVideoTutorials", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} website.
         /// </summary>
-        public static string StartPageVisitWebsite {
-            get {
+        public static string StartPageVisitWebsite
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageVisitWebsite", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Getting Started.
         /// </summary>
-        public static string StartPageWhatsNew {
-            get {
+        public static string StartPageWhatsNew
+        {
+            get
+            {
                 return ResourceManager.GetString("StartPageWhatsNew", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start Tour.
         /// </summary>
-        public static string StartTourButtonText {
-            get {
+        public static string StartTourButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("StartTourButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit....
         /// </summary>
-        public static string StringInputNodeEditMenu {
-            get {
+        public static string StringInputNodeEditMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("StringInputNodeEditMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to [Read-Only] .
         /// </summary>
-        public static string TabFileNameReadOnlyPrefix {
-            get {
+        public static string TabFileNameReadOnlyPrefix
+        {
+            get
+            {
                 return ResourceManager.GetString("TabFileNameReadOnlyPrefix", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to I Accept.
         /// </summary>
-        public static string TermsOfUseAcceptButton {
-            get {
+        public static string TermsOfUseAcceptButton
+        {
+            get
+            {
                 return ResourceManager.GetString("TermsOfUseAcceptButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to I Decline.
         /// </summary>
-        public static string TermsOfUseDeclineButton {
-            get {
+        public static string TermsOfUseDeclineButton
+        {
+            get
+            {
                 return ResourceManager.GetString("TermsOfUseDeclineButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package Manager Terms of Use.
         /// </summary>
-        public static string TermsOfUseViewTitle {
-            get {
+        public static string TermsOfUseViewTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("TermsOfUseViewTitle", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to File in use.
+        /// </summary>
+        public static string TitleFileInUse
+        {
+            get
+            {
+                return ResourceManager.GetString("TitleFileInUse", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Package Host Error.
         /// </summary>
-        public static string TitlePackageTargetOtherHost {
-            get {
+        public static string TitlePackageTargetOtherHost
+        {
+            get
+            {
                 return ResourceManager.GetString("TitlePackageTargetOtherHost", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to {0} of {1}.
         /// </summary>
-        public static string TooltipCurrentIndex {
-            get {
+        public static string TooltipCurrentIndex
+        {
+            get
+            {
                 return ResourceManager.GetString("TooltipCurrentIndex", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to of.
         /// </summary>
-        public static string TourLabelProgressText {
-            get {
+        public static string TourLabelProgressText
+        {
+            get
+            {
                 return ResourceManager.GetString("TourLabelProgressText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to A problem occurred when trying to access the location. Dynamo is unable to obtain read/write access to
         ///{0}.
         /// </summary>
-        public static string TrustedLocationNotAccessible {
-            get {
+        public static string TrustedLocationNotAccessible
+        {
+            get
+            {
                 return ResourceManager.GetString("TrustedLocationNotAccessible", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Trusted File Locations.
         /// </summary>
-        public static string TrustedPathsExpanderName {
-            get {
+        public static string TrustedPathsExpanderName
+        {
+            get
+            {
                 return ResourceManager.GetString("TrustedPathsExpanderName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You have trusted file location:
         ///{0}.
         /// </summary>
-        public static string TrustLocationAddedNotification {
-            get {
+        public static string TrustLocationAddedNotification
+        {
+            get
+            {
                 return ResourceManager.GetString("TrustLocationAddedNotification", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File location was not added to trusted locations..
         /// </summary>
-        public static string TrustLocationSkippedNotification {
-            get {
+        public static string TrustLocationSkippedNotification
+        {
+            get
+            {
                 return ResourceManager.GetString("TrustLocationSkippedNotification", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unable To Access Package Directory.
         /// </summary>
-        public static string UnableToAccessPackageDirectory {
-            get {
+        public static string UnableToAccessPackageDirectory
+        {
+            get
+            {
                 return ResourceManager.GetString("UnableToAccessPackageDirectory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unable To Access Directory.
         /// </summary>
-        public static string UnableToAccessTrustedDirectory {
-            get {
+        public static string UnableToAccessTrustedDirectory
+        {
+            get
+            {
                 return ResourceManager.GetString("UnableToAccessTrustedDirectory", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Removing Package Deprecation.
         /// </summary>
-        public static string UndeprecatingPackageMessageBoxTitle {
-            get {
+        public static string UndeprecatingPackageMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("UndeprecatingPackageMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo cannot ungroup when there is no parent group..
         /// </summary>
-        public static string UngroupParentGroupWarning {
-            get {
+        public static string UngroupParentGroupWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("UngroupParentGroupWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Uninstall loaded package.
         /// </summary>
-        public static string UninstallLoadedPackage {
-            get {
+        public static string UninstallLoadedPackage
+        {
+            get
+            {
                 return ResourceManager.GetString("UninstallLoadedPackage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Uninstall loaded packages.
         /// </summary>
-        public static string UninstallLoadedPackages {
-            get {
+        public static string UninstallLoadedPackages
+        {
+            get
+            {
                 return ResourceManager.GetString("UninstallLoadedPackages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Acres.
         /// </summary>
-        public static string UnitAcres {
-            get {
+        public static string UnitAcres
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitAcres", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Area.
         /// </summary>
-        public static string UnitArea {
-            get {
+        public static string UnitArea
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitArea", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Centimeters.
         /// </summary>
-        public static string UnitCentimeters {
-            get {
+        public static string UnitCentimeters
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCentimeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicCentimeter.
         /// </summary>
-        public static string UnitCubicCentimeter {
-            get {
+        public static string UnitCubicCentimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicCentimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicFoot.
         /// </summary>
-        public static string UnitCubicFoot {
-            get {
+        public static string UnitCubicFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicInches.
         /// </summary>
-        public static string UnitCubicInches {
-            get {
+        public static string UnitCubicInches
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicInches", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicMeters.
         /// </summary>
-        public static string UnitCubicMeters {
-            get {
+        public static string UnitCubicMeters
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicMeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicMillimeter.
         /// </summary>
-        public static string UnitCubicMillimeter {
-            get {
+        public static string UnitCubicMillimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicMillimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CubicYards.
         /// </summary>
-        public static string UnitCubicYards {
-            get {
+        public static string UnitCubicYards
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitCubicYards", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Decimeters.
         /// </summary>
-        public static string UnitDecimeters {
-            get {
+        public static string UnitDecimeters
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitDecimeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Feet.
         /// </summary>
-        public static string UnitFeet {
-            get {
+        public static string UnitFeet
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitFeet", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hectares.
         /// </summary>
-        public static string UnitHectares {
-            get {
+        public static string UnitHectares
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitHectares", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Inches.
         /// </summary>
-        public static string UnitInches {
-            get {
+        public static string UnitInches
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitInches", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Length.
         /// </summary>
-        public static string UnitLength {
-            get {
+        public static string UnitLength
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitLength", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Litres.
         /// </summary>
-        public static string UnitLitres {
-            get {
+        public static string UnitLitres
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitLitres", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Meters.
         /// </summary>
-        public static string UnitMeters {
-            get {
+        public static string UnitMeters
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitMeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Millimeters.
         /// </summary>
-        public static string UnitMillimeters {
-            get {
+        public static string UnitMillimeters
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitMillimeters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Units:.
         /// </summary>
-        public static string Units {
-            get {
+        public static string Units
+        {
+            get
+            {
                 return ResourceManager.GetString("Units", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SquareCentimeter.
         /// </summary>
-        public static string UnitSquareCentimeter {
-            get {
+        public static string UnitSquareCentimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitSquareCentimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SquareFoot.
         /// </summary>
-        public static string UnitSquareFoot {
-            get {
+        public static string UnitSquareFoot
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitSquareFoot", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SquareInch.
         /// </summary>
-        public static string UnitSquareInch {
-            get {
+        public static string UnitSquareInch
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitSquareInch", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SquareMeter.
         /// </summary>
-        public static string UnitSquareMeter {
-            get {
+        public static string UnitSquareMeter
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitSquareMeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SquareMillimeter.
         /// </summary>
-        public static string UnitSquareMillimeter {
-            get {
+        public static string UnitSquareMillimeter
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitSquareMillimeter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to USGallons.
         /// </summary>
-        public static string UnitUSGallons {
-            get {
+        public static string UnitUSGallons
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitUSGallons", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Volume.
         /// </summary>
-        public static string UnitVolume {
-            get {
+        public static string UnitVolume
+        {
+            get
+            {
                 return ResourceManager.GetString("UnitVolume", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unknown date format.
         /// </summary>
-        public static string UnknowDateFormat {
-            get {
+        public static string UnknowDateFormat
+        {
+            get
+            {
                 return ResourceManager.GetString("UnknowDateFormat", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unload Failure.
         /// </summary>
-        public static string UnloadFailureMessageBoxTitle {
-            get {
+        public static string UnloadFailureMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("UnloadFailureMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unpin this note from the node.
         /// </summary>
-        public static string UnpinNodeTooltip {
-            get {
+        public static string UnpinNodeTooltip
+        {
+            get
+            {
                 return ResourceManager.GetString("UnpinNodeTooltip", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unsaved changes.
         /// </summary>
-        public static string UnsavedChangesMessageBoxTitle {
-            get {
+        public static string UnsavedChangesMessageBoxTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("UnsavedChangesMessageBoxTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set Python Engine.
         /// </summary>
-        public static string UpdateAllPythonEngineMainMenuHeader {
-            get {
+        public static string UpdateAllPythonEngineMainMenuHeader
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateAllPythonEngineMainMenuHeader", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Update all {0} python nodes in the current workspace to use {1} engine?.
         /// </summary>
-        public static string UpdateAllPythonEngineWarning {
-            get {
+        public static string UpdateAllPythonEngineWarning
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateAllPythonEngineWarning", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Update All Python Nodes.
         /// </summary>
-        public static string UpdateAllPythonEngineWarningTitle {
-            get {
+        public static string UpdateAllPythonEngineWarningTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateAllPythonEngineWarningTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An update is available for Dynamo.
         ///Installing the latest update requires Dynamo and any host applications to close.
         ///Do you want to install the latest Dynamo update?.
         /// </summary>
-        public static string UpdateMessage {
-            get {
+        public static string UpdateMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Update Node Icons.
         /// </summary>
-        public static string UpdateNodeIconsDebugMenu {
-            get {
+        public static string UpdateNodeIconsDebugMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateNodeIconsDebugMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Agreements for Data Collection.
         /// </summary>
-        public static string UsageReportPromptDialogTitle {
-            get {
+        public static string UsageReportPromptDialogTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("UsageReportPromptDialogTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keep 1 input list&apos;s nesting.
         /// </summary>
-        public static string UseLevelKeepListStructureHint {
-            get {
+        public static string UseLevelKeepListStructureHint
+        {
+            get
+            {
                 return ResourceManager.GetString("UseLevelKeepListStructureHint", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Keep list structure.
         /// </summary>
-        public static string UseLevelKeepListStructurePopupMenuItem {
-            get {
+        public static string UseLevelKeepListStructurePopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("UseLevelKeepListStructurePopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use Levels.
         /// </summary>
-        public static string UseLevelPopupMenuItem {
-            get {
+        public static string UseLevelPopupMenuItem
+        {
+            get
+            {
                 return ResourceManager.GetString("UseLevelPopupMenuItem", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to At least one of your version values must be greater than 0..
         /// </summary>
-        public static string VersionValueGreaterThan0 {
-            get {
+        public static string VersionValueGreaterThan0
+        {
+            get
+            {
                 return ResourceManager.GetString("VersionValueGreaterThan0", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] vsDynamoMesh {
-            get {
+        public static byte[] vsDynamoMesh
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("vsDynamoMesh", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static byte[] vsDynamoPointLine {
-            get {
+        public static byte[] vsDynamoPointLine
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("vsDynamoPointLine", resourceCulture);
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Pan.
         /// </summary>
-        public static string Watch3DViewContextMenuPan {
-            get {
+        public static string Watch3DViewContextMenuPan
+        {
+            get
+            {
                 return ResourceManager.GetString("Watch3DViewContextMenuPan", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Rotate.
         /// </summary>
-        public static string Watch3DViewContextMenuRotate {
-            get {
+        public static string Watch3DViewContextMenuRotate
+        {
+            get
+            {
                 return ResourceManager.GetString("Watch3DViewContextMenuRotate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Switch to Node _View.
         /// </summary>
-        public static string Watch3DViewContextMenuSwitchView {
-            get {
+        public static string Watch3DViewContextMenuSwitchView
+        {
+            get
+            {
                 return ResourceManager.GetString("Watch3DViewContextMenuSwitchView", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to _Zoom to Fit.
         /// </summary>
-        public static string Watch3DViewContextMenuZoomToFit {
-            get {
+        public static string Watch3DViewContextMenuZoomToFit
+        {
+            get
+            {
                 return ResourceManager.GetString("Watch3DViewContextMenuZoomToFit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show Raw Data.
         /// </summary>
-        public static string WatchNodeRawDataMenu {
-            get {
+        public static string WatchNodeRawDataMenu
+        {
+            get
+            {
                 return ResourceManager.GetString("WatchNodeRawDataMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Dynamo requires WebView2 Evergreen Runtime, which is not installed on your computer. Please use the link below to download the Evergreen Standalone Installer and install the program. Then relaunch Dynamo. \n\n#WebView2 Runtime Installer=https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-sectionedge/webview2/#download-section.
         /// </summary>
-        public static string WebView2RequiredMessage {
-            get {
+        public static string WebView2RequiredMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("WebView2RequiredMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to WebView2 Required.
         /// </summary>
-        public static string WebView2RequiredTitle {
-            get {
+        public static string WebView2RequiredTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("WebView2RequiredTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspaces cannot be saved directly to the Templates folder. Please choose a different folder to save your file.
         ///To make this file into a new template, save it to a different folder, then move it to the Templates folder..
         /// </summary>
-        public static string WorkspaceSaveTemplateDirectoryBlockMsg {
-            get {
+        public static string WorkspaceSaveTemplateDirectoryBlockMsg
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceSaveTemplateDirectoryBlockMsg", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Invalid Save Path.
         /// </summary>
-        public static string WorkspaceSaveTemplateDirectoryBlockTitle {
-            get {
+        public static string WorkspaceSaveTemplateDirectoryBlockTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceSaveTemplateDirectoryBlockTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You haven&apos;t saved this file yet..
         /// </summary>
-        public static string WorkspaceTabNotSavedYet {
-            get {
+        public static string WorkspaceTabNotSavedYet
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceTabNotSavedYet", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This is a brand new file..
         /// </summary>
-        public static string WorkspaceTabSavingBrandNewFile {
-            get {
+        public static string WorkspaceTabSavingBrandNewFile
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceTabSavingBrandNewFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You need to save updates to this file..
         /// </summary>
-        public static string WorkspaceTabSavingNecessary {
-            get {
+        public static string WorkspaceTabSavingNecessary
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceTabSavingNecessary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No need to save!.
         /// </summary>
-        public static string WorkspaceTabSavingUnnecessary {
-            get {
+        public static string WorkspaceTabSavingUnnecessary
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceTabSavingUnnecessary", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unsaved.
         /// </summary>
-        public static string WorkspaceTabTooltipHeaderUnsaved {
-            get {
+        public static string WorkspaceTabTooltipHeaderUnsaved
+        {
+            get
+            {
                 return ResourceManager.GetString("WorkspaceTabTooltipHeaderUnsaved", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to DLL.
         /// </summary>
-        public static string ZeroTouchTypeShortString {
-            get {
+        public static string ZeroTouchTypeShortString
+        {
+            get
+            {
                 return ResourceManager.GetString("ZeroTouchTypeShortString", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 0.4.
         /// </summary>
-        public static string ZoomLevel {
-            get {
+        public static string ZoomLevel
+        {
+            get
+            {
                 return ResourceManager.GetString("ZoomLevel", resourceCulture);
             }
         }

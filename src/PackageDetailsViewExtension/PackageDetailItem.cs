@@ -16,6 +16,21 @@ namespace Dynamo.PackageDetails
     }
 
     /// <summary>
+    /// A simple utility class to allow an easier display of package version compatibility information
+    /// </summary>
+    public class FlattenedCompatibility
+    {
+        /// <summary>
+        /// The Dynamo/Host name to be compatible with - "Dynamo", "Revit", "Civil3D" ..
+        /// </summary>
+        public string CompatibilityName { get; set; }
+        /// <summary>
+        /// The string representation of the numerical version of the package - "1.0.0"
+        /// </summary>
+        public string Versions { get; set; }
+    }
+
+    /// <summary>
     /// A wrapper class for a PackageVersion object, used in the PackageDetailsExtension.
     /// </summary>
     public class PackageDetailItem : NotificationObject
@@ -34,9 +49,10 @@ namespace Dynamo.PackageDetails
         private string packageName;
         private string packageSize;
         private string created;
-        private List<FlattenedCompatibility> versionInfos;
+        private List<FlattenedCompatibility> versionInformation;
         private bool? isCompatible;
         private string releaseNotes;
+        private bool isExpanded;
 
         private PackageLoader PackageLoader { get; }
 
@@ -204,18 +220,21 @@ namespace Dynamo.PackageDetails
         }
 
         /// <summary>
-        /// Version infos (WIP)
+        /// A flattened collection of VersionInformation
         /// </summary>
-        public List<FlattenedCompatibility> VersionInfos
+        public List<FlattenedCompatibility> VersionInformation
         {
-            get => versionInfos;
+            get => versionInformation;
             set
             {
-                versionInfos = value;
-                RaisePropertyChanged(nameof(VersionInfos));
+                versionInformation = value;
+                RaisePropertyChanged(nameof(VersionInformation));
             }
         }
 
+        /// <summary>
+        /// If the current version is compatible, incompatible or with unknown compatibility
+        /// </summary>
         public bool? IsCompatible
         {
             get => isCompatible;
@@ -239,6 +258,19 @@ namespace Dynamo.PackageDetails
             }
         }
 
+        /// <summary>
+        /// Controls the package detail item expanded state
+        /// </summary>
+        public bool IsExpanded
+        {
+            get => isExpanded;
+            set
+            {
+                isExpanded = value;
+                RaisePropertyChanged(nameof(IsExpanded));
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -259,8 +291,7 @@ namespace Dynamo.PackageDetails
             this.IsEnabledForInstall = isEnabledForInstall && canInstall;
             this.PackageSize = string.IsNullOrEmpty(PackageVersion.size) ? "--" : PackageVersion.size;
             this.Created = GetFormattedDate(PackageVersion.created);
-            this.VersionInfos = GetFlattenedCompatibilityInfos(versionInfos);
-            this.IsCompatible = VersionInfo.GetVersionCompatibility(versionInfos, PackageVersionNumber);
+            this.VersionInformation = GetFlattenedCompatibilityInformation(packageVersion.compatibility_matrix);
             this.ReleaseNotes = PackageVersion.release_notes_url;
 
             // To avoid displaying package self-dependencies.
@@ -357,6 +388,127 @@ namespace Dynamo.PackageDetails
         }
 
         /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="versionDetails"></param>
+        /// <param name="packageName"></param>
+        /// <param name="packageVersion"></param>
+        /// <param name="canInstall"></param>
+        /// <param name="isEnabledForInstall">True, if package is not already downloaded, is not deprecated, and package loading is allowed.</param>
+        public PackageDetailItem(List<VersionInformation> versionDetails, string packageName, PackageVersion packageVersion, bool canInstall, bool isEnabledForInstall = true)
+        {
+            this.PackageName = packageName;
+            this.PackageVersion = packageVersion;
+            this.PackageVersionNumber = PackageVersion.version;
+            this.CopyRightHolder = PackageVersion.copyright_holder;
+            this.CopyRightYear = PackageVersion.copyright_year;
+            this.CanInstall = canInstall;
+            this.IsEnabledForInstall = isEnabledForInstall && canInstall;
+            this.PackageSize = string.IsNullOrEmpty(PackageVersion.size) ? "--" : PackageVersion.size;
+            this.Created = GetFormattedDate(PackageVersion.created);
+            this.VersionInformation = GetFlattenedCompatibilityInformation(packageVersion.compatibility_matrix);
+            this.IsCompatible = PackageManager.VersionInformation.GetVersionCompatibility(versionDetails, PackageVersionNumber);
+            this.ReleaseNotes = PackageVersion.release_notes_url;
+
+            // To avoid displaying package self-dependencies.
+            // For instance, avoiding Clockwork showing that it depends on Clockwork.
+            this.Packages = PackageVersion.full_dependency_ids
+                .Select(x => x.name)
+                .Where(x => x != PackageName)
+                .ToList();
+
+            DetectDependencies();
+        }
+
+        /// <summary>
+        /// Flattens the list of compatibility information from a collection of version infos.
+        /// Each compatibility entry is represented by its name and associated versions.
+        /// </summary>
+        /// <param name="versionDetails">A list of version compatibility information. Each entry contains a compatibility name, version range, and version list.</param>
+        /// <returns>A list of <see cref="FlattenedCompatibility"/> objects, each representing a flattened compatibility with its name and formatted versions.</returns>
+        private List<FlattenedCompatibility> GetFlattenedCompatibilityInformation(List<Greg.Responses.Compatibility> versionDetails)
+        {
+            var flattenedCompatibilities = new List<FlattenedCompatibility>();
+            try
+            {   
+                foreach (var versionInformation in versionDetails)
+                {
+                    // Add each compatibility dynamically based on the name
+                    flattenedCompatibilities.Add(new FlattenedCompatibility
+                    {
+                        CompatibilityName = CapitalizeFirstLetter(versionInformation.name),
+                        Versions = FormatVersionString(versionInformation)
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }   
+
+            return flattenedCompatibilities;
+        }
+
+        /// <summary>
+        /// Formats the version information from a <see cref="Greg.Responses.Compatibility"/> object into a single string.
+        /// Combines the minimum and maximum versions with the version list if available.
+        /// </summary>
+        /// <param name="compatibility">The <see cref="Greg.Responses.Compatibility"/> object containing versioning information.</param>
+        /// <returns>A formatted string representing the version range and individual versions, or a comma-delimited string of versions if no range is provided.</returns>
+        private string FormatVersionString(Greg.Responses.Compatibility compatibility)
+        {
+            var hasVersions = compatibility.versions != null && compatibility.versions.Any();
+
+            if (!string.IsNullOrEmpty(compatibility.min) && !string.IsNullOrEmpty(compatibility.max) && hasVersions)
+            {
+                return $"{compatibility.min} - {compatibility.max}, {string.Join(", ", compatibility.versions)}";
+            }
+            else if (!string.IsNullOrEmpty(compatibility.min) && !string.IsNullOrEmpty(compatibility.max))
+            {
+                return $"{compatibility.min} - {compatibility.max}";
+            }
+            else if (hasVersions)
+            {
+                return string.Join(", ", compatibility.versions);
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Try parse a date string in a preferred format
+        /// </summary>
+        /// <param name="dateString"></param>
+        /// <returns></returns>
+        private string GetFormattedDate(string dateString)
+        {
+            if (String.IsNullOrEmpty(dateString)) return string.Empty;
+
+            DateTime parsedDate;
+
+            // Attempt to parse using a preferred format (ISO 8601, for example)
+            string[] preferredFormats = { "yyyy-MM-ddTHH:mm:ss.fffZ", "yyyy-MM-ddTHH:mm:ssZ" };
+
+            foreach (var format in preferredFormats)
+            {
+                if (DateTime.TryParseExact(dateString, format, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out parsedDate))
+                {
+                    return parsedDate.ToString("dd MMM yyyy");
+                }
+            }
+
+            // Fallback to the more flexible DateTime parsing
+            if (DateTime.TryParse(dateString, out parsedDate))
+            {
+                return parsedDate.ToString("dd MMM yyyy");
+            }
+
+            return string.Empty;
+        }
+
+        /// <summary>
         /// Reads the GregResponse collection of dependency information and sets values
         /// for PythonVersion and Hosts respectively.
         /// </summary>
@@ -383,6 +535,14 @@ namespace Dynamo.PackageDetails
 
             PythonVersion = pythonEngineVersions.Count > 0 ? string.Join(", ", pythonEngineVersions) : Dynamo.Properties.Resources.NoneString;
             Hosts = hostDependencies.Count > 0 ? string.Join(", ", hostDependencies) : Dynamo.Properties.Resources.NoneString;
+        }
+
+        private static string CapitalizeFirstLetter(string word)
+        {
+            if (string.IsNullOrEmpty(word))
+                return word;
+
+            return char.ToUpper(word[0]) + word.Substring(1);
         }
     }
 }
