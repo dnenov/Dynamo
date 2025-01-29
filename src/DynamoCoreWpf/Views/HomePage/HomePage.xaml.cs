@@ -30,7 +30,8 @@ namespace Dynamo.UI.Views
     public partial class HomePage : UserControl, IDisposable
     {
         private static readonly string htmlEmbeddedFile = "Dynamo.Wpf.Packages.DynamoHome.build.index.html";
-        private static readonly string jsEmbeddedFile = "Dynamo.Wpf.Packages.DynamoHome.build.index.bundle.js";
+        private static readonly string jsEmbeddedFile = "Dynamo.Wpf.Packages.DynamoHome.index.bundle.js";
+        //private static readonly string jsEmbeddedFile = "Dynamo.Wpf.Packages.DynamoHome.build.index.bundle.js";
         private static readonly string fontStylePath = "Dynamo.Wpf.Views.GuidedTour.HtmlPages.Resources.ArtifaktElement-Regular.woff";
         private static readonly string virtualFolderName = "embeddedFonts";
         private static readonly string fontUrl = $"http://{virtualFolderName}/ArtifaktElement-Regular.woff";
@@ -314,6 +315,10 @@ namespace Dynamo.UI.Views
 
                     await dynWebView.CoreWebView2.ExecuteScriptAsync(@$"window.setHomePageSettings('{settingsJson}');");
                 }
+
+                // Set side pane min width
+                await dynWebView.CoreWebView2
+                    .ExecuteScriptAsync(@$"window.setSidePaneMinWidth('{startPage.DynamoViewModel.PreferenceSettings.HomePageMinWidth.ToString()}')");
             }
 
             // Load recent files

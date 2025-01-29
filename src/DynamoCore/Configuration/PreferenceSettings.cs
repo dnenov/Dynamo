@@ -403,6 +403,12 @@ namespace Dynamo.Configuration
         /// Persistence for Dynamo HomePage
         /// </summary>  
         public List<string> HomePageSettings { get; set; }
+
+        /// <summary>
+        /// The minimum HomePage side pane width 
+        /// </summary>
+        public double HomePageMinWidth { get; set; }
+
         #endregion
 
         #region Dynamo application settings
@@ -991,6 +997,7 @@ namespace Dynamo.Configuration
             GraphChecksumItemsList = new List<GraphChecksumItem>();
             isMLAutocompleteTOUApproved = true;
             HomePageSettings = new List<string>();
+            HomePageMinWidth = 250;
         }
 
         /// <summary>
