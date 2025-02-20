@@ -362,8 +362,42 @@ namespace Dynamo.Wpf.ViewModels
         {
             if (Clicked != null)
             {
-                var nodeModel = Model.CreateNode();
-                Clicked(nodeModel, Position);
+                // Try to create the node based on the search element from in-Canvas search
+                // The node creation can fail if the node constructor dependencies are not found or other reasons.
+                // This is a best effort to create the node and log the error both in console and toast notification if it fails.
+                try
+                {
+                    var newNode = Model.CreateNode();
+
+                    // check to make sure a custom node cannot be added to its own workspace.
+                    var dynamoViewModel = searchViewModel.dynamoViewModel;
+                    var homeworkspace = dynamoViewModel.HomeSpaceViewModel;
+
+                    if (newNode.IsCustomFunction && dynamoViewModel.CurrentSpace is CustomNodeWorkspaceModel customNodeWorkspaceModel)
+                    {
+                        var nodeGuid = Guid.Parse(newNode.CreationName);
+
+                        if (nodeGuid.Equals(customNodeWorkspaceModel.CustomNodeId))
+                        {
+                            if (!customNodeWorkspaceModel.Nodes.Any(n => n.GetOriginalName().Contains("ScopeIf")))
+                            {
+                                dynamoViewModel.MainGuideManager.CreateRealTimeInfoWindow(Properties.Resources.CannotAddNodeToWorkspace);
+                                return;
+                            }
+                            else
+                            {
+                                homeworkspace.RunSettingsViewModel.Model.RunType = RunType.Manual;
+                            }
+                        }
+                    }
+
+                    Clicked(newNode, Position);
+                }
+                catch (Exception ex)
+                {
+                    searchViewModel.dynamoViewModel.Model.Logger.Log("Failed to create node from search element: " + Model.Name + "\n" + ex.Message);
+                    searchViewModel.dynamoViewModel.MainGuideManager.CreateRealTimeInfoWindow(Wpf.Properties.Resources.NodeInCanvasSearchCreationError + Model.Name, true);
+                }
             }
         }
 

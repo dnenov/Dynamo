@@ -164,7 +164,7 @@ namespace NodeDocumentationMarkdownGeneratorTests
             FromDirectoryCommand.HandleDocumentationFromDirectory(opts);
 
             var generatedFileNames = tempDirectory.GetFiles().Select(x => x.Name);
-            Assert.AreEqual(685, generatedFileNames.Count());
+            Assert.AreEqual(754, generatedFileNames.Count());
         }
 
         [Test]
@@ -225,7 +225,9 @@ namespace NodeDocumentationMarkdownGeneratorTests
 
             // Arrange
             var testOutputDirName = "TestMdOutput_CoreNodeModels";
- 
+            //these are new files/nodes so there is no dictionary content fo them.
+            var filesToSkip = new string[] { "CoreNodeModels.FormattedStringFromObject", "CoreNodeModels.FormattedStringFromArray" };
+                
             var coreNodeModelsDll = Path.Combine(DynamoCoreNodesDir, CORENODEMODELS_DLL_NAME);
             Assert.That(File.Exists(coreNodeModelsDll));
 
@@ -250,8 +252,8 @@ namespace NodeDocumentationMarkdownGeneratorTests
 
             //assert that the generated markdown files all contain an "indepth section" from the dictionary entry, which means
             //they were all found.
-
-            Assert.True(generatedFileNames.Where(x=>Path.GetExtension(x).Contains("md")).All(x => File.ReadAllText(x).ToLower().Contains("in depth")));
+            var generatedFileNamesSubset = generatedFileNames.Where(x => !filesToSkip.Contains(Path.GetFileNameWithoutExtension(x)));
+            Assert.True(generatedFileNamesSubset.Where(x=>Path.GetExtension(x).Contains("md")).All(x => File.ReadAllText(x).ToLower().Contains("in depth")));
           
         }
 
@@ -639,7 +641,7 @@ namespace NodeDocumentationMarkdownGeneratorTests
 
         protected static void SaveCoreLayoutSpecToPath(Assembly assembly, string savePath)
         {
-            var resource = "Dynamo.LibraryViewExtensionWebView2.web.library.layoutSpecs.json";
+            var resource = "Dynamo.LibraryViewExtensionWebView2.Packages.LibrarieJS.layoutSpecs.json";
             assembly = assembly == null ? Assembly.GetExecutingAssembly() : assembly;
             var stream = assembly.GetManifestResourceStream(resource);
             var fs = File.Create(savePath);

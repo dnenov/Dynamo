@@ -69,12 +69,14 @@ namespace DynamoUtilities
             try
             {
                 AllFlagsCache = JsonConvert.DeserializeObject<Dictionary<string, object>>(dataFromCLI);
-                //invoke the flags retrieved event on the sync context which should be the main ui thread.
+                // Invoke the flags retrieved event on the sync context which should be the main ui thread (if in Dynamo with UI) or the default SyncContext (if in headless mode).
                 syncContext?.Send((_) =>
                 {
                     FlagsRetrieved?.Invoke();
 
                 }, null);
+                var formattedFlags = JsonConvert.SerializeObject(AllFlagsCache, Formatting.Indented);
+                OnLogMessage($"retrieved feature flags with value: {formattedFlags}");
 
             }
             catch (Exception e)
@@ -88,11 +90,11 @@ namespace DynamoUtilities
         /// </summary>
         /// <typeparam name="T">Must be a bool or string, only bool or string flags should be created unless this implementation is improved.</typeparam>
         /// <param name="featureFlagKey">feature flag name</param>
-        /// <param name="defaultval">Currently the flag and default val MUST be a bool or string.</param>
+        /// <param name="defaultval">Currently the flag and default val MUST be a bool, or long(int64).</param>
         /// <returns></returns>
         internal T CheckFeatureFlag<T>(string featureFlagKey, T defaultval)
         {
-            if(!(defaultval is bool || defaultval is string)){
+            if(!(defaultval is bool || defaultval is string || defaultval is long)){
                 throw new ArgumentException("unsupported flag type", defaultval.GetType().ToString());
             }
             // if we have not retrieved flags from the cli return empty

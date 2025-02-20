@@ -551,6 +551,27 @@ namespace Dynamo.Tests
 
         [Test]
         [Category("UnitTests")]
+        public void CanOpenTemplateAsNewWorkspace()
+        {
+            // get empty workspace
+            var dynamoModel = ViewModel.Model;
+            Assert.IsNotNull(dynamoModel.CurrentWorkspace);
+
+            // set description
+            dynamoModel.CurrentWorkspace.Description = "dummy description";
+
+            // save
+            var newPath = GetNewFileNameOnTempPath("dyn");
+            dynamoModel.CurrentWorkspace.Save(newPath);
+
+            // load as template
+            ViewModel.Model.OpenTemplateFromPath(newPath);
+            Assert.AreEqual(string.Empty, ViewModel.Model.CurrentWorkspace.FileName);
+            Assert.AreEqual("dummy description", ViewModel.Model.CurrentWorkspace.Description);
+        }
+
+        [Test]
+        [Category("UnitTests")]
         public void CanSaveAndReadWorkspaceName()
         {
             // get empty workspace
@@ -649,7 +670,6 @@ namespace Dynamo.Tests
         }
 
         [Test]
-        [Category("UnitTests")]
         public void RemovePIIDataFromWorkspace()
         {
             string graphWithPIIDataPath = Path.Combine(TestDirectory, (@"UI\GraphWithPIIData.dyn"));
@@ -946,7 +966,7 @@ namespace Dynamo.Tests
             workspace.FileName = GetNewFileNameOnTempPath("dyf");
             // search common base name
             ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.Visible = true;
-            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults("Cool");
+            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask("Cool").Wait();
             // results are correct
             Assert.AreEqual(1, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.Count());
 
@@ -1103,7 +1123,7 @@ namespace Dynamo.Tests
             var newId = nodeWorkspace.CustomNodeDefinition.FunctionId;
 
             ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.Visible = true;
-            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults("Constant2");
+            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask("Constant2").Wait();
             Assert.AreEqual(originalNumElements + 1, ViewModel.Model.SearchModel.NumElements);
 
             Assert.AreEqual(2, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.OfType<CustomNodeSearchElementViewModel>().Count());
@@ -1206,7 +1226,7 @@ namespace Dynamo.Tests
 
             // search for refactored node
             ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.Visible = true;
-            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults("TheNoodle");
+            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask("TheNoodle").Wait();
 
             // results are correct
             Assert.AreEqual(1, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.Count());
@@ -1214,7 +1234,7 @@ namespace Dynamo.Tests
             Assert.AreEqual(newId, node3.ID);
 
             // search for un-refactored node
-            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults("Constant2");
+            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask("Constant2").Wait();
 
             // results are correct
             Assert.AreEqual(1, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.Count());
@@ -1262,7 +1282,7 @@ namespace Dynamo.Tests
 
             // search common base name
             ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.Visible = true;
-            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults("Constant2");
+            ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask("Constant2").Wait();
 
             // results are correct
             Assert.AreEqual(2, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.OfType<CustomNodeSearchElementViewModel>().Count());
@@ -1354,7 +1374,7 @@ namespace Dynamo.Tests
                 Assert.AreEqual(newName, workspace.Name);
 
                 // Verify new name is searchable
-                ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResults(newName);
+                ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.SearchAndUpdateResultsTask(newName).Wait();
                 Assert.AreEqual(1, ViewModel.CurrentSpaceViewModel.InCanvasSearchViewModel.FilteredResults.Count());
 
                 // Verify search element's name is new name
@@ -1519,6 +1539,21 @@ namespace Dynamo.Tests
             //Verify that the CustomNode name remains in the same value that was created previously
             Assert.True(initialNodeName == customNodeInstance.Name);
             Assert.False(Path.GetFileNameWithoutExtension(savePath) == customNodeInstance.Name);
+        }
+
+        /// <summary>
+        /// Workspace checksum test.
+        /// </summary>
+        [Test]
+        public void WorkapceChecksumTest()
+        {
+            var model = ViewModel.Model;
+            var examplePath = Path.Combine(TestDirectory, @"core\math", "Add.dyn");
+            ViewModel.OpenCommand.Execute(examplePath);
+
+            var checksumString = ViewModel.CurrentSpaceViewModel.Checksum;
+
+            Assert.AreEqual("65b395b9874b9d82e088093f30234c496704006030ecf35471404f62b62a6442", checksumString);
         }
         #endregion
     }

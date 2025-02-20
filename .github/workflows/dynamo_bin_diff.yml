@@ -24,7 +24,7 @@ jobs:
       - name: Disable problem matcher
         run: Write-Output "::remove-matcher owner=csc::"
       - name: Setup msbuild
-        uses: microsoft/setup-msbuild@v1.3
+        uses: microsoft/setup-msbuild@v2
       - name: Install dependencies for windows runtime
         run: |
           dotnet restore ${{ github.workspace }}\Dynamo\src\Dynamo.All.sln /p:Configuration=Release --runtime=win-x64 -p:DotNet=net8.0
@@ -41,7 +41,7 @@ jobs:
             Write-Error "DynamoCLI.exe was not found!"
           }
       - name: Cache Current Build
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         with:
           path: |
             ${{ github.workspace }}\Dynamo\bin\AnyCPU\Release
@@ -64,7 +64,7 @@ jobs:
       - name: Disable problem matcher
         run: Write-Output "::remove-matcher owner=csc::"
       - name: Setup msbuild
-        uses: microsoft/setup-msbuild@v1.3
+        uses: microsoft/setup-msbuild@v2
       - name: Install dependencies for windows runtime
         run: |
           dotnet restore ${{ github.workspace }}\master\src\Dynamo.All.sln /p:Configuration=Release --runtime=win-x64 -p:DotNet=net8.0
@@ -81,7 +81,7 @@ jobs:
             Write-Error "DynamoCLI.exe was not found!"
           }
       - name: Cache Master Build
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         with:
           path: ${{ github.workspace }}\master\bin\AnyCPU\Release
           key: ${{ github.run_id }}-${{ github.run_attempt }}-master
@@ -91,7 +91,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Restore Current Build
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           path: |
@@ -99,7 +99,7 @@ jobs:
             ${{ github.workspace }}\Dynamo\.github\scripts
           key: ${{ github.run_id }}-${{ github.run_attempt }}-current
       - name: Restore Master Build
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           path: ${{ github.workspace }}\master\bin\AnyCPU\Release

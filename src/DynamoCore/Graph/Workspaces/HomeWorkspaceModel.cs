@@ -698,11 +698,18 @@ namespace Dynamo.Graph.Workspaces
                 var node = workspace.Nodes.FirstOrDefault(n => n.GUID == guid);
                 if (node == null)
                     continue;
+
+                // Block Infos updates during the many errors/warnings/notifications added here
+                // InfoBubbles will be updated on NodeViewModel's EvaluationCompleted handler.
                 using (node.PropertyChangeManager.SetPropsToSuppress(nameof(NodeModel.Infos), nameof(NodeModel.State)))
+                using (Disposable.Create(() => { node.BlockInfoBubbleUpdates = true; }, () => { node.BlockInfoBubbleUpdates = false; }))
                 {
                     node.Warning(warning.Value); // Update node warning message.
                 }
             }
+
+            // All nodes that have runtime warnings or infos
+            HashSet<Guid> nodesWithInfos = [.. warnings.Keys];
 
             // Update node info message.
             foreach (var info in updateTask.RuntimeInfos)
@@ -711,7 +718,13 @@ namespace Dynamo.Graph.Workspaces
                 var node = workspace.Nodes.FirstOrDefault(n => n.GUID == guid);
                 if (node == null)
                     continue;
+
+                nodesWithInfos.Add(guid);
+
+                // Block Infos updates during the many errors/warnings/notifications added here
+                // InfoBubbles will be updated on NodeViewModel's EvaluationCompleted handler.
                 using (node.PropertyChangeManager.SetPropsToSuppress(nameof(NodeModel.Infos), nameof(NodeModel.State)))
+                using (Disposable.Create(() => { node.BlockInfoBubbleUpdates = true; }, () => { node.BlockInfoBubbleUpdates = false; }))
                 {
                     node.Info(string.Join(Environment.NewLine, info.Value.Select(w => w.Message)));
                 }
@@ -727,8 +740,8 @@ namespace Dynamo.Graph.Workspaces
             // Dispatch the failure message display for execution on UI thread.
             // 
             EvaluationCompletedEventArgs e = task.Exception == null || IsTestMode
-                ? new EvaluationCompletedEventArgs(true,warnings.Keys,null)
-                : new EvaluationCompletedEventArgs(true, warnings.Keys, task.Exception);
+                ? new EvaluationCompletedEventArgs(true, nodesWithInfos, null)
+                : new EvaluationCompletedEventArgs(true, nodesWithInfos, task.Exception);
 
             EvaluationCount ++;
 
@@ -867,7 +880,7 @@ namespace Dynamo.Graph.Workspaces
         /// trace data but do not exist in the current CallSite data.
         /// </summary>
         /// <returns></returns>
-        internal IList<string> GetOrphanedSerializablesAndClearHistoricalTraceData()
+        internal List<string> GetOrphanedSerializablesAndClearHistoricalTraceData()
         {
             var orphans = new List<string>();
 
@@ -878,13 +891,14 @@ namespace Dynamo.Graph.Workspaces
             // then add the serializables for that guid to the list of
             // orphans.
 
+            var nodeLookup = Nodes.Select(n => n.GUID).ToHashSet();
             foreach (var nodeData in historicalTraceData)
             {
                 var nodeGuid = nodeData.Key;
 
-                if (Nodes.All(n => n.GUID != nodeGuid))
+                if (!nodeLookup.Contains(nodeGuid))
                 {
-                    orphans.AddRange(nodeData.Value.SelectMany(CallSite.GetAllSerializablesFromSingleRunTraceData).ToList());
+                    orphans.AddRange(nodeData.Value.SelectMany(CallSite.GetAllSerializablesFromSingleRunTraceData));
                 }
             }
 

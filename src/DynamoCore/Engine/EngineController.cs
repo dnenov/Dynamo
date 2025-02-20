@@ -174,6 +174,7 @@ namespace Dynamo.Engine
 
             liveRunnerServices.Dispose();
             codeCompletionServices = null;
+            CompilationServices = null;
         }
 
         /// <summary>
@@ -389,7 +390,6 @@ namespace Dynamo.Engine
         /// </summary>
         /// <param name="scheduler">The scheduler on which custom node compilation 
         /// task can be scheduled.</param>
-        /// 
         internal void ProcessPendingCustomNodeSyncData(IScheduler scheduler)
         {
             while (pendingCustomNodeSyncData.Count > 0)
@@ -438,7 +438,8 @@ namespace Dynamo.Engine
 
             foreach (var node in nodes)
             {
-                if (!node.IsInputNode) continue;
+                //Ignore inputs, nodes with input ports, and nodes derived from custom nodes.
+                if (!node.IsInputNode || node.InPorts.Any() || node.IsCustomFunction) continue;
 
                 // Only one or the other of the two lists, Added or Modified, will match the node GUID if they do. 
                 bool isAdded = false;
@@ -533,14 +534,14 @@ namespace Dynamo.Engine
             var callsiteToOrphanMap = new Dictionary<Guid, List<string>>();
             foreach (var cs in liveRunnerServices.RuntimeCore.RuntimeData.CallsiteCache.Values)
             {
-                var orphanedSerializables = cs.GetOrphanedSerializables().ToList();
-                if (callsiteToOrphanMap.ContainsKey(cs.CallSiteID))
+                var orphanedSerializables = cs.GetOrphanedSerializables();
+                if (callsiteToOrphanMap.TryGetValue(cs.CallSiteID, out var serializablesForCallsite))
                 {
-                    callsiteToOrphanMap[cs.CallSiteID].AddRange(orphanedSerializables);
+                    serializablesForCallsite.AddRange(orphanedSerializables);
                 }
                 else
                 {
-                    callsiteToOrphanMap.Add(cs.CallSiteID, orphanedSerializables);
+                    callsiteToOrphanMap.Add(cs.CallSiteID, orphanedSerializables.ToList());
                 }
             }
 
