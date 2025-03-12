@@ -991,6 +991,11 @@ namespace Dynamo.Models
 
             LogWarningMessageEvents.LogWarningMessage += LogWarningMessage;
             LogWarningMessageEvents.LogInfoMessage += LogInfoMessage;
+
+#pragma warning disable AUTH_SERVICES
+            AuthServices.RequestAuthProvider += AuthServicesEvents_AuthProviderRequested;
+#pragma warning restore AUTH_SERVICES
+
             DynamoConsoleLogger.LogMessageToDynamoConsole += LogMessageWrapper;
             DynamoConsoleLogger.LogErrorToDynamoConsole += LogErrorMessageWrapper;
             if (!IsServiceMode)
@@ -1018,6 +1023,11 @@ namespace Dynamo.Models
                  
             // This event should only be raised at the end of this method.
             DynamoReady(new ReadyParams(this));
+        }
+
+        private void AuthServicesEvents_AuthProviderRequested(RequestAuthProviderEventArgs args)
+        {
+            args.AuthProvider = AuthenticationManager.AuthProvider;
         }
 
         /// <summary>
@@ -1461,6 +1471,11 @@ namespace Dynamo.Models
 
             LogWarningMessageEvents.LogWarningMessage -= LogWarningMessage;
             LogWarningMessageEvents.LogInfoMessage -= LogInfoMessage;
+
+#pragma warning disable AUTH_SERVICES
+            AuthServices.RequestAuthProvider -= AuthServicesEvents_AuthProviderRequested;
+#pragma warning restore AUTH_SERVICES
+
             DynamoConsoleLogger.LogMessageToDynamoConsole -= LogMessageWrapper;
             DynamoConsoleLogger.LogErrorToDynamoConsole -= LogErrorMessageWrapper;
             foreach (var ws in _workspaces)
@@ -2732,7 +2747,7 @@ namespace Dynamo.Models
                     }
                 }
 
-                if (annotation.Nodes.Any() && !annotation.Nodes.Except(modelsToDelete).Any())
+                if (annotation.Nodes.Any() && !annotation.Nodes.Except(modelsToDelete).Any(n => n is not ConnectorPinModel))
                 {
                     //Annotation Model has to be serialized first - before the nodes.
                     //so, store the Annotation model as first object. This will serialize the
