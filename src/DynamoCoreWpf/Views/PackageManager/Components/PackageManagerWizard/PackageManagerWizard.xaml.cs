@@ -118,6 +118,7 @@ namespace Dynamo.UI.Views
         {
             CompatibilityMap();
             SetLocale();
+            SetDefaultUserNamePreviewValue();
 
             if (_hasPendingUpdates)
             {
@@ -125,6 +126,7 @@ namespace Dynamo.UI.Views
                 UpdateFromBackEnd();
             }
         }
+
 
         private async void SetLocale()
         {
@@ -153,6 +155,7 @@ namespace Dynamo.UI.Views
             {
                 previousViewModel.PropertyChanged -= PublishPackageViewModel_PropertyChanged;
                 previousViewModel.PublishSuccess -= PublishPackageViewModel_PublishSuccess;
+                previousViewModel.UploadCancelled -= OnUploadCancelled;
             }
 
             // Cast and assign the new DataContext
@@ -168,9 +171,10 @@ namespace Dynamo.UI.Views
             {
                 publishPackageViewModel.PropertyChanged += PublishPackageViewModel_PropertyChanged;
                 publishPackageViewModel.PublishSuccess += PublishPackageViewModel_PublishSuccess;
+                previousViewModel.UploadCancelled += OnUploadCancelled;
 
                 // Only send updates if the application has been loaded
-                if(_applicationLoaded) UpdateFromBackEnd();
+                if (_applicationLoaded) UpdateFromBackEnd();
             }
         }
 
@@ -556,6 +560,14 @@ namespace Dynamo.UI.Views
             }
         }
 
+        private async void SendUploadCancel()
+        {
+            if (dynWebView?.CoreWebView2 != null)
+            {
+                await dynWebView.CoreWebView2.ExecuteScriptAsync($"window.receiveUploadCancel();");
+            }
+        }
+
         private async void SendDialogResult(string msg)
         {
             var payload = new { result = msg };
@@ -567,6 +579,20 @@ namespace Dynamo.UI.Views
             }
         }
 
+        private async void SetDefaultUserNamePreviewValue()
+        {
+            if (!string.IsNullOrEmpty(publishPackageViewModel?.DynamoViewModel?.Model?.AuthenticationManager?.Username))
+            {
+                var payload = new { userName = publishPackageViewModel.DynamoViewModel.Model.AuthenticationManager.Username };
+
+                string jsonPayload = Newtonsoft.Json.JsonConvert.SerializeObject(payload, Formatting.None);
+
+                if (dynWebView?.CoreWebView2 != null)
+                {
+                    await dynWebView.CoreWebView2.ExecuteScriptAsync($"window.receiveDefaultUserName({jsonPayload})");
+                }
+            }
+        }
 
         #endregion
 
@@ -713,6 +739,15 @@ namespace Dynamo.UI.Views
                 );
                 if (compatibilityMatrix == null) return;
 
+                // Replace any 'x' in the max field with '*'
+                foreach (var item in compatibilityMatrix)
+                {
+                    if (!string.IsNullOrWhiteSpace(item.max))
+                    {
+                        item.max = item.max.Replace("x", "*");
+                    }
+                }
+
                 publishPackageViewModel.CompatibilityMatrix = compatibilityMatrix;
 
                 LogMessage("Compatibility matrix updated successfully.");
@@ -754,6 +789,8 @@ namespace Dynamo.UI.Views
 
         internal void Submit()
         {
+            PrePopulateDefaultValues();
+
             if (publishPackageViewModel == null) return;
             if (publishPackageViewModel.SubmitCommand?.CanExecute() == true)
             {
@@ -763,6 +800,8 @@ namespace Dynamo.UI.Views
 
         internal void Publish()
         {
+            PrePopulateDefaultValues();
+
             if (publishPackageViewModel == null) return;
             if (publishPackageViewModel.PublishLocallyCommand?.CanExecute() == true)
             {
@@ -814,6 +853,15 @@ namespace Dynamo.UI.Views
             {
                 SendDialogResult("Cancel");
             }
+        }
+
+        /// <summary>
+        ///  Notify the front-end that the upload was cancelled
+        /// </summary>
+        /// <exception cref="NotImplementedException"></exception>
+        private void OnUploadCancelled()
+        {
+           SendUploadCancel();
         }
 
         #endregion
@@ -973,6 +1021,25 @@ namespace Dynamo.UI.Views
             this.publishPackageViewModel?.DynamoViewModel?.Model.Logger.Log(logMessage);
         }
 
+        /// <summary>
+        /// Pre-populate default values for the package details
+        /// </summary>
+        private void PrePopulateDefaultValues()
+        {
+            if (publishPackageViewModel == null) return;
+            if (string.IsNullOrEmpty(publishPackageViewModel.CopyrightYear))
+            {
+                publishPackageViewModel.CopyrightYear = DateTime.Now.Year.ToString();
+            }
+            if (string.IsNullOrEmpty(publishPackageViewModel.License))
+            {
+                publishPackageViewModel.License = "MIT";
+            }
+            if (string.IsNullOrEmpty(publishPackageViewModel.CopyrightHolder))
+            {
+                publishPackageViewModel.CopyrightHolder = publishPackageViewModel.DynamoViewModel.Model.AuthenticationManager.Username;
+            }
+        }
         #endregion
 
         #region Dispose
@@ -1002,6 +1069,7 @@ namespace Dynamo.UI.Views
                     {
                         this.publishPackageViewModel.PropertyChanged -= PublishPackageViewModel_PropertyChanged;
                         this.publishPackageViewModel.PublishSuccess -= PublishPackageViewModel_PublishSuccess;
+                        this.previousViewModel.UploadCancelled -= OnUploadCancelled;
                     }
 
                     if (this.dynWebView != null && this.dynWebView.CoreWebView2 != null)
@@ -1013,6 +1081,7 @@ namespace Dynamo.UI.Views
                 _disposed = true;
             }
         }
+
         #endregion
     }
 

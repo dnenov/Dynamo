@@ -106,6 +106,7 @@ namespace Dynamo.Graph.Nodes
         #endregion
 
         internal const double HeaderHeight = 46;
+        internal const double CustomNodeTopBorderHeight = 8;
         internal static string ExtensionNode = "ExtensionNode";
 
         #region public members
@@ -1004,6 +1005,23 @@ namespace Dynamo.Graph.Nodes
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Return a value indicating whether this node is connected to a transient node.
+        /// </summary>
+        internal bool HasTransientConnections()
+        {
+            var allPorts = InPorts.Concat(OutPorts);
+            foreach (var port in allPorts)
+            {
+                if (port?.HasTransientConnections() is true)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         /// <summary>

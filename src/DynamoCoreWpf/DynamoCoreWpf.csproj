@@ -94,7 +94,7 @@
 
     <Target Name="NpmRunBuildPMWizard" BeforeTargets="BeforeBuild">
         <PropertyGroup>
-            <PackageVersion>0.0.16</PackageVersion>
+            <PackageVersion>0.0.20</PackageVersion>
             <PackageName>PackageManagerWizard</PackageName>
         </PropertyGroup>
         <Exec Command="$(PowerShellCommand) -ExecutionPolicy Bypass -File &quot;$(SolutionDir)pkgexist.ps1&quot; &quot;$(PackageName)&quot; &quot;$(PackageVersion)&quot;" ConsoleToMSBuild="true">
@@ -129,7 +129,6 @@
 
     <ItemGroup>
     <None Remove="Packages\PackageManagerWizard\dist\index.html" />
-    <None Remove="Controls\DNAAutocompleteBar.xaml" />
     <None Remove="Controls\Docs\cs-CZ\FileTrustWarningDocumentation.html" />
     <None Remove="Controls\Docs\cs-CZ\NodeAutocompleteDocumentation.html" />
     <None Remove="Controls\Docs\de-DE\FileTrustWarningDocumentation.html" />
@@ -160,6 +159,9 @@
     <None Remove="Packages\SplashScreen\build\index.html" />
     <None Remove="Packages\DynamoHome\build\index.bundle.js" />
     <None Remove="Packages\DynamoHome\build\index.html" />
+    <None Remove="UI\Images\Annotations\frozen-dark-64px.png" />
+    <None Remove="UI\Images\Annotations\frozen-hover-64px.png" />
+    <None Remove="UI\Images\Annotations\frozen-light-64px.png" />
     <None Remove="UI\Images\Canvas\canvas-button-geometry-scaling.png" />
     <None Remove="UI\Images\caret_down_white_48px.png" />
     <None Remove="UI\Images\caret_up_white_48px.png" />
@@ -490,7 +492,6 @@
     <PackageReference Include="DotNetProjects.Extended.Wpf.Toolkit" Version="5.0.103" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\DNAAutocompleteBar.xaml.cs" />
     <Compile Include="Controls\InstalledPackagesControl.xaml.cs">
       <DependentUpon>InstalledPackagesControl.xaml</DependentUpon>
     </Compile>
@@ -707,7 +708,6 @@
     <Compile Include="Utilities\ActionDebouncer.cs" />
     <Compile Include="ViewModels\Search\BrowserInternalElementViewModel.cs" />
     <Compile Include="ViewModels\Search\BrowserItemViewModel.cs" />
-    <Compile Include="ViewModels\Search\ClusterAutocompleteResult.cs" />
     <Compile Include="ViewModels\Search\NodeAutoCompleteSearchViewModel.cs" />
     <Compile Include="ViewModels\Search\NodeSearchElementViewModel.cs" />
     <Compile Include="ViewModels\Core\StateMachine.cs" />
@@ -898,9 +898,6 @@
     <Compile Include="Windows\ModelessChildWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\DNAAutocompleteBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\InstalledPackagesControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1170,6 +1167,9 @@
     <Resource Include="UI\Images\Alignment\align_x_distribute.png" />
     <Resource Include="UI\Images\Alignment\align_y_average.png" />
     <Resource Include="UI\Images\Alignment\align_y_distribute.png" />
+    <Resource Include="UI\Images\Annotations\frozen-dark-64px.png" />
+    <Resource Include="UI\Images\Annotations\frozen-hover-64px.png" />
+    <Resource Include="UI\Images\Annotations\frozen-light-64px.png" />
     <Resource Include="UI\Images\Canvas\canvas-button-geometry-scaling.png" />
     <Resource Include="UI\Images\caret_down_white_48px.png" />
     <Resource Include="UI\Images\caret_drop_down.png" />

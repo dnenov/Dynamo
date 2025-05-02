@@ -873,9 +873,9 @@ Bez obaw, będziesz mieć możliwość zapisania pracy.</value>
     <value>Błąd publikowania!</value>
   </data>
   <data name="FileNotPublishMessage" xml:space="preserve">
-    <value>Plik(i) nie zostały znalezione lub są zawarte w pakiecie. Proszę dodać tylko pliki, które znajdują się poza pakietami.
+    <value>Pliki nie zostały znalezione lub są zawarte w pakiecie. Dodaj tylko pliki, które znajdują się poza pakietami.
 
-Nie można opublikować pliku(ów):
+Nie można opublikować plików:
 {0}</value>
   </data>
   <data name="FilePathConverterNoFileSelected" xml:space="preserve">
@@ -939,10 +939,10 @@ Nie można opublikować pliku(ów):
     <value>Pomniejsz</value>
   </data>
   <data name="InfoBubbleError" xml:space="preserve">
-    <value>Błąd:</value>
+    <value>Błąd: </value>
   </data>
   <data name="InfoBubbleWarning" xml:space="preserve">
-    <value>Ostrzeżenie:</value>
+    <value>Ostrzeżenie: </value>
   </data>
   <data name="InstalledPackageViewAdditionalFileLabel" xml:space="preserve">
     <value>Dodatkowe pliki</value>
@@ -1185,9 +1185,9 @@ Można później ponownie pobrać pakiet.</value>
 Jeśli nie, to węzeł zostanie przeniesiony do nowego pakietu, który tworzysz.</value>
   </data>
   <data name="MessageToDeprecatePackage" xml:space="preserve">
-    <value>Czy na pewno chcesz wycofać {0}? Żądanie zostanie odrzucone, jeśli użytkownik nie jest administratorem pakietu. Oznacza to, że użytkownik nie będzie już obsługiwać pakietu, mimo że pakiet będzie nadal wyświetlany w wynikach wyszukiwania. 
+    <value>Czy na pewno chcesz wycofać {0}? Żądanie zostanie odrzucone, jeśli nie jesteś administratorem pakietu. Oznacza to, że nie będziesz już obsługiwać pakietu, mimo że pakiet będzie nadal wyświetlany w wynikach wyszukiwania. 
 
-Zawsze można pobrać ponownie wycofane komponenty pakietu.</value>
+Zawsze możesz cofnąć wycofanie pakietu.</value>
   </data>
   <data name="MessageToUndeprecatePackage" xml:space="preserve">
     <value>Czy na pewno chcesz przywrócić {0}? Żądanie zostanie odrzucone, jeśli użytkownik nie jest administratorem pakietu. Oznacza to, że użytkownik będzie nadal obsługiwać pakiet i pakiet będzie wyświetlany, gdy użytkownicy przeglądają pakiety.
@@ -1195,11 +1195,11 @@ Zawsze można pobrać ponownie wycofane komponenty pakietu.</value>
 Zawsze można cofnąć przywrócenie pakietu.</value>
   </data>
   <data name="MessageForceInstallOrUninstallToContinue" xml:space="preserve">
-    <value>Package {0} has one or more dependencies that conflict with the following packages that are in use in the workspace: {1}. Dependency conflicts could cause unintended behavior to occur.
+    <value>Pakiet {0} ma co najmniej jedną zależność powodującą konflikt z następującymi pakietami używanymi w obszarze roboczym: {1}. Konflikty zależności mogą powodować niezamierzone zachowanie.
     
-Do you wish to continue installing it while keeping the packages that are already installed?
+Czy chcesz kontynuować instalację, zachowując pakiety, które są już zainstalowane?
 
-If not, {2} needs to uninstall {1} to continue but cannot as they are in use. Try restarting {2} and download {0} again.</value>
+Jeśli nie, {2} musi odinstalować {1}, aby kontynuować, ale nie może, ponieważ są one używane. Spróbuj ponownie uruchomić {2} i ponownie pobierz {0}.</value>
   </data>
   <data name="MessageForceInstallOrUninstallUponRestart" xml:space="preserve">
     <value>Pakiet {0} ma co najmniej jedną zależność powodującą konflikt z następującymi pakietami: 
@@ -1698,7 +1698,7 @@ Chcesz opublikować inny pakiet?</value>
     <value>Opublikuj pakiet</value>
   </data>
   <data name="PublishPackageViewPublisherWebiSite" xml:space="preserve">
-    <value>Adres URL strony internetowej (opcjonalnie)</value>
+    <value>Adres URL witryny internetowej (opcjonalnie)</value>
   </data>
   <data name="PublishPackageViewRepositoryUrl" xml:space="preserve">
     <value>Adres URL repozytorium (opcjonalnie)</value>
@@ -2036,12 +2036,12 @@ Czy chcesz zainstalować najnowszą aktualizację dodatku Dynamo?</value>
     <value>Nie zostanie dodana nowa karta, ponieważ to rozszerzenie już występuje na pasku bocznym rozszerzeń.</value>
   </data>
   <data name="MessageUninstallCustomNodeToContinue" xml:space="preserve">
-    <value>{1} cannot be loaded.
-Installing it will conflict with one or more node definitions that already exist in {0}, which is currently loaded. 
-To install {1}, Dynamo needs to first uninstall {0}. 
-Restart Dynamo to complete the uninstall.
+    <value>Nie można wczytać {1}.
+Zainstalowanie tego elementu spowoduje konflikt z co najmniej jedną definicją węzła już istniejącą w obecnie wczytanym elemencie {0}. 
+Aby zainstalować {1}, dodatek Dynamo musi najpierw odinstalować {0}. 
+Uruchom ponownie dodatek Dynamo, aby zakończyć dezinstalację.
 
-Uninstall the following packages: {0}?</value>
+Odinstaluj następujące pakiety: {0}?</value>
   </data>
   <data name="PreviewText" xml:space="preserve">
     <value> Ta funkcja jest w wersji Preview! </value>
@@ -2200,25 +2200,25 @@ Uninstall the following packages: {0}?</value>
     <value>Wymaga ponownego uruchomienia dodatku Dynamo</value>
   </data>
   <data name="MessagePackageDepsInBuiltinPackages" xml:space="preserve">
-    <value>{0} has dependencies that conflict with the following built-in package(s): {1}. Dependency conflicts could cause unintended behavior to occur.
+    <value>{0} ma zależności, które powodują konflikt z następującymi pakietami wbudowanymi: {1}. Konflikty zależności mogą powodować niezamierzone zachowanie.
     
-Do you wish to continue trying to install {0}?</value>
+Czy chcesz kontynuować próbę zainstalowania {0}?</value>
   </data>
   <data name="MessageSamePackageDiffVersInBuiltinPackages" xml:space="preserve">
-    <value>{0} cannot be installed as it conflicts with a different version of the built-in package, {1}, which is already installed.
+    <value>Nie można zainstalować {0}, ponieważ powoduje konflikt z inną, już zainstalowaną wersją wbudowanego pakietu {1}.
     
-You can try disabling loading packages from built-in package paths, or unload the conflicting package, then restart {2} and download {0} again.</value>
+Możesz spróbować wyłączyć wczytywanie pakietów ze ścieżek pakietów wbudowanych lub usunąć z pamięci pakiet powodujący konflikt, a następnie ponownie uruchomić {2} i ponownie pobrać {0}.</value>
   </data>
   <data name="MessageSamePackageSameVersInBuiltinPackages" xml:space="preserve">
-    <value>The same version of package {0} is already installed as a built-in package and does not need to be installed again.</value>
+    <value>Ta sama wersja pakietu {0} jest już zainstalowana jako pakiet wbudowany i nie trzeba jej instalować ponownie.</value>
   </data>
   <data name="MessageSamePackageSameVersInLocalPackages" xml:space="preserve">
     <value>Ta sama wersja oprogramowania {0} jest już zainstalowana i nie trzeba jej instalować ponownie.</value>
   </data>
   <data name="MessageSamePackageDiffVersInLocalPackages" xml:space="preserve">
-    <value>Package {0} cannot be installed as it conflicts with a different version, {1}, which is already installed. 
+    <value>Nie można zainstalować pakietu {0}, ponieważ jest w konflikcie z inną, już zainstalowaną wersją: {1}. 
 
-Do you wish to uninstall {1}? Restart {2} to complete the uninstall and try downloading {0} again.</value>
+Czy chcesz odinstalować {1}? Uruchom ponownie {2}, aby zakończyć dezinstalację, i spróbuj ponownie pobrać {0}.</value>
   </data>
   <data name="PreferencesViewGeneralSettingsRun" xml:space="preserve">
     <value>Ustawienia uruchomienia</value>
@@ -2398,7 +2398,7 @@ Do you wish to uninstall {1}? Restart {2} to complete the uninstall and try down
     <value>Opis &lt;Kliknij dwukrotnie tutaj, aby edytować opis grupy&gt;</value>
   </data>
   <data name="GroupNameDefaultText" xml:space="preserve">
-    <value>Title &lt;Click here to edit the group title&gt;</value>
+    <value>Tytuł &lt;Kliknij tutaj, aby edytować tytuł grupy&gt;</value>
   </data>
   <data name="GroupContextMenuAddGroupToGroup" xml:space="preserve">
     <value>Dodaj grupę do tej grupy</value>
@@ -2591,7 +2591,7 @@ Jeśli przełącznik jest wyłączony, pakiety niestandardowe, które nie zosta�
     <value>Użyj programu Revit do skalowania narzędzi pomocniczych grafiki tła</value>
   </data>
   <data name="PreferencesUseHostScaleUnitsToolTip" xml:space="preserve">
-    <value>When toggled on, the current Host document units will be used to scale the background graphic helpers (grids, axes). Otherwise, the Graphic Elements Scale drop-down will determine scale.</value>
+    <value>Po włączeniu tej opcji bieżące jednostki dokumentu nadrzędnego będą używane do skalowania narzędzi pomocniczych grafiki tła (takich jak siatki, osie). W przeciwnym razie skala będzie określana za pomocą listy rozwijanej Skala elementów graficznych.</value>
   </data>
   <data name="PublishPackageVersionMajorWatermark" xml:space="preserve">
     <value>0</value>
@@ -2619,7 +2619,7 @@ Ten pakiet zostanie usunięty po następnym ponownym uruchomieniu dodatku Dynamo
     <value>Słowa kluczowe</value>
   </data>
   <data name="PublishPackageViewLicenseSubLabel" xml:space="preserve">
-    <value>Applies to the latest package version. If blank, the package will be licensed under </value>
+    <value>Dotyczy najnowszej wersji pakietu. Jeśli ta opcja jest pusta, pakiet będzie objęty licencją </value>
   </data>
   <data name="PublishPackageViewLicenseWatermark" xml:space="preserve">
     <value>Licencja</value>
@@ -2894,7 +2894,7 @@ Aby zainstalować najnowszą wersję pakietu, kliknij przycisk Zainstaluj. \n
     <value>Ten pakiet zawiera węzły niestandardowe, które są w użyciu. Należy usunąć te węzły niestandardowe lub zamknąć wykres, aby można było usunąć ten pakiet.</value>
   </data>
   <data name="PackagesGuideNavigatePackagesText" xml:space="preserve">
-    <value>\nWhen you install a package, it appears in the library under Add-ons.  \n\n**Click to expand the package** so you can see its nodes (functions).</value>
+    <value>\nPo zainstalowaniu pakietu jest on wyświetlany w bibliotece w obszarze Dodatki.  \n\n**Kliknij, aby rozwinąć pakiet** i wyświetlić jego węzły (funkcje).</value>
   </data>
   <data name="PackagesGuideNavigatePackagesTitle" xml:space="preserve">
     <value>Przejdź do pakietów</value>
@@ -3164,11 +3164,11 @@ Można tym zarządzać w obszarze Preferencje -&gt; Zabezpieczenia.</value>
     <value>Błąd hosta pakietu</value>
   </data>
   <data name="TrustedLocationNotAccessible" xml:space="preserve">
-    <value>A problem occurred when trying to access the trusted location. Dynamo is unable to obtain read/write access to
+    <value>Wystąpił problem podczas próby uzyskania dostępu do zaufanej lokalizacji. Dodatek Dynamo nie może uzyskać dostępu na potrzeby odczytu/zapisu do
 {0}</value>
   </data>
   <data name="UnableToAccessTrustedDirectory" xml:space="preserve">
-    <value>Unable To Access Trusted Directory</value>
+    <value>Nie można uzyskać dostępu do zaufanego katalogu</value>
   </data>
   <data name="ConnectorContextMenuHeaderPinConnector" xml:space="preserve">
     <value>Przypnij przewód</value>
@@ -3183,7 +3183,7 @@ Można tym zarządzać w obszarze Preferencje -&gt; Zabezpieczenia.</value>
     <value>Przejdź w górę</value>
   </data>
   <data name="ConnectorContextMenuHeaderEndNode" xml:space="preserve">
-    <value>Navigate Downtream</value>
+    <value>Nawiguj w dół</value>
   </data>
   <data name="ContextMenuNodeConnections" xml:space="preserve">
     <value>Połączenia węzłów</value>
@@ -3749,7 +3749,7 @@ Aby ustawić ten plik jako nowy szablon, zapisz go w innym folderze, a następni
     <value>Nie można umieścić węzła niestandardowego w jego własnym obszarze roboczym bez poprawnego zaimplementowania rekurencyjnego przypadku bazowego za pomocą węzła scopeif.</value>
   </data>
   <data name="PackageUnknownCompatibilityVersionDownloadMsg" xml:space="preserve">
-    <value>The compatibility of this version with your setup has not been verified. It may or may not work as expected.</value>
+    <value>Zgodność tej wersji z używaną konfiguracją nie została zweryfikowana. Może, ale nie musi ona działać zgodnie z oczekiwaniami.</value>
   </data>
   <data name="IDSDKErrorMessage" xml:space="preserve">
     <value>Wygląda na to, że program Autodesk Identity Manager nie jest skonfigurowany w systemie. Aby zapewnić pełny dostęp do wszystkich funkcji, zaloguj się na konto Autodesk przy użyciu programu Autodesk Identity Manager.
@@ -3777,19 +3777,22 @@ Aby ustawić ten plik jako nowy szablon, zapisz go w innym folderze, a następni
     <value>Pokaż domyślny opis grupy</value>
   </data>
   <data name="NodeAutoCompleteToolTip" xml:space="preserve">
-    <value>Click to get Node Autocomplete suggestions</value>
+    <value>Kliknij, aby uzyskać sugestie autouzupełniania węzłów</value>
   </data>
   <data name="ExportWorkspaceAsImage" xml:space="preserve">
-    <value>Workspace has been exported as an image to </value>
+    <value>Obszar roboczy wyeksportowano jako obraz do </value>
   </data>
   <data name="ExportWorkspaceAs3DImage" xml:space="preserve">
-    <value>Workspace has been exported as a 3D image to </value>
+    <value>Obszar roboczy wyeksportowano jako obraz 3D do </value>
   </data>
   <data name="PackageDetailsViewExtensionName" xml:space="preserve">
     <value>Szczegóły pakietu</value>
   </data>
   <data name="PublishPackageBackToFileButton" xml:space="preserve">
-    <value>Back to File Selection</value>
+    <value>Powrót do wyboru pliku</value>
+  </data>
+  <data name="GroupFrozenButtonToolTip" xml:space="preserve">
+    <value>This group is frozen. Click to unfreeze.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="psDynamoMesh" type="System.Resources.ResXFileRef, System.Windows.Forms">

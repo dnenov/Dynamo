@@ -1,4 +1,6 @@
+using Autodesk.DesignScript.Runtime;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DSCore.CurveMapper
 {
@@ -6,6 +8,8 @@ namespace DSCore.CurveMapper
     /// Represents a square root curve in the CurveMapper.
     /// The curve follows a square root function and is influenced by two control points.
     /// </summary>
+
+    [IsVisibleInDynamoLibrary(false)]
     public class SquareRootCurve : CurveBase
     {
         private double ControlPoint1X;
@@ -56,7 +60,7 @@ namespace DSCore.CurveMapper
         /// <summary>
         /// Returns X and Y values distributed across the curve.
         /// </summary>
-        protected override (List<double> XValues, List<double> YValues) GenerateCurve(int pointsCount, bool isRender)
+        protected override (List<double> XValues, List<double> YValues) GenerateCurve(List<double> pointsDomain, bool isRender)
         {
             var valuesX = new List<double>();
             var valuesY = new List<double>();
@@ -90,8 +94,9 @@ namespace DSCore.CurveMapper
                     }
                 }
             }
-            else
+            else if (pointsDomain.Count == 1)
             {
+                var pointsCount = (int)pointsDomain[0];
                 var step = CanvasSize / (pointsCount - 1);
 
                 for (int i = 0; i < pointsCount; i++)
@@ -101,6 +106,10 @@ namespace DSCore.CurveMapper
                     valuesX.Add(x);
                     valuesY.Add(ComputeSquareRootY(x, sqrtFactor));
                 }
+            }
+            else
+            {
+                return GenerateFromDomain(pointsDomain, x => ComputeSquareRootY(x, sqrtFactor));
             }
 
             return (valuesX, valuesY);

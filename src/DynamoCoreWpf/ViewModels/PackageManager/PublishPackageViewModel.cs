@@ -986,6 +986,11 @@ namespace Dynamo.PackageManager
         /// </summary>
         private bool IsPublishFromLocalPackage = false;
 
+        /// <summary>
+        /// Notifies the view model that the user has cancelled the upload
+        /// </summary>
+        public event Action UploadCancelled;
+
         #endregion
 
         internal PublishPackageViewModel()
@@ -1541,6 +1546,8 @@ namespace Dynamo.PackageManager
         /// <summary>
         /// The method is used to create a PublishPackageViewModel from a Package object.
         /// If retainFolderStructure is set to true, the folder structure of the package will be retained. Else, the default folder structure will be imposed.
+        /// TODO: This process heavily relies on the pkg.json of the locally installed package providing all of the header-related inforamtion
+        /// This leads to potential mismatch from the local package and the current package on the server
         /// </summary>
         /// <param name="dynamoViewModel"></param>
         /// <param name="pkg">The package to be loaded</param>
@@ -1573,6 +1580,27 @@ namespace Dynamo.PackageManager
                 }
             }
 
+            // First check if the local package has the compatibility info
+            var compatibility_matrix = pkg.CompatibilityMatrix  ?? pkg.Header?.compatibility_matrix;
+            //If we do not find compatibility info in the local package, we will check the cached packages
+            if (compatibility_matrix == null)
+            {
+                // We need to get the compatibility matrix from the cached package list
+                // in order to show the correct compatibility matrix in the UI.
+                // We are still running the risk of having a higher version of the local package 
+                // leading to a null result for the compatibility matrix, in which case we will not pre-fill the compatibility info..
+                var cachedPackage = dynamoViewModel.PackageManagerClientViewModel.CachedPackageList
+                    .FirstOrDefault(x => x.Name == pkg.Name);
+                var version = cachedPackage?.Header.versions
+                    .FirstOrDefault(v => v.version.Equals(pkg.VersionName));
+                compatibility_matrix = version?.compatibility_matrix?
+                    .Select(entry => new PackageCompatibility(
+                    entry.name,
+                    entry.versions != null ? new List<string>(entry.versions) : null,
+                    entry.min,
+                    entry.max));
+            }
+
             var pkgViewModel = new PublishPackageViewModel(dynamoViewModel)
             {
                 Group = pkg.Group,
@@ -1592,13 +1620,7 @@ namespace Dynamo.PackageManager
                 CurrentPackageRootDirectories = new List<string> { pkg.RootDirectory },
                 //default retain folder structure to true when publishing a new version from local.
                 RetainFolderStructureOverride = retainFolderStructure,
-                CompatibilityMatrix = pkg.Header.compatibility_matrix?
-                .Select(entry => new PackageCompatibility(
-                    entry.name,
-                    entry.versions != null ? new List<string>(entry.versions) : null,
-                    entry.min,
-                    entry.max))
-                .ToList()
+                CompatibilityMatrix = compatibility_matrix?.ToList(),
             };
 
             // add additional files
@@ -2336,6 +2358,8 @@ namespace Dynamo.PackageManager
             MessageBoxResult response = DynamoModel.IsTestMode ? MessageBoxResult.OK : MessageBoxService.Show(Owner, Resources.PrePackagePublishMessage, Resources.PrePackagePublishTitle, MessageBoxButton.OKCancel, MessageBoxImage.Information);
             if (response == MessageBoxResult.Cancel)
             {
+                // Notify the front-end that the user has cancelled the upload
+                UploadCancelled?.Invoke();
                 return;
             }
 
@@ -2551,7 +2575,7 @@ namespace Dynamo.PackageManager
                 Package.RepositoryUrl = RepositoryUrl;
                 Package.CopyrightHolder = string.IsNullOrEmpty(CopyrightHolder) ? dynamoViewModel.Model.AuthenticationManager?.Username : CopyrightHolder;
                 Package.CopyrightYear = string.IsNullOrEmpty(CopyrightYear) ? DateTime.Now.Year.ToString() : copyrightYear;
-                Package.Header.compatibility_matrix = CompatibilityMatrix;  // New - CompatibilityMatrix, Dynamo 3.5
+                Package.SetCompatibility(CompatibilityMatrix); // New - CompatibilityMatrix, Dynamo 3.5
                 Package.Header.release_notes_url = ReleaseNotesUrl; // New - ReleaseNotesUrl, Dynamo 3.5
 
                 AppendPackageContents();

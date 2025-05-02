@@ -187,7 +187,7 @@
     <value>시스템에서 디렉토리를 선택하여 해당 경로를 반환할 수 있습니다</value>
   </data>
   <data name="DoubleInputNodeDescription" xml:space="preserve">
-    <value>숫자를 만듭니다.</value>
+    <value>숫자를 작성합니다.</value>
   </data>
   <data name="DoubleSliderDescription" xml:space="preserve">
     <value>숫자 값을 생성합니다</value>
@@ -208,7 +208,7 @@
     <value>지정된 경로에서 파일 객체를 작성합니다</value>
   </data>
   <data name="FileObjectPortDataPathToolTip" xml:space="preserve">
-    <value>파일 경로를 문자열로.</value>
+    <value>파일 경로를 문자열로 전환합니다.</value>
   </data>
   <data name="FileObjectPortDataResultToolTip" xml:space="preserve">
     <value>파일 객체</value>
@@ -340,7 +340,7 @@
     <value>지정된 범위에서 숫자 또는 문자의 시퀀스를 작성합니다</value>
   </data>
   <data name="SequenceDescription" xml:space="preserve">
-    <value>숫자의 시퀀스를 만듭니다.</value>
+    <value>숫자 시퀀스를 작성합니다.</value>
   </data>
   <data name="OrDescription" xml:space="preserve">
     <value>부울 OR: 입력 중 하나가 true인 경우 True를 반환합니다. 모두가 true가 아니면 False를 반환합니다.</value>
@@ -355,7 +355,7 @@
     <value>리스트</value>
   </data>
   <data name="PortDataOperandToolTip" xml:space="preserve">
-    <value>Boolean #</value>
+    <value>부울 #</value>
   </data>
   <data name="PortDataResultToolTip" xml:space="preserve">
     <value>결과 블록이 생성됨</value>
@@ -412,7 +412,7 @@
     <value>선택한 요소.</value>
   </data>
   <data name="StringfromArrayDescription" xml:space="preserve">
-    <value>Converts an array to a string representation</value>
+    <value>배열을 문자열 표현으로 변환합니다.</value>
   </data>
   <data name="StringfromObjectDescription" xml:space="preserve">
     <value>객체를 문자열 표현으로 변환합니다.</value>
@@ -442,7 +442,7 @@
     <value>print;output;display</value>
   </data>
   <data name="WebRequestDescription" xml:space="preserve">
-    <value>Returns the contents of a webpage from the given URL as a string</value>
+    <value>지정된 URL에서 웹 페이지의 컨텐츠를 문자열로 반환합니다.</value>
   </data>
   <data name="WebRequestPortDataResultToolTip" xml:space="preserve">
     <value>웹 요청의 내용을 문자열로.</value>
@@ -626,15 +626,15 @@
 기본값: G</value>
   </data>
   <data name="CurveMapperCountInputPortName" xml:space="preserve">
-    <value>count</value>
+    <value>값</value>
   </data>
   <data name="CurveMapperCountInputPortToolTip" xml:space="preserve">
-    <value>Number of values to generate.
+    <value>매핑할 값의 수 또는 매핑할 값의 목록입니다.
 
-Default value (int): {0}</value>
+기본값(int): {0}</value>
   </data>
   <data name="CurveMapperDescription" xml:space="preserve">
-    <value>선택한 수학 곡선을 기준으로 y 좌표에 따라 x 좌표를 재분배하여 점 분배를 정밀하게 제어합니다.</value>
+    <value>주어진 범위 내에서 일련의 입력 값을 재분포하여 지정된 곡선을 따라 해당 값을 매핑합니다. 단일 카운트가 제공되면 주어진 범위 내에서 x 방향을 따라 분포된 일련의 값을 생성한 다음 이 값을 곡선에 매핑합니다.</value>
   </data>
   <data name="CurveMapperSearchTags" xml:space="preserve">
     <value>graph;curve;mapper;math</value>
@@ -646,17 +646,17 @@ Default value (int): {0}</value>
     <value>x-MaxLimit</value>
   </data>
   <data name="CurveMapperXMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the X-axis domain.
+    <value>X축 도메인의 최대값입니다.
 
-Default value (double): {0}</value>
+기본값(double): {0}</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortName" xml:space="preserve">
     <value>x-MinLimit</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the X-axis domain.
+    <value>X축 도메인의 최소값입니다.
 
-Default value (double): {0}</value>
+기본값(double): {0}</value>
   </data>
   <data name="CurveMapperXValuesOutputPortName" xml:space="preserve">
     <value>x-Values</value>
@@ -670,17 +670,17 @@ double[]</value>
     <value>y-MaxLimit</value>
   </data>
   <data name="CurveMapperYMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the Y-axis domain.
+    <value>Y축 도메인의 최대값입니다.
 
-Default value (double): {0}</value>
+기본값(double): {0}</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortName" xml:space="preserve">
     <value>y-MinLimit</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the Y-axis domain.
+    <value>Y축 도메인의 최소값입니다.
 
-Default value (double): {0}</value>
+기본값(double): {0}</value>
   </data>
   <data name="CurveMapperYValuesOutputPortName" xml:space="preserve">
     <value>y-Values</value>
@@ -691,6 +691,6 @@ Default value (double): {0}</value>
 double[]</value>
   </data>
   <data name="ColorPalettePortDataResultToolTip" xml:space="preserve">
-    <value>Selected color</value>
+    <value>선택된 색상</value>
   </data>
 </root>

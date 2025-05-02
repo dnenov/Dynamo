@@ -340,7 +340,7 @@
     <value>建立給定範圍內的一系列數字或字母</value>
   </data>
   <data name="SequenceDescription" xml:space="preserve">
-    <value>建立一系列號碼。</value>
+    <value>建立一系列數字。</value>
   </data>
   <data name="OrDescription" xml:space="preserve">
     <value>布林 OR: 如果任一輸入為 true，則傳回 True。如果都不是 true，則傳回 False。</value>
@@ -355,7 +355,7 @@
     <value>清單</value>
   </data>
   <data name="PortDataOperandToolTip" xml:space="preserve">
-    <value>Boolean #</value>
+    <value>布林 #</value>
   </data>
   <data name="PortDataResultToolTip" xml:space="preserve">
     <value>產生的結果區塊</value>
@@ -412,7 +412,7 @@
     <value>選取的元素。</value>
   </data>
   <data name="StringfromArrayDescription" xml:space="preserve">
-    <value>Converts an array to a string representation</value>
+    <value>將陣列轉換為字串表現法</value>
   </data>
   <data name="StringfromObjectDescription" xml:space="preserve">
     <value>將物件轉換為字串表現法</value>
@@ -442,7 +442,7 @@
     <value>print;output;display</value>
   </data>
   <data name="WebRequestDescription" xml:space="preserve">
-    <value>Returns the contents of a webpage from the given URL as a string</value>
+    <value>以字串傳回給定 URL 中的網頁內容</value>
   </data>
   <data name="WebRequestPortDataResultToolTip" xml:space="preserve">
     <value>網路請求的內容，以字串表示。</value>
@@ -626,15 +626,15 @@
 預設值: G</value>
   </data>
   <data name="CurveMapperCountInputPortName" xml:space="preserve">
-    <value>count</value>
+    <value>values</value>
   </data>
   <data name="CurveMapperCountInputPortToolTip" xml:space="preserve">
-    <value>Number of values to generate.
+    <value>要對應的值數目或要對應的值清單。
 
-Default value (int): {0}</value>
+預設值 (int): {0}</value>
   </data>
   <data name="CurveMapperDescription" xml:space="preserve">
-    <value>根據選取的數學曲線沿著 y 座標重新分佈 x 座標，精確控制點的分佈。</value>
+    <value>將一系列的輸入值在給定範圍內重新分佈，然後沿著指定的曲線對應這些值。如果提供單一計數，則會產生一系列在給定範圍內沿著 x 方向分佈的值，然後將這些值對應到曲線。</value>
   </data>
   <data name="CurveMapperSearchTags" xml:space="preserve">
     <value>graph;curve;mapper;math</value>
@@ -646,17 +646,17 @@ Default value (int): {0}</value>
     <value>x-MaxLimit</value>
   </data>
   <data name="CurveMapperXMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the X-axis domain.
+    <value>X 軸定義域的最大值。
 
-Default value (double): {0}</value>
+預設值 (double): {0}</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortName" xml:space="preserve">
     <value>x-MinLimit</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the X-axis domain.
+    <value>X 軸定義域的最小值。
 
-Default value (double): {0}</value>
+預設值 (double): {0}</value>
   </data>
   <data name="CurveMapperXValuesOutputPortName" xml:space="preserve">
     <value>x-Values</value>
@@ -670,17 +670,17 @@ double[]</value>
     <value>y-MaxLimit</value>
   </data>
   <data name="CurveMapperYMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the Y-axis domain.
+    <value>Y 軸定義域的最大值。
 
-Default value (double): {0}</value>
+預設值 (double): {0}</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortName" xml:space="preserve">
     <value>y-MinLimit</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the Y-axis domain.
+    <value>Y 軸定義域的最小值。
 
-Default value (double): {0}</value>
+預設值 (double): {0}</value>
   </data>
   <data name="CurveMapperYValuesOutputPortName" xml:space="preserve">
     <value>y-Values</value>
@@ -691,6 +691,6 @@ Default value (double): {0}</value>
 double[]</value>
   </data>
   <data name="ColorPalettePortDataResultToolTip" xml:space="preserve">
-    <value>Selected color</value>
+    <value>選取的顏色</value>
   </data>
 </root>

@@ -928,11 +928,8 @@ namespace Dynamo.Models
 
             AddHomeWorkspace();
 
-            if (!IsServiceMode)
-            {
-                AuthenticationManager = new AuthenticationManager(config.AuthProvider);
-            }
-
+            AuthenticationManager = new AuthenticationManager(config.AuthProvider);
+  
             Logger.Log(string.Format("Dynamo -- Build {0}",
                                         Assembly.GetExecutingAssembly().GetName().Version));
 
@@ -2895,6 +2892,9 @@ namespace Dynamo.Models
         {
             if (string.IsNullOrWhiteSpace(locale)) return;
 
+            //Validate that the provided locale against the supported locales
+            locale = Configurations.SupportedLocaleDic.FirstOrDefault(x => x.Value == locale).Value ?? Configurations.SupportedLocaleDic.FirstOrDefault().Value;
+
             // Setting the locale for Dynamo from loaded Preferences, with Default handled differently
             // between a non-in-process integration case (when HostAnalyticsInfo.HostName is unspecified)
             // and in-process integration case. In later case, Default setting means following host locale.
@@ -3510,6 +3510,7 @@ namespace Dynamo.Models
         {
             var iDoc = LuceneUtility.InitializeIndexDocumentForNodes();
             List<NodeSearchElement> nodes = new();
+
             foreach (var funcGroup in functionGroups)
             {
                 foreach (var functionDescriptor in funcGroup.Functions)
@@ -3766,7 +3767,7 @@ namespace Dynamo.Models
             return result;
         }
 
-        private void RecordUndoModels(WorkspaceModel workspace, List<ModelBase> undoItems)
+        internal static void RecordUndoModels(WorkspaceModel workspace, List<ModelBase> undoItems)
         {
             var userActionDictionary = new Dictionary<ModelBase, UndoRedoRecorder.UserAction>();
             //Add models that were newly created

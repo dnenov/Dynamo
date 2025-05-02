@@ -355,7 +355,7 @@
     <value>Список</value>
   </data>
   <data name="PortDataOperandToolTip" xml:space="preserve">
-    <value>Boolean #</value>
+    <value>Логическое число</value>
   </data>
   <data name="PortDataResultToolTip" xml:space="preserve">
     <value>Сформированный блок результата</value>
@@ -412,7 +412,7 @@
     <value>Выбранные элементы.</value>
   </data>
   <data name="StringfromArrayDescription" xml:space="preserve">
-    <value>Converts an array to a string representation</value>
+    <value>Преобразование массива в строчное представление</value>
   </data>
   <data name="StringfromObjectDescription" xml:space="preserve">
     <value>Преобразование объекта в строчное представление</value>
@@ -442,7 +442,7 @@
     <value>print;output;display</value>
   </data>
   <data name="WebRequestDescription" xml:space="preserve">
-    <value>Returns the contents of a webpage from the given URL as a string</value>
+    <value>Возврат содержимого веб-страницы заданного URL-адреса в виде строки</value>
   </data>
   <data name="WebRequestPortDataResultToolTip" xml:space="preserve">
     <value>Содержимое веб-запроса в виде строки.</value>
@@ -626,15 +626,15 @@
 Значение по умолчанию: G</value>
   </data>
   <data name="CurveMapperCountInputPortName" xml:space="preserve">
-    <value>count</value>
+    <value>values</value>
   </data>
   <data name="CurveMapperCountInputPortToolTip" xml:space="preserve">
-    <value>Number of values to generate.
+    <value>Количество сопоставляемых значений или список значений для сопоставления.
 
-Default value (int): {0}</value>
+Значение по умолчанию (int): {0}</value>
   </data>
   <data name="CurveMapperDescription" xml:space="preserve">
-    <value>Перераспределение координат X по координатам Y на основе выбранной математической кривой для точного управления распределением точек.</value>
+    <value>Перераспределение последовательности входных значений в пределах заданного диапазона и их сопоставление вдоль заданной кривой. Если указано отдельное количество, создается последовательность значений, которые распределены вдоль оси X в пределах заданного диапазона, а затем эти значения сопоставляются с кривой.</value>
   </data>
   <data name="CurveMapperSearchTags" xml:space="preserve">
     <value>graph;curve;mapper;math</value>
@@ -646,17 +646,17 @@ Default value (int): {0}</value>
     <value>x-MaxLimit</value>
   </data>
   <data name="CurveMapperXMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the X-axis domain.
+    <value>Максимальное значение для области оси X.
 
-Default value (double): {0}</value>
+Значение по умолчанию (double): {0}</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortName" xml:space="preserve">
     <value>x-MinLimit</value>
   </data>
   <data name="CurveMapperXMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the X-axis domain.
+    <value>Минимальное значение для области оси X.
 
-Default value (double): {0}</value>
+Значение по умолчанию (double): {0}</value>
   </data>
   <data name="CurveMapperXValuesOutputPortName" xml:space="preserve">
     <value>x-Values</value>
@@ -670,17 +670,17 @@ double[]</value>
     <value>y-MaxLimit</value>
   </data>
   <data name="CurveMapperYMaxLimitInputPortToolTip" xml:space="preserve">
-    <value>Maximum value for the Y-axis domain.
+    <value>Максимальное значение для области оси Y.
 
-Default value (double): {0}</value>
+Значение по умолчанию (double): {0}</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortName" xml:space="preserve">
     <value>y-MinLimit</value>
   </data>
   <data name="CurveMapperYMinLimitInputPortToolTip" xml:space="preserve">
-    <value>Minimum value for the Y-axis domain.
+    <value>Минимальное значение для области оси Y.
 
-Default value (double): {0}</value>
+Значение по умолчанию (double): {0}</value>
   </data>
   <data name="CurveMapperYValuesOutputPortName" xml:space="preserve">
     <value>y-Values</value>
@@ -691,6 +691,6 @@ Default value (double): {0}</value>
 double[]</value>
   </data>
   <data name="ColorPalettePortDataResultToolTip" xml:space="preserve">
-    <value>Selected color</value>
+    <value>Выбранный цвет</value>
   </data>
 </root>

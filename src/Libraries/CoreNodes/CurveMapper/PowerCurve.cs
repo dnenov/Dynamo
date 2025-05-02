@@ -1,4 +1,6 @@
+using Autodesk.DesignScript.Runtime;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DSCore.CurveMapper
 {
@@ -6,6 +8,8 @@ namespace DSCore.CurveMapper
     /// Represents a power function curve in the CurveMapper.
     /// The curve is defined by a power equation derived from a control point.
     /// </summary>
+
+    [IsVisibleInDynamoLibrary(false)]
     public class PowerCurve : CurveBase
     {
         private double ControlPoint1X;
@@ -48,7 +52,7 @@ namespace DSCore.CurveMapper
         /// <summary>
         /// Returns X and Y values distributed across the curve.
         /// </summary>
-        protected override (List<double> XValues, List<double> YValues) GenerateCurve(int pointsCount, bool isRender)
+        protected override (List<double> XValues, List<double> YValues) GenerateCurve(List<double> pointsDomain, bool isRender)
         {
             var valuesX = new List<double>();
             var valuesY = new List<double>();
@@ -63,17 +67,21 @@ namespace DSCore.CurveMapper
                     valuesY.Add(y);
                 }
             }
-            else
+            else if (pointsDomain.Count == 1)
             {
+                var pointsCount = (int)pointsDomain[0];
                 double step = CanvasSize / (pointsCount - 1);
 
                 for (int i = 0; i < pointsCount; i++)
                 {
                     double x = i * step;
                     valuesX.Add(x);
-                    double y = ComputePowerY(x, powerFactor);
-                    valuesY.Add(y);
+                    valuesY.Add(ComputePowerY(x, powerFactor));
                 }
+            }
+            else
+            {
+                return GenerateFromDomain(pointsDomain, x => ComputePowerY(x, powerFactor));
             }
 
             return (valuesX, valuesY);

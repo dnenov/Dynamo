@@ -1,3 +1,4 @@
+using Autodesk.DesignScript.Runtime;
 using System.Collections.Generic;
 
 namespace DSCore.CurveMapper
@@ -6,6 +7,8 @@ namespace DSCore.CurveMapper
     /// Represents a control line in the CurveMapper.
     /// This is used for auxiliary control of other curves, particularly Bezier curves.
     /// </summary>
+
+    [IsVisibleInDynamoLibrary(false)]
     public class ControlLine : CurveBase
     {
         private double ControlPoint1X;
@@ -21,7 +24,7 @@ namespace DSCore.CurveMapper
             ControlPoint2X = cp2X;
             ControlPoint2Y = cp2Y;
         }
-        protected override (List<double> XValues, List<double> YValues) GenerateCurve(int pointsCount, bool isRender = false)
+        protected override (List<double> XValues, List<double> YValues) GenerateCurve(List<double> pointsCount, bool isRender = false)
         {
             return (new List<double> { ControlPoint1X, ControlPoint2X }, new List<double> { ControlPoint1Y, ControlPoint2Y });
         }
