@@ -800,6 +800,7 @@ namespace Dynamo.Controls
         public SolidColorBrush ExecutionPreviewBrush { get; set; }
         public SolidColorBrush NoneBrush { get; set; }
         public SolidColorBrush SelectionBrush { get; set; }
+        public SolidColorBrush TransientBrush { get; set; }
 
         public SolidColorBrush HoverBrush { get; set; }
 
@@ -808,6 +809,8 @@ namespace Dynamo.Controls
             var state = (PreviewState)value;
             switch (state)
             {
+                case PreviewState.Transient:
+                    return TransientBrush;
                 case PreviewState.ExecutionPreview:
                     return ExecutionPreviewBrush;
                 case PreviewState.None:
@@ -833,12 +836,15 @@ namespace Dynamo.Controls
         public Color None { get; set; }
         public Color Selection { get; set; }
         public Color Hover { get; set; }
+        public Color Transient { get; set; }
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var state = (PreviewState)value;
             switch (state)
             {
+                case PreviewState.Transient:
+                    return Transient;
                 case PreviewState.ExecutionPreview:
                     return ExecutionPreview;
                 case PreviewState.None:
@@ -1754,6 +1760,30 @@ namespace Dynamo.Controls
             string originalName = value.ToString();
             if (originalName == "Code Block") return new Thickness(0, 12, -24, 0);
             return new Thickness(0, 3, -24, 5);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotSupportedException();
+        }
+    }
+
+    /// <summary>
+    /// Used to set the port style of a Code Block node.
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("ApiDesign",
+        "RS0016:Add public types and members to the declared API",
+        Justification = "Converters are not part of the API")]
+    public class NodeModelToPortStyleConverter : IValueConverter
+    {
+        public Style PortStyle { get; set; }
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is CodeBlockNodeModel)
+            {
+                return PortStyle;
+            }
+            return DependencyProperty.UnsetValue;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -4267,6 +4297,22 @@ namespace Dynamo.Controls
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return Binding.DoNothing;
+        }
+    }
+
+    public class LengthToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is int length)
+                return length > 0 ? Visibility.Collapsed : Visibility.Visible;
+
+            return Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

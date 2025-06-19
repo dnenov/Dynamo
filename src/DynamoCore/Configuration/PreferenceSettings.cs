@@ -664,6 +664,11 @@ namespace Dynamo.Configuration
         public bool EnableNodeAutoComplete { get; set; }
 
         /// <summary>
+        /// This allows the user to enable or disable the new node auto complete menu.
+        /// </summary>
+        public bool EnableNewNodeAutoCompleteUI { get; set; }
+
+        /// <summary>
         /// PolyCurve normal and direction behavior has been made predictable in Dynamo 3.0 and has therefore changed. 
         /// This defines whether legacy (pre-3.0) PolyCurve behavior is selected by default.
         /// This flag can be overridden by individual workspaces that have the EnableLegacyPolyCurveBehavior flag defined.
@@ -682,10 +687,22 @@ namespace Dynamo.Configuration
         /// </summary>
         public int MLRecommendationConfidenceLevel { get; set; }
 
+        private int mLRecommendationNumberOfResults;
         /// <summary>
         /// This defines the number of results of the  ML recommendation
         /// </summary>
-        public int MLRecommendationNumberOfResults { get; set; }
+        public int MLRecommendationNumberOfResults
+        {
+            get => mLRecommendationNumberOfResults;
+            set
+            {
+                if (mLRecommendationNumberOfResults != value)
+                {
+                    mLRecommendationNumberOfResults = value;
+                    AutocompletePreferencesChanged?.Invoke();
+                }
+            }
+        }
 
         /// <summary>
         /// If true, autocomplete method options are hidden from UI 
@@ -853,10 +870,27 @@ namespace Dynamo.Configuration
         /// </summary>
         public RunType DefaultRunType { get; set; }
 
+        private NodeAutocompleteSuggestion defaultNodeAutocompleteSuggestion;
         /// <summary>
         /// Defines the default method of the Node Autocomplete
         /// </summary>
-        public NodeAutocompleteSuggestion DefaultNodeAutocompleteSuggestion { get; set; }
+        public NodeAutocompleteSuggestion DefaultNodeAutocompleteSuggestion
+        {
+            get => defaultNodeAutocompleteSuggestion;
+            set
+            {
+                if(defaultNodeAutocompleteSuggestion != value)
+                {
+                    defaultNodeAutocompleteSuggestion = value;
+                    AutocompletePreferencesChanged?.Invoke();
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Event that is fired when autocomplete-specific preferences are changed
+        /// </summary>
+        internal event Action AutocompletePreferencesChanged;
 
         /// <summary>
         /// Show Run Preview flag.
@@ -979,6 +1013,7 @@ namespace Dynamo.Configuration
             IsIronPythonDialogDisabled = false;
             ShowTabsAndSpacesInScriptEditor = false;
             EnableNodeAutoComplete = true;
+            EnableNewNodeAutoCompleteUI = true;
             DefaultEnableLegacyPolyCurveBehavior = true;
             HideNodesBelowSpecificConfidenceLevel = false;
             MLRecommendationConfidenceLevel = 10;

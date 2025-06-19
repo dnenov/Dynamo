@@ -20,7 +20,7 @@ using Point = System.Windows.Point;
 
 namespace Dynamo.ViewModels
 {
-    public enum PreviewState { Selection, ExecutionPreview, Hover, None }
+    public enum PreviewState { Selection, ExecutionPreview, Hover, None, Transient  }
 
     public partial class ConnectorViewModel : ViewModelBase
     {
@@ -38,6 +38,7 @@ namespace Dynamo.ViewModels
         private bool isConnecting = false;
         private bool isCollapsed = false;
         private bool isHidden = false;
+        private bool isTransient = false;
         private bool isTemporarilyVisible = false;
         private string connectorDataToolTip;
         private bool canShowConnectorTooltip = true;
@@ -196,6 +197,22 @@ namespace Dynamo.ViewModels
                 RaisePropertyChanged(nameof(IsHidden));
                 SetVisibilityOfPins(IsHidden);
                 SetPartialVisibilityOfPins(IsHidden);
+            }
+        }
+
+        internal bool IsTransient
+        {
+            get => isTransient;
+            set
+            {
+                if (isTransient == value)
+                {
+                    return;
+                }
+
+                isTransient = value;
+                RaisePropertyChanged(nameof(IsTransient));
+                RaisePropertyChanged(nameof(PreviewState));
             }
         }
 
@@ -503,6 +520,11 @@ namespace Dynamo.ViewModels
                 if (model == null)
                 {
                     return PreviewState.None;
+                }
+
+                if (IsTransient)
+                {
+                    return PreviewState.Transient;
                 }
 
                 if (Nodevm.ShowExecutionPreview || NodeEnd.ShowExecutionPreview)
@@ -1204,25 +1226,32 @@ namespace Dynamo.ViewModels
         /// </summary>
         public override void Dispose()
         {
-            model.PropertyChanged -= HandleConnectorPropertyChanged;
+            if (model != null)
+            {
+                model.PropertyChanged -= HandleConnectorPropertyChanged;
 
-            model.Start.PropertyChanged -= StartPortModel_PropertyChanged;
-            model.End.PropertyChanged -= EndPortModel_PropertyChanged;
+                model.Start.PropertyChanged -= StartPortModel_PropertyChanged;
+                model.End.PropertyChanged -= EndPortModel_PropertyChanged;
 
-            model.Start.Owner.PropertyChanged -= StartOwner_PropertyChanged;
-            model.End.Owner.PropertyChanged -= EndOwner_PropertyChanged;
-            model.ConnectorPinModels.CollectionChanged -= ConnectorPinModelCollectionChanged;
+                model.Start.Owner.PropertyChanged -= StartOwner_PropertyChanged;
+                model.End.Owner.PropertyChanged -= EndOwner_PropertyChanged;
+                model.ConnectorPinModels.CollectionChanged -= ConnectorPinModelCollectionChanged;
+
+                // Nodevm and NodeEnd props are found via model
+                if (Nodevm != null)
+                {
+                    Nodevm.PropertyChanged -= nodeViewModel_PropertyChanged;
+                }
+                if (NodeEnd != null)
+                {
+                    NodeEnd.PropertyChanged -= nodeEndViewModel_PropertyChanged;
+                }
+            }
+
+            workspaceViewModel.PropertyChanged -= WorkspaceViewModel_PropertyChanged;
 
             workspaceViewModel.DynamoViewModel.PropertyChanged -= DynamoViewModel_PropertyChanged;
             workspaceViewModel.DynamoViewModel.Model.PreferenceSettings.PropertyChanged -= DynamoViewModel_PropertyChanged;
-            if (Nodevm != null)
-            {
-                Nodevm.PropertyChanged -= nodeViewModel_PropertyChanged;
-            }
-            if (NodeEnd != null)
-            {
-                NodeEnd.PropertyChanged -= nodeEndViewModel_PropertyChanged;
-            }
 
             if (ConnectorPinViewCollection != null)
             {
@@ -1235,16 +1264,14 @@ namespace Dynamo.ViewModels
                 }
             }
 
-            workspaceViewModel.PropertyChanged -= WorkspaceViewModel_PropertyChanged;
-
             this.PropertyChanged -= ConnectorViewModelPropertyChanged;
             DiscardAllConnectorPinModels();
 
-            if(ConnectorContextMenuViewModel != null)
+            if (ConnectorContextMenuViewModel != null)
             {
                 ConnectorContextMenuViewModel.Dispose();
             }
-            if(ConnectorAnchorViewModel != null)
+            if (ConnectorAnchorViewModel != null)
             {
                 ConnectorAnchorViewModel.Dispose();
             }

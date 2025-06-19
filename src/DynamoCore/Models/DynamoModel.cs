@@ -237,7 +237,7 @@ namespace Dynamo.Models
         internal bool IsServiceMode { get; set; }
 
         /// <summary>
-        /// True if Dynamo starts up in offline mode.
+        /// True if Dynamo is used in offline mode.
         /// </summary>
         internal bool NoNetworkMode { get; }
 
@@ -1460,7 +1460,7 @@ namespace Dynamo.Models
             }
 
             // Lucene disposals (just if LuceneNET was initialized)
-            LuceneUtility.DisposeAll();
+            LuceneUtility?.DisposeAll();
 
 #if DEBUG
             CurrentWorkspace.NodeAdded -= CrashOnDemand.CurrentWorkspace_NodeAdded;
