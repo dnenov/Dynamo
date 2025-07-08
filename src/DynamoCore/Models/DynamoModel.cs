@@ -237,7 +237,7 @@ namespace Dynamo.Models
         internal bool IsServiceMode { get; set; }
 
         /// <summary>
-        /// True if Dynamo starts up in offline mode.
+        /// True if Dynamo is used in offline mode.
         /// </summary>
         internal bool NoNetworkMode { get; }
 
@@ -928,11 +928,8 @@ namespace Dynamo.Models
 
             AddHomeWorkspace();
 
-            if (!IsServiceMode)
-            {
-                AuthenticationManager = new AuthenticationManager(config.AuthProvider);
-            }
-
+            AuthenticationManager = new AuthenticationManager(config.AuthProvider);
+  
             Logger.Log(string.Format("Dynamo -- Build {0}",
                                         Assembly.GetExecutingAssembly().GetName().Version));
 
@@ -1463,7 +1460,7 @@ namespace Dynamo.Models
             }
 
             // Lucene disposals (just if LuceneNET was initialized)
-            LuceneUtility.DisposeAll();
+            LuceneUtility?.DisposeAll();
 
 #if DEBUG
             CurrentWorkspace.NodeAdded -= CrashOnDemand.CurrentWorkspace_NodeAdded;
@@ -2434,7 +2431,7 @@ namespace Dynamo.Models
             }
         }
 
-        private bool OpenJsonFile(
+        internal bool OpenJsonFile(
           string filePath,
           string fileContents,
           DynamoPreferencesData dynamoPreferences,
@@ -2894,6 +2891,9 @@ namespace Dynamo.Models
         public static void SetUICulture(string locale)
         {
             if (string.IsNullOrWhiteSpace(locale)) return;
+
+            //Validate that the provided locale against the supported locales
+            locale = Configurations.SupportedLocaleDic.FirstOrDefault(x => x.Value == locale).Value ?? Configurations.SupportedLocaleDic.FirstOrDefault().Value;
 
             // Setting the locale for Dynamo from loaded Preferences, with Default handled differently
             // between a non-in-process integration case (when HostAnalyticsInfo.HostName is unspecified)
@@ -3510,6 +3510,7 @@ namespace Dynamo.Models
         {
             var iDoc = LuceneUtility.InitializeIndexDocumentForNodes();
             List<NodeSearchElement> nodes = new();
+
             foreach (var funcGroup in functionGroups)
             {
                 foreach (var functionDescriptor in funcGroup.Functions)
@@ -3766,7 +3767,7 @@ namespace Dynamo.Models
             return result;
         }
 
-        private void RecordUndoModels(WorkspaceModel workspace, List<ModelBase> undoItems)
+        internal static void RecordUndoModels(WorkspaceModel workspace, List<ModelBase> undoItems)
         {
             var userActionDictionary = new Dictionary<ModelBase, UndoRedoRecorder.UserAction>();
             //Add models that were newly created

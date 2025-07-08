@@ -7,6 +7,7 @@
   <ConsoleHeight>123</ConsoleHeight>
   <GraphicScaleUnit>Feet</GraphicScaleUnit>
   <ShowPreviewBubbles>false</ShowPreviewBubbles>
+  <ShowDefaultGroupDescription>false</ShowDefaultGroupDescription>
   <UseHostScaleUnits>false</UseHostScaleUnits>
   <ShowCodeBlockLineNumber>false</ShowCodeBlockLineNumber>
   <ShowConnector>false</ShowConnector>
@@ -73,6 +74,7 @@
   <IsIronPythonDialogDisabled>true</IsIronPythonDialogDisabled>
   <ShowTabsAndSpacesInScriptEditor>true</ShowTabsAndSpacesInScriptEditor>
   <EnableNodeAutoComplete>false</EnableNodeAutoComplete>
+  <EnableNewNodeAutoCompleteUI>false</EnableNewNodeAutoCompleteUI>
   <DefaultEnableLegacyPolyCurveBehavior>false</DefaultEnableLegacyPolyCurveBehavior>
   <HideNodesBelowSpecificConfidenceLevel>true</HideNodesBelowSpecificConfidenceLevel>
   <MLRecommendationConfidenceLevel>99</MLRecommendationConfidenceLevel>

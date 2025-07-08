@@ -470,7 +470,7 @@ namespace DynamoCoreWpfTests
                 Assert.AreEqual(0, tabsBeforeExternalEventTrigger);
                 Assert.AreEqual(1, tabsAfterExternalEventTrigger);
                 Assert.IsTrue(htmlContent.Contains("<h2 id=\"heading\">Division by zero</h2>"));
-                Assert.False(htmlContent.Contains("document.getElementById(\"heading\").innerHTML = \"Script1\";"));
+                Assert.False(htmlContent.Contains("document.getElementById(\"heading\").innerHTML = \"Script1\";"), string.Format("hml: {0}", htmlContent));
             }
         }
 
@@ -807,7 +807,7 @@ namespace DynamoCoreWpfTests
             Assert.AreEqual(ViewModel.Model.CurrentWorkspace.Annotations.Count(), 1);
 
             //Validates that correct group name and description was set
-            Assert.AreEqual(ViewModel.Model.CurrentWorkspace.Annotations.FirstOrDefault().AnnotationText, "BasicAddition");
+            Assert.AreEqual(ViewModel.Model.CurrentWorkspace.Annotations.FirstOrDefault().AnnotationText, "CoreNodeModels.Input.DoubleInput");
             Assert.AreEqual(ViewModel.Model.CurrentWorkspace.Annotations.FirstOrDefault().AnnotationDescriptionText, "Inserted Dynamo graph");
         }
 

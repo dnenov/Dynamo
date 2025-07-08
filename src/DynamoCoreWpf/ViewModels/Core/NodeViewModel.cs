@@ -39,7 +39,8 @@ namespace Dynamo.ViewModels
         public delegate void SnapInputEventHandler(PortViewModel portViewModel);
         public delegate void PreviewPinStatusHandler(bool pinned);
 
-        internal delegate void NodeAutoCompletePopupEventHandler(Popup popup);
+        internal delegate void NodeAutoCompletePopupEventHandler(Window window, PortModel portType, double spacing);
+        internal delegate void NodeClusterAutoCompletePopupEventHandler(Window window, double spacing);
         internal delegate void PortContextMenuPopupEventHandler(Popup popup);
         #endregion
 
@@ -63,6 +64,7 @@ namespace Dynamo.ViewModels
         private bool isNodeInCollapsedGroup = false;
         private const string WatchNodeName = "Watch";
         private bool nodeHoveringState;
+        private bool isHidden;
         #endregion
 
         #region public members
@@ -368,6 +370,23 @@ namespace Dynamo.ViewModels
         }
 
         /// <summary>
+        ///     This property controls node view visibility in canvas.
+        /// </summary>
+        [JsonIgnore]
+        public bool IsHidden
+        {
+            get => isHidden;
+            set
+            {
+                if (isHidden != value)
+                {
+                    isHidden = value;
+                    RaisePropertyChanged(nameof(IsHidden));
+                }
+            }
+        }
+
+        /// <summary>
         /// Determines whether or not the semi-transparent overlay is displaying on the node.
         /// This reflects whether the node is in a info/warning/error/frozen state
         /// </summary>
@@ -629,7 +648,11 @@ namespace Dynamo.ViewModels
         [JsonIgnore]
         public bool IsTransient
         {
-            set { NodeModel.IsTransient = value; }
+            set
+            {
+                NodeModel.IsTransient = value;
+                RaisePropertyChanged(nameof(IsTransient));
+            }
             get { return NodeModel.IsTransient; }
         }
 
@@ -703,6 +726,57 @@ namespace Dynamo.ViewModels
             set
             {
                 NodeModel.Y = value;
+            }
+        }
+
+        /// <summary>
+        ///     Returns or set the Width of the NodeView.
+        /// </summary>
+        [JsonProperty(Order = 9)]
+        public double Width
+        {
+            get { return NodeModel.Width; }
+            set
+            {
+                NodeModel.Width = value;
+            }
+        }
+
+        /// <summary>
+        ///     Returns or set the Height of the NodeView.
+        /// </summary>
+        [JsonProperty(Order = 10)]
+        public double Height
+        {
+            get { return NodeModel.Height; }
+            set
+            {
+                NodeModel.Height = value;
+            }
+        }
+        /// <summary>
+        ///     Returns or set the Width of the Node's border that is added inside the NodeView.
+        /// </summary>
+        [JsonProperty(Order = 11)]
+        public double WidthBorder
+        {
+            get { return NodeModel.WidthBorder; }
+            set
+            {
+                NodeModel.WidthBorder = value;
+            }
+        }
+
+        /// <summary>
+        ///     Returns or set the Height of the Node's border that is added inside the NodeView.
+        /// </summary>
+        [JsonProperty(Order = 12)]
+        public double HeightBorder
+        {
+            get { return NodeModel.HeightBorder; }
+            set
+            {
+                NodeModel.HeightBorder = value;
             }
         }
 
@@ -804,12 +878,18 @@ namespace Dynamo.ViewModels
 
         #region events
 
+        internal event NodeClusterAutoCompletePopupEventHandler RequestClusterAutoCompletePopupPlacementTarget;
         internal event NodeAutoCompletePopupEventHandler RequestAutoCompletePopupPlacementTarget;
         internal event PortContextMenuPopupEventHandler RequestPortContextMenuPopupPlacementTarget;
 
-        internal void OnRequestAutoCompletePopupPlacementTarget(Popup popup)
+        internal void OnRequestAutoCompletePopupPlacementTarget(Window window, PortModel portModel, double spacing)
         {
-            RequestAutoCompletePopupPlacementTarget?.Invoke(popup);
+            RequestAutoCompletePopupPlacementTarget?.Invoke(window, portModel, spacing);
+        }
+
+        internal void OnClusterRequestAutoCompletePopupPlacementTarget(Window window, double spacing)
+        {
+            RequestClusterAutoCompletePopupPlacementTarget?.Invoke(window, spacing);
         }
 
         public void OnRequestPortContextMenuPlacementTarget(Popup popup)
@@ -913,6 +993,7 @@ namespace Dynamo.ViewModels
             }
             logic.NodeMessagesClearing += Logic_NodeMessagesClearing;
             logic.NodeInfoMessagesClearing += Logic_NodeInfoMessagesClearing;
+            logic.NodeWarningMessagesClearing += Logic_NodeWarningMessagesClearing;
 
             logic_PropertyChanged(this, new PropertyChangedEventArgs(nameof(IsVisible)));
             UpdateBubbleContent();
@@ -1001,6 +1082,36 @@ namespace Dynamo.ViewModels
             }
         }
 
+        /// <summary>
+        /// Clears only warning messages from the node's info bubble, preserving any existing info messages.
+        /// </summary>
+        /// <param name="obj"></param>
+        private void Logic_NodeWarningMessagesClearing(NodeModel obj)
+        {
+            if (ErrorBubble == null) return;
+
+            var warningsToRemove = ErrorBubble.NodeMessages.Where(x => x.Style == InfoBubbleViewModel.Style.Warning).ToList();
+
+            if (DynamoViewModel.UIDispatcher != null)
+            {
+                DynamoViewModel.UIDispatcher.Invoke(() =>
+                {
+                    foreach (var itemToRemove in warningsToRemove)
+                    {
+                        ErrorBubble.NodeMessages.Remove(itemToRemove);
+                    }
+                });
+            }
+            else
+            {
+                foreach (var itemToRemove in warningsToRemove)
+                {
+                    ErrorBubble.NodeMessages.Remove(itemToRemove);
+                }
+            }
+            return;
+        }
+
         private void DismissedNodeMessages_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (!(sender is ObservableCollection<InfoBubbleDataPacket> observableCollection)) return;
@@ -1058,7 +1169,8 @@ namespace Dynamo.ViewModels
 
             NodeModel.NodeMessagesClearing -= Logic_NodeMessagesClearing;
             NodeModel.NodeInfoMessagesClearing -= Logic_NodeInfoMessagesClearing;
-            
+            NodeModel.NodeWarningMessagesClearing -= Logic_NodeWarningMessagesClearing;
+
             if (ErrorBubble != null) DisposeErrorBubble();
 
             DynamoSelection.Instance.Selection.CollectionChanged -= SelectionOnCollectionChanged;
@@ -1312,7 +1424,7 @@ namespace Dynamo.ViewModels
         private static SolidColorBrush warningColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FAA21B"));
         private static SolidColorBrush infoColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#6AC0E7"));
         private static SolidColorBrush noPreviewColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#BBBBBB"));
-        private static SolidColorBrush nodeCustomColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#B385F2"));
+        private static SolidColorBrush nodeCustomColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#32BCAD"));
         private static SolidColorBrush nodePreviewGeometryColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#BBBBBB"));
         private static SolidColorBrush nodeFrozenOverlayColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#BCD3EE"));
         private static SolidColorBrush nodeTransientOverlayColor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#D5BCF7"));
